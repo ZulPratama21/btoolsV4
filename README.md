@@ -13,5 +13,6 @@ BtoolsV4 With Django
   /env               # Virtual environment
   /requirement.txt   # List library yang perlu diinstal
 7. Jika dalam pengeditan terdapat instalasi library baru, gunakan command berikut agar requirement.txt dapat langsung ter-update : pip install <nama-library> && pip freeze | grep <nama-library> >> requirements.txt
-8. Edit file settings.py didalam direktory /webApp/btools/settings.py pada baris ALLOWED_HOSTS = [] , dengan menambahkan ip address yang akan digunakan untuk mengakses server : ALLOWED_HOSTS = [<IP Address>]
-9. Server sudah siap untuk dijalankan : python3 manage.py runserver <IP Address>:<Port Address>
+8. install mysql dengan commanf "apt instaall mysql-server" berikan password ****
+9. Edit file settings.py didalam direktory /webApp/btools/settings.py pada baris ALLOWED_HOSTS = [] , dengan menambahkan ip address yang akan digunakan untuk mengakses server : ALLOWED_HOSTS = [<IP Address>]
+10. Server sudah siap untuk dijalankan : python3 manage.py runserver <IP Address>:<Port Address>
