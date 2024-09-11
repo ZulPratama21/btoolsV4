@@ -1,0 +1,97 @@
+*
+* Visual Studio Code Server
+*
+* By using the software, you agree to
+* the Visual Studio Code Server License Terms (https://aka.ms/vscode-server-license) and
+* the Microsoft Privacy Statement (https://privacy.microsoft.com/en-US/privacystatement).
+*
+Server bound to /tmp/code-4149d522-8e9b-4dbb-9af5-6f7bba844212
+Extension host agent listening on /tmp/code-4149d522-8e9b-4dbb-9af5-6f7bba844212
+
+[07:59:32] 
+
+
+
+
+[07:59:32] Extension host agent started.
+[07:59:32] [<unknown>][ae920fa5][ExtensionHostConnection] New connection established.
+[07:59:32] [<unknown>][322d82c4][ManagementConnection] New connection established.
+[07:59:32] [<unknown>][ae920fa5][ExtensionHostConnection] <31705> Launched Extension Host Process.
+rejected promise not handled within 1 second: CodeExpectedError: Could not find pty on pty host
+stack trace: CodeExpectedError: Could not find pty on pty host
+    at k.U (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/platform/terminal/node/ptyHostMain.js:54:30837)
+    at k.updateIcon (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/platform/terminal/node/ptyHostMain.js:54:26087)
+    at D.<computed> (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/platform/terminal/node/ptyHostMain.js:54:21308)
+    at Object.call (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/platform/terminal/node/ptyHostMain.js:36:5378)
+    at c.s (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/platform/terminal/node/ptyHostMain.js:34:5506)
+    at c.q (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/platform/terminal/node/ptyHostMain.js:34:4947)
+    at w.value (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/platform/terminal/node/ptyHostMain.js:34:4247)
+    at i.B (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/platform/terminal/node/ptyHostMain.js:30:741)
+    at i.fire (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/platform/terminal/node/ptyHostMain.js:30:958)
+    at process.$e (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/platform/terminal/node/ptyHostMain.js:25:27395)
+    at process.emit (node:events:519:28)
+    at emit (node:internal/child_process:951:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:83:21)
+[07:59:35] Error [CodeExpectedError]: Could not find pty on pty host
+    at k.U (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/platform/terminal/node/ptyHostMain.js:54:30837)
+    at k.updateIcon (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/platform/terminal/node/ptyHostMain.js:54:26087)
+    at D.<computed> (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/platform/terminal/node/ptyHostMain.js:54:21308)
+    at Object.call (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/platform/terminal/node/ptyHostMain.js:36:5378)
+    at c.s (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/platform/terminal/node/ptyHostMain.js:34:5506)
+    at c.q (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/platform/terminal/node/ptyHostMain.js:34:4947)
+    at w.value (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/platform/terminal/node/ptyHostMain.js:34:4247)
+    at i.B (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/platform/terminal/node/ptyHostMain.js:30:741)
+    at i.fire (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/platform/terminal/node/ptyHostMain.js:30:958)
+    at process.$e (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/platform/terminal/node/ptyHostMain.js:25:27395)
+    at process.emit (node:events:519:28)
+    at emit (node:internal/child_process:951:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:83:21)
+[07:59:38] Getting Manifest... ms-python.python
+[07:59:38] Getting Manifest... ms-python.vscode-pylance
+[07:59:38] Installing extension: ms-python.vscode-pylance {
+  productVersion: { version: '1.92.2', date: '2024-08-14T17:29:30.058Z' },
+  pinned: false,
+  isApplicationScoped: false,
+  context: { clientTargetPlatform: 'win32-x64' },
+  installOnlyNewlyAddedFromExtensionPack: true,
+  profileLocation: v {
+    scheme: 'file',
+    authority: '',
+    path: '/root/.vscode-server/extensions/extensions.json',
+    query: '',
+    fragment: '',
+    _formatted: 'file:///root/.vscode-server/extensions/extensions.json',
+    _fsPath: '/root/.vscode-server/extensions/extensions.json'
+  }
+}
+[07:59:38] Installing extension: ms-python.python {
+  productVersion: { version: '1.92.2', date: '2024-08-14T17:29:30.058Z' },
+  pinned: false,
+  isApplicationScoped: false,
+  context: { clientTargetPlatform: 'win32-x64' },
+  installOnlyNewlyAddedFromExtensionPack: true,
+  profileLocation: v {
+    scheme: 'file',
+    authority: '',
+    path: '/root/.vscode-server/extensions/extensions.json',
+    query: '',
+    fragment: '',
+    _formatted: 'file:///root/.vscode-server/extensions/extensions.json',
+    _fsPath: '/root/.vscode-server/extensions/extensions.json'
+  }
+}
+[07:59:39] Getting Manifest... ms-python.python
+[07:59:39] Waiting for already requested installing extension ms-python.python ms-python.vscode-pylance file:///root/.vscode-server/extensions/extensions.json
+[07:59:45] Extension signature verification result for ms-python.vscode-pylance: Success. Executed: true. Duration: 4486ms.
+[07:59:45] Extension signature verification result for ms-python.python: Success. Executed: true. Duration: 5203ms.
+[07:59:51] Extracted extension to file:///root/.vscode-server/extensions/ms-python.python-2024.14.0-linux-x64: ms-python.python
+[07:59:54] Extracted extension to file:///root/.vscode-server/extensions/ms-python.vscode-pylance-2024.9.1: ms-python.vscode-pylance
+[07:59:55] Renamed to /root/.vscode-server/extensions/ms-python.python-2024.14.0-linux-x64
+[07:59:59] Renamed to /root/.vscode-server/extensions/ms-python.vscode-pylance-2024.9.1
+[07:59:59] Marked extension as uninstalled ms-python.python-2024.12.3-linux-x64
+[07:59:59] Extension installed successfully: ms-python.python file:///root/.vscode-server/extensions/extensions.json
+[07:59:59] Finished waiting for already requested installing extension ms-python.python ms-python.vscode-pylance file:///root/.vscode-server/extensions/extensions.json
+[07:59:59] Marked extension as uninstalled ms-python.vscode-pylance-2024.8.2
+[07:59:59] Extension installed successfully: ms-python.vscode-pylance file:///root/.vscode-server/extensions/extensions.json
+New EH opened, aborting shutdown
+[08:04:32] New EH opened, aborting shutdown

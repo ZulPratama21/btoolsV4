@@ -1,0 +1,51 @@
+2024-09-11 07:59:32.718 [info] 
+
+
+
+
+2024-09-11 07:59:32.729 [info] Extension host agent started.
+2024-09-11 07:59:32.778 [info] [<unknown>][ae920fa5][ExtensionHostConnection] New connection established.
+2024-09-11 07:59:32.794 [info] [<unknown>][322d82c4][ManagementConnection] New connection established.
+2024-09-11 07:59:32.863 [info] [<unknown>][ae920fa5][ExtensionHostConnection] <31705> Launched Extension Host Process.
+2024-09-11 07:59:35.795 [error] CodeExpectedError: Could not find pty on pty host
+    at k.U (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/platform/terminal/node/ptyHostMain.js:54:30837)
+    at k.updateIcon (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/platform/terminal/node/ptyHostMain.js:54:26087)
+    at D.<computed> (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/platform/terminal/node/ptyHostMain.js:54:21308)
+    at Object.call (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/platform/terminal/node/ptyHostMain.js:36:5378)
+    at c.s (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/platform/terminal/node/ptyHostMain.js:34:5506)
+    at c.q (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/platform/terminal/node/ptyHostMain.js:34:4947)
+    at w.value (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/platform/terminal/node/ptyHostMain.js:34:4247)
+    at i.B (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/platform/terminal/node/ptyHostMain.js:30:741)
+    at i.fire (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/platform/terminal/node/ptyHostMain.js:30:958)
+    at process.$e (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/platform/terminal/node/ptyHostMain.js:25:27395)
+    at process.emit (node:events:519:28)
+    at emit (node:internal/child_process:951:14)
+    at process.processTicksAndRejections (node:internal/process/task_queues:83:21)
+2024-09-11 07:59:38.091 [info] Getting Manifest... ms-python.python
+2024-09-11 07:59:38.091 [info] Getting Manifest... ms-python.vscode-pylance
+2024-09-11 07:59:38.151 [info] Installing extension: ms-python.vscode-pylance {"productVersion":{"version":"1.92.2","date":"2024-08-14T17:29:30.058Z"},"pinned":false,"isApplicationScoped":false,"context":{"clientTargetPlatform":"win32-x64"},"installOnlyNewlyAddedFromExtensionPack":true,"profileLocation":{"$mid":1,"fsPath":"/root/.vscode-server/extensions/extensions.json","external":"file:///root/.vscode-server/extensions/extensions.json","path":"/root/.vscode-server/extensions/extensions.json","scheme":"file"}}
+2024-09-11 07:59:38.228 [info] Installing extension: ms-python.python {"productVersion":{"version":"1.92.2","date":"2024-08-14T17:29:30.058Z"},"pinned":false,"isApplicationScoped":false,"context":{"clientTargetPlatform":"win32-x64"},"installOnlyNewlyAddedFromExtensionPack":true,"profileLocation":{"$mid":1,"fsPath":"/root/.vscode-server/extensions/extensions.json","external":"file:///root/.vscode-server/extensions/extensions.json","path":"/root/.vscode-server/extensions/extensions.json","scheme":"file"}}
+2024-09-11 07:59:39.119 [info] Getting Manifest... ms-python.python
+2024-09-11 07:59:39.260 [info] Waiting for already requested installing extension ms-python.python ms-python.vscode-pylance file:///root/.vscode-server/extensions/extensions.json
+2024-09-11 07:59:45.127 [info] Extension signature verification result for ms-python.vscode-pylance: Success. Executed: true. Duration: 4486ms.
+2024-09-11 07:59:45.140 [info] Extension signature verification result for ms-python.python: Success. Executed: true. Duration: 5203ms.
+2024-09-11 07:59:51.482 [info] Extracted extension to file:///root/.vscode-server/extensions/ms-python.python-2024.14.0-linux-x64: ms-python.python
+2024-09-11 07:59:54.613 [info] Extracted extension to file:///root/.vscode-server/extensions/ms-python.vscode-pylance-2024.9.1: ms-python.vscode-pylance
+2024-09-11 07:59:55.161 [info] Renamed to /root/.vscode-server/extensions/ms-python.python-2024.14.0-linux-x64
+2024-09-11 07:59:59.223 [info] Renamed to /root/.vscode-server/extensions/ms-python.vscode-pylance-2024.9.1
+2024-09-11 07:59:59.239 [info] Marked extension as uninstalled ms-python.python-2024.12.3-linux-x64
+2024-09-11 07:59:59.254 [info] Extension installed successfully: ms-python.python file:///root/.vscode-server/extensions/extensions.json
+2024-09-11 07:59:59.256 [info] Finished waiting for already requested installing extension ms-python.python ms-python.vscode-pylance file:///root/.vscode-server/extensions/extensions.json
+2024-09-11 07:59:59.469 [info] Marked extension as uninstalled ms-python.vscode-pylance-2024.8.2
+2024-09-11 07:59:59.472 [info] Extension installed successfully: ms-python.vscode-pylance file:///root/.vscode-server/extensions/extensions.json
+2024-09-11 08:04:32.730 [info] New EH opened, aborting shutdown
+2024-09-11 08:20:38.866 [info] [<unknown>][322d82c4][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+2024-09-11 08:20:38.869 [error] Error: Unexpected SIGPIPE
+    at process.<anonymous> (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/server/node/server.main.js:190:6369)
+    at process.emit (node:events:531:35)
+2024-09-11 08:26:22.778 [info] [<unknown>][322d82c4][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+2024-09-11 08:26:22.779 [info] [<unknown>][77fae3a7][ManagementConnection] New connection established.
+2024-09-11 08:26:22.786 [info] [<unknown>][db477589][ExtensionHostConnection] New connection established.
+2024-09-11 08:26:22.790 [info] [<unknown>][db477589][ExtensionHostConnection] <2374> Launched Extension Host Process.
+2024-09-11 08:31:22.900 [info] [<unknown>][322d82c4][ManagementConnection] The reconnection short grace time of 5m has expired, so the connection will be disposed.
+2024-09-11 08:31:23.048 [info] [<unknown>][ae920fa5][ExtensionHostConnection] <31705> Extension Host Process exited with code: 0, signal: null.

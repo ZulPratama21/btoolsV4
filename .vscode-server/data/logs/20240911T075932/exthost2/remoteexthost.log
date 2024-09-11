@@ -1,0 +1,25 @@
+2024-09-11 08:26:24.084 [info] Extension host with pid 2374 started
+2024-09-11 08:26:24.084 [error] Error: EEXIST: file already exists, open '/root/.vscode-server/data/User/workspaceStorage/8949629dd5cf0999335706f43dd62ed8/vscode.lock'
+2024-09-11 08:26:24.089 [info] Lock '/root/.vscode-server/data/User/workspaceStorage/8949629dd5cf0999335706f43dd62ed8/vscode.lock': Could not acquire lock, checking if the file is stale.
+2024-09-11 08:26:24.100 [info] Lock '/root/.vscode-server/data/User/workspaceStorage/8949629dd5cf0999335706f43dd62ed8/vscode.lock': The lock does not look stale, elapsed: 217 ms, giving up.
+2024-09-11 08:26:24.176 [info] Lock '/root/.vscode-server/data/User/workspaceStorage/8949629dd5cf0999335706f43dd62ed8-1/vscode.lock': Lock acquired.
+2024-09-11 08:26:24.396 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2024-09-11 08:26:24.398 [info] ExtensionService#_doActivateExtension ms-python.python, startup: false, activationEvent: 'onLanguage:python', root cause: ms-python.debugpy
+2024-09-11 08:26:25.249 [info] ExtensionService#_doActivateExtension ms-python.debugpy, startup: false, activationEvent: 'onLanguage:python'
+2024-09-11 08:26:25.249 [info] ExtensionService#_doActivateExtension ms-python.vscode-pylance, startup: false, activationEvent: 'onLanguage:python'
+2024-09-11 08:26:26.756 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2024-09-11 08:26:26.817 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2024-09-11 08:26:26.818 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2024-09-11 08:26:27.200 [info] Eager extensions activated
+2024-09-11 08:26:27.201 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2024-09-11 08:26:27.201 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2024-09-11 08:26:29.671 [warning] [Decorations] CAPPING events from decorations provider vscode.git 10000
+2024-09-11 08:26:34.283 [warning] [Decorations] CAPPING events from decorations provider vscode.git 10000
+2024-09-11 08:28:06.987 [info] ExtensionService#_doActivateExtension vscode.npm, startup: false, activationEvent: 'onTerminalQuickFixRequest:ms-vscode.npm-command'
+2024-09-11 08:48:39.149 [error] [ms-python.python] provider FAILED
+2024-09-11 08:48:39.149 [error] Error: Request textDocument/codeAction failed with message: index is out of range
+	at ae (/root/.vscode-server/extensions/ms-python.python-2024.14.0-linux-x64/out/client/extension.js:2:2041224)
+	at oe (/root/.vscode-server/extensions/ms-python.python-2024.14.0-linux-x64/out/client/extension.js:2:2039184)
+	at Immediate.<anonymous> (/root/.vscode-server/extensions/ms-python.python-2024.14.0-linux-x64/out/client/extension.js:2:2035478)
+	at process.processImmediate (node:internal/timers:478:21)
+2024-09-11 08:49:36.406 [info] ExtensionService#_doActivateExtension vscode.html-language-features, startup: false, activationEvent: 'onLanguage:html'

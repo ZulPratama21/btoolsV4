@@ -1,0 +1,19 @@
+2024-09-05 15:38:16.193 [info] (Client) Pylance async client (2024.8.2) started with python extension (2024.12.3)
+2024-09-05 15:38:17.099 [info] [Info  - 3:38:16 PM] (27679) Server root directory: file:///root/.vscode-server/extensions/ms-python.vscode-pylance-2024.8.2/dist
+2024-09-05 15:38:17.107 [info] [Info  - 3:38:17 PM] (27679) Experimental Pylance language server 2024.8.2 (pyright version 1.1.373, commit ee424479) starting
+2024-09-05 15:38:17.107 [info] [Info  - 3:38:17 PM] (27679) Starting service instance "webApp"
+2024-09-05 15:38:17.189 [info] [Info  - 3:38:17 PM] (27679) Setting pythonPath for service "webApp": "/usr/bin/python3"
+2024-09-05 15:38:17.189 [info] [Info  - 3:38:17 PM] (27679) Setting environmentName for service "webApp": "3.10.14 (global)"
+2024-09-05 15:38:17.190 [info] [Info  - 3:38:17 PM] (27679) No include entries specified; assuming /root/webApp
+2024-09-05 15:38:17.193 [info] [Info  - 3:38:17 PM] (27679) Auto-excluding **/node_modules
+2024-09-05 15:38:17.193 [info] [Info  - 3:38:17 PM] (27679) Auto-excluding **/__pycache__
+2024-09-05 15:38:17.193 [info] [Info  - 3:38:17 PM] (27679) Auto-excluding **/.*
+2024-09-05 15:38:17.328 [info] [Info  - 3:38:17 PM] (27679) Assuming Python version 3.10.14.final.0
+2024-09-05 15:38:17.463 [info] [Info  - 3:38:17 PM] (27679) Found 6 source files
+2024-09-05 15:38:17.515 [info] [Info  - 3:38:17 PM] (27679) Background analysis(1) root directory: file:///root/.vscode-server/extensions/ms-python.vscode-pylance-2024.8.2/dist
+2024-09-05 15:38:17.515 [info] [Info  - 3:38:17 PM] (27679) Background analysis(1) started
+2024-09-05 15:38:18.460 [info] [Info  - 3:38:18 PM] (27679) Indexer background runner(2) root directory: file:///root/.vscode-server/extensions/ms-python.vscode-pylance-2024.8.2/dist (index)
+2024-09-05 15:38:18.461 [info] [Info  - 3:38:18 PM] (27679) Indexing(2) started
+2024-09-05 15:38:19.483 [info] [Info  - 3:38:19 PM] (27679) scanned(2) 41 files over 1 exec env
+2024-09-05 15:38:21.219 [info] [Info  - 3:38:21 PM] (27679) indexed(2) 16 files over 1 exec env
+2024-09-05 15:38:21.286 [info] [Info  - 3:38:21 PM] (27679) Indexing finished(2).

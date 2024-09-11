@@ -1,0 +1,58 @@
+2024-09-05 15:38:14.101 [info] Experiment 'pythonRecommendTensorboardExt' is active
+2024-09-05 15:38:14.101 [info] Experiment 'pythonTerminalEnvVarActivation' is active
+2024-09-05 15:38:14.101 [info] Experiment 'pythonTestAdapter' is active
+2024-09-05 15:38:14.132 [error] Reading directory to watch failed [Error: ENOENT: no such file or directory, scandir '/root/webApp/.pixi/envs'
+	at Object.readdirSync (node:fs:1507:26)
+	at /root/.vscode-server/extensions/ms-python.python-2024.12.3-linux-x64/out/client/extension.js:2:586747
+	at /root/.vscode-server/extensions/ms-python.python-2024.12.3-linux-x64/out/client/extension.js:2:586938
+	at Array.map (<anonymous>)
+	at d.initWatchers (/root/.vscode-server/extensions/ms-python.python-2024.12.3-linux-x64/out/client/extension.js:2:586656)
+	at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+	at async d.ensureWatchersReady (/root/.vscode-server/extensions/ms-python.python-2024.12.3-linux-x64/out/client/extension.js:2:543067)] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'scandir',
+  path: '/root/webApp/.pixi/envs'
+}
+2024-09-05 15:38:14.134 [error] Dir "/root/webApp/.pixi/envs" is not watchable (directory does not exist)
+2024-09-05 15:38:14.287 [info] Default formatter is set to null for workspace /root/webApp
+2024-09-05 15:38:14.295 [info] Starting Environment refresh
+2024-09-05 15:38:14.295 [info] Searching for interpreters in posix paths locator
+2024-09-05 15:38:14.301 [info] Searching for pyenv environments
+2024-09-05 15:38:14.301 [info] Searching for conda environments
+2024-09-05 15:38:14.301 [info] Searching for global virtual environments
+2024-09-05 15:38:14.301 [info] Searching for custom virtual environments
+2024-09-05 15:38:15.123 [info] pyenv is not installed
+2024-09-05 15:38:15.123 [info] Finished searching for pyenv environments: 827 milliseconds
+2024-09-05 15:38:15.124 [info] Finished searching for custom virtual envs: 827 milliseconds
+2024-09-05 15:38:15.129 [info] > conda info --json
+2024-09-05 15:38:15.132 [info] > pixi --version
+2024-09-05 15:38:15.132 [error] [Error: spawn pixi ENOENT
+	at ChildProcess._handle.onexit (node:internal/child_process:286:19)
+	at onErrorNT (node:internal/child_process:484:16)
+	at process.processTicksAndRejections (node:internal/process/task_queues:82:21)] {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'spawn pixi',
+  path: 'pixi',
+  spawnargs: [ '--version' ]
+}
+2024-09-05 15:38:15.134 [info] > hatch env show --json
+2024-09-05 15:38:15.134 [info] cwd: .
+2024-09-05 15:38:15.139 [info] > pyenv which python
+2024-09-05 15:38:15.139 [info] cwd: .
+2024-09-05 15:38:15.139 [info] Finished searching for global virtual envs: 842 milliseconds
+2024-09-05 15:38:15.154 [info] Found: /usr/bin/python3 --> /usr/bin/python3.10
+2024-09-05 15:38:15.154 [info] Found: /usr/bin/python3.10 --> /usr/bin/python3.10
+2024-09-05 15:38:15.154 [info] Found: /usr/bin/python3.8 --> /usr/bin/python3.8
+2024-09-05 15:38:15.169 [info] Finished searching for interpreters in posix paths locator: 873 milliseconds
+2024-09-05 15:38:15.169 [info] > /usr/bin/python3 -I ~/.vscode-server/extensions/ms-python.python-2024.12.3-linux-x64/python_files/get_output_via_markers.py ~/.vscode-server/extensions/ms-python.python-2024.12.3-linux-x64/python_files/interpreterInfo.py
+2024-09-05 15:38:15.184 [info] > /usr/bin/python3.8 -I ~/.vscode-server/extensions/ms-python.python-2024.12.3-linux-x64/python_files/get_output_via_markers.py ~/.vscode-server/extensions/ms-python.python-2024.12.3-linux-x64/python_files/interpreterInfo.py
+2024-09-05 15:38:15.184 [info] Environments refresh paths discovered (event): 891 milliseconds
+2024-09-05 15:38:15.184 [info] Environments refresh paths discovered: 891 milliseconds
+2024-09-05 15:38:15.521 [info] Environments refresh finished (event): 1228 milliseconds
+2024-09-05 15:38:15.535 [info] Environment refresh took 1242 milliseconds
+2024-09-05 15:38:15.537 [warning] could not find a pixi interpreter for the interpreter at /usr/bin/python3
+2024-09-05 15:38:15.540 [info] Python interpreter path: /usr/bin/python3
+2024-09-05 15:38:15.623 [warning] could not find a pixi interpreter for the interpreter at /usr/bin/python3
+2024-09-05 15:38:17.136 [info] Starting Pylance language server.

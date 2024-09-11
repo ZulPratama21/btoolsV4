@@ -1,0 +1,33 @@
+2024-09-11 08:26:25.082 [info] Experiment 'pythonRecommendTensorboardExt' is active
+2024-09-11 08:26:25.083 [info] Experiment 'pythonTerminalEnvVarActivation' is active
+2024-09-11 08:26:25.083 [info] Experiment 'pythonTestAdapter' is active
+2024-09-11 08:26:25.118 [warning] Dir "/root/webApp/.pixi/envs" is not watchable (directory does not exist)
+2024-09-11 08:26:25.232 [info] Default formatter is set to null for workspace /root/webApp
+2024-09-11 08:26:25.241 [info] Starting Environment refresh
+2024-09-11 08:26:26.765 [info] > pixi --version
+2024-09-11 08:26:26.768 [info] > hatch env show --json
+2024-09-11 08:26:26.768 [info] cwd: .
+2024-09-11 08:26:26.769 [info] Python interpreter path: /usr/bin/python3
+2024-09-11 08:26:26.930 [info] > pyenv which python
+2024-09-11 08:26:26.930 [info] cwd: .
+2024-09-11 08:26:26.958 [info] > /usr/bin/python3 -I ~/.vscode-server/extensions/ms-python.python-2024.14.0-linux-x64/python_files/get_output_via_markers.py ~/.vscode-server/extensions/ms-python.python-2024.14.0-linux-x64/python_files/interpreterInfo.py
+2024-09-11 08:26:26.958 [info] Environments refresh paths discovered: 1718 milliseconds
+2024-09-11 08:26:27.081 [warning] could not find a pixi interpreter for the interpreter at /usr/bin/python3
+2024-09-11 08:26:27.618 [info] Environments refresh finished (event): 2378 milliseconds
+2024-09-11 08:26:27.622 [info] Environment refresh took 2382 milliseconds
+2024-09-11 08:26:28.407 [info] Starting Pylance language server.
+2024-09-11 08:34:16.407 [info] Discover tests for workspace name: webApp - uri: /root/webApp/btools/settings.py
+2024-09-11 08:35:44.037 [info] Discover tests for workspace name: webApp - uri: /root/webApp/btools/settings.py
+2024-09-11 08:35:48.096 [info] Discover tests for workspace name: webApp - uri: /root/webApp/btools/settings.py
+2024-09-11 08:42:20.552 [info] Discover tests for workspace name: webApp - uri: /root/webApp/btools/urls.py
+2024-09-11 08:43:51.741 [info] Discover tests for workspace name: webApp - uri: /root/webApp/btools/urls.py
+2024-09-11 08:48:28.597 [info] Discover tests for workspace name: webApp - uri: /root/webApp/btools/urls.py
+2024-09-11 08:49:18.760 [info] Discover tests for workspace name: webApp - uri: /root/webApp/btools/views.py
+2024-09-11 08:49:22.606 [info] Discover tests for workspace name: webApp - uri: /root/webApp/btools/urls.py
+2024-09-11 08:52:36.021 [info] Discover tests for workspace name: webApp - uri: /root/webApp/btools/settings.py
+2024-09-11 08:54:16.636 [info] Discover tests for workspace name: webApp - uri: /root/webApp/btools/views.py
+2024-09-11 08:54:20.094 [info] Discover tests for workspace name: webApp - uri: /root/webApp/btools/urls.py
+2024-09-11 08:54:32.079 [info] Discover tests for workspace name: webApp - uri: /root/webApp/btools/urls.py
+2024-09-11 08:57:13.810 [info] Discover tests for workspace name: webApp - uri: /root/webApp/btools/views.py
+2024-09-11 08:58:50.716 [info] Discover tests for workspace name: webApp - uri: /root/webApp/btools/settings.py
+2024-09-11 08:58:51.976 [info] Discover tests for workspace name: webApp - uri: /root/webApp/btools/settings.py

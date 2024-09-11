@@ -1,0 +1,33 @@
+2024-08-28 01:17:37.639 [info] 
+
+
+
+
+2024-08-28 01:17:37.650 [info] Extension host agent started.
+2024-08-28 01:17:37.694 [info] [<unknown>][bd96debe][ManagementConnection] New connection established.
+2024-08-28 01:17:37.699 [info] [<unknown>][1397ff9d][ExtensionHostConnection] New connection established.
+2024-08-28 01:17:37.768 [info] [<unknown>][1397ff9d][ExtensionHostConnection] <11817> Launched Extension Host Process.
+2024-08-28 01:22:37.650 [info] New EH opened, aborting shutdown
+2024-08-28 01:26:00.173 [info] [<unknown>][bd96debe][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+2024-08-28 01:33:13.391 [info] [<unknown>][bd96debe][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+2024-08-28 01:33:13.393 [info] [<unknown>][931cb856][ExtensionHostConnection] New connection established.
+2024-08-28 01:33:13.394 [info] [<unknown>][e2362316][ManagementConnection] New connection established.
+2024-08-28 01:33:13.397 [info] [<unknown>][931cb856][ExtensionHostConnection] <12199> Launched Extension Host Process.
+2024-08-28 01:33:13.400 [error] Error: Unexpected SIGPIPE
+    at process.<anonymous> (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/server/node/server.main.js:190:6369)
+    at process.emit (node:events:531:35)
+2024-08-28 01:38:13.430 [info] [<unknown>][bd96debe][ManagementConnection] The reconnection short grace time of 5m has expired, so the connection will be disposed.
+2024-08-28 01:38:13.508 [info] [<unknown>][1397ff9d][ExtensionHostConnection] <11817> Extension Host Process exited with code: 0, signal: null.
+2024-08-28 01:42:36.474 [warning] [File Watcher (node.js)] Watcher shutdown because watched path got deleted
+2024-08-28 02:13:47.443 [info] [<unknown>][e2362316][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+2024-08-28 02:21:54.467 [info] [<unknown>][e2362316][ManagementConnection] Another client has connected, will shorten the wait for reconnection 5m before disposing...
+2024-08-28 02:21:54.467 [info] [<unknown>][1665aa83][ManagementConnection] New connection established.
+2024-08-28 02:21:54.468 [info] [<unknown>][fdce38c4][ExtensionHostConnection] New connection established.
+2024-08-28 02:21:54.471 [info] [<unknown>][fdce38c4][ExtensionHostConnection] <15037> Launched Extension Host Process.
+2024-08-28 02:26:54.588 [info] [<unknown>][e2362316][ManagementConnection] The reconnection short grace time of 5m has expired, so the connection will be disposed.
+2024-08-28 02:26:54.646 [info] [<unknown>][931cb856][ExtensionHostConnection] <12199> Extension Host Process exited with code: 0, signal: null.
+2024-08-28 03:43:03.710 [info] [<unknown>][1665aa83][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+2024-08-28 06:42:41.555 [info] [<unknown>][fdce38c4][ExtensionHostConnection] <15037> Extension Host Process exited with code: 0, signal: null.
+2024-08-28 06:42:41.555 [info] Last EH closed, waiting before shutting down
+2024-08-28 06:43:08.921 [info] [<unknown>][1665aa83][ManagementConnection] The reconnection grace time of 3h has expired, so the connection will be disposed.
+2024-08-28 06:47:41.555 [info] Last EH closed, shutting down

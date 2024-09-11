@@ -1,0 +1,21 @@
+2024-09-11 07:59:37.392 [info] (Client) Pylance async client (2024.8.2) started with python extension (2024.12.3)
+2024-09-11 07:59:38.312 [info] [Info  - 7:59:38 AM] (31923) Server root directory: file:///root/.vscode-server/extensions/ms-python.vscode-pylance-2024.8.2/dist
+2024-09-11 07:59:38.312 [info] [Info  - 7:59:38 AM] (31923) Experimental Pylance language server 2024.8.2 (pyright version 1.1.373, commit ee424479) starting
+2024-09-11 07:59:38.312 [info] [Info  - 7:59:38 AM] (31923) Starting service instance "webApp"
+2024-09-11 07:59:38.584 [info] [Info  - 7:59:38 AM] (31923) Setting pythonPath for service "webApp": "/usr/bin/python3"
+2024-09-11 07:59:38.585 [info] [Info  - 7:59:38 AM] (31923) Setting environmentName for service "webApp": "3.10.14 (global)"
+2024-09-11 07:59:38.588 [info] [Info  - 7:59:38 AM] (31923) No include entries specified; assuming /root/webApp
+2024-09-11 07:59:38.588 [info] [Info  - 7:59:38 AM] (31923) Auto-excluding **/node_modules
+2024-09-11 07:59:38.588 [info] [Info  - 7:59:38 AM] (31923) Auto-excluding **/__pycache__
+2024-09-11 07:59:38.588 [info] [Info  - 7:59:38 AM] (31923) Auto-excluding **/.*
+2024-09-11 07:59:38.682 [info] [Info  - 7:59:38 AM] (31923) Assuming Python version 3.10.14.final.0
+2024-09-11 07:59:39.102 [info] [Info  - 7:59:39 AM] (31923) Found 6 source files
+2024-09-11 07:59:40.724 [info] [Info  - 7:59:40 AM] (31923) Background analysis(1) root directory: file:///root/.vscode-server/extensions/ms-python.vscode-pylance-2024.8.2/dist
+2024-09-11 07:59:40.731 [info] [Info  - 7:59:40 AM] (31923) Background analysis(1) started
+2024-09-11 07:59:42.092 [info] [Info  - 7:59:42 AM] (31923) Indexer background runner(2) root directory: file:///root/.vscode-server/extensions/ms-python.vscode-pylance-2024.8.2/dist (index)
+2024-09-11 07:59:42.092 [info] [Info  - 7:59:42 AM] (31923) Indexing(2) started
+2024-09-11 07:59:43.262 [info] [Info  - 7:59:43 AM] (31923) [BG(1)] Long operation: SemanticTokens range 0:0 - 65:10 at file:///root/webApp/btools/settings.py (2310ms)
+2024-09-11 07:59:45.047 [info] [Info  - 7:59:45 AM] (31923) [IDX(2)] Long operation: scan packages file:///root/webApp (2515ms)
+2024-09-11 07:59:45.047 [info] [Info  - 7:59:45 AM] (31923) scanned(2) 41 files over 1 exec env
+2024-09-11 07:59:48.823 [info] [Info  - 7:59:48 AM] (31923) indexed(2) 16 files over 1 exec env
+2024-09-11 07:59:48.846 [info] [Info  - 7:59:48 AM] (31923) Indexing finished(2).

@@ -1,0 +1,19 @@
+2024-09-05 15:37:41.056 [info] Extension host with pid 27445 started
+2024-09-05 15:37:41.234 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*'
+2024-09-05 15:37:41.258 [info] Lock '/root/.vscode-server/data/User/workspaceStorage/8949629dd5cf0999335706f43dd62ed8/vscode.lock': Lock acquired.
+2024-09-05 15:37:41.316 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2024-09-05 15:37:41.591 [info] Eager extensions activated
+2024-09-05 15:37:41.591 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2024-09-05 15:37:41.592 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2024-09-05 15:37:42.398 [info] ExtensionService#_doActivateExtension vscode.git, startup: false, activationEvent: 'api', root cause: vscode.github
+2024-09-05 15:37:46.366 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2024-09-05 15:38:13.629 [info] ExtensionService#_doActivateExtension ms-python.python, startup: false, activationEvent: 'onWalkthrough:pythonWelcome'
+2024-09-05 15:38:14.304 [info] ExtensionService#_doActivateExtension ms-python.debugpy, startup: false, activationEvent: 'onLanguage:python'
+2024-09-05 15:38:14.305 [info] ExtensionService#_doActivateExtension ms-python.vscode-pylance, startup: false, activationEvent: 'onLanguage:python'
+2024-09-05 17:38:16.115 [error] Error: connect ENETUNREACH 13.78.111.198:443
+	at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1606:16)
+2024-09-05 17:38:18.564 [error] Error: connect ENETUNREACH 13.78.111.198:443
+	at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1606:16)
+2024-09-05 19:38:49.407 [info] Extension host terminating: renderer disconnected for too long (1)
+2024-09-05 19:38:49.408 [info] Lock '/root/.vscode-server/data/User/workspaceStorage/8949629dd5cf0999335706f43dd62ed8/vscode.lock': Marking the lockfile as scheduled to be released in 6000 ms.
+2024-09-05 19:38:49.448 [info] Extension host with pid 27445 exiting with code 0

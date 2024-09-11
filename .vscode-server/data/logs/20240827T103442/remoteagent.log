@@ -1,0 +1,20 @@
+2024-08-27 10:34:42.194 [info] 
+
+
+
+
+2024-08-27 10:34:42.212 [info] Extension host agent started.
+2024-08-27 10:34:42.285 [info] [<unknown>][07aacae9][ExtensionHostConnection] New connection established.
+2024-08-27 10:34:42.292 [info] [<unknown>][21e6db1b][ManagementConnection] New connection established.
+2024-08-27 10:34:42.360 [info] [<unknown>][07aacae9][ExtensionHostConnection] <8148> Launched Extension Host Process.
+2024-08-27 10:39:42.213 [info] New EH opened, aborting shutdown
+2024-08-27 10:43:06.879 [warning] [File Watcher (node.js)] Watcher shutdown because watched path got deleted
+2024-08-27 10:44:04.420 [warning] [File Watcher (node.js)] Watcher shutdown because watched path got deleted
+2024-08-27 16:27:35.773 [info] [<unknown>][21e6db1b][ManagementConnection] The client has disconnected, will wait for reconnection 3h before disposing...
+2024-08-27 19:27:13.730 [info] [<unknown>][07aacae9][ExtensionHostConnection] <8148> Extension Host Process exited with code: 0, signal: null.
+2024-08-27 19:27:13.732 [info] Last EH closed, waiting before shutting down
+2024-08-27 19:27:13.734 [error] Error: Unexpected SIGPIPE
+    at process.<anonymous> (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/server/node/server.main.js:190:6369)
+    at process.emit (node:events:531:35)
+2024-08-27 19:27:41.596 [info] [<unknown>][21e6db1b][ManagementConnection] The reconnection grace time of 3h has expired, so the connection will be disposed.
+2024-08-27 19:32:13.733 [info] Last EH closed, shutting down

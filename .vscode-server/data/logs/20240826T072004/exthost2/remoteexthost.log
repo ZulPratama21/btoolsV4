@@ -1,0 +1,153 @@
+2024-08-26 07:20:57.748 [info] Extension host with pid 24341 started
+2024-08-26 07:20:57.848 [info] Eager extensions activated
+2024-08-26 07:20:57.992 [info] Lock '/root/.vscode-server/data/User/workspaceStorage/7d50ef09d57127cc45e205fba2300c4b/vscode.lock': Lock acquired.
+2024-08-26 07:21:00.154 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2024-08-26 07:21:00.155 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2024-08-26 07:21:00.155 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: false, activationEvent: '*', root cause: vscode.git
+2024-08-26 07:21:00.156 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2024-08-26 07:21:00.265 [info] ExtensionService#_doActivateExtension vscode.git, startup: false, activationEvent: '*'
+2024-08-26 07:21:00.266 [info] ExtensionService#_doActivateExtension vscode.github, startup: false, activationEvent: '*'
+2024-08-26 07:21:00.582 [info] ExtensionService#_doActivateExtension vscode.configuration-editing, startup: false, activationEvent: 'onLanguage:jsonc'
+2024-08-26 07:21:00.582 [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2024-08-26 07:21:00.582 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2024-08-26 07:21:08.887 [info] ExtensionService#_doActivateExtension vscode.npm, startup: false, activationEvent: 'onTerminalQuickFixRequest:ms-vscode.npm-command'
+2024-08-26 07:40:24.374 [warning] [Decorations] CAPPING events from decorations provider vscode.git 7392
+2024-08-26 07:40:25.488 [warning] [Decorations] CAPPING events from decorations provider vscode.git 7392
+2024-08-26 07:40:26.312 [error] Error: No such branch: master.
+	at N.getBranch (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/extensions/git/dist/main.js:2:936645)
+	at async T.retryRun (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/extensions/git/dist/main.js:2:1032124)
+	at async T.run (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/extensions/git/dist/main.js:2:1031728)
+	at async T.getBranch (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/extensions/git/dist/main.js:2:1020077)
+	at async T.getBranchBase (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/extensions/git/dist/main.js:2:1020363)
+	at async t.GitHistoryProvider.resolveHEADMergeBase (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/extensions/git/dist/main.js:2:948043)
+	at async t.GitHistoryProvider.onDidRunGitStatus (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/extensions/git/dist/main.js:2:941421)
+2024-08-26 07:40:26.500 [error] Error: No such branch: master.
+	at N.getBranch (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/extensions/git/dist/main.js:2:936645)
+	at async T.retryRun (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/extensions/git/dist/main.js:2:1032124)
+	at async T.run (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/extensions/git/dist/main.js:2:1031728)
+	at async T.getBranch (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/extensions/git/dist/main.js:2:1020077)
+	at async T.getBranchBase (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/extensions/git/dist/main.js:2:1020363)
+	at async t.GitHistoryProvider.resolveHEADMergeBase (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/extensions/git/dist/main.js:2:948043)
+	at async t.GitHistoryProvider.onDidRunGitStatus (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/extensions/git/dist/main.js:2:941421)
+2024-08-26 07:40:36.416 [warning] [Decorations] CAPPING events from decorations provider vscode.git 7392
+2024-08-26 07:40:37.436 [error] Error: No such branch: master.
+	at N.getBranch (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/extensions/git/dist/main.js:2:936645)
+	at async T.retryRun (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/extensions/git/dist/main.js:2:1032124)
+	at async T.run (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/extensions/git/dist/main.js:2:1031728)
+	at async T.getBranch (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/extensions/git/dist/main.js:2:1020077)
+	at async T.getBranchBase (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/extensions/git/dist/main.js:2:1020363)
+	at async t.GitHistoryProvider.resolveHEADMergeBase (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/extensions/git/dist/main.js:2:948043)
+	at async t.GitHistoryProvider.onDidRunGitStatus (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/extensions/git/dist/main.js:2:941421)
+2024-08-26 07:40:46.559 [warning] [Decorations] CAPPING events from decorations provider vscode.git 7392
+2024-08-26 07:40:47.690 [error] Error: No such branch: master.
+	at N.getBranch (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/extensions/git/dist/main.js:2:936645)
+	at async T.retryRun (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/extensions/git/dist/main.js:2:1032124)
+	at async T.run (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/extensions/git/dist/main.js:2:1031728)
+	at async T.getBranch (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/extensions/git/dist/main.js:2:1020077)
+	at async T.getBranchBase (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/extensions/git/dist/main.js:2:1020363)
+	at async t.GitHistoryProvider.resolveHEADMergeBase (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/extensions/git/dist/main.js:2:948043)
+	at async t.GitHistoryProvider.onDidRunGitStatus (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/extensions/git/dist/main.js:2:941421)
+2024-08-26 07:40:47.851 [warning] [Decorations] CAPPING events from decorations provider vscode.git 7392
+2024-08-26 07:40:49.048 [error] Error: No such branch: master.
+	at N.getBranch (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/extensions/git/dist/main.js:2:936645)
+	at async T.retryRun (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/extensions/git/dist/main.js:2:1032124)
+	at async T.run (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/extensions/git/dist/main.js:2:1031728)
+	at async T.getBranch (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/extensions/git/dist/main.js:2:1020077)
+	at async T.getBranchBase (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/extensions/git/dist/main.js:2:1020363)
+	at async t.GitHistoryProvider.resolveHEADMergeBase (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/extensions/git/dist/main.js:2:948043)
+	at async t.GitHistoryProvider.onDidRunGitStatus (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/extensions/git/dist/main.js:2:941421)
+2024-08-26 07:41:04.151 [warning] [Decorations] CAPPING events from decorations provider vscode.git 7392
+2024-08-26 07:41:05.140 [warning] [Decorations] CAPPING events from decorations provider vscode.git 1436
+2024-08-26 07:41:10.226 [warning] [Decorations] CAPPING events from decorations provider vscode.git 1436
+2024-08-26 07:41:38.406 [warning] [Decorations] CAPPING events from decorations provider vscode.git 1436
+2024-08-26 07:42:52.719 [warning] [Decorations] CAPPING events from decorations provider vscode.git 1436
+2024-08-26 07:42:53.605 [warning] [Decorations] CAPPING events from decorations provider vscode.git 1436
+2024-08-26 08:51:59.238 [warning] [Decorations] CAPPING events from decorations provider vscode.git 1439
+2024-08-26 08:52:07.127 [warning] [Decorations] CAPPING events from decorations provider vscode.git 1439
+2024-08-26 08:52:31.226 [warning] [Decorations] CAPPING events from decorations provider vscode.git 1439
+2024-08-26 08:52:36.395 [info] ExtensionService#_doActivateExtension vscode.html-language-features, startup: false, activationEvent: 'onLanguage:html'
+2024-08-26 08:54:11.403 [warning] [Decorations] CAPPING events from decorations provider vscode.git 1441
+2024-08-26 08:54:57.496 [warning] [Decorations] CAPPING events from decorations provider vscode.git 1446
+2024-08-26 08:54:57.967 [warning] [Decorations] CAPPING events from decorations provider vscode.git 1446
+2024-08-26 08:58:16.944 [warning] [Decorations] CAPPING events from decorations provider vscode.git 1446
+2024-08-26 09:05:07.398 [info] Extension host terminating: renderer disconnected for too long (2)
+2024-08-26 09:05:07.399 [info] Lock '/root/.vscode-server/data/User/workspaceStorage/7d50ef09d57127cc45e205fba2300c4b/vscode.lock': Marking the lockfile as scheduled to be released in 6000 ms.
+2024-08-26 09:05:07.442 [error] Canceled: Canceled
+	at new C (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/workbench/api/node/extensionHostProcess.js:144:35204)
+	at y.U (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/workbench/api/node/extensionHostProcess.js:151:6017)
+	at z.<computed>.j.charCodeAt.R.CharCode.DollarSign.z.<computed> (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/workbench/api/node/extensionHostProcess.js:151:3107)
+	at d.g (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/workbench/api/node/extensionHostProcess.js:154:205942)
+	at d.executeCommand (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/workbench/api/node/extensionHostProcess.js:154:205380)
+	at A.registerCommand.description (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/workbench/api/node/extensionHostProcess.js:154:204704)
+	at d.h (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/workbench/api/node/extensionHostProcess.js:154:206481)
+	at d.g (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/workbench/api/node/extensionHostProcess.js:154:205473)
+	at d.executeCommand (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/workbench/api/node/extensionHostProcess.js:154:205380)
+	at Object.executeCommand (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/workbench/api/node/extensionHostProcess.js:164:23060)
+	at i.O [as value] (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/extensions/git/dist/main.js:2:951642)
+	at n.B (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/workbench/api/node/extensionHostProcess.js:83:737)
+	at n.C (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/workbench/api/node/extensionHostProcess.js:83:807)
+	at n.fire (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/workbench/api/node/extensionHostProcess.js:83:1023)
+	at Object.p [as dispose] (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/extensions/git/dist/main.js:2:972220)
+	at /root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/extensions/git/dist/main.js:2:978342
+	at Array.forEach (<anonymous>)
+	at f.dispose (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/extensions/git/dist/main.js:2:978328)
+	at a.<anonymous> (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/workbench/api/node/extensionHostProcess.js:152:4173)
+	at a.dispose (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/workbench/api/node/extensionHostProcess.js:152:4270)
+	at a.<anonymous> (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/extensions/git/dist/main.js:2:953940)
+	at a.dispose (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/workbench/api/node/extensionHostProcess.js:152:4270)
+	at $ (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/workbench/api/node/extensionHostProcess.js:30:744)
+	at /root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/workbench/api/node/extensionHostProcess.js:160:13379
+	at /root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/workbench/api/node/extensionHostProcess.js:30:1112
+	at Object.dispose (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/workbench/api/node/extensionHostProcess.js:11:11354)
+	at m.eb (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/workbench/api/node/extensionHostProcess.js:160:10056)
+	at /root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/workbench/api/node/extensionHostProcess.js:160:7927
+	at Array.map (<anonymous>)
+	at m.$ (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/workbench/api/node/extensionHostProcess.js:160:7914)
+	at m.terminate (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/workbench/api/node/extensionHostProcess.js:160:8187)
+	at $.terminate (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/workbench/api/node/extensionHostProcess.js:164:1513)
+	at o (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/workbench/api/node/extensionHostProcess.js:177:10633)
+	at j.a (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/workbench/api/node/extensionHostProcess.js:177:7301)
+	at j.h (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/workbench/api/node/extensionHostProcess.js:87:21483)
+	at listOnTimeout (node:internal/timers:573:17)
+	at process.processTimers (node:internal/timers:514:7) setContext undefined
+2024-08-26 09:05:07.443 [error] Canceled: Canceled
+	at new C (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/workbench/api/node/extensionHostProcess.js:144:35204)
+	at y.U (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/workbench/api/node/extensionHostProcess.js:151:6017)
+	at z.<computed>.j.charCodeAt.R.CharCode.DollarSign.z.<computed> (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/workbench/api/node/extensionHostProcess.js:151:3107)
+	at d.g (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/workbench/api/node/extensionHostProcess.js:154:205942)
+	at d.executeCommand (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/workbench/api/node/extensionHostProcess.js:154:205380)
+	at A.registerCommand.description (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/workbench/api/node/extensionHostProcess.js:154:204704)
+	at d.h (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/workbench/api/node/extensionHostProcess.js:154:206481)
+	at d.g (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/workbench/api/node/extensionHostProcess.js:154:205473)
+	at d.executeCommand (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/workbench/api/node/extensionHostProcess.js:154:205380)
+	at Object.executeCommand (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/workbench/api/node/extensionHostProcess.js:164:23060)
+	at set hasGitHubRepositories [as hasGitHubRepositories] (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/extensions/github/dist/extension.js:2:322969)
+	at /root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/extensions/github/dist/extension.js:2:323928
+	at i.value (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/extensions/git/dist/main.js:2:1060193)
+	at n.B (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/workbench/api/node/extensionHostProcess.js:83:737)
+	at n.C (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/workbench/api/node/extensionHostProcess.js:83:807)
+	at n.fire (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/workbench/api/node/extensionHostProcess.js:83:1023)
+	at Object.p [as dispose] (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/extensions/git/dist/main.js:2:972220)
+	at /root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/extensions/git/dist/main.js:2:978342
+	at Array.forEach (<anonymous>)
+	at f.dispose (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/extensions/git/dist/main.js:2:978328)
+	at a.<anonymous> (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/workbench/api/node/extensionHostProcess.js:152:4173)
+	at a.dispose (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/workbench/api/node/extensionHostProcess.js:152:4270)
+	at a.<anonymous> (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/extensions/git/dist/main.js:2:953940)
+	at a.dispose (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/workbench/api/node/extensionHostProcess.js:152:4270)
+	at $ (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/workbench/api/node/extensionHostProcess.js:30:744)
+	at /root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/workbench/api/node/extensionHostProcess.js:160:13379
+	at /root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/workbench/api/node/extensionHostProcess.js:30:1112
+	at Object.dispose (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/workbench/api/node/extensionHostProcess.js:11:11354)
+	at m.eb (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/workbench/api/node/extensionHostProcess.js:160:10056)
+	at /root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/workbench/api/node/extensionHostProcess.js:160:7927
+	at Array.map (<anonymous>)
+	at m.$ (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/workbench/api/node/extensionHostProcess.js:160:7914)
+	at m.terminate (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/workbench/api/node/extensionHostProcess.js:160:8187)
+	at $.terminate (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/workbench/api/node/extensionHostProcess.js:164:1513)
+	at o (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/workbench/api/node/extensionHostProcess.js:177:10633)
+	at j.a (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/workbench/api/node/extensionHostProcess.js:177:7301)
+	at j.h (/root/.vscode-server/cli/servers/Stable-fee1edb8d6d72a0ddff41e5f71a671c23ed924b9/server/out/vs/workbench/api/node/extensionHostProcess.js:87:21483)
+	at listOnTimeout (node:internal/timers:573:17)
+	at process.processTimers (node:internal/timers:514:7) setContext undefined
+2024-08-26 09:05:07.446 [info] Extension host with pid 24341 exiting with code 0
