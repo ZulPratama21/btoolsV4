@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="{% static 'vendor/bootstrap/bootstrap.css' %}">
+
+  <title>Logout Confirmation</title>
+
+</head>
+<body>
+  <div class="container d-flex justify-content-center align-items-center vh-100">
+    <div class="card shadow-lg">
+      <div class="card-body text-center">
+        <h2 class="card-title mb-4">Are you sure you want to logout?</h2>
+        <div class="d-flex justify-content-around">
+            <form method="POST">
+                {% csrf_token %}
+                <input type="submit" name="logout" class="btn btn-danger" value="   yes   "></button>
+          <a href="{% url 'dashboard' %}" name="cancel" class="btn btn-secondary">Cancel</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="{% static 'vendor/bootstrap/bootstrap.js' %}"></script>
+
+</body>
+</html>
