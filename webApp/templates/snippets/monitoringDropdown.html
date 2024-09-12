@@ -1,0 +1,123 @@
+<a class="list-group-item list-group-item-action list-group-item-light p-3 
+{% if 'monitoring' in request.path %}active{% endif %}" 
+data-bs-toggle="collapse" 
+href="#collapseMonitoring" 
+role="button" 
+aria-expanded="{% if 'monitoring' in request.path %}true{% else %}false{% endif %}" 
+aria-controls="collapseMonitoring">
+Monitoring <i class="bi bi-display"></i>
+</a>
+<div class="collapse {% if 'monitoring' in request.path %}show{% endif %}" id="collapseMonitoring">
+<div class="list-group">
+    <a class="list-group-item list-group-item-light p-3 
+        {% if request.resolver_match.kwargs.templateName == 'librenms' %}active{% endif %}" 
+        href="{% url 'monitoring:monitoringViews' templateName='librenms' %}">
+        <i class="bi bi-dot"></i> Libre NMS <i class="bi bi-diagram-3-fill"></i>
+    </a>
+
+    <a class="list-group-item list-group-item-light p-3 
+        {% if request.resolver_match.kwargs.templateName == 'smokeping' %}active{% endif %}" 
+        href="{% url 'monitoring:monitoringViews' templateName='smokeping' %}">
+        <i class="bi bi-dot"></i> SmokePing <i class="bi bi-graph-up"></i>
+    </a>
+
+    <a class="list-group-item list-group-item-light p-3 
+        {% if request.resolver_match.kwargs.templateName == 'graylog' %}active{% endif %}" 
+        href="{% url 'monitoring:monitoringViews' templateName='graylog' %}">
+        <i class="bi bi-dot"></i> Graylog <i class="bi bi-card-text"></i></i>
+    </a>
+    
+    <!-- Nagios with Submenu -->
+    <a class="list-group-item list-group-item-light p-3 
+        {% if 'nagios' in request.path %}active{% endif %}" 
+        data-bs-toggle="collapse" 
+        href="#collapseNagios" 
+        role="button" 
+        aria-expanded="{% if 'nagios' in request.path %}true{% else %}false{% endif %}" 
+        aria-controls="collapseNagios">
+        <i class="bi bi-dot"></i> Nagios <i class="bi bi-arrow-down-up"></i>
+    </a>
+    <div class="collapse {% if 'nagios' in request.path %}show{% endif %}" id="collapseNagios">
+        <div class="list-group">
+            <a class="list-group-item list-group-item-light p-3 
+                {% if request.resolver_match.kwargs.templateName == 'nagiosmap51' %}active
+                {% elif request.resolver_match.kwargs.templateName == 'nagiosmap52' %}active
+                {% elif request.resolver_match.kwargs.templateName == 'nagiosmap53' %}active
+                {% elif request.resolver_match.kwargs.templateName == 'nagiosmap54' %}active
+                {% else %}
+                {% endif %}" 
+                data-bs-toggle="collapse" 
+                href="#collapseMap" 
+                role="button" 
+                aria-expanded="{% if 'map' in request.path %}true{% else %}false{% endif %}" 
+                aria-controls="collapseMap">
+                <i class="bi bi-dot"></i> <i class="bi bi-dot"></i> MAP
+            </a>
+            <div class="collapse {% if 'map' in request.path %}show{% endif %}" id="collapseMap">
+                <div class="list-group">
+                    <a class="list-group-item list-group-item-light p-3 
+                        {% if request.resolver_match.kwargs.templateName == 'nagiosmap51' %}active{% endif %}" 
+                        href="{% url 'monitoring:monitoringViews' templateName='nagiosmap51' %}">
+                        <i class="bi bi-dot"></i> <i class="bi bi-dot"></i> <i class="bi bi-dot"></i> 51 POP-Core
+                    </a>
+                    <a class="list-group-item list-group-item-light p-3 
+                        {% if request.resolver_match.kwargs.templateName == 'nagiosmap52' %}active{% endif %}" 
+                        href="{% url 'monitoring:monitoringViews' templateName='nagiosmap52' %}">
+                        <i class="bi bi-dot"></i> <i class="bi bi-dot"></i> <i class="bi bi-dot"></i> 52 BHome
+                    </a>
+                    <a class="list-group-item list-group-item-light p-3 
+                        {% if request.resolver_match.kwargs.templateName == 'nagiosmap53' %}active{% endif %}" 
+                        href="{% url 'monitoring:monitoringViews' templateName='nagiosmap53' %}">
+                        <i class="bi bi-dot"></i> <i class="bi bi-dot"></i> <i class="bi bi-dot"></i> 53 All-POP
+                    </a>
+                    <a class="list-group-item list-group-item-light p-3 
+                        {% if request.resolver_match.kwargs.templateName == 'nagiosmap54' %}active{% endif %}" 
+                        href="{% url 'monitoring:monitoringViews' templateName='nagiosmap54' %}">
+                        <i class="bi bi-dot"></i> <i class="bi bi-dot"></i> <i class="bi bi-dot"></i> 54 Server
+                    </a>
+                </div>
+            </div>
+            
+            <a class="list-group-item list-group-item-light p-3 
+                {% if request.resolver_match.kwargs.templateName == 'nagioshostUnhandled51' %}active
+                {% elif request.resolver_match.kwargs.templateName == 'nagioshostUnhandled52' %}active
+                {% elif request.resolver_match.kwargs.templateName == 'nagioshostUnhandled53' %}active
+                {% elif request.resolver_match.kwargs.templateName == 'nagioshostUnhandled54' %}active
+                {% else %}
+                {% endif %}" 
+                data-bs-toggle="collapse" 
+                href="#collapsehostUnhandled" 
+                role="button" 
+                aria-expanded="{% if 'hostUnhandled' in request.path %}true{% else %}false{% endif %}" 
+                aria-controls="collapsehostUnhandled">
+                <i class="bi bi-dot"></i> <i class="bi bi-dot"></i> Host Unhandled
+            </a>
+            <div class="collapse {% if 'hostUnhandled' in request.path %}show{% endif %}" id="collapsehostUnhandled">
+                <div class="list-group">
+                    <a class="list-group-item list-group-item-light p-3 
+                        {% if request.resolver_match.kwargs.templateName == 'nagioshostUnhandled51' %}active{% endif %}" 
+                        href="{% url 'monitoring:monitoringViews' templateName='nagioshostUnhandled51' %}">
+                        <i class="bi bi-dot"></i> <i class="bi bi-dot"></i> <i class="bi bi-dot"></i> 51 POP-Core
+                    </a>
+                    <a class="list-group-item list-group-item-light p-3 
+                        {% if request.resolver_match.kwargs.templateName == 'nagioshostUnhandled52' %}active{% endif %}" 
+                        href="{% url 'monitoring:monitoringViews' templateName='nagioshostUnhandled52' %}">
+                        <i class="bi bi-dot"></i> <i class="bi bi-dot"></i> <i class="bi bi-dot"></i> 52 BHome
+                    </a>
+                    <a class="list-group-item list-group-item-light p-3 
+                        {% if request.resolver_match.kwargs.templateName == 'nagioshostUnhandled53' %}active{% endif %}" 
+                        href="{% url 'monitoring:monitoringViews' templateName='nagioshostUnhandled53' %}">
+                        <i class="bi bi-dot"></i> <i class="bi bi-dot"></i> <i class="bi bi-dot"></i> 53 All-POP
+                    </a>
+                    <a class="list-group-item list-group-item-light p-3 
+                        {% if request.resolver_match.kwargs.templateName == 'nagioshostUnhandled54' %}active{% endif %}" 
+                        href="{% url 'monitoring:monitoringViews' templateName='nagioshostUnhandled54' %}">
+                        <i class="bi bi-dot"></i> <i class="bi bi-dot"></i> <i class="bi bi-dot"></i> 54 Server
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</div>

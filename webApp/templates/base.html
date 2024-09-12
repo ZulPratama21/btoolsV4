@@ -21,183 +21,20 @@
                 <a class="list-group-item list-group-item-action list-group-item-light p-3 {% block dashboard %}{% endblock %}" href="/">Dashboard</a>
                 
                 <!-- Configuration Dropdown -->
-                <a class="list-group-item list-group-item-action list-group-item-light p-3" data-bs-toggle="collapse" href="#collapseConfiguration" role="button" aria-expanded="false" aria-controls="collapseConfiguration">
-                    Configuration
-                </a>
-                <div class="collapse" id="collapseConfiguration">
-                    <div class="list-group">
-                        <a class="list-group-item list-group-item-light p-3" href="#!">Submenu 1</a>
-                        <a class="list-group-item list-group-item-light p-3" href="#!">Submenu 2</a>
-                        <a class="list-group-item list-group-item-light p-3" href="#!">Submenu 3</a>
-                    </div>
-                </div>
+                {% include "snippets/configurationDropdown.html" %}
 
                 <!-- Troubleshoot Dropdown -->
-                <a class="list-group-item list-group-item-action list-group-item-light p-3" data-bs-toggle="collapse" href="#collapseTroubleshoot" role="button" aria-expanded="false" aria-controls="collapseConfiguration">
-                    Troubleshoot
-                </a>
-                <div class="collapse" id="collapseTroubleshoot">
-                    <div class="list-group">
-                        <a class="list-group-item list-group-item-light p-3" href="#!">Submenu 1</a>
-                        <a class="list-group-item list-group-item-light p-3" href="#!">Submenu 2</a>
-                        <a class="list-group-item list-group-item-light p-3" href="#!">Submenu 3</a>
-                    </div>
-                </div>
+                {% include "snippets/troubleshootDropdown.html" %}
 
                 <!-- Maintenance Dropdown -->
-                <a class="list-group-item list-group-item-action list-group-item-light p-3" data-bs-toggle="collapse" href="#collapseMaintenance" role="button" aria-expanded="false" aria-controls="collapseConfiguration">
-                    Maintenance
-                </a>
-                <div class="collapse" id="collapseMaintenance">
-                    <div class="list-group">
-                        <a class="list-group-item list-group-item-light p-3" href="#!">Submenu 1</a>
-                        <a class="list-group-item list-group-item-light p-3" href="#!">Submenu 2</a>
-                        <a class="list-group-item list-group-item-light p-3" href="#!">Submenu 3</a>
-                    </div>
-                </div>
+                {% include "snippets/maintenanceDropdown.html" %}
 
                 <!-- Monitoring Dropdown -->
-                <a class="list-group-item list-group-item-action list-group-item-light p-3 
-                    {% if 'monitoring' in request.path %}active{% endif %}" 
-                    data-bs-toggle="collapse" 
-                    href="#collapseMonitoring" 
-                    role="button" 
-                    aria-expanded="{% if 'monitoring' in request.path %}true{% else %}false{% endif %}" 
-                    aria-controls="collapseMonitoring">
-                    Monitoring
-                </a>
-                <div class="collapse {% if 'monitoring' in request.path %}show{% endif %}" id="collapseMonitoring">
-                    <div class="list-group">
-                        <a class="list-group-item list-group-item-light p-3 
-                            {% if request.resolver_match.kwargs.templateName == 'librenms' %}active{% endif %}" 
-                            href="{% url 'monitoring:monitoringViews' templateName='librenms' %}">
-                            <i class="bi bi-dot"></i> Libre NMS <i class="bi bi-diagram-3-fill"></i>
-                        </a>
-
-                        <a class="list-group-item list-group-item-light p-3 
-                            {% if request.resolver_match.kwargs.templateName == 'smokeping' %}active{% endif %}" 
-                            href="{% url 'monitoring:monitoringViews' templateName='smokeping' %}">
-                            <i class="bi bi-dot"></i> SmokePing <i class="bi bi-graph-up"></i>
-                        </a>
-
-                        <a class="list-group-item list-group-item-light p-3 
-                            {% if request.resolver_match.kwargs.templateName == 'graylog' %}active{% endif %}" 
-                            href="{% url 'monitoring:monitoringViews' templateName='graylog' %}">
-                            <i class="bi bi-dot"></i> Graylog <i class="bi bi-card-text"></i></i>
-                        </a>
-                        
-                        <!-- Nagios with Submenu -->
-                        <a class="list-group-item list-group-item-light p-3 
-                            {% if 'nagios' in request.path %}active{% endif %}" 
-                            data-bs-toggle="collapse" 
-                            href="#collapseNagios" 
-                            role="button" 
-                            aria-expanded="{% if 'nagios' in request.path %}true{% else %}false{% endif %}" 
-                            aria-controls="collapseNagios">
-                            <i class="bi bi-dot"></i> Nagios <i class="bi bi-arrow-down-up"></i>
-                        </a>
-                        <div class="collapse {% if 'nagios' in request.path %}show{% endif %}" id="collapseNagios">
-                            <div class="list-group">
-                                <a class="list-group-item list-group-item-light p-3 
-                                    {% if request.resolver_match.kwargs.templateName == 'nagiosmap51' %}active
-                                    {% elif request.resolver_match.kwargs.templateName == 'nagiosmap52' %}active
-                                    {% elif request.resolver_match.kwargs.templateName == 'nagiosmap53' %}active
-                                    {% elif request.resolver_match.kwargs.templateName == 'nagiosmap54' %}active
-                                    {% else %}
-                                    {% endif %}" 
-                                    data-bs-toggle="collapse" 
-                                    href="#collapseMap" 
-                                    role="button" 
-                                    aria-expanded="{% if 'map' in request.path %}true{% else %}false{% endif %}" 
-                                    aria-controls="collapseMap">
-                                    <i class="bi bi-dot"></i> <i class="bi bi-dot"></i> MAP
-                                </a>
-                                <div class="collapse {% if 'map' in request.path %}show{% endif %}" id="collapseMap">
-                                    <div class="list-group">
-                                        <a class="list-group-item list-group-item-light p-3 
-                                            {% if request.resolver_match.kwargs.templateName == 'nagiosmap51' %}active{% endif %}" 
-                                            href="{% url 'monitoring:monitoringViews' templateName='nagiosmap51' %}">
-                                            <i class="bi bi-dot"></i> <i class="bi bi-dot"></i> <i class="bi bi-dot"></i> 51 POP-Core
-                                        </a>
-                                        <a class="list-group-item list-group-item-light p-3 
-                                            {% if request.resolver_match.kwargs.templateName == 'nagiosmap52' %}active{% endif %}" 
-                                            href="{% url 'monitoring:monitoringViews' templateName='nagiosmap52' %}">
-                                            <i class="bi bi-dot"></i> <i class="bi bi-dot"></i> <i class="bi bi-dot"></i> 52 BHome
-                                        </a>
-                                        <a class="list-group-item list-group-item-light p-3 
-                                            {% if request.resolver_match.kwargs.templateName == 'nagiosmap53' %}active{% endif %}" 
-                                            href="{% url 'monitoring:monitoringViews' templateName='nagiosmap53' %}">
-                                            <i class="bi bi-dot"></i> <i class="bi bi-dot"></i> <i class="bi bi-dot"></i> 53 All-POP
-                                        </a>
-                                        <a class="list-group-item list-group-item-light p-3 
-                                            {% if request.resolver_match.kwargs.templateName == 'nagiosmap54' %}active{% endif %}" 
-                                            href="{% url 'monitoring:monitoringViews' templateName='nagiosmap54' %}">
-                                            <i class="bi bi-dot"></i> <i class="bi bi-dot"></i> <i class="bi bi-dot"></i> 54 Server
-                                        </a>
-                                    </div>
-                                </div>
-                                
-                                <a class="list-group-item list-group-item-light p-3 
-                                    {% if request.resolver_match.kwargs.templateName == 'nagioshostUnhandled51' %}active
-                                    {% elif request.resolver_match.kwargs.templateName == 'nagioshostUnhandled52' %}active
-                                    {% elif request.resolver_match.kwargs.templateName == 'nagioshostUnhandled53' %}active
-                                    {% elif request.resolver_match.kwargs.templateName == 'nagioshostUnhandled54' %}active
-                                    {% else %}
-                                    {% endif %}" 
-                                    data-bs-toggle="collapse" 
-                                    href="#collapsehostUnhandled" 
-                                    role="button" 
-                                    aria-expanded="{% if 'hostUnhandled' in request.path %}true{% else %}false{% endif %}" 
-                                    aria-controls="collapsehostUnhandled">
-                                    <i class="bi bi-dot"></i> <i class="bi bi-dot"></i> Host Unhandled
-                                </a>
-                                <div class="collapse {% if 'hostUnhandled' in request.path %}show{% endif %}" id="collapsehostUnhandled">
-                                    <div class="list-group">
-                                        <a class="list-group-item list-group-item-light p-3 
-                                            {% if request.resolver_match.kwargs.templateName == 'nagioshostUnhandled51' %}active{% endif %}" 
-                                            href="{% url 'monitoring:monitoringViews' templateName='nagioshostUnhandled51' %}">
-                                            <i class="bi bi-dot"></i> <i class="bi bi-dot"></i> <i class="bi bi-dot"></i> 51 POP-Core
-                                        </a>
-                                        <a class="list-group-item list-group-item-light p-3 
-                                            {% if request.resolver_match.kwargs.templateName == 'nagioshostUnhandled52' %}active{% endif %}" 
-                                            href="{% url 'monitoring:monitoringViews' templateName='nagioshostUnhandled52' %}">
-                                            <i class="bi bi-dot"></i> <i class="bi bi-dot"></i> <i class="bi bi-dot"></i> 52 BHome
-                                        </a>
-                                        <a class="list-group-item list-group-item-light p-3 
-                                            {% if request.resolver_match.kwargs.templateName == 'nagioshostUnhandled53' %}active{% endif %}" 
-                                            href="{% url 'monitoring:monitoringViews' templateName='nagioshostUnhandled53' %}">
-                                            <i class="bi bi-dot"></i> <i class="bi bi-dot"></i> <i class="bi bi-dot"></i> 53 All-POP
-                                        </a>
-                                        <a class="list-group-item list-group-item-light p-3 
-                                            {% if request.resolver_match.kwargs.templateName == 'nagioshostUnhandled54' %}active{% endif %}" 
-                                            href="{% url 'monitoring:monitoringViews' templateName='nagioshostUnhandled54' %}">
-                                            <i class="bi bi-dot"></i> <i class="bi bi-dot"></i> <i class="bi bi-dot"></i> 54 Server
-                                        </a>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                {% include "snippets/monitoringDropdown.html" %}
 
 
                 <!-- Databases Dropdown -->
-                <a class="list-group-item list-group-item-action list-group-item-light p-3" 
-                data-bs-toggle="collapse" 
-                href="#collapseDatabases" 
-                role="button" 
-                aria-expanded="{% if 'databases' in request.path %}true{% else %}false{% endif %}" 
-                aria-controls="collapseDatabases">
-                    Databases
-                </a>
-                <div class="collapse {% if 'databases' in request.path %}show{% endif %}" id="collapseDatabases">
-                    <div class="list-group">
-                        <a class="list-group-item list-group-item-light p-3" href="#!">Submenu 1</a>
-                        <a class="list-group-item list-group-item-light p-3" href="#!">Submenu 2</a>
-                        <a class="list-group-item list-group-item-light p-3" href="#!">Submenu 3</a>
-                    </div>
-                </div>
+                {% include "snippets/databasesDropdown.html" %}
 
 
             </div>
@@ -207,24 +44,8 @@
         <div id="page-content-wrapper">
 
             <!-- Top navigation-->
-            <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-                <div class="container-fluid">
-                    <button class="btn btn-light me-3" id="sidebarToggle"><i class="bi bi-backspace-fill" id="toggleIcon"></i></button>
-                    <img src="{% static 'img/bnet.png' %}" id="logo">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ user }}</a>
-                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
-                                </div>
-                            </li>
-                            <li class="nav-item active"><a class="nav-link" href="#!"><i class="bi bi-person-circle"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
+            {% include "snippets/topNav.html" %}
+
             {% block content %}
 
             {% endblock content %}
