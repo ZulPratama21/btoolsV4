@@ -1,9 +1,9 @@
 from django.urls import path
 
-from . import views
+from .views import MonitoringViews
 
 app_name = 'monitoring'
 
 urlpatterns = [
-    path('smokeping/', views.smokeping, name='smokeping'),
+    path('<str:templateName>/', MonitoringViews.as_view(), name='monitoringViews'),
 ]
