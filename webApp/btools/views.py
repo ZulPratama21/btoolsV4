@@ -6,6 +6,8 @@ from django.contrib import messages
 def loginView(request):
 	if request.user.is_authenticated:
 		return redirect('dashboard')
+	
+	next_url = request.GET.get('next', 'dashboard')
 
 	if request.method == "POST":
 		username_login = request.POST['username']
@@ -16,7 +18,7 @@ def loginView(request):
 		if user is not None:
 			login(request, user)
 			messages.success(request, user.username)
-			return redirect('dashboard')
+			return redirect(next_url)
 		else:
 			messages.warning(request, 'Username atau Password SALAH!!!')
 			return redirect('login')
@@ -32,5 +34,6 @@ def logoutView(request):
 		return redirect('login')
 	return render(request, 'logout.html')
 
+@login_required(redirect_field_name='next', login_url='/login')
 def dashboard(request):
 	return render(request, 'dashboard.html')
