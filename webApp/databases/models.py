@@ -2,17 +2,9 @@ from django.db import models
 
 # Create your models here.
 
-# Get User From Auth_User Django
-from django.contrib.auth.models import User
-listUser = User.objects.all()
-userChoices = tuple(
-    (user.first_name.capitalize(), user.username) for user in listUser
-)
-
 class UserDevice(models.Model):
 	user	= models.CharField(
 		max_length = 100,
-		choices = userChoices,
 		default = 'admin',
 		)
 	

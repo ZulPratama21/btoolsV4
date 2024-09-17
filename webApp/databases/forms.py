@@ -1,5 +1,5 @@
 from django import forms
-from django.contrib import admin
+from django.contrib.auth.models import User
 from django.conf import settings
 from .models import UserDevice
 from cryptography.fernet import Fernet
@@ -7,6 +7,10 @@ from cryptography.fernet import Fernet
 cipher = Fernet(settings.ENCRYPTION_KEY)
 
 class UserDeviceForm(forms.ModelForm):
+    user = forms.ChoiceField(
+        initial='admin',
+    )
+
     password = forms.CharField(
         widget=forms.PasswordInput,
         label="Password",
@@ -20,6 +24,10 @@ class UserDeviceForm(forms.ModelForm):
         model = UserDevice
         fields = ['user', 'password', 'confirm_password', 'group']
         field_order = ['user', 'password', 'confirm_password', 'group']
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['user'].choices = [(user.username, user.first_name.capitalize()) for user in User.objects.all()]
 
     def clean(self):
         cleaned_data = super().clean()
