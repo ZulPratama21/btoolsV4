@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 
+import os
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -21,6 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-bc=ud82iqqdbrg4#j7h_o9k#im-q$nx!67m0!4n5zd*#*&6i*%'
+
+# KEY For User Device
+ENCRYPTION_KEY = os.getenv('ENCRYPTION_KEY', b'ov2-HenUg7oCHCWsZcZB_XfPBtjx4QgvPNN96N7J1aQ=')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -38,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'monitoring',
+    'databases',
 ]
 
 MIDDLEWARE = [
