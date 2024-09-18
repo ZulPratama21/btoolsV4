@@ -20,6 +20,7 @@ from django.urls import path, include
 from . import views
 
 urlpatterns = [
+    path("troubleshoot/", include('troubleshoot.urls', namespace='troubleshoot')),
     path("monitoring/", include('monitoring.urls', namespace='monitoring')),
     path('login/', views.loginView, name='login'),
     path('logout/', views.logoutView, name='logout'),
