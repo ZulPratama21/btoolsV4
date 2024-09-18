@@ -4,6 +4,6 @@ from . import views
 app_name = 'troubleshoot'
 
 urlpatterns = [
-    path('traffic-data/', views.get_traffic_data, name='traffic-data'),
+    path('getData/', views.get_traffic_data, name='getData'),
     path('bhomeFtth/', views.bhomeFtth, name='bhomeFtth')
 ]

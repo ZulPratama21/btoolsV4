@@ -1,81 +1,17 @@
+{% extends 'base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Traffic Monitoring</title>
+{% block content %}
+    <div class="container">
+        <h1>Troubleshoot BHome FTTH</h1>
+        <p>Status: <span id="status">x</span></p>
+        <p>MAX Upload: <span id="maxUpload">0</span> mbps</p>
+        <p>MAX Download: <span id="maxDownload">0</span> mbps</p>
+        <p>Traffic Upload: <span id="tUpload">0</span> mbps</p>
+        <p>Traffic Download: <span id="tDownload">0</span> mbps</p>
+        <p>Latency: <span id="latency">0</span> ms</p>
+    </div>
 
-</head>
-<body>
-    <h1>Router Traffic Monitoring</h1>
-    <canvas id="trafficChart" style="width: 500px; height: auto;"></canvas>
-    <p>RX Bytes: <span id="rxBytes">0</span> Mbps</p>
-    <p>TX Bytes: <span id="txBytes">0</span> Mbps</p>
-
-    <!-- Chart.js -->
     <script src="{% static 'vendor/chartJs/chart.js' %}"></script>
-
-    <!-- Adapter Time untuk Chart.js -->
     <script src="{% static 'vendor/chartJs/chartjs-adapter-date-fns' %}/"></script>
-    
-    <script>
-        const ctx = document.getElementById('trafficChart').getContext('2d');
-        const trafficChart = new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: [], // Waktu akan diisi di sini
-                datasets: [
-                    {
-                        label: 'RX Bytes',
-                        data: [],
-                        borderColor: 'rgba(75, 192, 192, 1)',
-                        fill: false,
-                    },
-                    {
-                        label: 'TX Bytes',
-                        data: [],
-                        borderColor: 'rgba(255, 99, 132, 1)',
-                        fill: false,
-                    }
-                ]
-            },
-            options: {
-                scales: {
-                    x: {
-                        type: 'time',
-                        time: {
-                            unit: 'second'
-                        }
-                    }
-                }
-            }
-        });
-    
-        // Function untuk update chart dan tampilkan data
-        function updateTrafficData() {
-            fetch('/troubleshoot/traffic-data/')
-                .then(response => response.json())
-                .then(data => {
-                    const now = new Date();
-    
-                    // Tambahkan data ke chart
-                    trafficChart.data.labels.push(now);
-                    trafficChart.data.datasets[0].data.push(data.rx_bytes);
-                    trafficChart.data.datasets[1].data.push(data.tx_bytes);
-    
-                    // Update chart
-                    trafficChart.update();
-    
-                    // Update nilai di bawah chart
-                    document.getElementById('rxBytes').textContent = data.rx_bytes;
-                    document.getElementById('txBytes').textContent = data.tx_bytes;
-                });
-        }
-    
-        // Polling tiap 5 detik
-        setInterval(updateTrafficData, 5000);
-    </script>
-    
-</body>
-</html>
+    <script src="{% static 'js/troubleshootBhomeFtth.js' %}"></script>
+{% endblock content %}
