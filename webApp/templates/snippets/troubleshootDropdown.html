@@ -1,10 +1,38 @@
-<a class="list-group-item list-group-item-action list-group-item-light p-3" data-bs-toggle="collapse" href="#collapseTroubleshoot" role="button" aria-expanded="false" aria-controls="collapseConfiguration">
+<a class="list-group-item list-group-item-action list-group-item-light p-3
+{% if 'troubleshoot' in request.path %}active{% endif %}"
+data-bs-toggle="collapse"
+href="#collapseTroubleshoot"
+role="button"
+aria-expanded="false"
+aria-controls="collapseConfiguration">
     Troubleshoot <i class="bi bi-wrench"></i>
 </a>
-<div class="collapse" id="collapseTroubleshoot">
+<div class="collapse {% if 'troubleshoot' in request.path %}show{% endif %}" id="collapseTroubleshoot">
     <div class="list-group">
-        <a class="list-group-item list-group-item-light p-3" href="#!">Submenu 1</a>
-        <a class="list-group-item list-group-item-light p-3" href="#!">Submenu 2</a>
-        <a class="list-group-item list-group-item-light p-3" href="#!">Submenu 3</a>
+        <div class="list-group">
+            <a class="list-group-item list-group-item-light p-3 
+                {% if 'bhomeFtth' in request.path  %}active
+                {% endif %}" 
+                data-bs-toggle="collapse" 
+                href="#collapseBhome" 
+                role="button" 
+                aria-expanded="{% if 'bhome' in request.path %}true{% else %}false{% endif %}" 
+                aria-controls="collapseBhome">
+                <i class="bi bi-dot"></i>  BHome
+            </a>
+            <div class="collapse {% if 'bhomeFtth' in request.path %}show{% endif %}" id="collapseBhome">
+                <div class="list-group">
+                    <a class="list-group-item list-group-item-light p-3 
+                        {% if 'bhomeFtth' in request.path %}active{% endif %}" 
+                        href="{% url 'troubleshoot:bhomeFtth' %}">
+                        <i class="bi bi-dot"></i> <i class="bi bi-dot"></i> BHome FTTH
+                    </a>      
+                    <a class="list-group-item list-group-item-light p-3" href="#!">
+                        <i class="bi bi-dot"></i> <i class="bi bi-dot"></i> BHome Wireless
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+

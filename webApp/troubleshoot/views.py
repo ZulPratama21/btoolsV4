@@ -3,6 +3,7 @@ from django.shortcuts import render
 # Create your views here.
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
+from django.contrib.auth.decorators import login_required
 
 from .scriptNetmation import troubleshootBhomeFtth
 
@@ -17,12 +18,12 @@ def getData(request):
             dataRouter = troubleshootBhomeFtth.getDataRouter(idLoc, host, 'jul', 'Juliandi123!@#', '8728')
 
         except Exception as e:
-            error = 'Failed to find location ID'
+            error = 'null'
             continue
 
     if dataRouter is None:
         return JsonResponse({
-            'statusClient': f'Error ({error})',
+            'statusClient': error,
             'maxUpload': 'X',
             'maxDownload': 'X',
             'tUpload': 'X',
@@ -32,5 +33,6 @@ def getData(request):
     else:
         return JsonResponse(dataRouter)
 
+@login_required(redirect_field_name='next', login_url='/login')
 def bhomeFtth(request):
     return render(request, 'troubleshoot/bhomeFtth.html')

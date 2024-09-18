@@ -11,15 +11,13 @@
         </form>
 
         <p>Status: <span id="status">x</span></p>
-        <p>MAX Upload: <span id="maxUpload">0</span> mbps</p>
-        <p>MAX Download: <span id="maxDownload">0</span> mbps</p>
+        <p>Max Upload: <span id="maxUpload">0</span> mbps</p>
+        <p>Max Download: <span id="maxDownload">0</span> mbps</p>
         <p>Traffic Upload: <span id="tUpload">0</span> mbps</p>
         <p>Traffic Download: <span id="tDownload">0</span> mbps</p>
         <p>Latency: <span id="latency">0</span> ms</p>
     </div>
 
-    <script src="{% static 'vendor/chartJs/chart.js' %}"></script>
-    <script src="{% static 'vendor/chartJs/chartjs-adapter-date-fns' %}/"></script>
     <script src="{% static 'vendor/bootstrap/jquery.js' %}"></script>
     <script src="{% static 'js/troubleshootBhomeFtth.js' %}"></script>
 {% endblock content %}
