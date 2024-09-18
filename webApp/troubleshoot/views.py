@@ -4,6 +4,7 @@ from django.shortcuts import render
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth.decorators import login_required
+import json
 
 from .scriptNetmation import troubleshootBhomeFtth
 
@@ -30,8 +31,14 @@ def getData(request):
             'tDownload': 'X',
             'latency': 'X',
         })
-    else:
-        return JsonResponse(dataRouter)
+    
+    dataOlt = troubleshootBhomeFtth.getDataOlt('172.16.1.106','intbnet',1,'1')
+
+    dataAll = {**dataRouter, **dataOlt}
+
+    print(json.dumps(dataAll, indent=4))
+
+    return JsonResponse(dataAll)
 
 @login_required(redirect_field_name='next', login_url='/login')
 def bhomeFtth(request):

@@ -17,6 +17,13 @@ function updateTrafficData() {
             document.getElementById('tUpload').textContent = data.tUpload;
             document.getElementById('tDownload').textContent = data.tDownload;
             document.getElementById('latency').textContent = data.latency;
+            document.getElementById('state').textContent = data.state;
+            document.getElementById('redaman').textContent = data.redaman;
+            document.getElementById('authpass').textContent = data.authpass;
+            document.getElementById('offline').textContent = data.offline;
+            document.getElementById('type').textContent = data.type;
+            document.getElementById('name').textContent = data.name;
+            document.getElementById('serialNumber').textContent = data.serialNumber;
         });
 }
 // update setiap 5 detik
