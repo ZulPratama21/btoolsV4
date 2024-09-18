@@ -1,8 +1,15 @@
 {% extends 'base.html' %}
 {% load static %}
+
 {% block content %}
     <div class="container">
         <h1>Troubleshoot BHome FTTH</h1>
+
+        <form id="locationForm">
+            <input type="text" name="locationId" placeholder="Enter Location ID" id="locationId">
+            <button type="submit">Submit</button>
+        </form>
+
         <p>Status: <span id="status">x</span></p>
         <p>MAX Upload: <span id="maxUpload">0</span> mbps</p>
         <p>MAX Download: <span id="maxDownload">0</span> mbps</p>
@@ -13,5 +20,6 @@
 
     <script src="{% static 'vendor/chartJs/chart.js' %}"></script>
     <script src="{% static 'vendor/chartJs/chartjs-adapter-date-fns' %}/"></script>
+    <script src="{% static 'vendor/bootstrap/jquery.js' %}"></script>
     <script src="{% static 'js/troubleshootBhomeFtth.js' %}"></script>
 {% endblock content %}

@@ -1,13 +1,13 @@
 from routeros_api import RouterOsApiPool
 
-def getDataRouter(inputUser):
-    idLoc = inputUser.upper()
+def getDataRouter(inputIdLoc, hostInput, userInput, passwordInput, portInput):
+    idLoc = inputIdLoc.upper()
 
     connection = RouterOsApiPool(
-        '103.73.72.162',
-        username='jul',
-        password='Juliandi123!@#',
-        port=8728,
+        host=hostInput,
+        username=userInput,
+        password=passwordInput,
+        port=int(portInput),
         plaintext_login=True
     )
     api = connection.get_api()
@@ -26,24 +26,23 @@ def getDataRouter(inputUser):
             remoteAddress = secret['remote-address']
             break
 
+    # Mengambil latency
     pingResult = api.get_resource('/').call('ping', { 'address': remoteAddress, 'count': '1' })
-
     for ping in pingResult:
         latencyResult = ping['time']
         if 'ms' in latencyResult:
             latency = int(latencyResult.split('ms')[0])
-
         else:
             latency = 0
 
-    queues = api.get_resource('/queue/simple')
-    
     # Mendapatkan semua queue terlebih dahulu
+    queues = api.get_resource('/queue/simple')
     all_queues = queues.get()
 
     for queue in all_queues:
         name = queue['name']
         if neCode in name:
+
             # Mengambil limitasi bandwidth
             maxLimit = queue['max-limit'].split('/')
             maxUpload = maxLimit[0]
@@ -55,18 +54,18 @@ def getDataRouter(inputUser):
             tDownload = traffic[1]
             break
 
+    # Mengambil status client
     addressLists = api.get_resource('/ip/firewall/address-list').call('print')
     addressList = [q for q in addressLists if q.get('address') == remoteAddress]
 
     for address in addressList:
         if address['list'] == 'allow':
             status = 'Subscribe'
-
         else:
             status = 'Suspend'
 
     result = {
-        'status':status,
+        'statusClient':status,
         'maxUpload':int(maxUpload)/1000000,
         'maxDownload':int(maxDownload)/1000000,
         'tUpload':int(tUpload)/1000000,
