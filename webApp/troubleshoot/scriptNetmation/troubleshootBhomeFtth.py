@@ -130,7 +130,7 @@ def getDataOlt(oltIp, community, oltPort, onuPort):
 
     result = {
             'state': str(getOnuState),
-            'redaman' : str(round(redamanResult, 2)) + ' dBm',
+            'redaman' : round(redamanResult, 2),
             'authpass': str(getOnuAuthpass.decode('utf-8')),
             'offline': str(getOnuOffline.decode('utf-8')),
             'type': str(getOnuType.decode('utf-8')),
