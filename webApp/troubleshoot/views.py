@@ -7,6 +7,7 @@ from django.contrib.auth.decorators import login_required
 import json
 
 from .scriptNetmation import troubleshootBhomeFtth
+from common.oidLib import dictOltIp
 
 @csrf_exempt  # Pastikan CSRF token diurus jika tidak digunakan di AJAX
 def getData(request):
@@ -32,11 +33,14 @@ def getData(request):
             'latency': 'X',
         })
     
-    dataOlt = troubleshootBhomeFtth.getDataOlt('172.16.1.106','intbnet',1,'1')
+    neCode = (dataRouter['neCode'])
+    oltIp = dictOltIp[neCode[:-4]]
+    oltPort = neCode[-4:-2]
+    onuPort = int(neCode[-2:])
+
+    dataOlt = troubleshootBhomeFtth.getDataOlt(oltIp,'intbnet',oltPort,onuPort)
 
     dataAll = {**dataRouter, **dataOlt}
-
-    print(json.dumps(dataAll, indent=4))
 
     return JsonResponse(dataAll)
 

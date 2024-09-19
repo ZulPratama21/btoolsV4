@@ -74,13 +74,14 @@ def getDataRouter(inputIdLoc, hostInput, userInput, passwordInput, portInput):
         'tUpload':int(tUpload)/1000000,
         'tDownload':int(tDownload)/1000000,
         'latency':latency,
+        'neCode':neCode,
     }
 
     connection.disconnect()
 
     return result
 
-def getDataOlt(oltIp, community, onuPort, oltPort):
+def getDataOlt(oltIp, community, oltPort, onuPort):
     async def snmpGet(oltIp, community,oid):
         client = PyWrapper(Client(oltIp, V2C(community)))
         output = await client.get(oid)

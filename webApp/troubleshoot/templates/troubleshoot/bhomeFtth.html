@@ -1,30 +1,110 @@
 {% extends 'base.html' %}
 {% load static %}
-
 {% block content %}
-    <div class="container">
-        <h1>Troubleshoot BHome FTTH</h1>
+<div class="container py-5">
+    <h1 class="text-center mb-4">Troubleshoot BHome FTTH</h1>
+    <form id="locationForm" class="row justify-content-center mb-4">
+        <div class="col-md-6">
+            <div class="input-group">
+                <input type="text" class="form-control" name="locationId" placeholder="Enter Location ID" id="locationId" required>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </form>
 
-        <form id="locationForm">
-            <input type="text" name="locationId" placeholder="Enter Location ID" id="locationId">
-            <button type="submit">Submit</button>
-        </form>
-
-        <p>Status: <span id="status">x</span></p>
-        <p>Max Upload: <span id="maxUpload">0</span> mbps</p>
-        <p>Max Download: <span id="maxDownload">0</span> mbps</p>
-        <p>Traffic Upload: <span id="tUpload">0</span> mbps</p>
-        <p>Traffic Download: <span id="tDownload">0</span> mbps</p>
-        <p>Latensi PING: <span id="latency">0</span> ms</p>
-        <p>Status ONU: <span id="state">X</span></p>
-        <p>Redaman: <span id="redaman">X</span></p>
-        <p>Terakhir Login: <span id="authpass">X</span></p>
-        <p>Offine: <span id="offline">X</span></p>
-        <p>Tipe ONT: <span id="type">X</span></p>
-        <p>Nama ONU: <span id="name">X</span></p>
-        <p>SN: <span id="serialNumber">X</span></p>
+    <!-- Tabel Data -->
+    <div class="table-responsive">
+        <table class="table table-bordered text-center table-sm">
+            <thead>
+                <tr>
+                    <th colspan="4" class="table-active table-primary">Pengecekan Koneksi</th>
+                </tr>
+                <tr>
+                    <th>Parameter</th>
+                    <th>Ex Condition</th>
+                    <th>Ideal Condition</th>
+                    <th>Result</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Status</td>
+                    <td><span id="status">x</span></td>
+                    <td>Subscribe</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Latensi PING</td>
+                    <td><span id="latency">0</span> ms</td>
+                    <td>&lt;10 ms</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Traffic Upload</td>
+                    <td><span id="tUpload">0</span> Mbps</td>
+                    <td>0.1 Mbps - <span id="maxUpload">0</span> Mbps</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Traffic Download</td>
+                    <td><span id="tDownload">0</span> Mbps</td>
+                    <td>1 Mbps - <span id="maxDownload">0</span> Mbps</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Redaman</td>
+                    <td><span id="redaman">X</span></td>
+                    <td>> -29 dBm</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Status ONU</td>
+                    <td><span id="state">X</span></td>
+                    <td>Working</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
-    <script src="{% static 'vendor/bootstrap/jquery.js' %}"></script>
-    <script src="{% static 'js/troubleshootBhomeFtth.js' %}"></script>
+    <div class="table-responsive">
+        <table class="table table-bordered text-center table-sm">
+            <thead>
+                <tr>
+                    <th colspan="2" class="table-success">Data Detail Pelanggan</th>
+                </tr>
+                <tr>
+                    <th>Parameter</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Terakhir Login</td>
+                    <td><span id="authpass">X</span></td>
+                </tr>
+                <tr>
+                    <td>Offline</td>
+                    <td><span id="offline">X</span></td>
+                </tr>
+                <tr>
+                    <td>Tipe ONT</td>
+                    <td><span id="type">X</span></td>
+                </tr>
+                <tr>
+                    <td>Nama ONU</td>
+                    <td><span id="name">X</span></td>
+                </tr>
+                <tr>
+                    <td>SN</td>
+                    <td><span id="serialNumber">X</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+<script src="{% static 'vendor/bootstrap/jquery.js' %}"></script>
+<script src="{% static 'js/troubleshootBhomeFtth.js' %}"></script>
 {% endblock content %}

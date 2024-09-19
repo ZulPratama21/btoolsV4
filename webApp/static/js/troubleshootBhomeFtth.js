@@ -27,4 +27,4 @@ function updateTrafficData() {
         });
 }
 // update setiap 5 detik
-setInterval(updateTrafficData, 5000);
+setInterval(updateTrafficData, 2500);
