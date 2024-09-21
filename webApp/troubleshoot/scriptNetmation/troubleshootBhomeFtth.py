@@ -17,20 +17,21 @@ def getDataRouter(inputIdLoc, hostInput, userInput, passwordInput, portInput):
 
     secrets = api.get_resource('/ppp/secret')
     allSecret = secrets.get()
-
+    
     for secret in allSecret:
         comment = secret['comment']
         if idLoc in comment:
             # Mengambil Kode NE untuk kebutuhan troubleshoot
             commentId = comment.split()[0]
             neCode = commentId.split('-')[1]
+            secretName = f'<pppoe-{secret["name"]}>'
 
             # Mengambil ip address client untuk melakukan ping
-            remoteAddress = secret['remote-address']
+            clientIp = secret['remote-address']
             break
-
+    
     # Mengambil latency
-    pingResult = api.get_resource('/').call('ping', { 'address': remoteAddress, 'count': '1' })
+    pingResult = api.get_resource('/').call('ping', { 'address': clientIp, 'count': '1', 'interval':'0.1s' })
     for ping in pingResult:
         latencyResult = ping['time']
         if 'ms' in latencyResult:
@@ -40,33 +41,28 @@ def getDataRouter(inputIdLoc, hostInput, userInput, passwordInput, portInput):
 
     # Mendapatkan semua queue terlebih dahulu
     queues = api.get_resource('/queue/simple')
-    all_queues = queues.get()
+    queueList = queues.get(name=secretName)
+    queue = queueList[0]
 
-    for queue in all_queues:
-        name = queue['name']
-        if neCode in name:
+    maxLimit = queue['max-limit'].split('/')
+    maxUpload = maxLimit[0]
+    maxDownload = maxLimit[1]
 
-            # Mengambil limitasi bandwidth
-            maxLimit = queue['max-limit'].split('/')
-            maxUpload = maxLimit[0]
-            maxDownload = maxLimit[1]
-
-            # Mengambil traffic saat ini
-            traffic = queue['rate'].split('/')
-            tUpload = traffic[0]
-            tDownload = traffic[1]
-            break
+    # Mengambil traffic saat ini
+    traffic = queue['rate'].split('/')
+    tUpload = traffic[0]
+    tDownload = traffic[1]
 
     # Mengambil status client
-    addressLists = api.get_resource('/ip/firewall/address-list').call('print')
-    addressList = [q for q in addressLists if q.get('address') == remoteAddress]
+    addressLists = api.get_resource('/ip/firewall/address-list')
+    addressList_List = addressLists.get(address=clientIp)
+    addressList = addressList_List[0]
 
-    for address in addressList:
-        if address['list'] == 'allow':
-            status = 'Subscribe'
-        else:
-            status = 'Suspend'
-
+    if addressList['list'] == 'allow':
+        status = 'Subscribe'
+    else:
+        status = 'Suspend'
+    
     result = {
         'statusClient':status,
         'maxUpload':int(maxUpload)/1000000,
@@ -75,6 +71,7 @@ def getDataRouter(inputIdLoc, hostInput, userInput, passwordInput, portInput):
         'tDownload':int(tDownload)/1000000,
         'latency':latency,
         'neCode':neCode,
+        'clientIp':clientIp
     }
 
     connection.disconnect()

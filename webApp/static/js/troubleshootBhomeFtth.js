@@ -1,12 +1,10 @@
 let locationId = null;
 
-// Mengambil inputan location ID dari user
 $('#locationForm').on('submit', function(event) {
     event.preventDefault();
     locationId = $('#locationId').val();
 });
 
-// Function untuk menampilkan data
 function updateTrafficData() {
     fetch(`/troubleshoot/getData/?locationId=${locationId}`)
     .then(response => response.json())
@@ -17,6 +15,7 @@ function updateTrafficData() {
         document.getElementById('latency').textContent = data.latency;
         document.getElementById('state').textContent = data.state;
         document.getElementById('redaman').textContent = data.redaman;
+        document.getElementById('clientIp').textContent = data.clientIp;
         document.getElementById('authpass').textContent = data.authpass;
         document.getElementById('offline').textContent = data.offline;
         document.getElementById('type').textContent = data.type;
@@ -36,7 +35,59 @@ function updateTrafficData() {
         document.getElementById('minDownload').textContent = minDownloadIdeal;
         document.getElementById('maxDownload').textContent = maxDownloadIdeal;
 
+        if (data.statusClient === 'Subscribe'){
+            statusResult = 'OK'
+            document.getElementById('statusResult')
+        } else {
+            statusResult = 'Bad'
+        }
+
+        if (data.tUpload < minUploadIdeal){
+            tUploadResult = 'Low Traffic'
+        } else if (data.tUpload > maxUploadIdeal){
+            tUploadResult = 'Full Traffic'
+        } else if (data.tUpload > minUploadIdeal && data.tUpload < maxUploadIdeal){
+            tUploadResult = 'OK'
+        } else {
+            tUploadResult = 'Bad'
+        }
+
+        if (data.tDownload < minDownloadIdeal){
+            tDownloadResult = 'Low Traffic'
+        } else if (data.tDownload > maxDownloadIdeal){
+            tDownloadResult = 'Full Traffic'
+        } else if (data.tDownload > minDownloadIdeal && data.tDownload < maxDownloadIdeal){
+            tDownloadResult = 'OK'
+        } else {
+            tDownloadResult = 'Bad'
+        }
+
+        if (data.latency < 10){
+            latencyResult = 'OK'
+        } else {
+            latencyResult = 'Bad'
+        }
+
+        if (data.state === 'Working'){
+            stateResult = 'OK'
+        } else {
+            stateResult = 'Bad'
+        }
+
+        if (data.redaman > -29){
+            redamanResult = 'OK'
+        } else {
+            redamanResult = 'Bad'
+        }
+
+        document.getElementById('statusResult').textContent = statusResult;
+        document.getElementById('tUploadResult').textContent = tUploadResult;
+        document.getElementById('tDownloadResult').textContent = tDownloadResult;
+        document.getElementById('latencyResult').textContent = latencyResult;
+        document.getElementById('stateResult').textContent = stateResult;
+        document.getElementById('redamanResult').textContent = redamanResult;
+
     });
 }
 
-setInterval(updateTrafficData, 5000);
+setInterval(updateTrafficData, 2000);

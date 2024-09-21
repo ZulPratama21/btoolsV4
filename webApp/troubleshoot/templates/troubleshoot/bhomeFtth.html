@@ -12,7 +12,6 @@
         </div>
     </form>
 
-    <!-- Tabel Data -->
     <div class="table-responsive">
         <table class="table table-bordered text-center table-sm">
             <thead>
@@ -31,37 +30,37 @@
                     <td>Status</td>
                     <td><span id="status">x</span></td>
                     <td>Subscribe</td>
-                    <td></td>
+                    <td><span class="badge bg-success text-light" id="statusResult">x</span></td>
                 </tr>
                 <tr>
                     <td>Latensi PING</td>
                     <td><span id="latency">0</span> ms</td>
                     <td>&lt;10 ms</td>
-                    <td></td>
+                    <td><span id="latencyResult">x</span></td>
                 </tr>
                 <tr>
                     <td>Traffic Upload</td>
                     <td><span id="tUpload">0</span> Mbps</td>
                     <td><span id="minUpload">0</span> Mbps - <span id="maxUpload">0</span> Mbps</td>
-                    <td></td>
+                    <td><span id="tUploadResult">0</span></td>
                 </tr>
                 <tr>
                     <td>Traffic Download</td>
                     <td><span id="tDownload">0</span> Mbps</td>
                     <td><span id="minDownload">0</span> Mbps - <span id="maxDownload">0</span> Mbps</td>
-                    <td></td>
+                    <td><span id="tDownloadResult">x</span></td>
                 </tr>                
                 <tr>
                     <td>Redaman</td>
                     <td><span id="redaman">X</span> dBm</td>
                     <td>> -29 dBm</td>
-                    <td></td>
+                    <td><span id="redamanResult">0</span></td>
                 </tr>
                 <tr>
                     <td>Status ONU</td>
                     <td><span id="state">X</span></td>
                     <td>Working</td>
-                    <td></td>
+                    <td><span id="stateResult">0</span></td>
                 </tr>
             </tbody>
         </table>
@@ -79,6 +78,10 @@
                 </tr>
             </thead>
             <tbody>
+                <tr></tr>
+                    <td>IP Pelanggan</td>
+                    <td><span id="clientIp">X</span></td>
+                </tr>
                 <tr>
                     <td>Terakhir Login</td>
                     <td><span id="authpass">X</span></td>

@@ -3,7 +3,7 @@ import asyncio
 from puresnmp import Client, V2C, PyWrapper
 import json
 
-def getDataOlt(oltIp, community, onuPort, oltPort):
+def getDataOlt(oltIp, community, oltPort, onuPort):
     async def snmpGet(oltIp, community,oid):
         client = PyWrapper(Client(oltIp, V2C(community)))
         output = await client.get(oid)
@@ -18,8 +18,10 @@ def getDataOlt(oltIp, community, onuPort, oltPort):
             'TYPE': str(oidLib.oidOnu['TYPE']) + str(oidLib.oidPortAll['port'][oltPort]['OID']) + '.' + str(onuPort),
             'NAME': str(oidLib.oidOnu['NAME']) + str(oidLib.oidPortAll['port'][oltPort]['OID']) + '.' + str(onuPort),
             'SN': str(oidLib.oidOnu['SN']) + str(oidLib.oidPortAll['port'][oltPort]['OID']) + '.' + str(onuPort),
+            'SSID' : "1.3.6.1.4.1.3902.1012.3.28.1.1.5.268501248.1",
+#            'PASSWORD' : "1.3.6.1.4.1.3902.1012.3.13.3.1.5.268501248.1",
         }
-
+      
     getOnuState = asyncio.run(snmpGet(oltIp, community,oidDict['STATE']))
     getOnuRedaman = asyncio.run(snmpGet(oltIp, community,oidDict['REDAMAN']))
     getOnuRedaman = asyncio.run(snmpGet(oltIp, community,oidDict['REDAMAN'])) * 0.002 - 30
@@ -29,6 +31,8 @@ def getDataOlt(oltIp, community, onuPort, oltPort):
     getOnuType = asyncio.run(snmpGet(oltIp, community, oidDict['TYPE']))
     getOnuName = asyncio.run(snmpGet(oltIp, community, oidDict['NAME']))
     getOnuSn = asyncio.run(snmpGet(oltIp, community, oidDict['SN']))
+    getSsid = asyncio.run(snmpGet(oltIp, community, oidDict['SSID']))
+#    getPassword = asyncio.run(snmpGet(oltIp, community, oidDict['PASSWORD']))
 
     if getOnuState == 0:
         getOnuState = "Logging"
@@ -52,16 +56,18 @@ def getDataOlt(oltIp, community, onuPort, oltPort):
 
     result = {
             'state': str(getOnuState),
-            'redaman' : str(round(redamanResult, 2)) + ' dBm',
+            'redaman' : round(redamanResult, 2),
             'authpass': str(getOnuAuthpass.decode('utf-8')),
             'offline': str(getOnuOffline.decode('utf-8')),
             'type': str(getOnuType.decode('utf-8')),
             'name': str(getOnuName.decode('utf-8')),
-            'serialNumber': serialNumberPatern + str(getOnuSn.hex()[8:]).upper()
+            'serialNumber': serialNumberPatern + str(getOnuSn.hex()[8:]).upper(),
+            'ssid' : str(getSsid.decode('ISO-8859-1')),
+#            'password' : str(getPassword),
         }
-
+    
     return result
 
-output = getDataOlt('172.16.1.106','intbnet',1,'1')
+output = getDataOlt('172.16.1.106', 'intbnet', '1', 1)
 
 print(json.dumps(output, indent=4))
