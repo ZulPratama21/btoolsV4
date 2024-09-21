@@ -35,51 +35,39 @@ function updateTrafficData() {
         document.getElementById('minDownload').textContent = minDownloadIdeal;
         document.getElementById('maxDownload').textContent = maxDownloadIdeal;
 
-        if (data.statusClient === 'Subscribe'){
-            statusResult = 'OK'
-            document.getElementById('statusResult')
+        let statusResult, tUploadResult, tDownloadResult, latencyResult, stateResult, redamanResult;
+
+        // Determine status result
+        statusResult = data.statusClient === 'Subscribe' ? 'OK' : 'Bad';
+
+        // Determine upload traffic result
+        if (data.tUpload < minUploadIdeal) {
+            tUploadResult = 'Low Traffic';
+        } else if (data.tUpload > maxUploadIdeal) {
+            tUploadResult = 'Full Traffic';
         } else {
-            statusResult = 'Bad'
+            tUploadResult = 'OK';
         }
 
-        if (data.tUpload < minUploadIdeal){
-            tUploadResult = 'Low Traffic'
-        } else if (data.tUpload > maxUploadIdeal){
-            tUploadResult = 'Full Traffic'
-        } else if (data.tUpload > minUploadIdeal && data.tUpload < maxUploadIdeal){
-            tUploadResult = 'OK'
+        // Determine download traffic result
+        if (data.tDownload < minDownloadIdeal) {
+            tDownloadResult = 'Low Traffic';
+        } else if (data.tDownload > maxDownloadIdeal) {
+            tDownloadResult = 'Full Traffic';
         } else {
-            tUploadResult = 'Bad'
+            tDownloadResult = 'OK';
         }
 
-        if (data.tDownload < minDownloadIdeal){
-            tDownloadResult = 'Low Traffic'
-        } else if (data.tDownload > maxDownloadIdeal){
-            tDownloadResult = 'Full Traffic'
-        } else if (data.tDownload > minDownloadIdeal && data.tDownload < maxDownloadIdeal){
-            tDownloadResult = 'OK'
-        } else {
-            tDownloadResult = 'Bad'
-        }
+        // Determine latency result
+        latencyResult = data.latency < 10 ? 'OK' : 'Bad';
 
-        if (data.latency < 10){
-            latencyResult = 'OK'
-        } else {
-            latencyResult = 'Bad'
-        }
+        // Determine state result
+        stateResult = data.state === 'Working' ? 'OK' : 'Bad';
 
-        if (data.state === 'Working'){
-            stateResult = 'OK'
-        } else {
-            stateResult = 'Bad'
-        }
+        // Determine redaman result
+        redamanResult = data.redaman > -29 ? 'OK' : 'Bad';
 
-        if (data.redaman > -29){
-            redamanResult = 'OK'
-        } else {
-            redamanResult = 'Bad'
-        }
-
+        // Update text content for results
         document.getElementById('statusResult').textContent = statusResult;
         document.getElementById('tUploadResult').textContent = tUploadResult;
         document.getElementById('tDownloadResult').textContent = tDownloadResult;
@@ -87,7 +75,28 @@ function updateTrafficData() {
         document.getElementById('stateResult').textContent = stateResult;
         document.getElementById('redamanResult').textContent = redamanResult;
 
+        // Helper function to update badge color
+        function updateBadgeColor(elementId, result) {
+            const element = document.getElementById(elementId);
+            element.classList.remove('bg-success', 'bg-danger', 'bg-warning');
+            if (result === 'OK') {
+                element.classList.add('bg-success');
+            } else if (result === 'Low Traffic') {
+                element.classList.add('bg-warning');
+            } else {
+                element.classList.add('bg-danger');
+            }
+        }
+
+        // Update badge colors
+        updateBadgeColor('statusResult', statusResult);
+        updateBadgeColor('tUploadResult', tUploadResult);
+        updateBadgeColor('tDownloadResult', tDownloadResult);
+        updateBadgeColor('latencyResult', latencyResult);
+        updateBadgeColor('stateResult', stateResult);
+        updateBadgeColor('redamanResult', redamanResult);
     });
 }
 
+// Call updateTrafficData every 2 seconds
 setInterval(updateTrafficData, 2000);
