@@ -17,7 +17,7 @@ def getData(request):
 
     for host in hostList:
         try:
-            dataRouter = troubleshootBhomeFtth.getDataRouter(idLoc, host, 'jul', 'Juliandi123!@#', '8728')
+            dataRouter = troubleshootBhomeFtth.getDataRouter(idLoc, host, 'neteng', 'netEngineerBnet', '8728')
 
         except Exception as e:
             error = 'null'
@@ -37,6 +37,8 @@ def getData(request):
     oltIp = dictOltIp[neCode[:-4]]
     oltPort = neCode[-4:-2]
     onuPort = int(neCode[-2:])
+
+    dataOlt = None
 
     dataOlt = troubleshootBhomeFtth.getDataOlt(oltIp,'intbnet',oltPort,onuPort)
 

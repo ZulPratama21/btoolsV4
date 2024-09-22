@@ -68,7 +68,7 @@
 
     <div class="row">
         <div class="col-md-6">
-
+            <canvas id="trafficChart" width="400" height="200"></canvas>
         </div>
         <div class="col-md-6">
             <div class="table-responsive">
@@ -112,10 +112,9 @@
             </div>
         </div>
     </div>
-
-
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
 <script src="{% static 'vendor/bootstrap/jquery.js' %}"></script>
 <script src="{% static 'js/troubleshootBhomeFtth.js' %}"></script>
 {% endblock content %}

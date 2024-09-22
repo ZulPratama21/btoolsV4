@@ -5,6 +5,68 @@ $('#locationForm').on('submit', function(event) {
     locationId = $('#locationId').val();
 });
 
+const config = {
+    type: "line",
+    data: {
+       labels: [],
+       datasets: [
+          {
+             label: "Upload",
+             backgroundColor: '#9ad0f5',
+             borderColor: '#9ad0f5',
+             data: [],
+             borderWidth: 1,
+             fill: false
+          },
+          {
+             label: "Download",
+             backgroundColor: '#ffb1c1',
+             borderColor: '#ffb1c1',
+             data: [],
+             borderWidth: 1,
+             fill: false
+          }
+       ]
+    },
+    options: {
+       responsive: true,
+       title: {
+          display: true,
+          text: "Realtime Traffic User"
+       },
+       tooltips: {
+          mode: "index",
+          intersect: false,
+       },
+       hover: {
+          mode: "nearest",
+          intersect: true
+       },
+       scales: {
+          xAxes: [{
+             display: true,
+             scaleLabel: {
+                display: true,
+                labelString: "Waktu"
+             }
+          }],
+          yAxes: [{
+             display: true,
+             scaleLabel: {
+                display: true,
+                labelString: "Throughput (MB)"
+             },
+             ticks: {
+                min: 0
+             }
+          }]
+       }
+    }
+ };
+const context = document.getElementById('trafficChart').getContext('2d');
+
+const lineChart = new Chart(context, config);
+
 function updateTrafficData() {
     fetch(`/troubleshoot/getData/?locationId=${locationId}`)
     .then(response => response.json())
@@ -25,9 +87,9 @@ function updateTrafficData() {
         let maxUpload = parseFloat(data.maxUpload) || 0;
         let maxDownload = parseFloat(data.maxDownload) || 0;
 
-        let minUploadIdeal = (0.05 * maxUpload).toFixed(2);
+        let minUploadIdeal = (0.025 * maxUpload).toFixed(2);
         let maxUploadIdeal = (0.80 * maxUpload).toFixed(2);
-        let minDownloadIdeal = (0.10 * maxDownload).toFixed(2);
+        let minDownloadIdeal = (0.05 * maxDownload).toFixed(2);
         let maxDownloadIdeal = (0.80 * maxDownload).toFixed(2);
 
         document.getElementById('minUpload').textContent = minUploadIdeal;
@@ -59,13 +121,13 @@ function updateTrafficData() {
         }
 
         // Determine latency result
-        latencyResult = data.latency < 10 ? 'OK' : 'Bad';
+        latencyResult = data.latency < 10 ? 'OK' : 'High Latency';
 
         // Determine state result
         stateResult = data.state === 'Working' ? 'OK' : 'Bad';
 
         // Determine redaman result
-        redamanResult = data.redaman > -29 ? 'OK' : 'Bad';
+        redamanResult = data.redaman > -29 ? 'OK' : 'High dB';
 
         // Update text content for results
         document.getElementById('statusResult').textContent = statusResult;
@@ -95,8 +157,36 @@ function updateTrafficData() {
         updateBadgeColor('latencyResult', latencyResult);
         updateBadgeColor('stateResult', stateResult);
         updateBadgeColor('redamanResult', redamanResult);
+
+      if (config.data.labels.length == 20) {
+         config.data.labels.shift();
+         config.data.datasets[0].data.shift();
+         config.data.datasets[1].data.shift();
+      }
+
+      const now = new Date();
+      const hours = now.getHours();
+      const minutes = now.getMinutes();
+      const seconds = now.getSeconds();
+      
+      config.data.labels.push(`${hours}:${minutes}:${seconds}`);
+      config.data.datasets[0].data.push(data.tUpload);
+      config.data.datasets[1].data.push(data.tDownload);
+
+      lineChart.update();
+
     });
 }
 
-// Call updateTrafficData every 2 seconds
-setInterval(updateTrafficData, 2000);
+let counter = 0;
+const maxPolls = 10; // Set batas polling menjadi 10 kali
+
+const intervalId = setInterval(() => {
+    updateTrafficData();  // Fungsi yang ingin kamu polling
+
+    counter++;
+    if (counter >= maxPolls) {
+        clearInterval(intervalId);  // Hentikan polling setelah 10 kali
+        console.log('Polling stopped after 10 times.');
+    }
+}, 2000);

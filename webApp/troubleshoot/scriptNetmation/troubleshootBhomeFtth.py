@@ -86,13 +86,13 @@ def getDataOlt(oltIp, community, oltPort, onuPort):
         return output
 
     oidDict = {
-            'STATE': str(oidLib.oidOnu['STATE']) + str(oidLib.oidPortAll['port'][oltPort]['OID']) + '.' + str(onuPort),
-            'REDAMAN': str(oidLib.oidOnu['REDAMAN']) + str(oidLib.oidPortAll['port'][oltPort]['OID']) + '.' + str(onuPort) + '.1',
-            'AUTHPASS': str(oidLib.oidOnu['AUTHPASS']) + str(oidLib.oidPortAll['port'][oltPort]['OID']) + '.' + str(onuPort),
-            'OFFLINE': str(oidLib.oidOnu['OFFLINE']) + str(oidLib.oidPortAll['port'][oltPort]['OID']) + '.' + str(onuPort),
-            'TYPE': str(oidLib.oidOnu['TYPE']) + str(oidLib.oidPortAll['port'][oltPort]['OID']) + '.' + str(onuPort),
-            'NAME': str(oidLib.oidOnu['NAME']) + str(oidLib.oidPortAll['port'][oltPort]['OID']) + '.' + str(onuPort),
-            'SN': str(oidLib.oidOnu['SN']) + str(oidLib.oidPortAll['port'][oltPort]['OID']) + '.' + str(onuPort),
+            'STATE': str(oidLib.oidOnu['STATE']) + str(oidLib.oidPort['port'][oltPort]['OID']) + '.' + str(onuPort),
+            'REDAMAN': str(oidLib.oidOnu['REDAMAN']) + str(oidLib.oidPort['port'][oltPort]['OID']) + '.' + str(onuPort) + '.1',
+            'AUTHPASS': str(oidLib.oidOnu['AUTHPASS']) + str(oidLib.oidPort['port'][oltPort]['OID']) + '.' + str(onuPort),
+            'OFFLINE': str(oidLib.oidOnu['OFFLINE']) + str(oidLib.oidPort['port'][oltPort]['OID']) + '.' + str(onuPort),
+            'TYPE': str(oidLib.oidOnu['TYPE']) + str(oidLib.oidPort['port'][oltPort]['OID']) + '.' + str(onuPort),
+            'NAME': str(oidLib.oidOnu['NAME']) + str(oidLib.oidPort['port'][oltPort]['OID']) + '.' + str(onuPort),
+            'SN': str(oidLib.oidOnu['SN']) + str(oidLib.oidPort['port'][oltPort]['OID']) + '.' + str(onuPort),
         }
 
     getOnuState = asyncio.run(snmpGet(oltIp, community,oidDict['STATE']))
