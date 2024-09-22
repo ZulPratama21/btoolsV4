@@ -1,9 +1,8 @@
 let locationId = null;
-
-$('#locationForm').on('submit', function(event) {
-    event.preventDefault();
-    locationId = $('#locationId').val();
-});
+let lineChart = null;
+let intervalId = null;
+let counter = 0;
+const maxPolls = 10;
 
 const config = {
     type: "line",
@@ -29,7 +28,8 @@ const config = {
        ]
     },
     options: {
-       responsive: true,
+      responsive: true,
+      maintainAspectRatio: false,
        title: {
           display: true,
           text: "Realtime Traffic User"
@@ -62,15 +62,42 @@ const config = {
           }]
        }
     }
- };
-const context = document.getElementById('trafficChart').getContext('2d');
+};
 
-const lineChart = new Chart(context, config);
+$('#locationForm').on('submit', function(event) {
+    event.preventDefault();
+    locationId = $('#locationId').val();
+
+    if (lineChart) {
+        lineChart.destroy();
+    }
+    
+    const context = document.getElementById('trafficChart').getContext('2d');
+    lineChart = new Chart(context, config);
+
+    if (intervalId) {
+        clearInterval(intervalId);
+    }
+
+    counter = 0;
+    intervalId = setInterval(() => {
+        updateTrafficData();
+        counter++;
+        if (counter >= maxPolls) {
+            clearInterval(intervalId);
+        }
+    }, 2000);
+});
 
 function updateTrafficData() {
     fetch(`/troubleshoot/getData/?locationId=${locationId}`)
     .then(response => response.json())
     .then(data => {
+        if (data.statusClient === 'Null'){
+            clearInterval(intervalId)
+            alert('ID Lokasi tidak ditermukan')
+        }
+
         document.getElementById('status').textContent = data.statusClient;
         document.getElementById('tUpload').textContent = data.tUpload;
         document.getElementById('tDownload').textContent = data.tDownload;
@@ -100,10 +127,18 @@ function updateTrafficData() {
         let statusResult, tUploadResult, tDownloadResult, latencyResult, stateResult, redamanResult;
 
         // Determine status result
-        statusResult = data.statusClient === 'Subscribe' ? 'OK' : 'Bad';
+        if (data.statusClient === 'Null'){
+            statusResult = '';
+        } else if (data.statusClient === 'Subscribe'){
+            statusResult = 'OK';
+        } else {
+            statusResult = 'Bad';
+        }
 
         // Determine upload traffic result
-        if (data.tUpload < minUploadIdeal) {
+        if (data.tUpload === 'X'){
+            tUploadResult = '';
+        } else if (data.tUpload < minUploadIdeal) {
             tUploadResult = 'Low Traffic';
         } else if (data.tUpload > maxUploadIdeal) {
             tUploadResult = 'Full Traffic';
@@ -112,7 +147,9 @@ function updateTrafficData() {
         }
 
         // Determine download traffic result
-        if (data.tDownload < minDownloadIdeal) {
+        if (data.tDownload === 'X'){
+            tUploadResult = '';
+        } else if (data.tDownload < minDownloadIdeal) {
             tDownloadResult = 'Low Traffic';
         } else if (data.tDownload > maxDownloadIdeal) {
             tDownloadResult = 'Full Traffic';
@@ -121,13 +158,32 @@ function updateTrafficData() {
         }
 
         // Determine latency result
-        latencyResult = data.latency < 10 ? 'OK' : 'High Latency';
+        if (data.latency === 'X') {
+            latencyResult = '';
+        } else if(data.latency < 10){
+            latencyResult = 'OK';
+        } else {
+            latencyResult = 'Bad';
+        }
 
         // Determine state result
-        stateResult = data.state === 'Working' ? 'OK' : 'Bad';
+        if (data.state === undefined) {
+            stateResult = '';
+        } else if (data.state === 'Working'){
+            stateResult = 'OK';
+        } else {
+            stateResult = 'Bad';
+        }
 
         // Determine redaman result
-        redamanResult = data.redaman > -29 ? 'OK' : 'High dB';
+        //redamanResult = data.redaman > -29 ? 'OK' : 'High dB';
+        if (data.redaman === undefined){
+            redamanResult = '';
+        } else if (data.redaman > -29){
+            redamanResult = 'OK';
+        } else {
+            redamanResult = 'High dB';
+        }
 
         // Update text content for results
         document.getElementById('statusResult').textContent = statusResult;
@@ -158,35 +214,25 @@ function updateTrafficData() {
         updateBadgeColor('stateResult', stateResult);
         updateBadgeColor('redamanResult', redamanResult);
 
-      if (config.data.labels.length == 20) {
-         config.data.labels.shift();
-         config.data.datasets[0].data.shift();
-         config.data.datasets[1].data.shift();
-      }
+        // Update the chart data
+        if (config.data.labels.length == 20) {
+            config.data.labels.shift();
+            config.data.datasets[0].data.shift();
+            config.data.datasets[1].data.shift();
+        }
 
-      const now = new Date();
-      const hours = now.getHours();
-      const minutes = now.getMinutes();
-      const seconds = now.getSeconds();
-      
-      config.data.labels.push(`${hours}:${minutes}:${seconds}`);
-      config.data.datasets[0].data.push(data.tUpload);
-      config.data.datasets[1].data.push(data.tDownload);
+        const now = new Date();
+        const hours = now.getHours();
+        const minutes = now.getMinutes();
+        const seconds = now.getSeconds();
+        
+        config.data.labels.push(`${hours}:${minutes}:${seconds}`);
+        config.data.datasets[0].data.push(data.tUpload);
+        config.data.datasets[1].data.push(data.tDownload);
 
-      lineChart.update();
+        lineChart.update();
 
+        const clientLink = document.getElementById('clientLink');
+        clientLink.href = `http://${data.clientIp}`;
     });
 }
-
-let counter = 0;
-const maxPolls = 10; // Set batas polling menjadi 10 kali
-
-const intervalId = setInterval(() => {
-    updateTrafficData();  // Fungsi yang ingin kamu polling
-
-    counter++;
-    if (counter >= maxPolls) {
-        clearInterval(intervalId);  // Hentikan polling setelah 10 kali
-        console.log('Polling stopped after 10 times.');
-    }
-}, 2000);

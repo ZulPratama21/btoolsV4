@@ -32,26 +32,42 @@ def getDataRouter(inputIdLoc, hostInput, userInput, passwordInput, portInput):
     
     # Mengambil latency
     pingResult = api.get_resource('/').call('ping', { 'address': clientIp, 'count': '1', 'interval':'0.1s' })
-    for ping in pingResult:
+    ping = pingResult[0]
+    
+    if 'time' in ping:
         latencyResult = ping['time']
         if 'ms' in latencyResult:
             latency = int(latencyResult.split('ms')[0])
         else:
             latency = 0
 
+    elif ping['status'] == 'timeout':
+        latency = 'timeout'
+
+    else:
+        latency = 'X'
+    
     # Mendapatkan semua queue terlebih dahulu
     queues = api.get_resource('/queue/simple')
     queueList = queues.get(name=secretName)
-    queue = queueList[0]
+    
+    if queueList == []:
+        maxUpload = 0
+        maxDownload = 0
+        tUpload = 0
+        tDownload = 0   
 
-    maxLimit = queue['max-limit'].split('/')
-    maxUpload = maxLimit[0]
-    maxDownload = maxLimit[1]
+    else:    
+        queue = queueList[0]
 
-    # Mengambil traffic saat ini
-    traffic = queue['rate'].split('/')
-    tUpload = traffic[0]
-    tDownload = traffic[1]
+        maxLimit = queue['max-limit'].split('/')
+        maxUpload = maxLimit[0]
+        maxDownload = maxLimit[1]
+
+        # Mengambil traffic saat ini
+        traffic = queue['rate'].split('/')
+        tUpload = traffic[0]
+        tDownload = traffic[1]
 
     # Mengambil status client
     addressLists = api.get_resource('/ip/firewall/address-list')
@@ -73,7 +89,7 @@ def getDataRouter(inputIdLoc, hostInput, userInput, passwordInput, portInput):
         'neCode':neCode,
         'clientIp':clientIp
     }
-
+    
     connection.disconnect()
 
     return result

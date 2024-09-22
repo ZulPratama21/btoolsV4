@@ -28,7 +28,7 @@
             <tbody>
                 <tr>
                     <td>Status</td>
-                    <td><span id="status">x</span></td>
+                    <td><span id="status">X</span></td>
                     <td>Subscribe</td>
                     <td><span class="badge" id="statusResult">x</span></td>
                 </tr>
@@ -52,7 +52,7 @@
                 </tr>                
                 <tr>
                     <td>Redaman</td>
-                    <td><span id="redaman">X</span> dBm</td>
+                    <td><span id="redaman">0</span> dBm</td>
                     <td>> -29 dBm</td>
                     <td><span class="badge" id="redamanResult">0</span></td>
                 </tr>
@@ -67,10 +67,23 @@
     </div>
 
     <div class="row">
-        <div class="col-md-6">
-            <canvas id="trafficChart" width="400" height="200"></canvas>
+        <div class="col-lg-6">
+            <table class="table table-bordered text-center table-sm">
+                <thead>
+                    <tr>
+                        <th class="table-active table-seconday">Real Time Traffic</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <canvas id="trafficChart" style="max-width: 100%; height: 300px;"></canvas>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-        <div class="col-md-6">
+        <div class="col-lg-6">
             <div class="table-responsive">
                 <table class="table table-bordered text-center table-sm">
                     <thead>
@@ -85,7 +98,10 @@
                     <tbody>
                         <tr></tr>
                             <td>IP Pelanggan</td>
-                            <td><span id="clientIp">X</span></td>
+                            <td>
+                                <span id="clientIp">X </span>
+                                <a id="clientLink" class="badge rounded-pill bg-primary text-light" href="http://clientIp" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">Open</a>
+                            </td>
                         </tr>
                         <tr>
                             <td>Terakhir Login</td>

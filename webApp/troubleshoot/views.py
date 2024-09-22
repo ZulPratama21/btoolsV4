@@ -20,12 +20,11 @@ def getData(request):
             dataRouter = troubleshootBhomeFtth.getDataRouter(idLoc, host, 'neteng', 'netEngineerBnet', '8728')
 
         except Exception as e:
-            error = 'null'
             continue
 
     if dataRouter is None:
         return JsonResponse({
-            'statusClient': error,
+            'statusClient': 'Null',
             'maxUpload': 'X',
             'maxDownload': 'X',
             'tUpload': 'X',
@@ -38,9 +37,19 @@ def getData(request):
     oltPort = neCode[-4:-2]
     onuPort = int(neCode[-2:])
 
-    dataOlt = None
+    try:
+        dataOlt = troubleshootBhomeFtth.getDataOlt(oltIp,'intbnet',oltPort,onuPort)
 
-    dataOlt = troubleshootBhomeFtth.getDataOlt(oltIp,'intbnet',oltPort,onuPort)
+    except Exception as e:
+        dataOlt = {
+                'state': 'Error',
+                'redaman' : 'X',
+                'authpass': 'X',
+                'offline': 'X',
+                'type': 'X',
+                'name': 'X',
+                'serialNumber': 'X',
+            }
 
     dataAll = {**dataRouter, **dataOlt}
 
