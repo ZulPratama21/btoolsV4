@@ -90,7 +90,7 @@ $('#locationForm').on('submit', function(event) {
 });
 
 function updateTrafficData() {
-    fetch(`/troubleshoot/getData/?locationId=${locationId}`)
+    fetch(`/troubleshoot/getDataDuFo/?locationId=${locationId}`)
     .then(response => response.json())
     .then(data => {
         if (data.statusClient === 'Null'){
@@ -102,14 +102,8 @@ function updateTrafficData() {
         document.getElementById('tUpload').textContent = data.tUpload;
         document.getElementById('tDownload').textContent = data.tDownload;
         document.getElementById('latency').textContent = data.latency;
-        document.getElementById('state').textContent = data.state;
-        document.getElementById('redaman').textContent = data.redaman;
         document.getElementById('clientIp').textContent = data.clientIp;
-        document.getElementById('authpass').textContent = data.authpass;
-        document.getElementById('offline').textContent = data.offline;
-        document.getElementById('type').textContent = data.type;
         document.getElementById('name').textContent = data.name;
-        document.getElementById('serialNumber').textContent = data.serialNumber;
 
         let maxUpload = parseFloat(data.maxUpload) || 0;
         let maxDownload = parseFloat(data.maxDownload) || 0;
@@ -190,8 +184,6 @@ function updateTrafficData() {
         document.getElementById('tUploadResult').textContent = tUploadResult;
         document.getElementById('tDownloadResult').textContent = tDownloadResult;
         document.getElementById('latencyResult').textContent = latencyResult;
-        document.getElementById('stateResult').textContent = stateResult;
-        document.getElementById('redamanResult').textContent = redamanResult;
 
         // Helper function to update badge color
         function updateBadgeColor(elementId, result) {
@@ -211,8 +203,6 @@ function updateTrafficData() {
         updateBadgeColor('tUploadResult', tUploadResult);
         updateBadgeColor('tDownloadResult', tDownloadResult);
         updateBadgeColor('latencyResult', latencyResult);
-        updateBadgeColor('stateResult', stateResult);
-        updateBadgeColor('redamanResult', redamanResult);
 
         // Update the chart data
         if (config.data.labels.length == 20) {

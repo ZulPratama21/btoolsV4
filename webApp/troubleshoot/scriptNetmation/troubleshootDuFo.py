@@ -1,5 +1,4 @@
-from routeros_api import RouterOsApiPool, exceptions
-import json
+from routeros_api import RouterOsApiPool
 
 def getDataRouter(inputIdLoc, hostInput, userInput, passwordInput, portInput):
     idLoc = inputIdLoc.upper()
@@ -63,7 +62,3 @@ def getDataRouter(inputIdLoc, hostInput, userInput, passwordInput, portInput):
     connection.disconnect()
 
     return result
-
-output = getDataRouter('CA0068101', '103.73.72.72', 'neteng', 'netEngineerBnet',8728)
-
-print(json.dumps(output, indent=4))

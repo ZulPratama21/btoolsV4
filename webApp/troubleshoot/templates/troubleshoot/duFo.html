@@ -2,7 +2,7 @@
 {% load static %}
 {% block content %}
 <div class="container py-5">
-    <h1 class="text-center mb-4">Troubleshoot BHome FTTH</h1>
+    <h1 class="text-center mb-4">Troubleshoot Dedicated & Upto Via FO</h1>
     <form id="locationForm" class="row justify-content-center mb-4">
         <div class="col-md-6">
             <div class="input-group">
@@ -49,18 +49,6 @@
                     <td><span id="tDownload">0</span> Mbps</td>
                     <td><span id="minDownload">0</span> Mbps - <span id="maxDownload">0</span> Mbps</td>
                     <td><span class="badge" id="tDownloadResult">0</span></td>
-                </tr>                
-                <tr>
-                    <td>Redaman</td>
-                    <td><span id="redaman">0</span> dBm</td>
-                    <td>> -29 dBm</td>
-                    <td><span class="badge" id="redamanResult">0</span></td>
-                </tr>
-                <tr>
-                    <td>Status ONU</td>
-                    <td><span id="state">X</span></td>
-                    <td>Working</td>
-                    <td><span class="badge" id="stateResult">0</span></td>
                 </tr>
             </tbody>
         </table>
@@ -96,7 +84,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr></tr>
+                        <tr>
                             <td>IP Pelanggan</td>
                             <td>
                                 <span id="clientIp">X </span>
@@ -104,24 +92,8 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>Terakhir Login</td>
-                            <td><span id="authpass">X</span></td>
-                        </tr>
-                        <tr>
-                            <td>Offline</td>
-                            <td><span id="offline">X</span></td>
-                        </tr>
-                        <tr>
-                            <td>Tipe ONT</td>
-                            <td><span id="type">X</span></td>
-                        </tr>
-                        <tr>
-                            <td>Nama ONU</td>
+                            <td>Detail Nama Pelanggan</td>
                             <td><span id="name">X</span></td>
-                        </tr>
-                        <tr>
-                            <td>SN</td>
-                            <td><span id="serialNumber">X</span></td>
                         </tr>
                     </tbody>
                 </table>
@@ -132,5 +104,5 @@
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
 <script src="{% static 'vendor/bootstrap/jquery.js' %}"></script>
-<script src="{% static 'troubleshoot/js/troubleshootBhomeFtth.js' %}"></script>
+<script src="{% static 'troubleshoot/js/troubleshootDuFo.js' %}"></script>
 {% endblock content %}
