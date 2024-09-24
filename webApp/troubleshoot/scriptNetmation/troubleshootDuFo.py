@@ -62,3 +62,28 @@ def getDataRouter(inputIdLoc, hostInput, userInput, passwordInput, portInput):
     connection.disconnect()
 
     return result
+
+def getAllData(idLoc):
+    hostList = ['103.73.72.72', '103.73.72.73', '103.73.72.74'] #Perlu dirubah ke database
+    dataRouter = None
+
+    for host in hostList:
+        try:
+            dataRouter = getDataRouter(idLoc, host, 'neteng', 'netEngineerBnet', '8728') #Akses user masih static, harus ambil dari database
+            
+        except Exception as e:
+            continue
+
+    if dataRouter is None:
+        return {
+            'statusClient': 'Null',
+            'maxUpload': 'X',
+            'maxDownload': 'X',
+            'tUpload': 'X',
+            'tDownload': 'X',
+            'latency': 'X',
+            'clientIp': 'X',
+            'clientName': 'X',
+        }
+
+    return dataRouter

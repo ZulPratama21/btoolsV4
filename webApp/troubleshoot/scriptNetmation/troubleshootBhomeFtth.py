@@ -1,5 +1,6 @@
 from routeros_api import RouterOsApiPool
 from common import oidLib
+from common.oidLib import dictOltIp # Perlu diganti ke database
 import asyncio
 from puresnmp import Client, V2C, PyWrapper
 
@@ -152,3 +153,47 @@ def getDataOlt(oltIp, community, oltPort, onuPort):
         }
 
     return result
+
+def getAllData(idLoc):
+    hostList = ['103.73.72.182', '103.73.72.162', '103.73.72.222'] #Perlu dirubah ke database
+    dataRouter = None
+
+    for host in hostList:
+        try:
+            dataRouter = getDataRouter(idLoc, host, 'neteng', 'netEngineerBnet', '8728') #Akses user masih static, harus ambil dari database
+
+        except Exception as e:
+            continue
+
+    if dataRouter is None:
+        return {
+            'statusClient': 'Null',
+            'maxUpload': 'X',
+            'maxDownload': 'X',
+            'tUpload': 'X',
+            'tDownload': 'X',
+            'latency': 'X',
+        }
+    
+    neCode = (dataRouter['neCode'])
+    oltIp = dictOltIp[neCode[:-4]] # perlu dirubah ke database
+    oltPort = neCode[-4:-2]
+    onuPort = int(neCode[-2:])
+
+    try:
+        dataOlt = getDataOlt(oltIp,'intbnet',oltPort,onuPort)
+
+    except Exception as e:
+        dataOlt = {
+                'state': 'Error',
+                'redaman' : 'X',
+                'authpass': 'X',
+                'offline': 'X',
+                'type': 'X',
+                'name': 'X',
+                'serialNumber': 'X',
+            }
+
+    dataAll = {**dataRouter, **dataOlt}
+
+    return dataAll
