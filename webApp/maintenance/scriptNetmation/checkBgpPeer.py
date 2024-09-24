@@ -1,5 +1,4 @@
 from routeros_api import RouterOsApiPool
-import json
 
 def getDataRouter(identity, hostInput, userInput, passwordInput, portInput):
     connection = RouterOsApiPool(
@@ -26,10 +25,10 @@ def getDataRouter(identity, hostInput, userInput, passwordInput, portInput):
                                     'ipDevice':hostInput,
                                     'name':bgp['name'],
                                     'disabled':bgp['disabled'],
-                                    #'localAddress':bgp['local-address'],
+                                    'localAddress':bgp['local-address'],
                                     'remoteAddress':bgp['remote-address'],
                                     'remoteId':bgp['remote-id'],
-                                    'remoteAS':bgp['remote-as'],
+                                    'remoteAs':bgp['remote-as'],
                                     'prefixCount':bgp['prefix-count'],
                                     'established':bgp['established'],
                     })
@@ -41,7 +40,7 @@ def getDataRouter(identity, hostInput, userInput, passwordInput, portInput):
                                     'localAddress':'X',
                                     'remoteAddress':bgp['remote-address'],
                                     'remoteId':'X',
-                                    'remoteAS':bgp['remote-as'],
+                                    'remoteAs':bgp['remote-as'],
                                     'prefixCount':'X',
                                     'established':bgp['established'],
                     })
@@ -54,7 +53,7 @@ def getDataRouter(identity, hostInput, userInput, passwordInput, portInput):
                 'localAddress':'X',
                 'remoteAddress':bgp['remote-address'],
                 'remoteId':'X',
-                'remoteAS':bgp['remote-as'],
+                'remoteAs':bgp['remote-as'],
                 'prefixCount':'X',
                 'established':'X',
                 })
@@ -76,7 +75,7 @@ def getDataRouter(identity, hostInput, userInput, passwordInput, portInput):
                                 'localAddress':bgpSession['local.address'],
                                 'remoteAddress':bgpSession['remote.address'],
                                 'remoteId':bgpSession['remote.id'],
-                                'remoteAS':bgpSession['remote.as'],
+                                'remoteAs':bgpSession['remote.as'],
                                 'prefixCount':bgpSession['prefix-count'],
                                 'established':bgpSession['established'],
                                 })
@@ -89,7 +88,7 @@ def getDataRouter(identity, hostInput, userInput, passwordInput, portInput):
                                 'localAddress':bgpConn['local.address'],
                                 'remoteAddress':bgpConn['remote.address'],
                                 'remoteId':'X',
-                                'remoteAS':bgpSession['remote.as'],
+                                'remoteAs':bgpSession['remote.as'],
                                 'prefixCount':'X',
                                 'established':'X',
                                 })
@@ -99,23 +98,24 @@ def getDataRouter(identity, hostInput, userInput, passwordInput, portInput):
 
     return bgpList
 
-bgpDevices = [
-        #'103.73.72.3',
-        #'103.73.72.2',
-        '103.73.72.42',
-        #'103.73.72.43',
-        #'103.73.72.1',
-    ]
-
 def getBgpList(bgpDevices):
     bgpList = []
     for device in bgpDevices:
-        dataPeer = getDataRouter('identity',device, 'jul', 'Juliandi123!@#', 8728)
-        for peer in dataPeer:
-            bgpList.append(peer)
+        try:
+            dataPeer = getDataRouter('identity',device, 'jul', 'Juliandi123!@#', 8728)
+            for peer in dataPeer:
+                bgpList.append(peer)
+        except Exception:
+            bgpList.append({'identity':'identity',
+                            'ipDevice':device,
+                            'name':'X',
+                            'disabled':'X',
+                            'localAddress':'X',
+                            'remoteAddress':'X',
+                            'remoteId':'X',
+                            'remoteAs':'X',
+                            'prefixCount':'X',
+                            'established':'X',
+            })
 
     return bgpList
-
-output = getBgpList(bgpDevices)
-
-print(json.dumps(output, indent=4))

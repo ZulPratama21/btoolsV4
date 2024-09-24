@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'monitoring',
     'databases',
     'troubleshoot',
+    'maintenance',
 ]
 
 MIDDLEWARE = [

@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="container mt-4">
+        <div class="table-responsive">
+            <table class="table table-bordered text-center table-sm">
+                <thead>
+                    <tr>
+                        <th colspan="9" class="table-active table-primary">Pengecekan Peering BGP</th>
+                    </tr>
+                    <tr>
+                        <th>Identity</th>
+                        <th>IP</th>
+                        <th>Nama Peering</th>
+                        <th>Local Address</th>
+                        <th>Remote Address</th>
+                        <th>Remote ID</th>
+                        <th>Remote AS</th>
+                        <th>Prefix Count</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for bgp in bgpList %}
+                    <tr>
+                        <td>{{ bgp.identity }}</td>
+                        <td>{{ bgp.ipDevice }}</td>
+                        <td>{{ bgp.name }}</td>
+                        <td>{{ bgp.localAddress }}</td>
+                        <td>{{ bgp.remoteAddress }}</td>
+                        <td>{{ bgp.remoteId }}</td>
+                        <td>{{ bgp.remoteAs }}</td>
+                        <td>{{ bgp.prefixCount }}</td>
+                        <td class="badge text-light
+                            {% if bgp.disabled == 'true' %}
+                                bg-secondary
+                            {% elif bgp.disabled == 'false' and bgp.established == 'false' %}
+                                bg-danger
+                            {% elif bgp.disabled == 'X' %}
+                                bg-warning
+                            {% else %}
+                                bg-success
+                            {% endif %}">
+
+                            {% if bgp.disabled == 'true' %}
+                                disabled
+                            {% elif bgp.disabled == 'false' and bgp.established == 'false' %}
+                                non-establish
+                            {% elif bgp.disabled == 'X' %}
+                                Router Timeout <i class="bi bi-exclamation-triangle-fill"></i>
+                            {% else %}
+                                established
+                            {% endif %}
+
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock content %}
+    

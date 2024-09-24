@@ -1,9 +1,15 @@
-<a class="list-group-item list-group-item-action list-group-item-light p-3" data-bs-toggle="collapse" href="#collapseMaintenance" role="button" aria-expanded="false" aria-controls="collapseConfiguration">
+<a class="list-group-item list-group-item-action list-group-item-light p-3
+{% if 'maintenance' in request.path %}active{% endif %}"
+data-bs-toggle="collapse"
+href="#collapseMaintenance"
+role="button"
+aria-expanded="false"
+aria-controls="collapseMaintenance">
     Maintenance <i class="bi bi-clipboard-data"></i>
 </a>
-<div class="collapse" id="collapseMaintenance">
+<div class="collapse {% if 'maintenance' in request.path %}show{% endif %}" id="collapseMaintenance">
     <div class="list-group">
-        <a class="list-group-item list-group-item-light p-3" href="#!">Submenu 1</a>
+        <a class="list-group-item list-group-item-light p-3 {% if 'checkBgpPeer' in request.path %}active{% endif %}" href="{% url 'maintenance:checkBgpPeer' %}"> <i class="bi bi-dot"></i>Check Peering BGP</a>
         <a class="list-group-item list-group-item-light p-3" href="#!">Submenu 2</a>
         <a class="list-group-item list-group-item-light p-3" href="#!">Submenu 3</a>
     </div>
