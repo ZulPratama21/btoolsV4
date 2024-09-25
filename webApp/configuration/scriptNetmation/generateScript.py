@@ -1,5 +1,5 @@
 
-def confC320OnuBridge(sn,neCode,ipAddress,subnetMask,limitasi,modemType):
+def gConfC320OnuBridge(sn,neCode,ipAddress,subnetMask,limitasi,modemType):
     oltId = int(neCode[-4:-2])
     if oltId < 17:
         oltPort = f'1/1/{oltId}'
@@ -8,7 +8,7 @@ def confC320OnuBridge(sn,neCode,ipAddress,subnetMask,limitasi,modemType):
         oltId2 = oltId - 16
         oltPort = f'1/2/{oltId2}'
 
-    vlan = neCode[:-3]
+    vlan = neCode[:-2]
     onu = int(neCode[-2:])
 
     result = f'''interface gpon-olt_{oltPort}
@@ -30,7 +30,3 @@ security-mgmt 1 state enable mode forward protocol web
 exit'''
     
     return result
-
-output = confC320OnuBridge('ZTE123123','10203','192.168.1.1','255.255.255.0','Gaming-10M','ZTE-F660')
-
-print(output)
