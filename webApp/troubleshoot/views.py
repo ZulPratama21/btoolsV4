@@ -19,6 +19,7 @@ def getDataDuFo(request):
 
     return JsonResponse(dataAll)
 
+# Perlu dirapihkan kembali agar hanya 1 function cukup untuk menampung beberapa request menggunakan dynamic URL
 @login_required(redirect_field_name='next', login_url='/login')
 def bhomeFtth(request):
     return render(request, 'troubleshoot/bhomeFtth.html')
