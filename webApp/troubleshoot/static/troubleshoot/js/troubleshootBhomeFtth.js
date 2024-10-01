@@ -98,6 +98,7 @@ function updateTrafficData() {
             alert('ID Lokasi tidak ditermukan')
         }
 
+        document.getElementById('clientDetail').textContent = data.comment;
         document.getElementById('status').textContent = data.statusClient;
         document.getElementById('tUpload').textContent = data.tUpload;
         document.getElementById('tDownload').textContent = data.tDownload;
@@ -110,6 +111,10 @@ function updateTrafficData() {
         document.getElementById('type').textContent = data.type;
         document.getElementById('name').textContent = data.name;
         document.getElementById('serialNumber').textContent = data.serialNumber;
+        document.getElementById('ssid5').textContent = data.ssid['5.8'];
+        document.getElementById('ssid2').textContent = data.ssid['2.4'];
+        document.getElementById('passWifi5').textContent = data.passWifi['5.8'];
+        document.getElementById('passWifi2').textContent = data.passWifi['2.4'];
 
         let maxUpload = parseFloat(data.maxUpload) || 0;
         let maxDownload = parseFloat(data.maxDownload) || 0;
@@ -234,5 +239,29 @@ function updateTrafficData() {
 
         const clientLink = document.getElementById('clientLink');
         clientLink.href = `http://${data.clientIp}`;
+
+        const dataConn = data.connectedDevice;
+        const tableBody = document.getElementById('deviceTable');
+        
+        // Kosongkan tabel sebelum menambahkan data baru
+        tableBody.innerHTML = '';
+        
+        // Looping melalui data dan membuat baris tabel
+        dataConn.forEach(device => {
+            const row = document.createElement('tr');
+        
+            const hostName = device.hostName ? device.hostName : 'Unknown';
+            const ipAddress = device.ipAddress;
+            const macAddress = device.macAddress;
+        
+            row.innerHTML = `
+                <td>${hostName}</td>
+                <td>${ipAddress}</td>
+                <td>${macAddress}</td>
+            `;
+        
+            tableBody.appendChild(row);
+        });
+        
     });
 }

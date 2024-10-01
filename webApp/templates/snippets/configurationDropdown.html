@@ -28,8 +28,10 @@ aria-controls="collapseConfiguration">
                         href="{% url 'configuration:generateScript' 'confC320OnuBridge' %}">
                         <i class="bi bi-dot"></i> <i class="bi bi-dot"></i> confC320OnuBridge
                     </a>      
-                    <a class="list-group-item list-group-item-light p-3" href="#!">
-                        <i class="bi bi-dot"></i> <i class="bi bi-dot"></i> confC320OnuPPPoE
+                    <a class="list-group-item list-group-item-light p-3
+                        {% if 'confC320OnuPppoe' in request.path %}active{% endif %}"
+                        href="{% url 'configuration:generateScript' 'confC320OnuPppoe' %}">
+                        <i class="bi bi-dot"></i> <i class="bi bi-dot"></i> confC320OnuPppoE
                     </a>
                 </div>
             </div>

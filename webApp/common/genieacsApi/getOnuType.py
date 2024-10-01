@@ -27,7 +27,3 @@ def getOnuType(clientIp):
         
     except Exception as e:
         return str(e)
-
-output = getOnuType("10.201.35.153")
-
-print(json.dumps(output, indent=4))

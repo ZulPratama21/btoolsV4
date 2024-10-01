@@ -1,6 +1,7 @@
 from routeros_api import RouterOsApiPool
 from common import oidLib
 from common.oidLib import dictOltIp # Perlu diganti ke database
+from common. genieacsApi import getOnuType, zte1, zte2, cdt1, cdt2
 import asyncio
 from puresnmp import Client, V2C, PyWrapper
 
@@ -88,7 +89,8 @@ def getDataRouter(inputIdLoc, hostInput, userInput, passwordInput, portInput):
         'tDownload':int(tDownload)/1000000,
         'latency':latency,
         'neCode':neCode,
-        'clientIp':clientIp
+        'clientIp':clientIp,
+        'comment':comment,
     }
     
     connection.disconnect()
@@ -173,6 +175,9 @@ def getAllData(idLoc):
             'tUpload': 'X',
             'tDownload': 'X',
             'latency': 'X',
+            'neCode': 'X',
+            'clientIp': 'X',
+            'comment': 'X',
         }
     
     neCode = (dataRouter['neCode'])
@@ -194,6 +199,31 @@ def getAllData(idLoc):
                 'serialNumber': 'X',
             }
 
-    dataAll = {**dataRouter, **dataOlt}
+    onuType = getOnuType.getOnuType(dataRouter['clientIp'])
+    dataOnu = None
+    if onuType == 'F670L':
+        dataOnu = zte1.getData(dataRouter['clientIp'])
+
+    if dataOnu is None:
+        dataOnu = {
+            'ssid':{
+                '5.8':'X',
+                '2.4':'X',
+            },
+            'passWifi':{
+                '5.8':'X',
+                '2.4':'X'
+            },
+            'connectedDevice':[
+                {
+                    'hostName':'X',
+                    'ipAddress':'X',
+                    'macAddress':'X',
+                }
+            ],
+        }
+
+    dataAll = {**dataRouter, **dataOlt, **dataOnu}
+    print(dataAll)
 
     return dataAll

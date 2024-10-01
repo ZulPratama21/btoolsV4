@@ -22,7 +22,7 @@ function sendData(event) {
     };
 
     // Melakukan fetch request dengan method POST
-    fetch('/configuration/apiConfC320OnuBridge', {
+    fetch('/configuration/apiConfC320OnuPppoe', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

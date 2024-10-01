@@ -25,7 +25,7 @@ def apiConfC320OnuBridge(request):
             'status': 'success',
             'message': result
         }
-
+        
         return JsonResponse(response_data)
     
 @csrf_exempt
@@ -36,8 +36,8 @@ def apiConfC320OnuPppoe(request):
         limitasi = data.get('limitasi')
         neCode = data.get('neCode')
         modemType = data.get('modemType')
-
-        result = gConfC320OnuPppoe(sn,neCode,ipAddress,subnetMask,limitasi,modemType)
+        
+        result = gConfC320OnuPppoe(sn,neCode,limitasi,modemType)
 
         response_data = {
             'status': 'success',

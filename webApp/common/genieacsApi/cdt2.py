@@ -1,3 +1,5 @@
+# Supported device: R550
+
 import requests
 import json
 
@@ -23,10 +25,10 @@ def getData(clientIp):
     }
 
     # Proyeksi data yang akan diambil
-    projectionSsid5 = "InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.SSID._value"
-    projectionSsid2 = "InternetGatewayDevice.LANDevice.1.WLANConfiguration.6.SSID._value"
-    projectionKeypassphrase5 = "InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.X_CMS_KeyPassphrase._value"
-    projectionKeypassphrase2 = "InternetGatewayDevice.LANDevice.1.WLANConfiguration.6.X_CMS_KeyPassphrase._value"
+    projectionSsid5 = "InternetGatewayDevice.LANDevice.1.WLANConfiguration.6.SSID._value"
+    projectionSsid2 = "InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.SSID._value"
+    projectionKeypassphrase5 = "InternetGatewayDevice.LANDevice.1.WLANConfiguration.6.X_CMS_KeyPassphrase._value"
+    projectionKeypassphrase2 = "InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.X_CMS_KeyPassphrase._value"
     projectionHost = 'InternetGatewayDevice.LANDevice.1.Hosts.Host'
 
     # Melakukan permintaan untuk SSID 5.8 Ghz
@@ -34,7 +36,7 @@ def getData(clientIp):
         responseSsid5 = requests.get(baseUrl, params={'query': query, 'projection': projectionSsid5})
         if responseSsid5.status_code == 200:
             ssidData5 = responseSsid5.json()
-            ssid5 = ssidData5[0]['InternetGatewayDevice']['LANDevice']['1']['WLANConfiguration']['1']['SSID']['_value']
+            ssid5 = ssidData5[0]['InternetGatewayDevice']['LANDevice']['1']['WLANConfiguration']['6']['SSID']['_value']
 
             result['ssid']['5.8'] = ssid5 
 
@@ -52,7 +54,7 @@ def getData(clientIp):
         responseSsid2 = requests.get(baseUrl, params={'query': query, 'projection': projectionSsid2})
         if responseSsid2.status_code == 200:
             ssidData2 = responseSsid2.json()
-            ssid2 = ssidData2[0]['InternetGatewayDevice']['LANDevice']['1']['WLANConfiguration']['6']['SSID']['_value']
+            ssid2 = ssidData2[0]['InternetGatewayDevice']['LANDevice']['1']['WLANConfiguration']['1']['SSID']['_value']
 
             result['ssid']['2.4'] = ssid2 
 
@@ -70,7 +72,7 @@ def getData(clientIp):
         responseKeypassphrase5 = requests.get(baseUrl, params={'query': query, 'projection': projectionKeypassphrase5})
         if responseKeypassphrase5.status_code == 200:
             keypassphraseData2 = responseKeypassphrase5.json()
-            keypassphrase2 = keypassphraseData2[0]['InternetGatewayDevice']['LANDevice']['1']['WLANConfiguration']['1']['X_CMS_KeyPassphrase']['_value']
+            keypassphrase2 = keypassphraseData2[0]['InternetGatewayDevice']['LANDevice']['1']['WLANConfiguration']['6']['X_CMS_KeyPassphrase']['_value']
             result['passWifi']['5.8'] = keypassphrase2
             
         else:
@@ -87,7 +89,7 @@ def getData(clientIp):
         responseKeypassphrase2 = requests.get(baseUrl, params={'query': query, 'projection': projectionKeypassphrase2})
         if responseKeypassphrase2.status_code == 200:
             keypassphraseData5 = responseKeypassphrase2.json()
-            keypassphrase5 = keypassphraseData5[0]['InternetGatewayDevice']['LANDevice']['1']['WLANConfiguration']['6']['X_CMS_KeyPassphrase']['_value']
+            keypassphrase5 = keypassphraseData5[0]['InternetGatewayDevice']['LANDevice']['1']['WLANConfiguration']['1']['X_CMS_KeyPassphrase']['_value']
             result['passWifi']['2.4'] = keypassphrase5
             
         else:
@@ -133,6 +135,3 @@ def getData(clientIp):
         result["connectedDevice"] = str(e)
 
     return result
-
-output = getData('10.201.35.153')
-print(json.dumps(output, indent=4))

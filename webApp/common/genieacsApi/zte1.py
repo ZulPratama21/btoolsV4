@@ -1,3 +1,5 @@
+# Supported device: F670L, F679L
+
 import requests
 import json
 
@@ -28,7 +30,7 @@ def getData(clientIp):
     projectionKeypassphrase5 = "InternetGatewayDevice.LANDevice.1.WLANConfiguration.5.KeyPassphrase._value"
     projectionKeypassphrase2 = "InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.KeyPassphrase._value"
     projectionHost = 'InternetGatewayDevice.LANDevice.1.Hosts.Host'
-
+    
     # Melakukan permintaan untuk SSID 5.8 Ghz
     try:
         responseSsid5 = requests.get(baseUrl, params={'query': query, 'projection': projectionSsid5})
@@ -45,7 +47,7 @@ def getData(clientIp):
         result['ssid']['5.8'] = 'not found'
 
     except Exception as e:
-        result['ssid']['5.8'] = str(e)
+        result['ssid']['5.8'] = 'error: ' + str(e)
 
     # Melakukan permintaan untuk SSID 2.4 Ghz
     try:
@@ -80,7 +82,7 @@ def getData(clientIp):
         result['passWifi']['5.8'] = 'not found'
 
     except Exception as e:
-        result['passWifi']['5.8'] = str(e)
+        result['passWifi']['5.8'] = 'error: ' + str(e)
 
     # Melakukan permintaan untuk KeyPassphrase 2.4 Ghz
     try:
@@ -97,7 +99,7 @@ def getData(clientIp):
         result['passWifi']['2.4'] = 'not found'
 
     except Exception as e:
-        result['passWifi']['2.4'] = str(e)
+        result['passWifi']['2.4'] = 'error: ' + str(e)
     
     # Melakukan permintaan untuk jumlah host terhubung
     try:
@@ -133,6 +135,3 @@ def getData(clientIp):
         result["connectedDevice"] = str(e)
 
     return result
-
-output = getData('10.211.40.1')
-print(json.dumps(output, indent=4))
