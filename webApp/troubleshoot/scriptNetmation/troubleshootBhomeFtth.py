@@ -54,11 +54,24 @@ def getDataRouter(inputIdLoc, hostInput, userInput, passwordInput, portInput):
     queueList = queues.get(name=secretName)
     
     if queueList == []:
-        maxUpload = 0
-        maxDownload = 0
-        tUpload = 0
-        tDownload = 0   
+        queueList = queues.get(name=neCode)
+        if queueList == []:
+            maxUpload = 0
+            maxDownload = 0
+            tUpload = 0
+            tDownload = 0
 
+        else:
+            queue = queueList[0]
+            
+            maxLimit = queue['max-limit'].split('/')
+            maxUpload = maxLimit[0]
+            maxDownload = maxLimit[1]
+
+            # Mengambil traffic saat ini
+            traffic = queue['rate'].split('/')
+            tUpload = traffic[0]
+            tDownload = traffic[1]
     else:    
         queue = queueList[0]
 
@@ -71,6 +84,7 @@ def getDataRouter(inputIdLoc, hostInput, userInput, passwordInput, portInput):
         tUpload = traffic[0]
         tDownload = traffic[1]
 
+       
     # Mengambil status client
     addressLists = api.get_resource('/ip/firewall/address-list')
     addressList_List = addressLists.get(address=clientIp)
