@@ -143,6 +143,8 @@ function updateTrafficData() {
         // Determine upload traffic result
         if (data.tUpload === 'X'){
             tUploadResult = '';
+        } else if (data.minUploadIdeal === 0){
+            tUploadResult = 'Bad';
         } else if (data.tUpload < minUploadIdeal) {
             tUploadResult = 'Low Traffic';
         } else if (data.tUpload > maxUploadIdeal) {
@@ -153,7 +155,9 @@ function updateTrafficData() {
 
         // Determine download traffic result
         if (data.tDownload === 'X'){
-            tUploadResult = '';
+            tDownloadResult = '';
+        } if (data.minDownloadIdeal === 0){
+            tDownloadResult = 'Bad';
         } else if (data.tDownload < minDownloadIdeal) {
             tDownloadResult = 'Low Traffic';
         } else if (data.tDownload > maxDownloadIdeal) {
@@ -236,6 +240,21 @@ function updateTrafficData() {
         config.data.datasets[1].data.push(data.tDownload);
 
         lineChart.update();
+
+        const changeSSIDPassword = document.getElementById('changeSSIDPassword');
+        changeSSIDPassword.addEventListener('click', (event) => {
+            event.preventDefault();
+            const clientIp = data.clientIp;
+            const onuType = data.type;
+            const ssid5 = data.ssid['5.8'];
+            const ssid2 = data.ssid['2.4'];
+            const passWifi5 = data.passWifi['5.8'];
+            const passWifi2 = data.passWifi['2.4'];
+            locationId
+            // Mengarahkan ke halaman baru dengan query parameters
+            window.location.href = `configWifi/${clientIp}?onuType=${encodeURIComponent(onuType)}&locationId=${encodeURIComponent(locationId)}&ssid5=${encodeURIComponent(ssid5)}&ssid2=${encodeURIComponent(ssid2)}&passWifi5=${encodeURIComponent(passWifi5)}&passWifi2=${encodeURIComponent(passWifi2)}`;
+        });
+        
 
         const clientLink = document.getElementById('clientLink');
         clientLink.href = `http://${data.clientIp}`;

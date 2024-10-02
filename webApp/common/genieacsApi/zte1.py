@@ -181,7 +181,7 @@ def getDeviceIdByIp(clientIP):
         print(f"Exception occurred: {str(e)}")
         return None
 
-def setWifi(clientIP, band, Ssid, passWifi):
+def setWifi(clientIP, band, ssid, passWifi):
     # Mendapatkan deviceId berdasarkan IP address
     deviceId = getDeviceIdByIp(clientIP)
     if not deviceId:
@@ -203,7 +203,7 @@ def setWifi(clientIP, band, Ssid, passWifi):
     data = {
         "name": "setParameterValues",
         "parameterValues": [
-            [paramSsid, Ssid] , [paramPassWifi, passWifi]
+            [paramSsid, ssid] , [paramPassWifi, passWifi]
         ]
     }
 
@@ -218,7 +218,7 @@ def setWifi(clientIP, band, Ssid, passWifi):
         
         if response.status_code == 200:
             result['statusCode'] = response.status_code
-            result['responseBody'] = f'Berhasil konfigurasi wifi\nSSID: {Ssid} Password: {passWifi}'
+            result['responseBody'] = f'Berhasil konfigurasi wifi<br>SSID: <strong>{ssid}</strong><br>Password: <strong>{passWifi}</strong><br>'
 
         else:
             result['statusCode'] = response.status_code

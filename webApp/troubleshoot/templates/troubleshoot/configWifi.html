@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h1>Ganti SSID dan Password Wifi Dibawah</h1>
+
+    <form class="mt-4" method="POST">
+        {% csrf_token %}
+        <div class="row">
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="ssid5" class="form-label">SSID 5.8 Ghz</label>
+                    <input type="text" class="form-control" id="ssid5" name="ssid5" value="{{ ssid5 }}" required>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="ssid2" class="form-label">SSID 2.4 Ghz</label>
+                    <input type="text" class="form-control" id="ssid2" name="ssid2" value="{{ ssid2 }}" required>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="passWifi5" class="form-label">Password SSID 5.8 Ghz</label>
+                    <input type="text" class="form-control" id="passWifi5" name="passWifi5" value="{{ passWifi5 }}" required>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="passWifi2" class="form-label">Password SSID 2.4 Ghz</label>
+                    <input type="text" class="form-control" id="passWifi2" name="passWifi2" value="{{ passWifi2 }}" required>
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+{% endblock content %}
+    

@@ -27,7 +27,7 @@ def getDataRouter(inputIdLoc, hostInput, userInput, passwordInput, portInput):
             commentId = comment.split()[0]
             neCode = commentId.split('-')[1]
             secretName = f'<pppoe-{secret["name"]}>'
-
+            
             # Mengambil ip address client untuk melakukan ping
             clientIp = secret['remote-address']
             break
@@ -215,7 +215,7 @@ def getAllData(idLoc):
 
     onuType = getOnuType.getOnuType(dataRouter['clientIp'])
     dataOnu = None
-    if onuType == 'F670L':
+    if onuType == 'F670L' or onuType == 'F679':
         dataOnu = zte1.getData(dataRouter['clientIp'])
 
     if dataOnu is None:
@@ -238,6 +238,5 @@ def getAllData(idLoc):
         }
 
     dataAll = {**dataRouter, **dataOlt, **dataOnu}
-    print(dataAll)
 
     return dataAll

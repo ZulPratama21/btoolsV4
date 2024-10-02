@@ -3,6 +3,15 @@
 {% block content %}
 <div class="container py-5">
     <h1 class="text-center mb-4">Troubleshoot BHome FTTH</h1>
+    {% if messages %}
+        <div class="messages">
+            {% for message in messages %}
+                <div class="alert alert-{{ message.tags }}" role="alert">
+                    {{ message|safe }}
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
     <form id="locationForm" class="row justify-content-center mb-4">
         <div class="col-md-6">
             <div class="input-group">
@@ -93,7 +102,10 @@
                             <th colspan="2" class="table-success">Data Detail Pelanggan</th>
                         </tr>
                         <tr>
-                            <th colspan="2"><span id="clientDetail">X</span></th>
+                            <th colspan="2">
+                                <span id="clientDetail">X</span>
+                                <a id="changeSSIDPassword" class="btn btn-warning btn-sm rounded-pill fw-bold" href="#" role="button" style="float: right;" target="_blank">Ganti SSID/Password</a>
+                            </th>
                         </tr>
                         <tr>
                             <th>Parameter</th>
@@ -127,16 +139,20 @@
                         <tr>
                             <td>SN</td>
                             <td><span id="serialNumber">X</span></td>
-                        </tr>                        <tr>
+                        </tr>
+                        <tr>
                             <td>SSID 5.8 Ghz</td>
                             <td><span id="ssid5">X</span></td>
-                        </tr>                        <tr>
+                        </tr>
+                        <tr>
                             <td>SSID 2.4 Ghz</td>
                             <td><span id="ssid2">X</span></td>
-                        </tr>                        <tr>
+                        </tr>
+                        <tr>
                             <td>Password Wifi 5.8 Ghz</td>
                             <td><span id="passWifi5">X</span></td>
-                        </tr>                        </tr>                        <tr>
+                        </tr>
+                        <tr>
                             <td>Password Wifi 2.4 Ghz</td>
                             <td><span id="passWifi2">X</span></td>
                         </tr>
