@@ -9,9 +9,7 @@ Monitoring <i class="bi bi-display"></i>
 </a>
 <div class="collapse {% if 'monitoring' in request.path %}show{% endif %}" id="collapseMonitoring">
 <div class="list-group">
-    <a class="list-group-item list-group-item-light p-3 
-        {% if request.resolver_match.kwargs.templateName == 'librenms' %}active{% endif %}" 
-        href="{% url 'monitoring:monitoringViews' templateName='librenms' %}">
+    <a class="list-group-item list-group-item-light p-3" href="https://mrtg.bnet.id/" target="_blank">
         <i class="bi bi-dot"></i> Libre NMS <i class="bi bi-diagram-3-fill"></i>
     </a>
 
@@ -119,5 +117,13 @@ Monitoring <i class="bi bi-display"></i>
 
         </div>
     </div>
+
+    <a class="list-group-item list-group-item-light p-3" href="http://172.16.1.186:3000/" target="_blank">
+        <i class="bi bi-dot"></i> Genieacs <i class="bi bi-router-fill"></i>
+    </a>
+
+    <a class="list-group-item list-group-item-light p-3" href="https://172.16.1.214:8061/" target="_blank">
+        <i class="bi bi-dot"></i> NetFlow <i class="bi bi-pci-card-network"></i>
+    </a>
 </div>
 </div>
