@@ -1,4 +1,6 @@
 {% load static %}
+{% load global_tags %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,22 +21,31 @@
             <div class="sidebar-heading border-bottom bg-light">BTOOLS V4</div>
             <div class="list-group list-group-flush">
                 <a class="list-group-item list-group-item-action list-group-item-light p-3 {% block dashboard %}{% endblock %}" href="/">Dashboard <i class="bi bi-speedometer"></i></a>
+
+                {% if user|in_groups:"NE Junior" %}
+                    <!-- Configuration Dropdown -->
+                    {% include "snippets/configurationDropdown.html" %}
+                {% endif %}
+
+                {% if user|in_groups:"NE Junior, CR" %}
+                    <!-- Troubleshoot Dropdown -->
+                    {% include "snippets/troubleshootDropdown.html" %}
+                {% endif %}
                 
-                <!-- Configuration Dropdown -->
-                {% include "snippets/configurationDropdown.html" %}
+                {% if user|in_groups:"NE Junior" %}
+                    <!-- Maintenance Dropdown -->
+                    {% include "snippets/maintenanceDropdown.html" %}
+                {% endif %}
 
-                <!-- Troubleshoot Dropdown -->
-                {% include "snippets/troubleshootDropdown.html" %}
+                {% if user|in_groups:"NE Junior, CR" %}
+                    <!-- Monitoring Dropdown -->
+                    {% include "snippets/monitoringDropdown.html" %}
+                {% endif %}
 
-                <!-- Maintenance Dropdown -->
-                {% include "snippets/maintenanceDropdown.html" %}
-
-                <!-- Monitoring Dropdown -->
-                {% include "snippets/monitoringDropdown.html" %}
-
-
-                <!-- Databases Dropdown -->
-                {% include "snippets/databasesDropdown.html" %}
+                {% if user|in_groups:"NE Junior" %}
+                    <!-- Databases Dropdown -->
+                    {% include "snippets/databasesDropdown.html" %}
+                {% endif %}
 
             </div>
         </div>
