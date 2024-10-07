@@ -105,6 +105,7 @@ function updateTrafficData() {
         document.getElementById('latency').textContent = data.latency;
         document.getElementById('state').textContent = data.state;
         document.getElementById('redaman').textContent = data.redaman;
+        document.getElementById('totalConnDevice').textContent = data.totalConnDevice;
         document.getElementById('clientIp').textContent = data.clientIp;
         document.getElementById('authpass').textContent = data.authpass;
         document.getElementById('offline').textContent = data.offline;
@@ -123,13 +124,15 @@ function updateTrafficData() {
         let maxUploadIdeal = (0.80 * maxUpload).toFixed(2);
         let minDownloadIdeal = (0.05 * maxDownload).toFixed(2);
         let maxDownloadIdeal = (0.80 * maxDownload).toFixed(2);
+        let maxConnDevice = (0.30 * maxDownload).toFixed();
 
         document.getElementById('minUpload').textContent = minUploadIdeal;
         document.getElementById('maxUpload').textContent = maxUploadIdeal;
         document.getElementById('minDownload').textContent = minDownloadIdeal;
         document.getElementById('maxDownload').textContent = maxDownloadIdeal;
+        document.getElementById('maxConnDevice').textContent = maxConnDevice;
 
-        let statusResult, tUploadResult, tDownloadResult, latencyResult, stateResult, redamanResult;
+        let statusResult, tUploadResult, tDownloadResult, latencyResult, stateResult, redamanResult, connDeviceResult;
 
         // Determine status result
         if (data.statusClient === 'Null'){
@@ -185,7 +188,6 @@ function updateTrafficData() {
         }
 
         // Determine redaman result
-        //redamanResult = data.redaman > -29 ? 'OK' : 'High dB';
         if (data.redaman === undefined){
             redamanResult = '';
         } else if (data.redaman > -29){
@@ -194,6 +196,15 @@ function updateTrafficData() {
             redamanResult = 'High dB';
         }
 
+        // Determine connected device result
+        if (parseInt(maxConnDevice) === 0){
+            connDeviceResult = '';
+        } else if (parseInt(maxConnDevice) < data.totalConnDevice){
+            connDeviceResult = 'Bad';
+        } else {
+            connDeviceResult = 'OK';
+        }
+        
         // Update text content for results
         document.getElementById('statusResult').textContent = statusResult;
         document.getElementById('tUploadResult').textContent = tUploadResult;
@@ -201,6 +212,7 @@ function updateTrafficData() {
         document.getElementById('latencyResult').textContent = latencyResult;
         document.getElementById('stateResult').textContent = stateResult;
         document.getElementById('redamanResult').textContent = redamanResult;
+        document.getElementById('connDeviceResult').textContent = connDeviceResult;
 
         // Helper function to update badge color
         function updateBadgeColor(elementId, result) {
@@ -222,6 +234,7 @@ function updateTrafficData() {
         updateBadgeColor('latencyResult', latencyResult);
         updateBadgeColor('stateResult', stateResult);
         updateBadgeColor('redamanResult', redamanResult);
+        updateBadgeColor('connDeviceResult', connDeviceResult);
 
         // Update the chart data
         if (config.data.labels.length == 20) {

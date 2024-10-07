@@ -1,7 +1,7 @@
 from routeros_api import RouterOsApiPool
 from common import oidLib
 from common.oidLib import dictOltIp # Perlu diganti ke database
-from common. genieacsApi import getOnuType, zte1, zte2, cdt1, cdt2
+from common.genieacsApi import getOnuType, zte1, zte2, cdt1, cdt2, cdt3
 import asyncio
 from puresnmp import Client, V2C, PyWrapper
 
@@ -89,7 +89,7 @@ def getDataRouter(inputIdLoc, hostInput, userInput, passwordInput, portInput):
     addressLists = api.get_resource('/ip/firewall/address-list')
     addressList_List = addressLists.get(address=clientIp)
     addressList = addressList_List[0]
-
+    
     if addressList['list'] == 'allow':
         status = 'Subscribe'
     else:
@@ -212,11 +212,24 @@ def getAllData(idLoc):
                 'name': 'X',
                 'serialNumber': 'X',
             }
-
+        
     onuType = getOnuType.getOnuType(dataRouter['clientIp'])
     dataOnu = None
+
     if onuType == 'F670L' or onuType == 'F679':
         dataOnu = zte1.getData(dataRouter['clientIp'])
+
+    elif onuType == 'F609' or onuType == 'F660':
+        dataOnu = zte2.getData(dataRouter['clientIp'])
+
+    elif onuType == 'FD514GD-R460':
+        dataOnu = cdt1.getData(dataRouter['clientIp'])
+
+    elif onuType == 'FD514GS1-R550':
+        dataOnu = cdt2.getData(dataRouter['clientIp'])
+
+    elif onuType == 'FD512XW-R460':
+        dataOnu = cdt3.getData(dataRouter['clientIp'])
 
     if dataOnu is None:
         dataOnu = {
@@ -235,6 +248,7 @@ def getAllData(idLoc):
                     'macAddress':'X',
                 }
             ],
+            'totalConnDevice':'X'
         }
 
     dataAll = {**dataRouter, **dataOlt, **dataOnu}

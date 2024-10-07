@@ -1,4 +1,5 @@
-# Supported device: F670L, F679L
+# Supported device FD514GD-R460
+
 import requests
 import json
 
@@ -9,7 +10,7 @@ def getData(clientIp):
 
     # Query untuk ExternalIPAddress
     query = json.dumps({
-        "InternetGatewayDevice.WANDevice.1.WANConnectionDevice.1.WANPPPConnection.1.ExternalIPAddress": clientIp
+        "InternetGatewayDevice.WANDevice.1.WANConnectionDevice.2.WANPPPConnection.1.ExternalIPAddress": clientIp
     })
     
     result = {
@@ -25,10 +26,10 @@ def getData(clientIp):
     }
 
     # Proyeksi data yang akan diambil
-    projectionSsid5 = "InternetGatewayDevice.LANDevice.1.WLANConfiguration.5.SSID._value"
-    projectionSsid2 = "InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.SSID._value"
-    projectionKeypassphrase5 = "InternetGatewayDevice.LANDevice.1.WLANConfiguration.5.KeyPassphrase._value"
-    projectionKeypassphrase2 = "InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.KeyPassphrase._value"
+    projectionSsid5 = "InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.SSID._value"
+    projectionSsid2 = "InternetGatewayDevice.LANDevice.1.WLANConfiguration.6.SSID._value"
+    projectionKeypassphrase5 = "InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.X_CMS_KeyPassphrase._value"
+    projectionKeypassphrase2 = "InternetGatewayDevice.LANDevice.1.WLANConfiguration.6.X_CMS_KeyPassphrase._value"
     projectionHost = 'InternetGatewayDevice.LANDevice.1.Hosts.Host'
     
     # Melakukan permintaan untuk SSID 5.8 Ghz
@@ -36,7 +37,7 @@ def getData(clientIp):
         responseSsid5 = requests.get(baseUrl, params={'query': query, 'projection': projectionSsid5}, timeout=timeout)
         if responseSsid5.status_code == 200:
             ssidData5 = responseSsid5.json()
-            ssid5 = ssidData5[0]['InternetGatewayDevice']['LANDevice']['1']['WLANConfiguration']['5']['SSID']['_value']
+            ssid5 = ssidData5[0]['InternetGatewayDevice']['LANDevice']['1']['WLANConfiguration']['1']['SSID']['_value']
 
             result['ssid']['5.8'] = ssid5 
 
@@ -57,7 +58,7 @@ def getData(clientIp):
         responseSsid2 = requests.get(baseUrl, params={'query': query, 'projection': projectionSsid2}, timeout=timeout)
         if responseSsid2.status_code == 200:
             ssidData2 = responseSsid2.json()
-            ssid2 = ssidData2[0]['InternetGatewayDevice']['LANDevice']['1']['WLANConfiguration']['1']['SSID']['_value']
+            ssid2 = ssidData2[0]['InternetGatewayDevice']['LANDevice']['1']['WLANConfiguration']['6']['SSID']['_value']
 
             result['ssid']['2.4'] = ssid2 
 
@@ -78,7 +79,7 @@ def getData(clientIp):
         responseKeypassphrase5 = requests.get(baseUrl, params={'query': query, 'projection': projectionKeypassphrase5}, timeout=timeout)
         if responseKeypassphrase5.status_code == 200:
             keypassphraseData2 = responseKeypassphrase5.json()
-            keypassphrase2 = keypassphraseData2[0]['InternetGatewayDevice']['LANDevice']['1']['WLANConfiguration']['5']['KeyPassphrase']['_value']
+            keypassphrase2 = keypassphraseData2[0]['InternetGatewayDevice']['LANDevice']['1']['WLANConfiguration']['1']['X_CMS_KeyPassphrase']['_value']
             result['passWifi']['5.8'] = keypassphrase2
             
         else:
@@ -98,7 +99,7 @@ def getData(clientIp):
         responseKeypassphrase2 = requests.get(baseUrl, params={'query': query, 'projection': projectionKeypassphrase2}, timeout=timeout)
         if responseKeypassphrase2.status_code == 200:
             keypassphraseData5 = responseKeypassphrase2.json()
-            keypassphrase5 = keypassphraseData5[0]['InternetGatewayDevice']['LANDevice']['1']['WLANConfiguration']['1']['KeyPassphrase']['_value']
+            keypassphrase5 = keypassphraseData5[0]['InternetGatewayDevice']['LANDevice']['1']['WLANConfiguration']['6']['X_CMS_KeyPassphrase']['_value']
             result['passWifi']['2.4'] = keypassphrase5
             
         else:
@@ -136,9 +137,11 @@ def getData(clientIp):
                 })
             
             result['connectedDevice'] = connectedDevice
+            result['totalConnDevice'] = len(connectedDevice)
 
         else:
             result['connectedDevice'] = responseHost.status_code + ', ' + responseHost.text
+            result['totalConnDevice'] = responseHost.status_code + ', ' + responseHost.text
 
     except IndexError:
         result['connectedDevice'] = 'not found'
@@ -151,34 +154,5 @@ def getData(clientIp):
 
     return result
 
-def getDeviceIdByIp(clientIP):
-    # URL untuk mendapatkan devices berdasarkan IP address
-    baseUrl = 'http://172.16.1.186:7557/devices'
-    timeout = 3  # Batas waktu 3 detik
-    
-    # Query berdasarkan IP address
-    query = json.dumps({
-        "InternetGatewayDevice.WANDevice.1.WANConnectionDevice.1.WANPPPConnection.1.ExternalIPAddress": clientIP
-    })
-    
-    try:
-        response = requests.get(baseUrl, params={'query': query}, timeout=timeout)
-        if response.status_code == 200:
-            devices = response.json()
-            if devices:
-                deviceId = devices[0]["_id"]
-                return deviceId
-            else:
-                return None
-        else:
-            print(f"Error: {response.status_code}, {response.text}")
-            return None
-    except requests.exceptions.Timeout:
-        print("Request timed out")
-        return None
-    except Exception as e:
-        print(f"Exception occurred: {str(e)}")
-        return None
-
-output = getDeviceIdByIp('10.201.47.4')
+output = getData('10.201.40.1')
 print(json.dumps(output, indent=4))

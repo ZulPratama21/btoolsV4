@@ -69,7 +69,7 @@ exit'''
     
     else:
         result = f'''interface gpon-olt_{oltPort}
-onu 1 type {modemType} sn {sn}
+onu {onu} type {modemType} sn {sn}
 exit
 interface gpon-onu_{oltPort}:{onu}
 sn-bind enable sn

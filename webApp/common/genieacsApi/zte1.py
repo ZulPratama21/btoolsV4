@@ -98,9 +98,9 @@ def getData(clientIp):
     try:
         responseKeypassphrase2 = requests.get(baseUrl, params={'query': query, 'projection': projectionKeypassphrase2}, timeout=timeout)
         if responseKeypassphrase2.status_code == 200:
-            keypassphraseData5 = responseKeypassphrase2.json()
-            keypassphrase5 = keypassphraseData5[0]['InternetGatewayDevice']['LANDevice']['1']['WLANConfiguration']['1']['KeyPassphrase']['_value']
-            result['passWifi']['2.4'] = keypassphrase5
+            keypassphraseData2 = responseKeypassphrase2.json()
+            keypassphrase2 = keypassphraseData2[0]['InternetGatewayDevice']['LANDevice']['1']['WLANConfiguration']['1']['KeyPassphrase']['_value']
+            result['passWifi']['2.4'] = keypassphrase2
             
         else:
             result['passWifi']['2.4'] = responseKeypassphrase2.status_code + ', ' + responseKeypassphrase5.text
@@ -137,9 +137,11 @@ def getData(clientIp):
                 })
             
             result['connectedDevice'] = connectedDevice
+            result['totalConnDevice'] = len(connectedDevice)
 
         else:
             result['connectedDevice'] = responseHost.status_code + ', ' + responseHost.text
+            result['totalConnDevice'] = responseHost.status_code + ', ' + responseHost.text
 
     except IndexError:
         result['connectedDevice'] = 'not found'
