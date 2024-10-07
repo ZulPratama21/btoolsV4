@@ -146,7 +146,7 @@ function updateTrafficData() {
         // Determine upload traffic result
         if (data.tUpload === 'X'){
             tUploadResult = '';
-        } else if (data.minUploadIdeal === 0){
+        } else if (parseFloat(minUploadIdeal) <= 0.00){
             tUploadResult = 'Bad';
         } else if (data.tUpload < minUploadIdeal) {
             tUploadResult = 'Low Traffic';
@@ -159,7 +159,7 @@ function updateTrafficData() {
         // Determine download traffic result
         if (data.tDownload === 'X'){
             tDownloadResult = '';
-        } if (data.minDownloadIdeal === 0){
+        } else if (parseFloat(minDownloadIdeal) <= 0.00){
             tDownloadResult = 'Bad';
         } else if (data.tDownload < minDownloadIdeal) {
             tDownloadResult = 'Low Traffic';

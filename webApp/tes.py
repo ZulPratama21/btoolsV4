@@ -1,158 +1,111 @@
-# Supported device FD514GD-R460
-
-import requests
+from routeros_api import RouterOsApiPool
 import json
 
-def getData(clientIp):
-    # URL dasar API
-    baseUrl = 'http://172.16.1.186:7557/devices'
-    timeout = 3  # Batas waktu 3 detik
+def getDataRouter(inputIdLoc, hostInput, userInput, passwordInput, portInput):
+    idLoc = inputIdLoc.upper()
 
-    # Query untuk ExternalIPAddress
-    query = json.dumps({
-        "InternetGatewayDevice.WANDevice.1.WANConnectionDevice.2.WANPPPConnection.1.ExternalIPAddress": clientIp
-    })
+    connection = RouterOsApiPool(
+        host=hostInput,
+        username=userInput,
+        password=passwordInput,
+        port=int(portInput),
+        plaintext_login=True
+    )
+    api = connection.get_api()
+
+    secrets = api.get_resource('/ppp/secret')
+    allSecret = secrets.get()
+    
+    for secret in allSecret:
+        comment = secret['comment']
+        if idLoc in comment:
+            # Mengambil Kode NE untuk kebutuhan troubleshoot
+            commentId = comment.split()[0]
+            neCode = commentId.split('-')[1]
+            secretName = f'<pppoe-{secret["name"]}>'
+            
+            # Mengambil ip address client untuk melakukan ping
+            clientIp = secret['remote-address']
+            break
+    
+    # Mengambil latency
+    pingResult = api.get_resource('/').call('ping', { 'address': clientIp, 'count': '1', 'interval':'0.1s' })
+    ping = pingResult[0]
+    
+    if 'time' in ping:
+        latencyResult = ping['time']
+        if 'ms' in latencyResult:
+            latency = int(latencyResult.split('ms')[0])
+        else:
+            latency = 0
+
+    elif ping['status'] == 'timeout':
+        latency = 'timeout'
+
+    else:
+        latency = 'X'
+    
+    # Mendapatkan semua queue terlebih dahulu
+    queues = api.get_resource('/queue/simple')
+    queueList = queues.get(name=secretName)
+    
+    if queueList == []:
+        queueList = queues.get(name=neCode)
+        if queueList == []:
+            maxUpload = 0
+            maxDownload = 0
+            tUpload = 0
+            tDownload = 0
+
+        else:
+            queue = queueList[0]
+            
+            maxLimit = queue['max-limit'].split('/')
+            maxUpload = maxLimit[0]
+            maxDownload = maxLimit[1]
+
+            # Mengambil traffic saat ini
+            traffic = queue['rate'].split('/')
+            tUpload = traffic[0]
+            tDownload = traffic[1]
+    else:    
+        queue = queueList[0]
+
+        maxLimit = queue['max-limit'].split('/')
+        maxUpload = maxLimit[0]
+        maxDownload = maxLimit[1]
+
+        # Mengambil traffic saat ini
+        traffic = queue['rate'].split('/')
+        tUpload = traffic[0]
+        tDownload = traffic[1]
+
+       
+    # Mengambil status client
+    addressLists = api.get_resource('/ip/firewall/address-list')
+    addressList_List = addressLists.get(address=clientIp, list='allow')
+    
+    if addressList_List == []:
+        status = 'Suspend'
+
+    else:
+        status = 'Subscribe'
     
     result = {
-        'ssid': {
-            '5.8': '',
-            '2.4': '',
-        },
-        'passWifi': {
-            '5.8': '',
-            '2.4': '',
-        },
-        'connectedDevice': '',
+        'statusClient':status,
+        'maxUpload':int(maxUpload)/1000000,
+        'maxDownload':int(maxDownload)/1000000,
+        'tUpload':int(tUpload)/1000000,
+        'tDownload':int(tDownload)/1000000,
+        'latency':latency,
+        'neCode':neCode,
+        'clientIp':clientIp,
+        'comment':comment,
     }
-
-    # Proyeksi data yang akan diambil
-    projectionSsid5 = "InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.SSID._value"
-    projectionSsid2 = "InternetGatewayDevice.LANDevice.1.WLANConfiguration.6.SSID._value"
-    projectionKeypassphrase5 = "InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.X_CMS_KeyPassphrase._value"
-    projectionKeypassphrase2 = "InternetGatewayDevice.LANDevice.1.WLANConfiguration.6.X_CMS_KeyPassphrase._value"
-    projectionHost = 'InternetGatewayDevice.LANDevice.1.Hosts.Host'
     
-    # Melakukan permintaan untuk SSID 5.8 Ghz
-    try:
-        responseSsid5 = requests.get(baseUrl, params={'query': query, 'projection': projectionSsid5}, timeout=timeout)
-        if responseSsid5.status_code == 200:
-            ssidData5 = responseSsid5.json()
-            ssid5 = ssidData5[0]['InternetGatewayDevice']['LANDevice']['1']['WLANConfiguration']['1']['SSID']['_value']
-
-            result['ssid']['5.8'] = ssid5 
-
-        else:
-            result["ssid"]['5.8'] = responseSsid5.status_code + ', ' +  responseSsid5.text
-
-    except IndexError:
-        result['ssid']['5.8'] = 'not found'
-
-    except requests.exceptions.Timeout:
-        result['ssid']['5.8'] = 'request timed out'
-
-    except Exception as e:
-        result['ssid']['5.8'] = 'error: ' + str(e)
-
-    # Melakukan permintaan untuk SSID 2.4 Ghz
-    try:
-        responseSsid2 = requests.get(baseUrl, params={'query': query, 'projection': projectionSsid2}, timeout=timeout)
-        if responseSsid2.status_code == 200:
-            ssidData2 = responseSsid2.json()
-            ssid2 = ssidData2[0]['InternetGatewayDevice']['LANDevice']['1']['WLANConfiguration']['6']['SSID']['_value']
-
-            result['ssid']['2.4'] = ssid2 
-
-        else:
-            result["ssid"]['2.4'] = responseSsid2.status_code + ', ' +  responseSsid2.text
-
-    except IndexError:
-        result['ssid']['2.4'] = 'not found'
-
-    except requests.exceptions.Timeout:
-        result['ssid']['2.4'] = 'request timed out'
-
-    except Exception as e:
-        result['ssid']['2.4'] = str(e)
-
-    # Melakukan permintaan untuk KeyPassphrase 5.8 Ghz
-    try:
-        responseKeypassphrase5 = requests.get(baseUrl, params={'query': query, 'projection': projectionKeypassphrase5}, timeout=timeout)
-        if responseKeypassphrase5.status_code == 200:
-            keypassphraseData2 = responseKeypassphrase5.json()
-            keypassphrase2 = keypassphraseData2[0]['InternetGatewayDevice']['LANDevice']['1']['WLANConfiguration']['1']['X_CMS_KeyPassphrase']['_value']
-            result['passWifi']['5.8'] = keypassphrase2
-            
-        else:
-            result['passWifi']['5.8'] = responseKeypassphrase5.status_code + ', ' + responseKeypassphrase5.text
-
-    except IndexError:
-        result['passWifi']['5.8'] = 'not found'
-
-    except requests.exceptions.Timeout:
-        result['passWifi']['5.8'] = 'request timed out'
-
-    except Exception as e:
-        result['passWifi']['5.8'] = 'error: ' + str(e)
-
-    # Melakukan permintaan untuk KeyPassphrase 2.4 Ghz
-    try:
-        responseKeypassphrase2 = requests.get(baseUrl, params={'query': query, 'projection': projectionKeypassphrase2}, timeout=timeout)
-        if responseKeypassphrase2.status_code == 200:
-            keypassphraseData5 = responseKeypassphrase2.json()
-            keypassphrase5 = keypassphraseData5[0]['InternetGatewayDevice']['LANDevice']['1']['WLANConfiguration']['6']['X_CMS_KeyPassphrase']['_value']
-            result['passWifi']['2.4'] = keypassphrase5
-            
-        else:
-            result['passWifi']['2.4'] = responseKeypassphrase2.status_code + ', ' + responseKeypassphrase5.text
-
-    except IndexError:
-        result['passWifi']['2.4'] = 'not found'
-
-    except requests.exceptions.Timeout:
-        result['passWifi']['2.4'] = 'request timed out'
-
-    except Exception as e:
-        result['passWifi']['2.4'] = 'error: ' + str(e)
-    
-    # Melakukan permintaan untuk jumlah host terhubung
-    try:
-        responseHost = requests.get(baseUrl, params={'query': query, 'projection':projectionHost}, timeout=timeout)
-        if responseHost.status_code == 200:
-            hostData = responseHost.json()
-            host = hostData[0]['InternetGatewayDevice']['LANDevice']['1']['Hosts']['Host']
-
-            connectedDevice = []
-
-            for x in host:
-                if not x.isdigit():
-                    break
-                hostName = host[x]['HostName']['_value']
-                ipAddress = host[x]['IPAddress']['_value']
-                macAddress = host[x]['MACAddress']['_value']
-
-                connectedDevice.append({
-                    'hostName': hostName,
-                    'ipAddress': ipAddress,
-                    'macAddress': macAddress,
-                })
-            
-            result['connectedDevice'] = connectedDevice
-            result['totalConnDevice'] = len(connectedDevice)
-
-        else:
-            result['connectedDevice'] = responseHost.status_code + ', ' + responseHost.text
-            result['totalConnDevice'] = responseHost.status_code + ', ' + responseHost.text
-
-    except IndexError:
-        result['connectedDevice'] = 'not found'
-
-    except requests.exceptions.Timeout:
-        result['connectedDevice'] = 'request timed out'
-
-    except Exception as e:
-        result['connectedDevice'] = str(e)
+    connection.disconnect()
 
     return result
 
-output = getData('10.201.40.1')
+output = getDataRouter('CA0146301', '103.73.72.222', 'neteng', 'netEngineerBnet', '8728')
 print(json.dumps(output, indent=4))

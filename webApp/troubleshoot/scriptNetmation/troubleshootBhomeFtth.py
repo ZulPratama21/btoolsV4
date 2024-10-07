@@ -87,13 +87,13 @@ def getDataRouter(inputIdLoc, hostInput, userInput, passwordInput, portInput):
        
     # Mengambil status client
     addressLists = api.get_resource('/ip/firewall/address-list')
-    addressList_List = addressLists.get(address=clientIp)
-    addressList = addressList_List[0]
+    addressList_List = addressLists.get(address=clientIp, list='allow')
     
-    if addressList['list'] == 'allow':
-        status = 'Subscribe'
-    else:
+    if addressList_List == []:
         status = 'Suspend'
+
+    else:
+        status = 'Subscribe'
     
     result = {
         'statusClient':status,
