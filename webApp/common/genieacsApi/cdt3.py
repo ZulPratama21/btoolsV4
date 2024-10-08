@@ -3,17 +3,18 @@
 import requests
 import json
 
-def getData(clientIp):
+def getData(deviceId):
     # URL dasar API
     baseUrl = 'http://172.16.1.186:7557/devices'
     timeout = 3  # Batas waktu 3 detik
 
     # Query untuk ExternalIPAddress
     query = json.dumps({
-        "InternetGatewayDevice.WANDevice.1.WANConnectionDevice.1.WANPPPConnection.1.ExternalIPAddress": clientIp
+        '_id': deviceId
     })
     
     result = {
+        'deviceId':deviceId,
         'ssid': {
             '5.8': '',
             '2.4': '',
@@ -111,46 +112,11 @@ def getData(clientIp):
 
     return result
 
-def getDeviceIdByIp(clientIP):
-    # URL untuk mendapatkan devices berdasarkan IP address
-    baseUrl = 'http://172.16.1.186:7557/devices'
-    timeout = 3  # Batas waktu 3 detik
-    
-    # Query berdasarkan IP address
-    query = json.dumps({
-        "InternetGatewayDevice.WANDevice.1.WANConnectionDevice.1.WANPPPConnection.1.ExternalIPAddress": clientIP
-    })
-    
-    try:
-        response = requests.get(baseUrl, params={'query': query}, timeout=timeout)
-        if response.status_code == 200:
-            devices = response.json()
-            if devices:
-                deviceId = devices[0]["_id"]
-                return deviceId
-            else:
-                return None
-        else:
-            print(f"Error: {response.status_code}, {response.text}")
-            return None
-    except requests.exceptions.Timeout:
-        print("Request timed out")
-        return None
-    except Exception as e:
-        print(f"Exception occurred: {str(e)}")
-        return None
-
-def setWifi(clientIP, band, ssid, passWifi):
-    # Mendapatkan deviceId berdasarkan IP address
-    deviceId = getDeviceIdByIp(clientIP)
-    if not deviceId:
-        print("Device ID not found for IP:", clientIP)
-        return
+def setWifi(deviceId, band, ssid, passWifi):
+    urlDevice = deviceId.replace('-R', '%252DR')
 
     paramSsid = "InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.SSID"
     paramPassWifi = 'InternetGatewayDevice.LANDevice.1.WLANConfiguration.1.X_CMS_KeyPassphrase'
-
-    urlDevice = deviceId.replace('%2D', '%252D')
 
     # URL dasar API dengan deviceId
     baseUrl = f'http://172.16.1.186:7557/devices/{urlDevice}/tasks?timeout=3000&connection_request'

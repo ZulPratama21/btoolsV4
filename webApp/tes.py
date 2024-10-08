@@ -13,6 +13,7 @@ def getDataRouter(inputIdLoc, hostInput, userInput, passwordInput, portInput):
     )
     api = connection.get_api()
 
+    # Mencari secret user
     secrets = api.get_resource('/ppp/secret')
     allSecret = secrets.get()
     
@@ -27,7 +28,11 @@ def getDataRouter(inputIdLoc, hostInput, userInput, passwordInput, portInput):
             # Mengambil ip address client untuk melakukan ping
             clientIp = secret['remote-address']
             break
-    
+
+    # Mengambil identity parent router
+    identityList = api.get_resource('/system/identity').get()
+    identity = identityList[0]['name']
+
     # Mengambil latency
     pingResult = api.get_resource('/').call('ping', { 'address': clientIp, 'count': '1', 'interval':'0.1s' })
     ping = pingResult[0]
@@ -92,6 +97,7 @@ def getDataRouter(inputIdLoc, hostInput, userInput, passwordInput, portInput):
         status = 'Subscribe'
     
     result = {
+        'parentRouter':identity,
         'statusClient':status,
         'maxUpload':int(maxUpload)/1000000,
         'maxDownload':int(maxDownload)/1000000,
@@ -107,5 +113,5 @@ def getDataRouter(inputIdLoc, hostInput, userInput, passwordInput, portInput):
 
     return result
 
-output = getDataRouter('CA0146301', '103.73.72.222', 'neteng', 'netEngineerBnet', '8728')
+output = getDataRouter('CA0007401', '103.73.72.182', 'neteng', 'netEngineerBnet', 8728)
 print(json.dumps(output, indent=4))

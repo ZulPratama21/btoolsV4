@@ -17,6 +17,7 @@ def getDataRouter(inputIdLoc, hostInput, userInput, passwordInput, portInput):
     )
     api = connection.get_api()
 
+    # Mencari secret user
     secrets = api.get_resource('/ppp/secret')
     allSecret = secrets.get()
     
@@ -31,7 +32,11 @@ def getDataRouter(inputIdLoc, hostInput, userInput, passwordInput, portInput):
             # Mengambil ip address client untuk melakukan ping
             clientIp = secret['remote-address']
             break
-    
+
+    # Mengambil identity parent router
+    identityList = api.get_resource('/system/identity').get()
+    identity = identityList[0]['name']
+
     # Mengambil latency
     pingResult = api.get_resource('/').call('ping', { 'address': clientIp, 'count': '1', 'interval':'0.1s' })
     ping = pingResult[0]
@@ -96,6 +101,7 @@ def getDataRouter(inputIdLoc, hostInput, userInput, passwordInput, portInput):
         status = 'Subscribe'
     
     result = {
+        'parentRouter':identity,
         'statusClient':status,
         'maxUpload':int(maxUpload)/1000000,
         'maxDownload':int(maxDownload)/1000000,
@@ -212,27 +218,13 @@ def getAllData(idLoc):
                 'name': 'X',
                 'serialNumber': 'X',
             }
-        
-    onuType = getOnuType.getOnuType(dataRouter['clientIp'])
-    dataOnu = None
+    
+    onuApi = None
+    onuApi = getOnuType.getOnuType(dataRouter['clientIp'])
 
-    if onuType == 'F670L' or onuType == 'F679':
-        dataOnu = zte1.getData(dataRouter['clientIp'])
-
-    elif onuType == 'F609' or onuType == 'F660':
-        dataOnu = zte2.getData(dataRouter['clientIp'])
-
-    elif onuType == 'FD514GD-R460':
-        dataOnu = cdt1.getData(dataRouter['clientIp'])
-
-    elif onuType == 'FD514GS1-R550':
-        dataOnu = cdt2.getData(dataRouter['clientIp'])
-
-    elif onuType == 'FD512XW-R460':
-        dataOnu = cdt3.getData(dataRouter['clientIp'])
-
-    if dataOnu is None:
+    if onuApi is None:
         dataOnu = {
+            'deviceId':'X',
             'ssid':{
                 '5.8':'X',
                 '2.4':'X',
@@ -250,6 +242,45 @@ def getAllData(idLoc):
             ],
             'totalConnDevice':'X'
         }
+
+    else:
+        dataOnu = None
+        
+        if onuApi['onuType'] == 'F670L' or onuApi['onuType'] == 'F679':
+            dataOnu = zte1.getData(onuApi['deviceId'])
+
+        elif onuApi['onuType'] == 'F609' or onuApi['onuType'] == 'F660':
+            dataOnu = zte2.getData(onuApi['deviceId'])
+
+        elif onuApi['onuType'] == 'FD514GD-R460':
+            dataOnu = cdt1.getData(onuApi['deviceId'])
+
+        elif onuApi['onuType'] == 'FD514GS1-R550':
+            dataOnu = cdt2.getData(onuApi['deviceId'])
+
+        elif onuApi['onuType'] == 'FD512XW-R460':
+            dataOnu = cdt3.getData(onuApi['deviceId'])
+
+        if dataOnu is None:
+            dataOnu = {
+                'deviceId':'X',
+                'ssid':{
+                    '5.8':'X',
+                    '2.4':'X',
+                },
+                'passWifi':{
+                    '5.8':'X',
+                    '2.4':'X'
+                },
+                'connectedDevice':[
+                    {
+                        'hostName':'X',
+                        'ipAddress':'X',
+                        'macAddress':'X',
+                    }
+                ],
+                'totalConnDevice':'X'
+            }
 
     dataAll = {**dataRouter, **dataOlt, **dataOnu}
 

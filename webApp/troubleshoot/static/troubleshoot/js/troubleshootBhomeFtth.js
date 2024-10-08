@@ -98,6 +98,7 @@ function updateTrafficData() {
             alert('ID Lokasi tidak ditermukan')
         }
 
+        document.getElementById('parentRouter').textContent = data.parentRouter;
         document.getElementById('clientDetail').textContent = data.comment;
         document.getElementById('status').textContent = data.statusClient;
         document.getElementById('tUpload').textContent = data.tUpload;
@@ -112,6 +113,7 @@ function updateTrafficData() {
         document.getElementById('type').textContent = data.type;
         document.getElementById('name').textContent = data.name;
         document.getElementById('serialNumber').textContent = data.serialNumber;
+        document.getElementById('deviceId').textContent = data.deviceId;
         document.getElementById('ssid5').textContent = data.ssid['5.8'];
         document.getElementById('ssid2').textContent = data.ssid['2.4'];
         document.getElementById('passWifi5').textContent = data.passWifi['5.8'];
@@ -257,7 +259,7 @@ function updateTrafficData() {
         const changeSSIDPassword = document.getElementById('changeSSIDPassword');
         changeSSIDPassword.addEventListener('click', (event) => {
             event.preventDefault();
-            const clientIp = data.clientIp;
+            const deviceId = data.deviceId;
             const onuType = data.type;
             const ssid5 = data.ssid['5.8'];
             const ssid2 = data.ssid['2.4'];
@@ -265,7 +267,7 @@ function updateTrafficData() {
             const passWifi2 = data.passWifi['2.4'];
             locationId
             // Mengarahkan ke halaman baru dengan query parameters
-            window.location.href = `configWifi/${clientIp}?onuType=${encodeURIComponent(onuType)}&locationId=${encodeURIComponent(locationId)}&ssid5=${encodeURIComponent(ssid5)}&ssid2=${encodeURIComponent(ssid2)}&passWifi5=${encodeURIComponent(passWifi5)}&passWifi2=${encodeURIComponent(passWifi2)}`;
+            window.location.href = `configWifi/${deviceId}?onuType=${encodeURIComponent(onuType)}&locationId=${encodeURIComponent(locationId)}&ssid5=${encodeURIComponent(ssid5)}&ssid2=${encodeURIComponent(ssid2)}&passWifi5=${encodeURIComponent(passWifi5)}&passWifi2=${encodeURIComponent(passWifi2)}`;
         });
         
 
