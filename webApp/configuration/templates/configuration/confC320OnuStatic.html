@@ -3,19 +3,19 @@
 
 {% block content %}
     <div class="Container text-center mt-4">
-        <h1>Generate Script Konfigurasi<br>OLT C320 Onu PPPoE</h1>
+        <h1>Generate Script Konfigurasi<br>OLT C320 Onu Static</h1>
     </div>
 
     <div class="container mt-5">
         <form>
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <div class="mb-3">
                         <label for="sn" class="form-label">SN</label>
                         <input type="text" class="form-control" id="sn" placeholder="Masukkan SN" required>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <div class="mb-3">
                         <label for="limitasi" class="form-label">Pilih Limitasi</label> <!-- Harus diganti ke database -->
                         <select class="form-select" id="limitasi" required>
@@ -28,17 +28,16 @@
                         </select>
                     </div>
                 </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <div class="mb-3">
                         <label for="neCode" class="form-label">ID NE</label>
                         <input type="text" class="form-control" id="neCode" placeholder="Masukan ID NE" required>
                     </div>
                 </div>
+            </div>
 
-                <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-4">
                     <div class="mb-3">
                         <label for="modemType" class="form-label">Pilih Tipe Modem</label>
                         <select class="form-select" id="modemType" required>
@@ -46,6 +45,18 @@
                             <option value="ZTE-F660">ZTE</option>
                             <option value="OPEN_HGW">CDATA</option>
                         </select>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="mb-3">
+                        <label for="ipAddress" class="form-label">IP Address</label>
+                        <input type="ipAddress" class="form-control" id="ipAddress" placeholder="Masukan IP Address" required>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="mb-3">
+                        <label for="subnetMask" class="form-label">Subnet Mas</label>
+                        <input type="subnetMask" class="form-control" id="subnetMask" placeholder="Masukan Subnet Mask" required>
                     </div>
                 </div>
             </div>
@@ -66,5 +77,5 @@
         
     </div>
 
-<script src="{% static 'configuration/js/confC320OnuPppoe.js' %}"></script>
+<script src="{% static 'configuration/js/confC320OnuStatic.js' %}"></script>
 {% endblock content %}

@@ -1,11 +1,27 @@
 
 def gConfC320OnuBridge(sn,neCode,ipAddress,subnetMask,limitasi,modemType):
     oltId = int(neCode[-4:-2])
-    if oltId < 17:
+    if neCode[:-4] == '3':
+        if oltId < 17:
+            oltPort = f'1/2/{oltId}'
+
+        elif oltId < 33:
+            oltId2 = oltId - 32
+            oltPort = f'1/2/{oltId2}'
+
+    elif oltId < 17:
         oltPort = f'1/1/{oltId}'
 
-    else:
+    elif oltId < 33:
         oltId2 = oltId - 16
+        oltPort = f'1/2/{oltId2}'
+
+    elif oltId < 49:
+        oltId2 = oltId - 32
+        oltPort = f'1/1/{oltId2}'
+
+    else:
+        oltId2 = oltId - 48
         oltPort = f'1/2/{oltId2}'
 
     vlan = neCode[:-2]
@@ -88,4 +104,51 @@ wan 1 ethuni 1 ssid 1 service tr069 internet host 1
 tr069-mgmt 1 acs http://172.16.1.186:7547 validate basic username admin password TR09Bnet137 state unlock
 exit'''
         
+    return result
+
+def gConfC320OnuStatic(sn,neCode,ipAddress,subnetMask,limitasi,modemType):
+    oltId = int(neCode[-4:-2])
+    if neCode[:-4] == '3':
+        if oltId < 17:
+            oltPort = f'1/2/{oltId}'
+
+        elif oltId < 33:
+            oltId2 = oltId - 32
+            oltPort = f'1/2/{oltId2}'
+
+    elif oltId < 17:
+        oltPort = f'1/1/{oltId}'
+
+    elif oltId < 33:
+        oltId2 = oltId - 16
+        oltPort = f'1/2/{oltId2}'
+
+    elif oltId < 49:
+        oltId2 = oltId - 32
+        oltPort = f'1/1/{oltId2}'
+
+    else:
+        oltId2 = oltId - 48
+        oltPort = f'1/2/{oltId2}'
+
+    vlan = neCode[:-2]
+    onu = int(neCode[-2:])
+
+    result = f'''interface gpon-olt_{oltPort}
+onu {onu} type {modemType} sn {sn}
+exit
+interface gpon-onu_{oltPort}:{onu}
+sn-bind enable sn
+tcont 1 name ip{vlan} profile {limitasi}
+gemport 1 name ip{vlan} tcont 1
+service-port 1 vport 1 user-vlan {vlan} vlan {vlan}
+exit
+pon-onu-mng gpon-onu_{oltPort}:{onu}
+firewall enable level low
+service ip{vlan} gemport 1 vlan {vlan}
+wan-ip 1 mode static ip-profile ip{vlan} ip-address {ipAddress} mask {subnetMask} vlan-profile vlan{vlan} host 1
+security-mgmt 1 state enable mode forward protocol web
+tr069-mgmt 1 acs http://172.16.1.186:7547 validate basic username admin password TR09Bnet137 state unlock
+exit'''
+
     return result

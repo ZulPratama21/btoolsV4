@@ -6,5 +6,6 @@ app_name = 'configuration'
 urlpatterns = [
     path('apiConfC320OnuBridge', views.apiConfC320OnuBridge, name='apiConfC320OnuBridge'),
     path('apiConfC320OnuPppoe', views.apiConfC320OnuPppoe, name='apiConfC320OnuPppoe'),
+    path('apiConfC320OnuStatic', views.apiConfC320OnuStatic, name='apiConfC320OnuStatic'),
     path('generateScript/<str:generateApp>/', views.generateScript, name='generateScript'),
 ]

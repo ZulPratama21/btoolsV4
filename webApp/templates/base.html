@@ -27,7 +27,7 @@
                     {% include "snippets/configurationDropdown.html" %}
                 {% endif %}
 
-                {% if user|in_groups:"NE Junior, CR" %}
+                {% if user|in_groups:"NE Junior, CR, NE PKL" %}
                     <!-- Troubleshoot Dropdown -->
                     {% include "snippets/troubleshootDropdown.html" %}
                 {% endif %}
@@ -37,7 +37,7 @@
                     {% include "snippets/maintenanceDropdown.html" %}
                 {% endif %}
 
-                {% if user|in_groups:"NE Junior, CR" %}
+                {% if user|in_groups:"NE Junior, CR, NE PKL" %}
                     <!-- Monitoring Dropdown -->
                     {% include "snippets/monitoringDropdown.html" %}
                 {% endif %}

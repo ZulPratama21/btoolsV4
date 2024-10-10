@@ -31,7 +31,12 @@ aria-controls="collapseConfiguration">
                     <a class="list-group-item list-group-item-light p-3
                         {% if 'confC320OnuPppoe' in request.path %}active{% endif %}"
                         href="{% url 'configuration:generateScript' 'confC320OnuPppoe' %}">
-                        <i class="bi bi-dot"></i> <i class="bi bi-dot"></i> confC320OnuPppoE
+                        <i class="bi bi-dot"></i> <i class="bi bi-dot"></i> confC320OnuPppoe
+                    </a>
+                    <a class="list-group-item list-group-item-light p-3
+                        {% if 'confC320OnuStatic' in request.path %}active{% endif %}"
+                        href="{% url 'configuration:generateScript' 'confC320OnuStatic' %}">
+                        <i class="bi bi-dot"></i> <i class="bi bi-dot"></i> confC320OnuStatic
                     </a>
                 </div>
             </div>
