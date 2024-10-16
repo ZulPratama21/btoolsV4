@@ -38,11 +38,16 @@ aria-controls="collapseConfiguration">
                         href="{% url 'configuration:generateScript' 'confC320OnuStatic' %}">
                         <i class="bi bi-dot"></i> <i class="bi bi-dot"></i> confC320OnuStatic
                     </a>
+                    <a class="list-group-item list-group-item-light p-3
+                        {% if 'confC320OnuManyPacket' in request.path %}active{% endif %}"
+                        href="{% url 'configuration:generateScript' 'confC320OnuManyPacket' %}">
+                        <i class="bi bi-dot"></i> <i class="bi bi-dot"></i> confC320OnuManyPacket
+                    </a>
                 </div>
             </div>
         </div>
 
-        <a class="list-group-item list-group-item-light p-3" href="#!">Submenu 2</a>
-        <a class="list-group-item list-group-item-light p-3" href="#!">Submenu 3</a>
+        <a class="list-group-item list-group-item-light p-3" href="#!"><i class="bi bi-dot"></i> Device BNET</a>
+        <a class="list-group-item list-group-item-light p-3" href="#!"><i class="bi bi-dot"></i> Device Client</a>
     </div>
 </div>

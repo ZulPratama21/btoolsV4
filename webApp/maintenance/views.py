@@ -20,3 +20,7 @@ def checkBgpPeer(request):
     }
 
     return render(request, "maintenance/checkBgpPeer.html", context)
+
+@login_required(redirect_field_name='next', login_url='/login')
+def historyRedaman(request):
+    return render(request, 'maintenance/historyRedaman.html')

@@ -5,4 +5,5 @@ app_name = 'maintenance'
 
 urlpatterns = [
     path('checkBgpPeer/', views.checkBgpPeer, name='checkBgpPeer'),
+    path('historyRedaman/', views.historyRedaman, name='historyRedaman'),
 ]

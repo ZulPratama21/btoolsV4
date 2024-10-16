@@ -6,7 +6,12 @@ from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth.decorators import login_required
 import json
 
-from .scriptNetmation.generateScript import gConfC320OnuBridge, gConfC320OnuPppoe, gConfC320OnuStatic
+from .scriptNetmation.generateScript import (
+    gConfC320OnuBridge,
+    gConfC320OnuPppoe,
+    gConfC320OnuStatic,
+    gConfC320OnuManyPacket
+    )
 
 @csrf_exempt
 def apiConfC320OnuBridge(request):
@@ -64,6 +69,26 @@ def apiConfC320OnuStatic(request):
             'message': result
         }
 
+        return JsonResponse(response_data)
+
+@csrf_exempt
+def apiConfC320OnuManyPacket(request):
+    if request.method == 'POST':
+        data = json.loads(request.body)
+        vlanGw = data.get('vlanGw')
+        sn = data.get('sn')
+        ipAddress = data.get('ipAddress')
+        limitasi = data.get('limitasi')
+        neCodes = data.get('neCodes')
+        modemType = data.get('modemType')
+
+        result = gConfC320OnuManyPacket(vlanGw, sn,neCodes,ipAddress,limitasi,modemType)
+
+        response_data = {
+            'status': 'success',
+            'message': result
+        }
+        
         return JsonResponse(response_data)
 
 @login_required(redirect_field_name='next', login_url='/login')

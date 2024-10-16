@@ -24,6 +24,7 @@ urlpatterns = [
     path("maintenance/", include('maintenance.urls', namespace='maintenance')),
     path("troubleshoot/", include('troubleshoot.urls', namespace='troubleshoot')),
     path("monitoring/", include('monitoring.urls', namespace='monitoring')),
+    path("databases/", include('databases.urls', namespace='databases')),
     path('login/', views.loginView, name='login'),
     path('logout/', views.logoutView, name='logout'),
     path('', views.dashboard, name='dashboard'),
