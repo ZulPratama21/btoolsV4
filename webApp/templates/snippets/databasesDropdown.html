@@ -1,4 +1,5 @@
-<a class="list-group-item list-group-item-action list-group-item-light p-3" 
+<a class="list-group-item list-group-item-action list-group-item-light p-3
+{% if 'databases' in request.path %}active{% endif %}" 
 data-bs-toggle="collapse" 
 href="#collapseDatabases" 
 role="button" 
@@ -8,8 +9,18 @@ aria-controls="collapseDatabases">
 </a>
 <div class="collapse {% if 'databases' in request.path %}show{% endif %}" id="collapseDatabases">
     <div class="list-group">
-        <a class="list-group-item list-group-item-light p-3" href="#!">User Device</a>
-        <a class="list-group-item list-group-item-light p-3" href="#!">Submenu 2</a>
+        <a class="list-group-item list-group-item-light p-3
+        {% if 'client' in request.path %}active{% endif %}"
+        href="{% url 'databases:client' %}">
+        <i class="bi bi-dot"></i> Client
+        </a>
+
+        <a class="list-group-item list-group-item-light p-3
+        {% if 'odp' in request.path %}active{% endif %}"
+        href="{% url 'databases:odp' %}">
+        <i class="bi bi-dot"></i> ODP
+        </a>
+    
         <a class="list-group-item list-group-item-light p-3" href="#!">Submenu 3</a>
     </div>
 </div>
