@@ -70,6 +70,9 @@ $('#locationForm').on('submit', function(event) {
 
     if (lineChart) {
         lineChart.destroy();
+        config.data.labels = [];
+        config.data.datasets[0].data = [];
+        config.data.datasets[1].data = [];
     }
     
     const context = document.getElementById('trafficChart').getContext('2d');
