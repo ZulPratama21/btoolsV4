@@ -27,7 +27,13 @@ aria-controls="collapseDatabases">
             </a>
         {% endif %}
 
-        <a class="list-group-item list-group-item-light p-3" href="#!">Submenu 3</a>
+        {% if user|in_groups:"NE Junior" %}
+            <a class="list-group-item list-group-item-light p-3
+            {% if 'device' in request.path %}active{% endif %}"
+            href="{% url 'databases:device' %}">
+            <i class="bi bi-dot"></i> Device
+            </a>
+        {% endif %}
 
     </div>
 </div>

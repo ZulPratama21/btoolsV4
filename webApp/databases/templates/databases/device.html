@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="container">
+        <h1 class="mt-4 mb-4 text-center">Database ODP</h1>
+
+        {% if messages %}
+        <div class="messages">
+            {% for message in messages %}
+                <div class="alert alert-{{ message.tags }}" role="alert">
+                    {{ message|safe }}
+                </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        <form method="get" class="mb-4">
+          <div class="input-group">
+              <input type="text" name="q" class="form-control" placeholder="Search for names, IPs, or other details..">
+              <div class="input-group-append">
+                  <input type="submit" class="btn btn-primary ms-3" value="Search">
+              </div>
+          </div>
+        </form>
+        <!--
+        <form method="post">
+          {% csrf_token %}
+          <button class="btn btn-secondary"> Update Port Terisi </button>
+        </form>
+        -->
+        {% include "databases/snippets/paginator.html" %}
+
+        <div class="table-responsive">
+            <table class="table table-striped table-bordered table-hover">
+                <thead class="thead-dark sticky-top">
+                  <tr>
+                    <th scope="col" class="text-center">#</th>
+                    <th scope="col">POP</th>
+                    <th scope="col">ID Perangkat</th>
+                    <th scope="col">Tanggal Instalasi</th>
+                    <th scope="col">Remote Address</th>
+                    <th scope="col">IP Tambahan</th>
+                    <th scope="col" class="text-center">Port Winbox</th>
+                    <th scope="col" class="text-center">Port SSH</th>
+                    <th scope="col" class="text-center">Port API</th>
+                    <th scope="col" class="text-center">Port Web</th>
+                    <th scope="col">Layer</th>
+                    <th scope="col">Router Firewall</th>
+                    <th scope="col">Role</th>
+                    <th scope="col">Frequency</th>
+                    <th scope="col">Channel Band</th>
+                    <th scope="col">Channel Width</th>
+                    <th scope="col">Signal</th>
+                    <th scope="col">SN</th>
+                    <th scope="col">OS</th>
+                    <th scope="col">Tipe</th>
+                    <th scope="col">Watt</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Remark</th>
+                    <th scope="col">Last Update</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for device in page_obj %}
+                  <tr>
+                    <th scope="row" class="text-center">{{ device.id }}</th>
+                    <td style="white-space: nowrap;">{{ device.pop }}</td>
+                    <td style="white-space: nowrap;">{{ device.deviceId }}</td>
+                    <td style="white-space: nowrap;">{{ device.installedDate }}</td>
+                    <td style="white-space: nowrap;">{{ device.remoteAddress }}</td>
+                    <td style="white-space: nowrap;">{{ device.addtionalIp }}</td>
+                    <td style="white-space: nowrap;" class="text-center">{{ device.portWinbox }}</td>
+                    <td style="white-space: nowrap;" class="text-center">{{ device.portSsh }}</td>
+                    <td style="white-space: nowrap;" class="text-center">{{ device.portApi }}</td>
+                    <td style="white-space: nowrap;" class="text-center">{{ device.portWeb }}</td>
+                    <td style="white-space: nowrap;">{{ device.layer }}</td>
+                    <td style="white-space: nowrap;">{{ device.routerFirewall }}</td>
+                    <td style="white-space: nowrap;">{{ device.role }}</td>
+                    <td style="white-space: nowrap;">{{ device.statusOpname }}</td>
+                    <td style="white-space: nowrap;">{{ device.frequency }}</td>
+                    <td style="white-space: nowrap;">{{ device.channelBand }}</td>
+                    <td style="white-space: nowrap;">{{ device.channelWidth }}</td>
+                    <td style="white-space: nowrap;">{{ device.signal }}</td>
+                    <td style="white-space: nowrap;">{{ device.sn }}</td>
+                    <td style="white-space: nowrap;">{{ device.os }}</td>
+                    <td style="white-space: nowrap;">{{ device.type }}</td>
+                    <td style="white-space: nowrap;">{{ device.watt }}</td>
+                    <td style="white-space: nowrap;">{{ device.status }}</td>
+                    <td style="white-space: nowrap;">{{ device.remark }}</td>
+                    <td style="white-space: nowrap;">{{ device.updated }}</td>
+                  </tr>
+                  {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    {% include "databases/snippets/paginator.html" %}
+
+{% endblock %}

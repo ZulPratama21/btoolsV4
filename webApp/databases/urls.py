@@ -5,6 +5,7 @@ from . import views
 app_name = 'databases'
 
 urlpatterns = [
-    path('odp/', views.odp, name='odp'),
     path('client/', views.client, name='client'),
+    path('odp/', views.odp, name='odp'),
+    path('device/', views.device, name='device'),
 ]

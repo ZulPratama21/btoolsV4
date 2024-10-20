@@ -7,7 +7,7 @@ from puresnmp import Client, V2C, PyWrapper
 
 def getDataRouter(inputIdLoc, hostInput, userInput, passwordInput, portInput):
     idLoc = inputIdLoc.upper()
-
+    
     connection = RouterOsApiPool(
         host=hostInput,
         username=userInput,
@@ -20,7 +20,7 @@ def getDataRouter(inputIdLoc, hostInput, userInput, passwordInput, portInput):
     # Mencari secret user
     secrets = api.get_resource('/ppp/secret')
     allSecret = secrets.get()
-    
+
     for secret in allSecret:
         comment = secret['comment']
         if idLoc in comment:

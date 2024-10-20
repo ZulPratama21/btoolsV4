@@ -6,7 +6,7 @@ from django.contrib import messages
 
 # Create your views here.
 
-from .models import Odp, Client
+from .models import Odp, Client, Device
 from .command import update_odp_data
 
 @login_required(redirect_field_name='next', login_url='/login')
@@ -96,3 +96,46 @@ def client(request):
     }
 
     return render(request, 'databases/client.html', context)
+
+@login_required(redirect_field_name='next', login_url='/login')
+def device(request):
+    query = request.GET.get('q')
+    devices = Device.objects.all().values()
+
+    if query:
+        devices = devices.filter(
+            Q(pop__icontains=query) |
+            Q(deviceId__icontains=query) |
+            Q(installedDate__icontains=query) |
+            Q(remoteAddress__icontains=query) |
+            Q(addtionalIp__icontains=query) |
+            Q(portWinbox__icontains=query) |
+            Q(portssh__icontains=query) |
+            Q(portapi__icontains=query) |
+            Q(portweb__icontains=query) |
+            Q(layer__icontains=query) |
+            Q(routerFirewall__icontains=query) |
+            Q(role__icontains=query) |
+            Q(frequency__icontains=query) |
+            Q(channelBand__icontains=query) |
+            Q(channelWidth__icontains=query) |
+            Q(signal__icontains=query) |
+            Q(sn__icontains=query) |
+            Q(os__icontains=query) |
+            Q(type__icontains=query) |
+            Q(watt__icontains=query) |
+            Q(status__icontains=query) |
+            Q(remark__icontains=query) |
+            Q(updated__icontains=query)
+        )
+        
+    paginator = Paginator(devices, 50)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+
+    context = {
+        'page_obj': page_obj,
+        'query': query,
+    }
+
+    return render(request, 'databases/device.html', context)
