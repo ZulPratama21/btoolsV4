@@ -12,7 +12,7 @@ class UserDevice(models.Model):
 	
 	listGroup = (
 		('Read','read'),
-		('Write','Write'),
+		('Write','write'),
 		('Full','full'),
 		)
 
@@ -26,7 +26,7 @@ class UserDevice(models.Model):
 	updated		= models.DateTimeField(auto_now=True)
 
 	def __str__(self):
-		return "{}. {}".format(self.id,self.user)
+		return f"{self.id}. {self.user} - {self.group}"
 	
 class Client(models.Model):
     idpelanggan = models.CharField(max_length = 10)

@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container mt-4">
+    <h1 class="text-center mb-4">Configure User to Device</h1>
+    <form method="POST" onsubmit="return validateForm();">
+        {% csrf_token %}
+        <div class="row">
+            <!-- User Table -->
+            <div class="col-lg-6 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-secondary text-white text-center">
+                        <strong><i class="bi bi-person-circle"></i></strong>
+                    </div>
+                    <div class="card-body p-0">
+                        <!-- Search bar untuk User -->
+                        <div class="mb-3 p-3">
+                            <input class="form-control" id="userTableFilter" type="text" placeholder="Search Users..">
+                        </div>
+                        <div class="table-responsive" style="max-height: 300px; overflow-y: auto;">
+                            <table class="table table-hover" id="userTable">
+                                <thead class="table-light sticky-top">
+                                    <tr>
+                                        <th scope="col">
+                                            <input type="checkbox" id="selectAllUsers" onclick="toggleSelectAll('userTable', this)"> All
+                                        </th>
+                                        <th scope="col">User</th>
+                                        <th scope="col">Group</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for user in users %}
+                                    {% if user.user != 'bnettools' %}
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" class="userCheckbox" name="selectedUsers" value="{{ user.id }}" onclick="checkSelectAll('userTable', 'selectAllUsers')">
+                                        </td>
+                                        <td>{{ user.user }}</td>
+                                        <td>{{ user.group }}</td>
+                                    </tr>
+                                    {% endif %}
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Device Table -->
+            <div class="col-lg-6">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-secondary text-white text-center">
+                        <strong><i class="bi bi-router"></i></strong>
+                    </div>
+                    <div class="card-body p-0">
+                        <!-- Search bar untuk Device -->
+                        <div class="mb-3 p-3">
+                            <input class="form-control" id="deviceTableFilter" type="text" placeholder="Search Devices..">
+                        </div>
+                        <div class="table-responsive" style="max-height: 300px; overflow-y: auto;">
+                            <table class="table table-hover" id="deviceTable">
+                                <thead class="table-light sticky-top">
+                                    <tr>
+                                        <th scope="col">
+                                            <input type="checkbox" id="selectAllDevices" onclick="toggleSelectAll('deviceTable', this)"> All
+                                        </th>
+                                        <th scope="col">Identity</th>
+                                        <th scope="col">Layer</th>
+                                        <th scope="col">IP Device</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for device in devices %}
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" class="deviceCheckbox" name="selectedDevices" value="{{ device.id }}" onclick="checkSelectAll('deviceTable', 'selectAllDevices')">
+                                        </td>
+                                        <td>{{ device.deviceId }}</td>
+                                        <td>{{ device.layer }}</td>
+                                        <td>{{ device.remoteAddress }}</td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <table class="table table-bordered text-center">
+            <thead class="table-light">
+                <tr>
+                    <th scope="col" colspan="3" class="fs-5 py-3">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <button type="submit" name="action" value="add" class="btn btn-success w-100 px-5 py-2">Add</button>
+                    </td>
+                    <td>
+                        <button type="submit" name="action" value="edit" class="btn btn-secondary w-100 px-5 py-2">Edit</button>
+                    </td>
+                    <td>
+                        <button type="submit" name="action" value="delete" class="btn btn-danger w-100 px-5 py-2">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        
+    </form>
+</div>
+
+<script src="{% static 'configuration/js/confUserDevice.js' %}"></script>
+
+{% endblock %}

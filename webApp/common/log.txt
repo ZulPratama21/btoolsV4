@@ -1,0 +1,8 @@
+21/10/2024 15:27:05 || 103.73.72.7 || bnettools || Konfigurasi User || Berhasil login pada perangkat 103.73.72.7
+21/10/2024 15:27:05 || 103.73.72.7 || bnettools || Konfigurasi User || Berhasil melakukan konfigurasi: /user set neteng name=neteng password=netEngineerBnet group=read
+21/10/2024 15:28:26 || 103.73.72.7 || bnettools || Konfigurasi User || Berhasil login pada perangkat 103.73.72.7
+21/10/2024 15:28:27 || 103.73.72.7 || bnettools || Konfigurasi User || Berhasil melakukan konfigurasi: /user set neteng name=neteng password=netEngineerBnet group=read
+21/10/2024 15:28:27 || 103.73.72.7 || bnettools || Konfigurasi User || Berhasil melakukan konfigurasi: /user set jul name=jul password=Juliandi123!@# group=full
+21/10/2024 15:28:28 || 103.73.72.7 || bnettools || Konfigurasi User || Berhasil melakukan konfigurasi: /user set deni name=deni password=D3n123 group=write
+21/10/2024 15:28:28 || 103.73.72.7 || bnettools || Konfigurasi User || Berhasil melakukan konfigurasi: /user set randi name=randi password=R4nd!098 group=write
+21/10/2024 15:28:29 || 103.73.72.7 || bnettools || Konfigurasi User || Berhasil melakukan konfigurasi: /user set fitria name=fitria password=Bismillah12 group=write
