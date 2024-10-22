@@ -9,7 +9,8 @@ urlpatterns = [
     path('apiConfC320OnuStatic', views.apiConfC320OnuStatic, name='apiConfC320OnuStatic'),
     path('apiConfC320OnuManyPacket', views.apiConfC320OnuManyPacket, name='apiConfC320OnuManyPacket'),
     path('generateScript/<str:generateApp>/', views.generateScript, name='generateScript'),
-    path('confUserDevice', views.confUserDevice, name='confUserDevice'),
+    path('activationDevice', views.activationDevice, name='activationDevice'),
     path('sendConfDevice', views.sendConfDevice, name='sendConfDevice'),
     path('sendConfClient', views.sendConfClient, name='sendConfClient'),
+    path('confUserDevice', views.confUserDevice, name='confUserDevice'),
 ]

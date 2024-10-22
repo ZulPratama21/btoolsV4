@@ -1,0 +1,14 @@
+/user remove admin
+/ip dns set servers=103.73.73.71
+/ip service set telnet disabled=yes
+/ip service set ftp disabled=yes
+/ip service set www disabled=yes
+/ip service set api address=172.16.1.77/32,172.16.1.27/32,103.73.74.15/32
+/ip service set winbox address=103.73.72.70/32,103.73.74.98/32,10.12.1.2/32
+/ip service set api-ssl disabled=yes
+/system clock set time-zone-autodetect=yes time-zone-name=Asia/Jakarta
+/snmp community add addresses=103.73.73.78/32 name=intbnet write-access=yes authentication-password=bnetlibre encryption-password=bnetlibre
+/system logging add action=syslog topics=warning,!script
+/system logging add action=syslog topics=critical
+/system logging add action=syslog topics=error
+/system logging add action=syslog topics=info

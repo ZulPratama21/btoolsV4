@@ -1,0 +1,210 @@
+/user remove admin
+/ip dns set servers=103.73.73.71
+/ip service set telnet disabled=yes
+/ip service set ftp disabled=yes
+/ip service set www disabled=yes
+/ip service set api address=172.16.1.77/32,172.16.1.27/32,103.73.74.15/32
+/ip service set winbox address=103.73.72.70/32,103.73.74.98/32,10.12.1.2/32
+/ip service set api-ssl disabled=yes
+/system clock set time-zone-autodetect=yes time-zone-name=Asia/Jakarta
+/snmp community add addresses=103.73.73.78/32 name=intbnet write-access=yes authentication-password=bnetlibre encryption-password=bnetlibre
+/system logging add action=syslog topics=warning,!script
+/system logging add action=syslog topics=critical
+/system logging add action=syslog topics=error
+/system logging add action=syslog topics=info
+/ip firewall address-list add address=10.1.128.0/17 list=radio
+/ip firewall address-list add address=10.2.128.0/17 list=radio
+/ip firewall address-list add address=10.3.128.0/17 list=radio
+/ip firewall address-list add address=10.4.128.0/17 list=radio
+/ip firewall address-list add address=10.5.128.0/17 list=radio
+/ip firewall address-list add address=10.6.128.0/17 list=radio
+/ip firewall address-list add address=10.7.128.0/17 list=radio
+/ip firewall address-list add address=10.8.128.0/17 list=radio
+/ip firewall address-list add address=10.9.128.0/17 list=radio
+/ip firewall address-list add address=10.10.128.0/17 list=radio
+/ip firewall address-list add address=10.11.128.0/17 list=radio
+/ip firewall address-list add address=10.12.128.0/17 list=radio
+/ip firewall address-list add address=10.13.128.0/17 list=radio
+/ip firewall address-list add address=10.14.128.0/17 list=radio
+/ip firewall address-list add address=10.15.128.0/17 list=radio
+/ip firewall address-list add address=10.16.128.0/17 list=radio
+/ip firewall address-list add address=10.17.128.0/17 list=radio
+/ip firewall address-list add address=10.18.128.0/17 list=radio
+/ip firewall address-list add address=10.19.128.0/17 list=radio
+/ip firewall address-list add address=10.20.128.0/17 list=radio
+/ip firewall address-list add address=10.21.128.0/17 list=radio
+/ip firewall address-list add address=10.22.128.0/17 list=radio
+/ip firewall address-list add address=10.23.128.0/17 list=radio
+/ip firewall address-list add address=10.24.128.0/17 list=radio
+/ip firewall address-list add address=10.25.128.0/17 list=radio
+/ip firewall address-list add address=10.26.128.0/17 list=radio
+/ip firewall address-list add address=10.27.128.0/17 list=radio
+/ip firewall address-list add address=10.28.128.0/17 list=radio
+/ip firewall address-list add address=10.29.128.0/17 list=radio
+/ip firewall address-list add address=10.30.128.0/17 list=radio
+/ip firewall address-list add address=10.50.128.0/17 list=radio
+/ip firewall address-list add address=10.75.128.0/17 list=radio
+/ip firewall address-list add address=103.73.74.98 comment=rtr-b_kantorBnet-pop001-001-a201 list=acceptAccess
+/ip firewall address-list add address=10.12.1.2 comment=rumah_popGt list=acceptAccess
+/ip firewall address-list add address=103.73.73.0/24 comment=prefix_allServer list=acceptAccess
+/ip firewall address-list add address=103.73.72.70 comment=rtr-b_tunnel_IDC list=acceptAccess
+/ip firewall address-list add address=172.16.1.140/30 comment=server_lib.bnet.id list=server
+/ip firewall address-list add address=172.16.1.148/30 comment=server_lapakAep list=server
+/ip firewall address-list add address=172.16.1.168/30 comment=server_all.bnet.id list=server
+/ip firewall address-list add address=172.16.1.78 comment=pnetLab list=server
+/ip firewall address-list add address=172.16.1.161 comment=server_ribitCode list=server
+/ip firewall address-list add address=172.16.1.50 comment=serverNetmation list=server
+/ip firewall address-list add address=172.16.1.27 comment=btoolsV3 list=server
+/ip firewall address-list add address=172.16.1.77 comment=btoolsV2 list=server
+/ip firewall address-list add address=100.64.0.0/10 comment="Shared Address Space" list=bogus
+/ip firewall address-list add address=169.254.0.0/16 comment="Link Local" list=bogus
+/ip firewall address-list add address=192.0.0.0/24 comment="IETF Protocol Assignments" list=bogus
+/ip firewall address-list add address=192.0.2.0/24 comment=TEST-NET-1 list=bogus
+/ip firewall address-list add address=192.88.99.0/24 comment="6to4 Relay Anycast" list=bogus
+/ip firewall address-list add address=192.168.0.0/16 comment="Private-Use Networks" list=bogus
+/ip firewall address-list add address=198.18.0.0/15 comment="Network Interconnect Device Benchmark Testing" list=bogus
+/ip firewall address-list add address=198.51.100.0/24 comment=TEST-NET-2 list=bogus
+/ip firewall address-list add address=203.0.113.0/24 comment=TEST-NET-3 list=bogus
+/ip firewall address-list add address=224.0.0.0/3 comment=Multicast list=bogus
+/ip firewall address-list add address=240.0.0.0/4 comment="Reserved for Future Use" list=bogus
+/ip firewall address-list add address=255.255.255.255 comment="Limited Broadcast" list=bogus
+/ip firewall address-list add address=0.0.0.0/8 comment="Reserved for Broadcast" list=bogus
+/ip firewall address-list add address=127.0.0.0/8 comment=Loopback list=bogus
+/ip firewall address-list add address=172.16.0.0/24 list=SwOltSvr
+/ip firewall address-list add address=172.16.1.0/24 list=SwOltSvr
+/ip firewall address-list add address=172.16.2.0/24 list=SwOltSvr
+/ip firewall address-list add address=172.16.3.0/24 list=SwOltSvr
+/ip firewall address-list add address=172.16.4.0/24 list=SwOltSvr
+/ip firewall address-list add address=172.16.5.0/24 list=SwOltSvr
+/ip firewall address-list add address=172.16.6.0/24 list=SwOltSvr
+/ip firewall address-list add address=172.16.7.0/24 list=SwOltSvr
+/ip firewall address-list add address=172.16.8.0/24 list=SwOltSvr
+/ip firewall address-list add address=172.16.9.0/24 list=SwOltSvr
+/ip firewall address-list add address=172.16.10.0/24 list=SwOltSvr
+/ip firewall address-list add address=172.16.11.0/24 list=SwOltSvr
+/ip firewall address-list add address=172.16.12.0/24 list=SwOltSvr
+/ip firewall address-list add address=172.16.13.0/24 list=SwOltSvr
+/ip firewall address-list add address=172.16.14.0/24 list=SwOltSvr
+/ip firewall address-list add address=172.16.15.0/24 list=SwOltSvr
+/ip firewall address-list add address=172.16.16.0/24 list=SwOltSvr
+/ip firewall address-list add address=172.16.17.0/24 list=SwOltSvr
+/ip firewall address-list add address=172.16.18.0/24 list=SwOltSvr
+/ip firewall address-list add address=172.16.19.0/24 list=SwOltSvr
+/ip firewall address-list add address=172.16.20.0/24 list=SwOltSvr
+/ip firewall address-list add address=172.16.1.77 comment=btools list=monitoring
+/ip firewall address-list add address=172.16.1.61 comment=graylog list=monitoring
+/ip firewall address-list add address=172.16.1.54 comment=nagios4 list=monitoring
+/ip firewall address-list add address=172.16.1.51 comment=nagios1 list=monitoring
+/ip firewall address-list add address=172.16.1.52 comment=nagios2 list=monitoring
+/ip firewall address-list add address=172.16.1.29 comment=smokeping list=monitoring
+/ip firewall address-list add address=172.16.1.53 comment=nagios3 list=monitoring
+/ip firewall address-list add address=103.73.72.0/24 list=acceptPortScanner
+/ip firewall address-list add address=103.73.74.98 list=acceptPortScanner
+/ip firewall address-list add address=10.12.1.2 list=acceptPortScanner
+/ip firewall address-list add address=172.16.0.0/12 list=acceptPortScanner
+/ip firewall address-list add address=10.1.0.0/17 list=custPrivate
+/ip firewall address-list add address=10.2.0.0/17 list=custPrivate
+/ip firewall address-list add address=10.3.0.0/17 list=custPrivate
+/ip firewall address-list add address=10.4.0.0/17 list=custPrivate
+/ip firewall address-list add address=10.5.0.0/17 list=custPrivate
+/ip firewall address-list add address=10.6.0.0/17 list=custPrivate
+/ip firewall address-list add address=10.7.0.0/17 list=custPrivate
+/ip firewall address-list add address=10.8.0.0/17 list=custPrivate
+/ip firewall address-list add address=10.9.0.0/17 list=custPrivate
+/ip firewall address-list add address=10.10.0.0/17 list=custPrivate
+/ip firewall address-list add address=10.11.0.0/17 list=custPrivate
+/ip firewall address-list add address=10.12.0.0/17 list=custPrivate
+/ip firewall address-list add address=10.13.0.0/17 list=custPrivate
+/ip firewall address-list add address=10.14.0.0/17 list=custPrivate
+/ip firewall address-list add address=10.15.0.0/17 list=custPrivate
+/ip firewall address-list add address=10.16.0.0/17 list=custPrivate
+/ip firewall address-list add address=10.17.0.0/17 list=custPrivate
+/ip firewall address-list add address=10.18.0.0/17 list=custPrivate
+/ip firewall address-list add address=10.19.0.0/17 list=custPrivate
+/ip firewall address-list add address=10.20.0.0/17 list=custPrivate
+/ip firewall address-list add address=10.21.0.0/17 list=custPrivate
+/ip firewall address-list add address=10.22.0.0/17 list=custPrivate
+/ip firewall address-list add address=10.23.0.0/17 list=custPrivate
+/ip firewall address-list add address=10.24.0.0/17 list=custPrivate
+/ip firewall address-list add address=10.25.0.0/17 list=custPrivate
+/ip firewall address-list add address=10.26.0.0/17 list=custPrivate
+/ip firewall address-list add address=10.27.0.0/17 list=custPrivate
+/ip firewall address-list add address=10.28.0.0/17 list=custPrivate
+/ip firewall address-list add address=10.29.0.0/17 list=custPrivate
+/ip firewall address-list add address=10.30.0.0/17 list=custPrivate
+/ip firewall address-list add address=10.31.0.0/17 list=custPrivate
+/ip firewall address-list add address=10.32.0.0/17 list=custPrivate
+/ip firewall address-list add address=10.33.0.0/17 list=custPrivate
+/ip firewall address-list add address=10.34.0.0/17 list=custPrivate
+/ip firewall address-list add address=10.35.0.0/17 list=custPrivate
+/ip firewall address-list add address=10.36.0.0/17 list=custPrivate
+/ip firewall address-list add address=10.37.0.0/17 list=custPrivate
+/ip firewall address-list add address=10.38.0.0/17 list=custPrivate
+/ip firewall address-list add address=10.39.0.0/17 list=custPrivate
+/ip firewall address-list add address=10.40.0.0/17 list=custPrivate
+/ip firewall address-list add address=10.41.0.0/17 list=custPrivate
+/ip firewall address-list add address=10.42.0.0/17 list=custPrivate
+/ip firewall address-list add address=10.43.0.0/17 list=custPrivate
+/ip firewall address-list add address=10.44.0.0/17 list=custPrivate
+/ip firewall address-list add address=10.45.0.0/17 list=custPrivate
+/ip firewall address-list add address=10.46.0.0/17 list=custPrivate
+/ip firewall address-list add address=10.47.0.0/17 list=custPrivate
+/ip firewall address-list add address=10.48.0.0/17 list=custPrivate
+/ip firewall address-list add address=10.49.0.0/17 list=custPrivate
+/ip firewall address-list add address=10.50.0.0/17 list=custPrivate
+/ip firewall address-list add address=10.75.0.0/17 list=custPrivate
+/ip firewall address-list add address=10.1.224.0/23 list=router
+/ip firewall address-list add address=10.2.224.0/23 list=router
+/ip firewall address-list add address=10.3.224.0/23 list=router
+/ip firewall address-list add address=10.4.224.0/23 list=router
+/ip firewall address-list add address=10.5.224.0/23 list=router
+/ip firewall address-list add address=10.6.224.0/23 list=router
+/ip firewall address-list add address=10.7.224.0/23 list=router
+/ip firewall address-list add address=10.8.224.0/23 list=router
+/ip firewall address-list add address=10.9.224.0/23 list=router
+/ip firewall address-list add address=10.10.224.0/23 list=router
+/ip firewall address-list add address=10.11.224.0/23 list=router
+/ip firewall address-list add address=10.12.224.0/23 list=router
+/ip firewall address-list add address=10.13.224.0/23 list=router
+/ip firewall address-list add address=10.14.224.0/23 list=router
+/ip firewall address-list add address=10.15.224.0/23 list=router
+/ip firewall address-list add address=10.16.224.0/23 list=router
+/ip firewall address-list add address=10.17.224.0/23 list=router
+/ip firewall address-list add address=10.18.224.0/23 list=router
+/ip firewall address-list add address=10.19.224.0/23 list=router
+/ip firewall address-list add address=10.20.224.0/23 list=router
+/ip firewall address-list add address=10.21.224.0/23 list=router
+/ip firewall address-list add address=10.22.224.0/23 list=router
+/ip firewall address-list add address=10.23.224.0/23 list=router
+/ip firewall address-list add address=10.24.224.0/23 list=router
+/ip firewall address-list add address=10.25.224.0/23 list=router
+/ip firewall address-list add address=10.26.224.0/23 list=router
+/ip firewall address-list add address=10.27.224.0/23 list=router
+/ip firewall address-list add address=10.28.224.0/23 list=router
+/ip firewall address-list add address=10.29.224.0/23 list=router
+/ip firewall address-list add address=10.30.224.0/23 list=router
+/ip firewall address-list add address=10.50.224.0/23 list=router
+/ip firewall address-list add address=10.75.224.0/23 list=router
+/ip firewall filter add action=accept chain=forward comment=allAcceptSubnetSourceIPs src-address-list=acceptAccess
+/ip firewall filter add action=accept chain=forward comment=allAcceptSubnetDestinationIPs dst-address-list=acceptAccess
+/ip firewall filter add action=accept chain=forward comment=acceptBandwithTestDestinationFromAllSubnetPortTcp dst-port=2000 protocol=tcp src-port=""
+/ip firewall filter add action=accept chain=forward comment=acceptBandwithTestSourceFromAllSubnetPortTcp protocol=tcp src-port=2000
+/ip firewall filter add action=accept chain=forward comment=acceptBandwithTestDestinationFromAllSubnetPortUdp dst-port=2000 protocol=udp
+/ip firewall filter add action=accept chain=forward comment=acceptBandwithTestSourceFromAllSubnetPortUdp protocol=udp src-port=2000
+/ip firewall filter add action=accept chain=forward comment=acceptFromServerGraylogSourceIPs protocol=udp src-address=172.16.1.61 src-port=5151,12201
+/ip firewall filter add action=accept chain=forward comment=acceptFromServerGraylogDestinationIPs dst-address=172.16.1.61 dst-port=5151,12201 protocol=udp
+/ip firewall filter add action=accept chain=forward comment=acceptFromApi&SshToServerList connection-state=established dst-address-list=server protocol=tcp src-port=22,22322,21312,24321,8728,8927
+/ip firewall filter add action=drop chain=forward comment=dropAccesToPublicFromCustPrivate dst-address=103.73.72.0/24 protocol=!icmp src-address-list=custPrivate
+/ip firewall filter add action=drop chain=forward comment=dropAccesToPublicFromCustIpPublic dst-address=103.73.72.0/24 protocol=!icmp src-address-list=public
+/ip firewall filter add action=drop chain=forward comment=dropAllBlockFromUnstrustedSubnetToRouter dst-address-list=router protocol=!icmp
+/ip firewall filter add action=drop chain=forward comment=dropLocalToLocal dst-address-list=custPrivate src-address-list=custPrivate
+/ip firewall filter add action=drop chain=forward comment=dropAllBlockFromUnstrustedSubnetToRadio dst-address-list=radio protocol=!icmp
+/ip firewall filter add action=drop chain=forward comment=dropAllBlockFromUnstrustedSubnetToSwitch_OLT_Server dst-address-list=SwOltSvr protocol=!icmp
+/ip firewall filter add action=drop chain=forward comment="Surveillance Address" dst-port=23 protocol=tcp src-address-list=addressSurveillance
+/ip firewall filter add action=drop chain=input comment=dropBogusSourceIPs src-address-list=bogus
+/ip firewall filter add action=drop chain=forward comment=dropBogusDestinationIPs dst-address-list=bogus
+/ip firewall filter add action=return chain=detect-ddos comment=ddosAttack dst-limit=32,32,src-and-dst-addresses/10s
+/ip firewall filter add action=add-dst-to-address-list address-list=ddos-targets address-list-timeout=10m chain=detect-ddos comment=ddosAttack
+/ip firewall filter add action=add-src-to-address-list address-list=ddos-attackers address-list-timeout=10m chain=detect-ddos comment=ddosAttack
+/ip firewall filter add action=add-src-to-address-list address-list=portScanner address-list-timeout=1m chain=input comment=portScanDetector protocol=tcp psd=21,3s,3,1 src-address-list=!acceptPortScanner
+/ip firewall filter add action=drop chain=input comment=dropSpamPort src-address-list=portScanner
