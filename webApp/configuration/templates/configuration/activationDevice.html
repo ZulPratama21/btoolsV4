@@ -1,0 +1,152 @@
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="card shadow-sm">
+        <div class="card-header">
+            <h4 class="mb-0">Tambah Device</h4>
+        </div>
+        <div class="card-body">
+            <form method="post" class="needs-validation" novalidate>
+                {% csrf_token %}
+                
+                <!-- First Row -->
+                <div class="row mb-3">
+                    <div class="col-md-4">
+                        <label for="pop" class="form-label">POP</label>
+                        {{ form.pop|add_class:"form-control" }}
+                    </div>
+                    <div class="col-md-4">
+                        <label for="deviceId" class="form-label">Device ID</label>
+                        {{ form.deviceId|add_class:"form-control" }}
+                    </div>
+                    <div class="col-md-4">
+                        <label for="installedDate" class="form-label">Installed Date</label>
+                        {{ form.installedDate|add_class:"form-control" }}
+                    </div>
+                </div>
+
+                <!-- Second Row -->
+                <div class="row mb-3">
+                    <div class="col-md-4">
+                        <label for="remoteAddress" class="form-label">Remote Address</label>
+                        {{ form.remoteAddress|add_class:"form-control" }}
+                    </div>
+                    <div class="col-md-4">
+                        <label for="addtionalIp" class="form-label">Additional IP</label>
+                        {{ form.addtionalIp|add_class:"form-control" }}
+                    </div>
+                    <div class="col-md-4">
+                        <label for="portWinbox" class="form-label">Port Winbox</label>
+                        {{ form.portWinbox|add_class:"form-control" }}
+                    </div>
+                </div>
+
+                <!-- Third Row -->
+                <div class="row mb-3">
+                    <div class="col-md-3">
+                        <label for="portSsh" class="form-label">Port SSH</label>
+                        {{ form.portSsh|add_class:"form-control" }}
+                    </div>
+                    <div class="col-md-3">
+                        <label for="portApi" class="form-label">Port API</label>
+                        {{ form.portApi|add_class:"form-control" }}
+                    </div>
+                    <div class="col-md-3">
+                        <label for="portWeb" class="form-label">Port Web</label>
+                        {{ form.portWeb|add_class:"form-control" }}
+                    </div>
+                    <div class="col-md-3">
+                        <label for="layer" class="form-label">Layer</label>
+                        {{ form.layer|add_class:"form-control" }}
+                    </div>
+                </div>
+
+                <!-- Fourth Row -->
+                <div class="row mb-3">
+                    <div class="col-md-3">
+                        <label for="routerFirewall" class="form-label">Router Firewall</label>
+                        {{ form.routerFirewall|add_class:"form-control" }}
+                    </div>
+                    <div class="col-md-3">
+                        <label for="role" class="form-label">Role</label>
+                        {{ form.role|add_class:"form-control" }}
+                    </div>
+                    <div class="col-md-3">
+                        <label for="frequency" class="form-label">Frequency</label>
+                        {{ form.frequency|add_class:"form-control" }}
+                    </div>
+                    <div class="col-md-3">
+                        <label for="channelBand" class="form-label">Channel Band</label>
+                        {{ form.channelBand|add_class:"form-control" }}
+                    </div>
+                </div>
+
+                <!-- Fifth Row -->
+                <div class="row mb-3">
+                    <div class="col-md-3">
+                        <label for="channelWidth" class="form-label">Channel Width</label>
+                        {{ form.channelWidth|add_class:"form-control" }}
+                    </div>
+                    <div class="col-md-3">
+                        <label for="signal" class="form-label">Signal</label>
+                        {{ form.signal|add_class:"form-control" }}
+                    </div>
+                    <div class="col-md-3">
+                        <label for="sn" class="form-label">SN</label>
+                        {{ form.sn|add_class:"form-control" }}
+                    </div>
+                    <div class="col-md-3">
+                        <label for="os" class="form-label">OS</label>
+                        {{ form.os|add_class:"form-control" }}
+                    </div>
+                </div>
+
+                <!-- Sixth Row -->
+                <div class="row mb-3">
+                    <div class="col-md-4">
+                        <label for="type" class="form-label">Type</label>
+                        {{ form.type|add_class:"form-control" }}
+                    </div>
+                    <div class="col-md-4">
+                        <label for="watt" class="form-label">Watt</label>
+                        {{ form.watt|add_class:"form-control" }}
+                    </div>
+                    <div class="col-md-4">
+                        <label for="remark" class="form-label">Remark</label>
+                        {{ form.remark|add_class:"form-control" }}
+                    </div>
+                </div>
+
+                <!-- User Password -->
+                <div class="row mb-3">
+                    <div class="col-md-4">
+                        <label for="userSelect" class="form-label">Activator</label>
+                        <select class="form-select shadow-sm" id="userSelect" name="user" aria-label="User" required>
+                            <option selected>Select User</option>
+                            {% for user in users %}
+                                {% if user.user != 'neteng' and user.user != 'bnettools' %}
+                                    <option value="{{ user.user }}">{{ user.user }}</option>
+                                {% endif %}
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control shadow-sm" id="passwordInput" name="password" placeholder="Password" required>
+                    </div>
+                    <div class="col-md-4 d-flex align-items-end">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="{% static 'configuration/js/activationDevice.js' %}"></script>
+
+{% endblock content %}

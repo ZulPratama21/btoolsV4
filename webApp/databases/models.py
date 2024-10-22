@@ -199,7 +199,7 @@ class Device(models.Model):
 
 
   role = models.CharField(max_length = 100) # perlu diganti menjadi sebuah database
-  frequency = models.IntegerField(default=5000) # perlu ditambahkan peraturan yang tidak memperbolehkan freq tertentu
+  frequency = models.IntegerField(default=0) # perlu ditambahkan peraturan yang tidak memperbolehkan freq tertentu
 
   bandList = (
     ('5Ghz-A','5ghz-a'),
@@ -253,7 +253,7 @@ class Device(models.Model):
   status = models.CharField(
     max_length = 7,
 		choices = statusList,
-		default = 'idle',
+		default = 'Active',
     )
 
   remark = models.TextField(blank=True, null=True)

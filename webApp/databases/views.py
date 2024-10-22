@@ -111,9 +111,9 @@ def device(request):
             Q(remoteAddress__icontains=query) |
             Q(addtionalIp__icontains=query) |
             Q(portWinbox__icontains=query) |
-            Q(portssh__icontains=query) |
-            Q(portapi__icontains=query) |
-            Q(portweb__icontains=query) |
+            Q(portSsh__icontains=query) |
+            Q(portApi__icontains=query) |
+            Q(portWeb__icontains=query) |
             Q(layer__icontains=query) |
             Q(routerFirewall__icontains=query) |
             Q(role__icontains=query) |

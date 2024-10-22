@@ -12,8 +12,11 @@ from .scriptNetmation.generateScript import (
     gConfC320OnuStatic,
     gConfC320OnuManyPacket
     )
+
+from .scriptNetmation.activation import deviceActivation
 from databases.models import UserDevice, Device, Client
 from common.utils import decryptor, confRouterOs
+from databases.forms import deviceForm
 
 @csrf_exempt
 def apiConfC320OnuBridge(request):
@@ -288,5 +291,47 @@ def sendConfClient(request):
 
     return render(request, f'configuration/sendConfClient.html', context)
 
+@login_required(redirect_field_name='next', login_url='/login')
 def activationDevice(request):
-    pass
+    if request.method == 'POST':
+        form = deviceForm(request.POST)
+        if form.is_valid():
+            pop = form.cleaned_data['pop']
+            deviceId = form.cleaned_data['deviceId']
+            remoteAddress = form.cleaned_data['remoteAddress']
+            portSsh = form.cleaned_data['portSsh']
+            routerFirewall = form.cleaned_data['routerFirewall']
+            os = form.cleaned_data['os']
+
+            user = request.POST.get('user')
+            password = request.POST.get('password')
+
+            result = deviceActivation(remoteAddress, user, password, portSsh, deviceId, pop, routerFirewall)
+
+            # Checking error
+            for log in result:
+                if 'Gagal' in log:
+                    context = {
+                        'output': result,
+                        'source': 'configuration:activationDevice',
+                    }
+                    
+                    return render(request, 'logOutput.html', context)
+                
+            context = {
+                'output': result,
+                'source': 'configuration:activationDevice',
+            }
+
+            form.save()
+            return render(request, 'logOutput.html', context)        
+    
+    users = UserDevice.objects.all().values()
+    form = deviceForm()
+
+    context = {
+        'form': form,
+        'users': users,
+    }
+
+    return render(request, 'configuration/activationDevice.html', context)

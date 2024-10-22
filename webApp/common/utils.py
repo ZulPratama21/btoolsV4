@@ -56,7 +56,7 @@ def confRouterOs(remoteAddress, user, password, port, activity, configList, roll
 				continue
 
 			elif len(output) != 0:
-				log = writeLog(remoteAddress, user, activity, f'terjadi error pada konfigurasi: {config} dengan detail: {output}')
+				log = writeLog(remoteAddress, user, activity, f'Gagal konfigurasi: {config} dengan detail: {output}')
 				logList.append(log)
 				
 				if rollBack == 'y':
@@ -75,7 +75,7 @@ def confRouterOs(remoteAddress, user, password, port, activity, configList, roll
 				successConf += 1
 
 	except Exception as e:
-		log = writeLog(remoteAddress, user, activity, f'Terjadi kegagalan login pada perangkat {remoteAddress} dengan detail : {e}')
+		log = writeLog(remoteAddress, user, activity, f'Gagal login pada perangkat {remoteAddress} dengan detail : {e}')
 		logList.append(log)
 
 	return logList

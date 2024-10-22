@@ -1,7 +1,8 @@
 from django import forms
 from django.contrib.auth.models import User
 from django.conf import settings
-from .models import UserDevice
+
+from .models import UserDevice, Device
 from cryptography.fernet import Fernet
 
 cipher = Fernet(settings.ENCRYPTION_KEY)
@@ -43,3 +44,8 @@ class UserDeviceForm(forms.ModelForm):
         cleaned_data['password'] = encrypted_password.decode()
 
         return cleaned_data
+    
+class deviceForm(forms.ModelForm):
+    class Meta:
+        model = Device
+        fields = ['pop', 'deviceId', 'installedDate', 'remoteAddress', 'addtionalIp', 'portWinbox', 'portSsh', 'portApi', 'portWeb', 'layer', 'routerFirewall', 'role', 'frequency', 'channelBand', 'channelWidth', 'signal', 'sn', 'os', 'type', 'watt', 'remark']

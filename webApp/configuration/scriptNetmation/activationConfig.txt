@@ -1,5 +1,4 @@
-/user remove admin
-/ip dns set servers=103.73.73.71
+/ip dns set servers=103.73.73.71,103.73.73.72
 /ip service set telnet disabled=yes
 /ip service set ftp disabled=yes
 /ip service set www disabled=yes

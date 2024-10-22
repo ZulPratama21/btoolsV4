@@ -1186,3 +1186,775 @@ Columns: NAME, TYPE, ACTUAL-MTU, L2MTU, MAX-L2MTU, MAC-ADDRESS
 22/10/2024 09:30:09 || 10.201.35.61 || jul || Mengirim Konfigurasi Client || Terjadi kegagalan login pada perangkat 10.201.35.61 dengan detail : [Errno 110] Connection timed out
 22/10/2024 09:34:13 || 103.73.75.62 || jul || Mengirim Konfigurasi Client || Berhasil login pada perangkat 103.73.75.62
 22/10/2024 09:34:14 || 103.73.75.62 || jul || Mengirim Konfigurasi Client || /ip address print
+22/10/2024 16:31:37 || 10.1.225.1 || jul || Aktivasi Perangkat BNET || Terjadi kegagalan login pada perangkat 10.1.225.1 dengan detail : [Errno None] Unable to connect to port 22 on 10.1.225.1
+22/10/2024 16:45:45 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Terjadi kegagalan login pada perangkat 10.0.250.2 dengan detail : [Errno None] Unable to connect to port 22322 on 10.0.250.2
+22/10/2024 16:46:55 || 10.0.250.2 || admin || Aktivasi Perangkat BNET || Terjadi kegagalan login pada perangkat 10.0.250.2 dengan detail : Error reading SSH protocol banner
+22/10/2024 21:16:50 || 103.73.72.6 || jul || Mengirim Konfigurasi Device || Berhasil login pada perangkat 103.73.72.6
+22/10/2024 21:16:51 || 103.73.72.6 || jul || Mengirim Konfigurasi Device || Berhasil melakukan konfigurasi: /ip service set ssh address=172.16.1.50/32,172.16.1.77/32,172.16.1.130/32,172.16.1.27/32
+22/10/2024 21:19:01 || 172.16.1.18 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 172.16.1.18 dengan detail : [Errno 110] Connection timed out
+22/10/2024 21:19:02 || 103.73.72.72 || jul || Mengirim Konfigurasi Device || Berhasil login pada perangkat 103.73.72.72
+22/10/2024 21:19:02 || 103.73.72.72 || jul || Mengirim Konfigurasi Device || Berhasil melakukan konfigurasi: /ip service set ssh address=172.16.1.50/32,172.16.1.77/32,172.16.1.130/32,172.16.1.27/32
+22/10/2024 21:19:03 || 103.73.72.73 || jul || Mengirim Konfigurasi Device || Berhasil login pada perangkat 103.73.72.73
+22/10/2024 21:19:03 || 103.73.72.73 || jul || Mengirim Konfigurasi Device || Berhasil melakukan konfigurasi: /ip service set ssh address=172.16.1.50/32,172.16.1.77/32,172.16.1.130/32,172.16.1.27/32
+22/10/2024 21:19:04 || 103.73.72.74 || jul || Mengirim Konfigurasi Device || Berhasil login pada perangkat 103.73.72.74
+22/10/2024 21:19:04 || 103.73.72.74 || jul || Mengirim Konfigurasi Device || Berhasil melakukan konfigurasi: /ip service set ssh address=172.16.1.50/32,172.16.1.77/32,172.16.1.130/32,172.16.1.27/32
+22/10/2024 21:19:05 || 103.73.72.181 || jul || Mengirim Konfigurasi Device || Berhasil login pada perangkat 103.73.72.181
+22/10/2024 21:19:05 || 103.73.72.181 || jul || Mengirim Konfigurasi Device || Berhasil melakukan konfigurasi: /ip service set ssh address=172.16.1.50/32,172.16.1.77/32,172.16.1.130/32,172.16.1.27/32
+22/10/2024 21:19:20 || 172.16.1.154 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 172.16.1.154 dengan detail : Error reading SSH protocol banner
+22/10/2024 21:19:20 || 103.73.72.182 || jul || Mengirim Konfigurasi Device || Berhasil login pada perangkat 103.73.72.182
+22/10/2024 21:19:21 || 103.73.72.182 || jul || Mengirim Konfigurasi Device || Berhasil melakukan konfigurasi: /ip service set ssh address=172.16.1.50/32,172.16.1.77/32,172.16.1.130/32,172.16.1.27/32
+22/10/2024 21:19:21 || 103.73.72.162 || jul || Mengirim Konfigurasi Device || Berhasil login pada perangkat 103.73.72.162
+22/10/2024 21:19:22 || 103.73.72.162 || jul || Mengirim Konfigurasi Device || Berhasil melakukan konfigurasi: /ip service set ssh address=172.16.1.50/32,172.16.1.77/32,172.16.1.130/32,172.16.1.27/32
+22/10/2024 21:19:22 || 103.73.72.222 || jul || Mengirim Konfigurasi Device || Berhasil login pada perangkat 103.73.72.222
+22/10/2024 21:19:23 || 103.73.72.222 || jul || Mengirim Konfigurasi Device || Berhasil melakukan konfigurasi: /ip service set ssh address=172.16.1.50/32,172.16.1.77/32,172.16.1.130/32,172.16.1.27/32
+22/10/2024 21:19:23 || 103.73.72.7 || jul || Mengirim Konfigurasi Device || Berhasil login pada perangkat 103.73.72.7
+22/10/2024 21:19:24 || 103.73.72.7 || jul || Mengirim Konfigurasi Device || Berhasil melakukan konfigurasi: /ip service set ssh address=172.16.1.50/32,172.16.1.77/32,172.16.1.130/32,172.16.1.27/32
+22/10/2024 21:19:24 || 172.16.1.210 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 172.16.1.210 dengan detail : Error reading SSH protocol banner[Errno 104] Connection reset by peer
+22/10/2024 21:19:24 || 172.16.1.242 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 172.16.1.242 dengan detail : Error reading SSH protocol banner
+22/10/2024 21:19:32 || 172.16.1.36 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 172.16.1.36 dengan detail : Authentication failed.
+22/10/2024 21:19:32 || 103.73.72.1 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 103.73.72.1 dengan detail : Error reading SSH protocol banner
+22/10/2024 21:19:32 || - || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat - dengan detail : [Errno -2] Name or service not known
+22/10/2024 21:19:32 || 172.16.1.14 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 172.16.1.14 dengan detail : [Errno None] Unable to connect to port 0 on 172.16.1.14
+22/10/2024 21:19:32 || 103.73.74.30 || jul || Mengirim Konfigurasi Device || Berhasil login pada perangkat 103.73.74.30
+22/10/2024 21:19:33 || 103.73.74.30 || jul || Mengirim Konfigurasi Device || Berhasil melakukan konfigurasi: /ip service set ssh address=172.16.1.50/32,172.16.1.77/32,172.16.1.130/32,172.16.1.27/32
+22/10/2024 21:19:33 || 103.73.72.226 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 103.73.72.226 dengan detail : Error reading SSH protocol banner
+22/10/2024 21:19:33 || 103.73.74.98 || jul || Mengirim Konfigurasi Device || Berhasil login pada perangkat 103.73.74.98
+22/10/2024 21:19:33 || 103.73.74.98 || jul || Mengirim Konfigurasi Device || Berhasil melakukan konfigurasi: /ip service set ssh address=172.16.1.50/32,172.16.1.77/32,172.16.1.130/32,172.16.1.27/32
+22/10/2024 21:19:33 || - || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat - dengan detail : [Errno -2] Name or service not known
+22/10/2024 21:19:33 || - || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat - dengan detail : [Errno -2] Name or service not known
+22/10/2024 21:19:33 || - || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat - dengan detail : [Errno -2] Name or service not known
+22/10/2024 21:19:34 || 10.1.128.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.1.128.2 dengan detail : Authentication failed.
+22/10/2024 21:19:34 || 10.1.129.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.1.129.2 dengan detail : Error reading SSH protocol banner
+22/10/2024 21:19:34 || 10.1.131.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.1.131.2 dengan detail : Error reading SSH protocol banner[Errno 104] Connection reset by peer
+22/10/2024 21:19:34 || 10.1.132.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.1.132.2 dengan detail : Error reading SSH protocol banner[Errno 104] Connection reset by peer
+22/10/2024 21:19:34 || 10.1.136.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.1.136.2 dengan detail : [Errno None] Unable to connect to port 22322 on 10.1.136.2
+22/10/2024 21:19:34 || 10.1.138.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.1.138.2 dengan detail : Error reading SSH protocol banner
+22/10/2024 21:19:34 || 10.1.139.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.1.139.2 dengan detail : Error reading SSH protocol banner
+22/10/2024 21:19:34 || 10.1.140.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.1.140.2 dengan detail : Error reading SSH protocol banner
+22/10/2024 21:19:34 || 10.1.141.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.1.141.2 dengan detail : Error reading SSH protocol banner[Errno 104] Connection reset by peer
+22/10/2024 21:19:34 || 10.1.142.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.1.142.2 dengan detail : Error reading SSH protocol banner
+22/10/2024 21:19:34 || 10.1.150.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.1.150.2 dengan detail : Error reading SSH protocol banner
+22/10/2024 21:19:34 || 10.1.156.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.1.156.2 dengan detail : Error reading SSH protocol banner[Errno 104] Connection reset by peer
+22/10/2024 21:19:34 || 10.1.157.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.1.157.2 dengan detail : [Errno None] Unable to connect to port 22322 on 10.1.157.2
+22/10/2024 21:19:49 || 10.1.158.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.1.158.2 dengan detail : Error reading SSH protocol banner
+22/10/2024 21:19:49 || 10.2.192.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.2.192.2 dengan detail : Error reading SSH protocol banner
+22/10/2024 21:19:49 || 103.73.72.224 || jul || Mengirim Konfigurasi Device || Berhasil login pada perangkat 103.73.72.224
+22/10/2024 21:19:50 || 103.73.72.224 || jul || Mengirim Konfigurasi Device || Berhasil melakukan konfigurasi: /ip service set ssh address=172.16.1.50/32,172.16.1.77/32,172.16.1.130/32,172.16.1.27/32
+22/10/2024 21:22:00 || 172.16.2.254 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 172.16.2.254 dengan detail : [Errno 110] Connection timed out
+22/10/2024 21:22:00 || 10.2.128.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.2.128.2 dengan detail : Error reading SSH protocol banner[Errno 104] Connection reset by peer
+22/10/2024 21:22:00 || 10.2.129.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.2.129.2 dengan detail : Error reading SSH protocol banner
+22/10/2024 21:22:00 || 10.2.130.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.2.130.2 dengan detail : Error reading SSH protocol banner[Errno 104] Connection reset by peer
+22/10/2024 21:22:15 || 10.2.131.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.2.131.2 dengan detail : Error reading SSH protocol banner
+22/10/2024 21:22:15 || 10.2.132.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.2.132.2 dengan detail : Error reading SSH protocol banner[Errno 104] Connection reset by peer
+22/10/2024 21:22:15 || 10.2.134.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.2.134.2 dengan detail : Error reading SSH protocol banner[Errno 104] Connection reset by peer
+22/10/2024 21:22:15 || 10.2.138.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.2.138.2 dengan detail : Error reading SSH protocol banner
+22/10/2024 21:22:15 || 10.2.141.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.2.141.2 dengan detail : [Errno None] Unable to connect to port 22322 on 10.2.141.2
+22/10/2024 21:22:15 || 10.2.144.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.2.144.2 dengan detail : Error reading SSH protocol banner[Errno 104] Connection reset by peer
+22/10/2024 21:22:15 || 10.2.192.3 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.2.192.3 dengan detail : Error reading SSH protocol banner[Errno 104] Connection reset by peer
+22/10/2024 21:22:15 || 103.73.72.28 || jul || Mengirim Konfigurasi Device || Berhasil login pada perangkat 103.73.72.28
+22/10/2024 21:22:16 || 103.73.72.28 || jul || Mengirim Konfigurasi Device || Berhasil melakukan konfigurasi: /ip service set ssh address=172.16.1.50/32,172.16.1.77/32,172.16.1.130/32,172.16.1.27/32
+22/10/2024 21:24:25 || 172.16.3.254 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 172.16.3.254 dengan detail : [Errno 110] Connection timed out
+22/10/2024 21:24:25 || 10.3.192.10 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.3.192.10 dengan detail : Error reading SSH protocol banner[Errno 104] Connection reset by peer
+22/10/2024 21:24:25 || 10.3.138.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.3.138.2 dengan detail : Error reading SSH protocol banner
+22/10/2024 21:24:25 || 10.3.131.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.3.131.2 dengan detail : [Errno None] Unable to connect to port 22322 on 10.3.131.2
+22/10/2024 21:24:25 || 10.3.136.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.3.136.2 dengan detail : Error reading SSH protocol banner
+22/10/2024 21:24:25 || 10.3.133.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.3.133.2 dengan detail : Error reading SSH protocol banner
+22/10/2024 21:24:25 || 10.3.137.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.3.137.2 dengan detail : Error reading SSH protocol banner[Errno 104] Connection reset by peer
+22/10/2024 21:24:25 || 10.3.128.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.3.128.2 dengan detail : Error reading SSH protocol banner
+22/10/2024 21:24:25 || 10.3.130.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.3.130.2 dengan detail : Error reading SSH protocol banner[Errno 104] Connection reset by peer
+22/10/2024 21:24:25 || 10.3.141.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.3.141.2 dengan detail : Error reading SSH protocol banner
+22/10/2024 21:24:25 || 10.3.140.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.3.140.2 dengan detail : Error reading SSH protocol banner
+22/10/2024 21:26:36 || private || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat private dengan detail : [Errno 110] Connection timed out
+22/10/2024 21:26:37 || 103.73.72.30 || jul || Mengirim Konfigurasi Device || Berhasil login pada perangkat 103.73.72.30
+22/10/2024 21:26:37 || 103.73.72.30 || jul || Mengirim Konfigurasi Device || Berhasil melakukan konfigurasi: /ip service set ssh address=172.16.1.50/32,172.16.1.77/32,172.16.1.130/32,172.16.1.27/32
+22/10/2024 21:28:47 || 172.16.4.250 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 172.16.4.250 dengan detail : [Errno 110] Connection timed out
+22/10/2024 21:28:47 || 10.4.130.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.4.130.2 dengan detail : Error reading SSH protocol banner[Errno 104] Connection reset by peer
+22/10/2024 21:28:47 || 10.4.132.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.4.132.2 dengan detail : Error reading SSH protocol banner
+22/10/2024 21:28:47 || 10.4.133.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.4.133.2 dengan detail : Error reading SSH protocol banner[Errno 104] Connection reset by peer
+22/10/2024 21:28:47 || 10.4.134.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.4.134.2 dengan detail : Error reading SSH protocol banner
+22/10/2024 21:28:47 || 10.4.142.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.4.142.2 dengan detail : Error reading SSH protocol banner[Errno 104] Connection reset by peer
+22/10/2024 21:28:47 || 10.7.192.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.7.192.2 dengan detail : Error reading SSH protocol banner
+22/10/2024 21:28:47 || 10.14.192.10 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.14.192.10 dengan detail : Error reading SSH protocol banner[Errno 104] Connection reset by peer
+22/10/2024 21:28:47 || 10.7.135.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.7.135.2 dengan detail : [Errno None] Unable to connect to port 22322 on 10.7.135.2
+22/10/2024 21:28:47 || 10.4.143.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.4.143.2 dengan detail : Error reading SSH protocol banner[Errno 104] Connection reset by peer
+22/10/2024 21:28:48 || 10.5.224.2 || jul || Mengirim Konfigurasi Device || Berhasil login pada perangkat 10.5.224.2
+22/10/2024 21:28:48 || 10.5.224.2 || jul || Mengirim Konfigurasi Device || Berhasil melakukan konfigurasi: /ip service set ssh address=172.16.1.50/32,172.16.1.77/32,172.16.1.130/32,172.16.1.27/32
+22/10/2024 21:28:48 || 172.16.5.250 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 172.16.5.250 dengan detail : [Errno None] Unable to connect to port 0 on 172.16.5.250
+22/10/2024 21:29:04 || 10.5.129.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.5.129.2 dengan detail : Error reading SSH protocol banner
+22/10/2024 21:29:19 || 10.5.130.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.5.130.2 dengan detail : Error reading SSH protocol banner
+22/10/2024 21:29:19 || 10.5.131.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.5.131.2 dengan detail : Error reading SSH protocol banner[Errno 104] Connection reset by peer
+22/10/2024 21:29:19 || 10.5.132.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.5.132.2 dengan detail : [Errno None] Unable to connect to port 22322 on 10.5.132.2
+22/10/2024 21:29:19 || 10.5.133.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.5.133.2 dengan detail : [Errno None] Unable to connect to port 22322 on 10.5.133.2
+22/10/2024 21:29:19 || 10.5.135.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.5.135.2 dengan detail : [Errno None] Unable to connect to port 22322 on 10.5.135.2
+22/10/2024 21:29:19 || 103.73.72.106 || jul || Mengirim Konfigurasi Device || Berhasil login pada perangkat 103.73.72.106
+22/10/2024 21:29:19 || 103.73.72.106 || jul || Mengirim Konfigurasi Device || Berhasil melakukan konfigurasi: /ip service set ssh address=172.16.1.50/32,172.16.1.77/32,172.16.1.130/32,172.16.1.27/32
+22/10/2024 21:31:29 || 172.16.8.242 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 172.16.8.242 dengan detail : [Errno 110] Connection timed out
+22/10/2024 21:31:30 || 103.73.72.33 || jul || Mengirim Konfigurasi Device || Berhasil login pada perangkat 103.73.72.33
+22/10/2024 21:31:30 || 103.73.72.33 || jul || Mengirim Konfigurasi Device || Berhasil melakukan konfigurasi: /ip service set ssh address=172.16.1.50/32,172.16.1.77/32,172.16.1.130/32,172.16.1.27/32
+22/10/2024 21:33:40 || 172.16.8.254 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 172.16.8.254 dengan detail : [Errno 110] Connection timed out
+22/10/2024 21:35:51 || 172.16.8.250 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 172.16.8.250 dengan detail : [Errno 110] Connection timed out
+22/10/2024 21:38:02 || 172.16.8.246 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 172.16.8.246 dengan detail : [Errno 110] Connection timed out
+22/10/2024 21:38:02 || 10.20.192.10 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.20.192.10 dengan detail : Error reading SSH protocol banner
+22/10/2024 21:38:02 || 10.8.131.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.8.131.2 dengan detail : Error reading SSH protocol banner[Errno 104] Connection reset by peer
+22/10/2024 21:38:02 || 10.8.133.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.8.133.2 dengan detail : Error reading SSH protocol banner
+22/10/2024 21:38:03 || 103.73.72.35 || jul || Mengirim Konfigurasi Device || Berhasil login pada perangkat 103.73.72.35
+22/10/2024 21:38:03 || 103.73.72.35 || jul || Mengirim Konfigurasi Device || Berhasil melakukan konfigurasi: /ip service set ssh address=172.16.1.50/32,172.16.1.77/32,172.16.1.130/32,172.16.1.27/32
+22/10/2024 21:40:13 || 172.16.10.254 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 172.16.10.254 dengan detail : [Errno 110] Connection timed out
+22/10/2024 21:40:16 || 10.10.129.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.10.129.2 dengan detail : [Errno None] Unable to connect to port 0 on 10.10.129.2
+22/10/2024 21:40:17 || 10.12.224.6 || jul || Mengirim Konfigurasi Device || Berhasil login pada perangkat 10.12.224.6
+22/10/2024 21:40:17 || 10.12.224.6 || jul || Mengirim Konfigurasi Device || Berhasil melakukan konfigurasi: /ip service set ssh address=172.16.1.50/32,172.16.1.77/32,172.16.1.130/32,172.16.1.27/32
+22/10/2024 21:42:28 || 172.16.12.254 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 172.16.12.254 dengan detail : [Errno 110] Connection timed out
+22/10/2024 21:42:28 || 10.12.130.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.12.130.2 dengan detail : Error reading SSH protocol banner[Errno 104] Connection reset by peer
+22/10/2024 21:42:29 || 10.12.128.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.12.128.2 dengan detail : Error reading SSH protocol banner
+22/10/2024 21:42:29 || 10.12.131.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.12.131.2 dengan detail : Error reading SSH protocol banner
+22/10/2024 21:42:29 || 10.13.224.2 || jul || Mengirim Konfigurasi Device || Berhasil login pada perangkat 10.13.224.2
+22/10/2024 21:42:30 || 10.13.224.2 || jul || Mengirim Konfigurasi Device || Berhasil melakukan konfigurasi: /ip service set ssh address=172.16.1.50/32,172.16.1.77/32,172.16.1.130/32,172.16.1.27/32
+22/10/2024 21:44:40 || 172.16.13.254 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 172.16.13.254 dengan detail : [Errno 110] Connection timed out
+22/10/2024 21:46:51 || 10.14.0.1 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.14.0.1 dengan detail : [Errno 110] Connection timed out
+22/10/2024 21:49:02 || 10.14.0.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.14.0.2 dengan detail : [Errno 110] Connection timed out
+22/10/2024 21:51:13 || 172.16.14.34 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 172.16.14.34 dengan detail : [Errno 110] Connection timed out
+22/10/2024 21:53:24 || 172.16.14.35 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 172.16.14.35 dengan detail : [Errno 110] Connection timed out
+22/10/2024 21:53:24 || 172.16.14.1 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 172.16.14.1 dengan detail : [Errno None] Unable to connect to port 0 on 172.16.14.1
+22/10/2024 21:53:24 || 172.16.14.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 172.16.14.2 dengan detail : [Errno None] Unable to connect to port 0 on 172.16.14.2
+22/10/2024 21:53:25 || 172.16.14.3 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 172.16.14.3 dengan detail : [Errno None] Unable to connect to port 0 on 172.16.14.3
+22/10/2024 21:53:28 || 172.16.14.4 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 172.16.14.4 dengan detail : [Errno None] Unable to connect to port 0 on 172.16.14.4
+22/10/2024 21:53:31 || 172.16.14.5 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 172.16.14.5 dengan detail : [Errno None] Unable to connect to port 0 on 172.16.14.5
+22/10/2024 21:53:34 || 172.16.14.6 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 172.16.14.6 dengan detail : [Errno None] Unable to connect to port 0 on 172.16.14.6
+22/10/2024 21:53:34 || 172.16.14.7 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 172.16.14.7 dengan detail : [Errno None] Unable to connect to port 0 on 172.16.14.7
+22/10/2024 21:55:43 || 172.16.14.10 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 172.16.14.10 dengan detail : [Errno 110] Connection timed out
+22/10/2024 21:57:54 || 172.16.14.9 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 172.16.14.9 dengan detail : [Errno 110] Connection timed out
+22/10/2024 21:57:54 || 10.14.192.11 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.14.192.11 dengan detail : Error reading SSH protocol banner
+22/10/2024 21:57:55 || 10.14.128.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.14.128.2 dengan detail : Authentication failed.
+22/10/2024 21:57:55 || 10.14.128.3 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.14.128.3 dengan detail : [Errno None] Unable to connect to port 22322 on 10.14.128.3
+22/10/2024 21:57:55 || 10.14.128.4 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.14.128.4 dengan detail : [Errno None] Unable to connect to port 22322 on 10.14.128.4
+22/10/2024 21:57:56 || 103.73.72.34 || jul || Mengirim Konfigurasi Device || Berhasil login pada perangkat 103.73.72.34
+22/10/2024 21:57:56 || 103.73.72.34 || jul || Mengirim Konfigurasi Device || Berhasil melakukan konfigurasi: /ip service set ssh address=172.16.1.50/32,172.16.1.77/32,172.16.1.130/32,172.16.1.27/32
+22/10/2024 21:57:56 || 10.3.192.11 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.3.192.11 dengan detail : Error reading SSH protocol banner[Errno 104] Connection reset by peer
+22/10/2024 21:57:56 || 10.15.128.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.15.128.2 dengan detail : Error reading SSH protocol banner[Errno 104] Connection reset by peer
+22/10/2024 21:57:56 || 10.3.192.10 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.3.192.10 dengan detail : Error reading SSH protocol banner[Errno 104] Connection reset by peer
+22/10/2024 21:57:57 || 103.73.72.29 || jul || Mengirim Konfigurasi Device || Berhasil login pada perangkat 103.73.72.29
+22/10/2024 21:57:57 || 103.73.72.29 || jul || Mengirim Konfigurasi Device || Berhasil melakukan konfigurasi: /ip service set ssh address=172.16.1.50/32,172.16.1.77/32,172.16.1.130/32,172.16.1.27/32
+22/10/2024 22:00:07 || 172.16.16.254 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 172.16.16.254 dengan detail : [Errno 110] Connection timed out
+22/10/2024 22:00:08 || 10.17.224.2 || jul || Mengirim Konfigurasi Device || Berhasil login pada perangkat 10.17.224.2
+22/10/2024 22:00:08 || 10.17.224.2 || jul || Mengirim Konfigurasi Device || Berhasil melakukan konfigurasi: /ip service set ssh address=172.16.1.50/32,172.16.1.77/32,172.16.1.130/32,172.16.1.27/32
+22/10/2024 22:02:18 || 172.16.17.246 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 172.16.17.246 dengan detail : [Errno 110] Connection timed out
+22/10/2024 22:04:29 || 172.16.17.242 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 172.16.17.242 dengan detail : [Errno 110] Connection timed out
+22/10/2024 22:04:38 || 10.17.130.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.17.130.2 dengan detail : Authentication failed.
+22/10/2024 22:04:53 || 10.17.129.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.17.129.2 dengan detail : Error reading SSH protocol banner
+22/10/2024 22:05:08 || 10.17.133.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.17.133.2 dengan detail : Error reading SSH protocol banner
+22/10/2024 22:05:08 || 10.17.135.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.17.135.2 dengan detail : [Errno None] Unable to connect to port 22322 on 10.17.135.2
+22/10/2024 22:06:01 || 10.0.250.2 || admin || Aktivasi Perangkat BNET || Berhasil login pada perangkat 10.0.250.2
+22/10/2024 22:06:02 || 10.0.250.2 || admin || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /system identity set name="RTR-Testing123"
+22/10/2024 22:06:02 || 10.0.250.2 || admin || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /user add name=jul password=Juliandi123!@# group=write
+22/10/2024 22:06:03 || 10.0.250.2 || admin || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /system clock set date=Oct/22/2024 time=22:06:01 time-zone-autodetect=yes time-zone-name=Asia/Jakart
+22/10/2024 22:06:03 || 10.0.250.2 || admin || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /system logging action add name=syslog remote=172.16.1.61 remote-port=5151 src-address=10.0.250.2 target=remote
+22/10/2024 22:06:04 || 10.0.250.2 || admin || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /user remove admin
+
+22/10/2024 22:06:05 || 10.0.250.2 || admin || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip dns set servers=103.73.73.71
+
+22/10/2024 22:06:05 || 10.0.250.2 || admin || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip service set telnet disabled=yes
+
+22/10/2024 22:06:06 || 10.0.250.2 || admin || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip service set ftp disabled=yes
+
+22/10/2024 22:06:06 || 10.0.250.2 || admin || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip service set www disabled=yes
+
+22/10/2024 22:06:07 || 10.0.250.2 || admin || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip service set api address=172.16.1.77/32,172.16.1.27/32,103.73.74.15/32
+
+22/10/2024 22:06:07 || 10.0.250.2 || admin || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip service set winbox address=103.73.72.70/32,103.73.74.98/32,10.12.1.2/32
+
+22/10/2024 22:06:08 || 10.0.250.2 || admin || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip service set api-ssl disabled=yes
+
+22/10/2024 22:06:08 || 10.0.250.2 || admin || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /system clock set time-zone-autodetect=yes time-zone-name=Asia/Jakarta
+
+22/10/2024 22:06:09 || 10.0.250.2 || admin || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /snmp community add addresses=103.73.73.78/32 name=intbnet write-access=yes authentication-password=bnetlibre encryption-password=bnetlibre
+
+22/10/2024 22:06:09 || 10.0.250.2 || admin || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /system logging add action=syslog topics=warning,!script
+
+22/10/2024 22:06:10 || 10.0.250.2 || admin || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /system logging add action=syslog topics=critical
+
+22/10/2024 22:06:10 || 10.0.250.2 || admin || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /system logging add action=syslog topics=error
+
+22/10/2024 22:06:11 || 10.0.250.2 || admin || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /system logging add action=syslog topics=info
+22/10/2024 22:06:11 || 10.0.250.2 || admin || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip service set ssh address=172.16.1.77/32,172.16.1.27/32,172.16.1.50/32,172.16.1.130/32,103.73.74.15/32 port=22
+22/10/2024 22:06:12 || 10.0.250.2 || admin || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /snmp set contact=noc@bnet.id enabled=yes location="POP001-Adiarsa" trap-community=intbnet trap-version=3
+22/10/2024 22:07:17 || 172.16.18.254 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 172.16.18.254 dengan detail : [Errno 110] Connection timed out
+22/10/2024 22:07:17 || 10.18.128.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.18.128.2 dengan detail : [Errno None] Unable to connect to port 22 on 10.18.128.2
+22/10/2024 22:07:18 || 10.18.224.2 || jul || Mengirim Konfigurasi Device || Berhasil login pada perangkat 10.18.224.2
+22/10/2024 22:07:19 || 10.18.224.2 || jul || Mengirim Konfigurasi Device || Berhasil melakukan konfigurasi: /ip service set ssh address=172.16.1.50/32,172.16.1.77/32,172.16.1.130/32,172.16.1.27/32
+22/10/2024 22:07:19 || 10.19.224.2 || jul || Mengirim Konfigurasi Device || Berhasil login pada perangkat 10.19.224.2
+22/10/2024 22:07:20 || 10.19.224.2 || jul || Mengirim Konfigurasi Device || Berhasil melakukan konfigurasi: /ip service set ssh address=172.16.1.50/32,172.16.1.77/32,172.16.1.130/32,172.16.1.27/32
+22/10/2024 22:07:20 || 10.19.130.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.19.130.2 dengan detail : [Errno None] Unable to connect to port 22 on 10.19.130.2
+22/10/2024 22:07:20 || 10.19.129.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.19.129.2 dengan detail : [Errno None] Unable to connect to port 22 on 10.19.129.2
+22/10/2024 22:07:20 || 10.20.224.2 || jul || Mengirim Konfigurasi Device || Berhasil login pada perangkat 10.20.224.2
+22/10/2024 22:07:21 || 10.20.224.2 || jul || Mengirim Konfigurasi Device || Berhasil melakukan konfigurasi: /ip service set ssh address=172.16.1.50/32,172.16.1.77/32,172.16.1.130/32,172.16.1.27/32
+22/10/2024 22:07:21 || 10.20.192.11 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.20.192.11 dengan detail : [Errno None] Unable to connect to port 22 on 10.20.192.11
+22/10/2024 22:07:35 || 10.20.129.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.20.129.2 dengan detail : Authentication failed.
+22/10/2024 22:07:36 || 172.16.50.250 || jul || Mengirim Konfigurasi Device || Berhasil login pada perangkat 172.16.50.250
+22/10/2024 22:07:37 || 172.16.50.250 || jul || Mengirim Konfigurasi Device || Berhasil melakukan konfigurasi: /ip service set ssh address=172.16.1.50/32,172.16.1.77/32,172.16.1.130/32,172.16.1.27/32
+22/10/2024 22:07:37 || 103.73.72.166 || jul || Mengirim Konfigurasi Device || Berhasil login pada perangkat 103.73.72.166
+22/10/2024 22:07:37 || 103.73.72.166 || jul || Mengirim Konfigurasi Device || Berhasil melakukan konfigurasi: /ip service set ssh address=172.16.1.50/32,172.16.1.77/32,172.16.1.130/32,172.16.1.27/32
+22/10/2024 22:09:47 || 172.16.50.254 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 172.16.50.254 dengan detail : [Errno 110] Connection timed out
+22/10/2024 22:09:47 || 10.50.138.3 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.50.138.3 dengan detail : Authentication failed.
+22/10/2024 22:09:48 || 103.73.72.200 || jul || Mengirim Konfigurasi Device || Berhasil login pada perangkat 103.73.72.200
+22/10/2024 22:09:48 || 103.73.72.200 || jul || Mengirim Konfigurasi Device || Berhasil melakukan konfigurasi: /ip service set ssh address=172.16.1.50/32,172.16.1.77/32,172.16.1.130/32,172.16.1.27/32
+22/10/2024 22:09:48 || 10.2.134.3 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.2.134.3 dengan detail : Error reading SSH protocol banner
+22/10/2024 22:11:58 || 10.1.138.7 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.1.138.7 dengan detail : [Errno 110] Connection timed out
+22/10/2024 22:11:58 || 10.1.138.5 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.1.138.5 dengan detail : [Errno None] Unable to connect to port 22 on 10.1.138.5
+22/10/2024 22:11:58 || 10.1.138.3 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.1.138.3 dengan detail : [Errno None] Unable to connect to port 22 on 10.1.138.3
+22/10/2024 22:11:58 || 10.5.224.10 || jul || Mengirim Konfigurasi Device || Berhasil login pada perangkat 10.5.224.10
+22/10/2024 22:11:59 || 10.5.224.10 || jul || Mengirim Konfigurasi Device || Berhasil melakukan konfigurasi: /ip service set ssh address=172.16.1.50/32,172.16.1.77/32,172.16.1.130/32,172.16.1.27/32
+22/10/2024 22:11:59 || 10.5.137.11 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.5.137.11 dengan detail : Error reading SSH protocol banner
+22/10/2024 22:11:59 || 103.73.72.114 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 103.73.72.114 dengan detail : Error reading SSH protocol banner[Errno 104] Connection reset by peer
+22/10/2024 22:14:09 || 10.0.200.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.0.200.2 dengan detail : [Errno 110] Connection timed out
+22/10/2024 22:14:09 || 10.5.128.10 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.5.128.10 dengan detail : [Errno None] Unable to connect to port 22 on 10.5.128.10
+22/10/2024 22:14:09 || - || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat - dengan detail : [Errno -2] Name or service not known
+22/10/2024 22:14:10 || 10.4.225.2 || jul || Mengirim Konfigurasi Device || Berhasil login pada perangkat 10.4.225.2
+22/10/2024 22:14:10 || 10.4.225.2 || jul || Mengirim Konfigurasi Device || Berhasil melakukan konfigurasi: /ip service set ssh address=172.16.1.50/32,172.16.1.77/32,172.16.1.130/32,172.16.1.27/32
+22/10/2024 22:14:10 || 10.4.135.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.4.135.2 dengan detail : [Errno None] Unable to connect to port 22 on 10.4.135.2
+22/10/2024 22:14:10 || 10.4.136.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.4.136.2 dengan detail : [Errno None] Unable to connect to port 22 on 10.4.136.2
+22/10/2024 22:14:10 || 10.7.129.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.7.129.2 dengan detail : [Errno None] Unable to connect to port 22 on 10.7.129.2
+22/10/2024 22:14:11 || 103.73.72.83 || jul || Mengirim Konfigurasi Device || Berhasil login pada perangkat 103.73.72.83
+22/10/2024 22:14:11 || 103.73.72.83 || jul || Mengirim Konfigurasi Device || Berhasil melakukan konfigurasi: /ip service set ssh address=172.16.1.50/32,172.16.1.77/32,172.16.1.130/32,172.16.1.27/32
+22/10/2024 22:14:20 || 10.17.136.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.17.136.2 dengan detail : Authentication failed.
+22/10/2024 22:14:20 || 103.73.72.41 || jul || Mengirim Konfigurasi Device || Berhasil login pada perangkat 103.73.72.41
+22/10/2024 22:14:21 || 103.73.72.41 || jul || Mengirim Konfigurasi Device || Berhasil melakukan konfigurasi: /ip service set ssh address=172.16.1.50/32,172.16.1.77/32,172.16.1.130/32,172.16.1.27/32
+22/10/2024 22:14:36 || 10.21.128.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.21.128.2 dengan detail : Authentication failed.
+22/10/2024 22:14:36 || 103.73.72.48 || jul || Mengirim Konfigurasi Device || Berhasil login pada perangkat 103.73.72.48
+22/10/2024 22:14:36 || 103.73.72.48 || jul || Mengirim Konfigurasi Device || Berhasil melakukan konfigurasi: /ip service set ssh address=172.16.1.50/32,172.16.1.77/32,172.16.1.130/32,172.16.1.27/32
+22/10/2024 22:14:36 || 10.22.131.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.22.131.2 dengan detail : [Errno None] Unable to connect to port 22 on 10.22.131.2
+22/10/2024 22:14:36 || 10.23.128.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.23.128.2 dengan detail : Error reading SSH protocol banner[Errno 104] Connection reset by peer
+22/10/2024 22:14:37 || 103.73.72.49 || jul || Mengirim Konfigurasi Device || Berhasil login pada perangkat 103.73.72.49
+22/10/2024 22:14:37 || 103.73.72.49 || jul || Mengirim Konfigurasi Device || Berhasil melakukan konfigurasi: /ip service set ssh address=172.16.1.50/32,172.16.1.77/32,172.16.1.130/32,172.16.1.27/32
+22/10/2024 22:14:38 || 103.73.72.50 || jul || Mengirim Konfigurasi Device || Berhasil login pada perangkat 103.73.72.50
+22/10/2024 22:14:38 || 103.73.72.50 || jul || Mengirim Konfigurasi Device || Berhasil melakukan konfigurasi: /ip service set ssh address=172.16.1.50/32,172.16.1.77/32,172.16.1.130/32,172.16.1.27/32
+22/10/2024 22:14:39 || 10.26.224.2 || jul || Mengirim Konfigurasi Device || Berhasil login pada perangkat 10.26.224.2
+22/10/2024 22:14:39 || 10.26.224.2 || jul || Mengirim Konfigurasi Device || Berhasil melakukan konfigurasi: /ip service set ssh address=172.16.1.50/32,172.16.1.77/32,172.16.1.130/32,172.16.1.27/32
+22/10/2024 22:14:40 || 103.73.72.245 || jul || Mengirim Konfigurasi Device || Berhasil login pada perangkat 103.73.72.245
+22/10/2024 22:14:40 || 103.73.72.245 || jul || Mengirim Konfigurasi Device || Berhasil melakukan konfigurasi: /ip service set ssh address=172.16.1.50/32,172.16.1.77/32,172.16.1.130/32,172.16.1.27/32
+22/10/2024 22:14:48 || 10.27.130.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.27.130.2 dengan detail : Authentication failed.
+22/10/2024 22:14:48 || 10.12.132.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.12.132.2 dengan detail : Error reading SSH protocol banner
+22/10/2024 22:14:49 || 103.73.72.31 || jul || Mengirim Konfigurasi Device || Berhasil login pada perangkat 103.73.72.31
+22/10/2024 22:14:50 || 103.73.72.31 || jul || Mengirim Konfigurasi Device || Berhasil melakukan konfigurasi: /ip service set ssh address=172.16.1.50/32,172.16.1.77/32,172.16.1.130/32,172.16.1.27/32
+22/10/2024 22:14:50 || 10.28.224.2 || jul || Mengirim Konfigurasi Device || Berhasil login pada perangkat 10.28.224.2
+22/10/2024 22:14:51 || 10.28.224.2 || jul || Mengirim Konfigurasi Device || Berhasil melakukan konfigurasi: /ip service set ssh address=172.16.1.50/32,172.16.1.77/32,172.16.1.130/32,172.16.1.27/32
+22/10/2024 22:15:03 || 10.17.130.4 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.17.130.4 dengan detail : Authentication failed.
+22/10/2024 22:15:03 || 10.4.130.4 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.4.130.4 dengan detail : [Errno None] Unable to connect to port 22 on 10.4.130.4
+22/10/2024 22:15:18 || 10.17.132.2 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 10.17.132.2 dengan detail : Authentication failed.
+22/10/2024 22:15:18 || 103.73.72.95 || jul || Mengirim Konfigurasi Device || Terjadi kegagalan login pada perangkat 103.73.72.95 dengan detail : Error reading SSH protocol banner
+22/10/2024 22:20:46 || 10.0.250.2 || admin || Aktivasi Perangkat BNET || Terjadi kegagalan login pada perangkat 10.0.250.2 dengan detail : [Errno None] Unable to connect to port 22 on 10.0.250.2
+22/10/2024 22:22:10 || 10.0.250.2 || admin || Aktivasi Perangkat BNET || Terjadi kegagalan login pada perangkat 10.0.250.2 dengan detail : Error reading SSH protocol banner
+22/10/2024 22:23:43 || 10.0.250.2 || admin || Aktivasi Perangkat BNET || Berhasil login pada perangkat 10.0.250.2
+22/10/2024 22:23:44 || 10.0.250.2 || admin || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /system identity set name="RTR-Testing123"
+22/10/2024 22:23:44 || 10.0.250.2 || admin || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /user add name=jul password=Juliandi123!@# group=write
+22/10/2024 22:23:45 || 10.0.250.2 || admin || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /system clock set date=Oct/22/2024 time=22:23:43 time-zone-autodetect=yes time-zone-name=Asia/Jakart
+22/10/2024 22:23:45 || 10.0.250.2 || admin || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /system logging action add name=syslog remote=172.16.1.61 remote-port=5151 src-address=10.0.250.2 target=remote
+22/10/2024 22:23:46 || 10.0.250.2 || admin || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /user remove admin
+
+22/10/2024 22:23:46 || 10.0.250.2 || admin || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip dns set servers=103.73.73.71
+
+22/10/2024 22:23:47 || 10.0.250.2 || admin || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip service set telnet disabled=yes
+
+22/10/2024 22:23:47 || 10.0.250.2 || admin || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip service set ftp disabled=yes
+
+22/10/2024 22:23:48 || 10.0.250.2 || admin || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip service set www disabled=yes
+
+22/10/2024 22:23:48 || 10.0.250.2 || admin || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip service set api address=172.16.1.77/32,172.16.1.27/32,103.73.74.15/32
+
+22/10/2024 22:23:49 || 10.0.250.2 || admin || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip service set winbox address=103.73.72.70/32,103.73.74.98/32,10.12.1.2/32
+
+22/10/2024 22:23:49 || 10.0.250.2 || admin || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip service set api-ssl disabled=yes
+
+22/10/2024 22:23:50 || 10.0.250.2 || admin || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /system clock set time-zone-autodetect=yes time-zone-name=Asia/Jakarta
+
+22/10/2024 22:23:50 || 10.0.250.2 || admin || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /snmp community add addresses=103.73.73.78/32 name=intbnet write-access=yes authentication-password=bnetlibre encryption-password=bnetlibre
+
+22/10/2024 22:23:51 || 10.0.250.2 || admin || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /system logging add action=syslog topics=warning,!script
+
+22/10/2024 22:23:51 || 10.0.250.2 || admin || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /system logging add action=syslog topics=critical
+
+22/10/2024 22:23:52 || 10.0.250.2 || admin || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /system logging add action=syslog topics=error
+
+22/10/2024 22:23:52 || 10.0.250.2 || admin || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /system logging add action=syslog topics=info
+22/10/2024 22:23:53 || 10.0.250.2 || admin || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip service set ssh address=172.16.1.77/32,172.16.1.27/32,172.16.1.50/32,172.16.1.130/32,103.73.74.15/32 port=22
+22/10/2024 22:23:53 || 10.0.250.2 || admin || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /snmp set contact=noc@bnet.id enabled=yes location="POP001-Adiarsa" trap-community=intbnet trap-version=3
+22/10/2024 22:39:03 || 10.0.250.2 || admin || Aktivasi Perangkat BNET || Berhasil login pada perangkat 10.0.250.2
+22/10/2024 22:39:04 || 10.0.250.2 || admin || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /user add name=jul password=Juliandi123!@# group=write
+22/10/2024 22:39:04 || 10.0.250.2 || admin || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /user add name=bnettools password=netprogram_ group=write address=172.16.1.27/32,172.16.1.130/32
+22/10/2024 22:39:23 || 10.0.250.2 || admin || Aktivasi Perangkat BNET || Berhasil login pada perangkat 10.0.250.2
+22/10/2024 22:39:23 || 10.0.250.2 || admin || Aktivasi Perangkat BNET || terjadi error pada konfigurasi: /user add name=jul password=Juliandi123!@# group=write dengan detail: failure: user with the same name already exists
+22/10/2024 22:39:24 || 10.0.250.2 || admin || Aktivasi Perangkat BNET || terjadi error pada konfigurasi: /user add name=bnettools password=netprogram_ group=write address=172.16.1.27/32,172.16.1.130/32 dengan detail: failure: user with the same name already exists
+22/10/2024 22:39:24 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil login pada perangkat 10.0.250.2
+22/10/2024 22:39:25 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /system identity set name="RTR-Testing123"
+22/10/2024 22:39:25 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /system clock set date=Oct/22/2024 time=22:39:24 time-zone-autodetect=yes time-zone-name=Asia/Jakart
+22/10/2024 22:39:26 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /system logging action add name=syslog remote=172.16.1.61 remote-port=5151 src-address=10.0.250.2 target=remote
+22/10/2024 22:39:26 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || terjadi error pada konfigurasi: /user remove admin
+ dengan detail: not enough permissions (9)
+22/10/2024 22:43:43 || 10.0.250.2 || admin || Aktivasi Perangkat BNET || Berhasil login pada perangkat 10.0.250.2
+22/10/2024 22:43:44 || 10.0.250.2 || admin || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /user remove admin
+22/10/2024 22:43:44 || 10.0.250.2 || admin || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /user add name=jul password=Juliandi123!@# group=write
+22/10/2024 22:43:45 || 10.0.250.2 || admin || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /user add name=bnettools password=netprogram_ group=full address=172.16.1.27/32,172.16.1.130/32
+22/10/2024 22:43:45 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil login pada perangkat 10.0.250.2
+22/10/2024 22:43:46 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /system identity set name="RTR-Testing123"
+22/10/2024 22:43:46 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /system clock set date=Oct/22/2024 time=22:43:45 time-zone-autodetect=yes time-zone-name=Asia/Jakart
+22/10/2024 22:43:47 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /system logging action add name=syslog remote=172.16.1.61 remote-port=5151 src-address=10.0.250.2 target=remote
+22/10/2024 22:43:47 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || terjadi error pada konfigurasi: /user remove admin
+ dengan detail: no such item
+22/10/2024 22:45:15 || 10.0.250.2 || admin || Aktivasi Perangkat BNET || Terjadi kegagalan login pada perangkat 10.0.250.2 dengan detail : Authentication failed.
+22/10/2024 22:45:15 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Terjadi kegagalan login pada perangkat 10.0.250.2 dengan detail : Authentication failed.
+22/10/2024 22:45:38 || 10.0.250.2 || admin || Aktivasi Perangkat BNET || Berhasil login pada perangkat 10.0.250.2
+22/10/2024 22:45:39 || 10.0.250.2 || admin || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /user remove admin
+22/10/2024 22:45:39 || 10.0.250.2 || admin || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /user add name=jul password=Juliandi123!@# group=write
+22/10/2024 22:45:40 || 10.0.250.2 || admin || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /user add name=bnettools password=netprogram_ group=full address=172.16.1.27/32,172.16.1.130/32
+22/10/2024 22:45:40 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil login pada perangkat 10.0.250.2
+22/10/2024 22:45:41 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /system identity set name="RTR-Testing123"
+22/10/2024 22:45:41 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /system clock set date=Oct/22/2024 time=22:45:40 time-zone-autodetect=yes time-zone-name=Asia/Jakart
+22/10/2024 22:45:42 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /system logging action add name=syslog remote=172.16.1.61 remote-port=5151 src-address=10.0.250.2 target=remote
+22/10/2024 22:45:42 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || terjadi error pada konfigurasi: /user remove admin
+ dengan detail: no such item
+22/10/2024 22:56:15 || 10.0.250.2 || admin || Aktivasi Perangkat BNET || Berhasil login pada perangkat 10.0.250.2
+22/10/2024 22:56:16 || 10.0.250.2 || admin || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /user remove admin
+22/10/2024 22:56:16 || 10.0.250.2 || admin || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /user add name=jul password=Juliandi123!@# group=write
+22/10/2024 22:56:17 || 10.0.250.2 || admin || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /user add name=bnettools password=netprogram_ group=full address=172.16.1.27/32,172.16.1.130/32
+22/10/2024 22:56:17 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil login pada perangkat 10.0.250.2
+22/10/2024 22:56:18 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /system identity set name="RTR-Testing123"
+22/10/2024 22:56:18 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /system clock set date=Oct/22/2024 time=22:56:17 time-zone-autodetect=yes time-zone-name=Asia/Jakart
+22/10/2024 22:56:19 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /system logging action add name=syslog remote=172.16.1.61 remote-port=5151 src-address=10.0.250.2 target=remote
+22/10/2024 22:56:19 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || terjadi error pada konfigurasi: /user remove admin
+ dengan detail: no such item
+22/10/2024 22:58:06 || 10.0.250.2 || admin || Aktivasi Perangkat BNET || Berhasil login pada perangkat 10.0.250.2
+22/10/2024 22:58:07 || 10.0.250.2 || admin || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /user remove admin
+22/10/2024 22:58:07 || 10.0.250.2 || admin || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /user add name=jul password=Juliandi123!@# group=write
+22/10/2024 22:58:08 || 10.0.250.2 || admin || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /user add name=bnettools password=netprogram_ group=full address=172.16.1.27/32,172.16.1.130/32
+22/10/2024 22:58:08 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil login pada perangkat 10.0.250.2
+22/10/2024 22:58:09 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /system identity set name="RTR-Testing123"
+22/10/2024 22:58:09 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /system clock set date=Oct/22/2024 time=22:58:08 time-zone-autodetect=yes time-zone-name=Asia/Jakart
+22/10/2024 22:58:10 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /system logging action add name=syslog remote=172.16.1.61 remote-port=5151 src-address=10.0.250.2 target=remote
+22/10/2024 22:58:10 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || terjadi error pada konfigurasi: /user remove admin
+ dengan detail: no such item
+22/10/2024 22:59:21 || 10.0.250.2 || admin || Aktivasi Perangkat BNET || Berhasil login pada perangkat 10.0.250.2
+22/10/2024 22:59:21 || 10.0.250.2 || admin || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /user remove admin
+22/10/2024 22:59:22 || 10.0.250.2 || admin || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /user add name=jul password=Juliandi123!@# group=write
+22/10/2024 22:59:22 || 10.0.250.2 || admin || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /user add name=bnettools password=netprogram_ group=full address=172.16.1.27/32,172.16.1.130/32
+22/10/2024 22:59:22 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil login pada perangkat 10.0.250.2
+22/10/2024 22:59:23 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /system identity set name="RTR-Testing123"
+22/10/2024 22:59:23 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /system clock set date=Oct/22/2024 time=22:59:22 time-zone-autodetect=yes time-zone-name=Asia/Jakart
+22/10/2024 22:59:24 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /system logging action add name=syslog remote=172.16.1.61 remote-port=5151 src-address=10.0.250.2 target=remote
+22/10/2024 22:59:24 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip dns set servers=103.73.73.71,103.73.73.72
+
+22/10/2024 22:59:25 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip service set telnet disabled=yes
+
+22/10/2024 22:59:26 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip service set ftp disabled=yes
+
+22/10/2024 22:59:26 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip service set www disabled=yes
+
+22/10/2024 22:59:27 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip service set api address=172.16.1.77/32,172.16.1.27/32,103.73.74.15/32
+
+22/10/2024 22:59:27 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip service set winbox address=103.73.72.70/32,103.73.74.98/32,10.12.1.2/32
+
+22/10/2024 22:59:28 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip service set api-ssl disabled=yes
+
+22/10/2024 22:59:28 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /system clock set time-zone-autodetect=yes time-zone-name=Asia/Jakarta
+
+22/10/2024 22:59:29 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /snmp community add addresses=103.73.73.78/32 name=intbnet write-access=yes authentication-password=bnetlibre encryption-password=bnetlibre
+
+22/10/2024 22:59:29 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /system logging add action=syslog topics=warning,!script
+
+22/10/2024 22:59:30 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /system logging add action=syslog topics=critical
+
+22/10/2024 22:59:30 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /system logging add action=syslog topics=error
+
+22/10/2024 22:59:31 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /system logging add action=syslog topics=info
+
+22/10/2024 22:59:31 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.1.128.0/17 list=radio
+
+22/10/2024 22:59:32 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.2.128.0/17 list=radio
+
+22/10/2024 22:59:32 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.3.128.0/17 list=radio
+
+22/10/2024 22:59:33 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.4.128.0/17 list=radio
+
+22/10/2024 22:59:33 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.5.128.0/17 list=radio
+
+22/10/2024 22:59:34 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.6.128.0/17 list=radio
+
+22/10/2024 22:59:34 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.7.128.0/17 list=radio
+
+22/10/2024 22:59:35 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.8.128.0/17 list=radio
+
+22/10/2024 22:59:35 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.9.128.0/17 list=radio
+
+22/10/2024 22:59:36 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.10.128.0/17 list=radio
+
+22/10/2024 22:59:36 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.11.128.0/17 list=radio
+
+22/10/2024 22:59:37 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.12.128.0/17 list=radio
+
+22/10/2024 22:59:37 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.13.128.0/17 list=radio
+
+22/10/2024 22:59:38 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.14.128.0/17 list=radio
+
+22/10/2024 22:59:38 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.15.128.0/17 list=radio
+
+22/10/2024 22:59:39 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.16.128.0/17 list=radio
+
+22/10/2024 22:59:39 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.17.128.0/17 list=radio
+
+22/10/2024 22:59:40 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.18.128.0/17 list=radio
+
+22/10/2024 22:59:40 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.19.128.0/17 list=radio
+
+22/10/2024 22:59:41 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.20.128.0/17 list=radio
+
+22/10/2024 22:59:41 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.21.128.0/17 list=radio
+
+22/10/2024 22:59:42 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.22.128.0/17 list=radio
+
+22/10/2024 22:59:42 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.23.128.0/17 list=radio
+
+22/10/2024 22:59:43 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.24.128.0/17 list=radio
+
+22/10/2024 22:59:43 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.25.128.0/17 list=radio
+
+22/10/2024 22:59:44 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.26.128.0/17 list=radio
+
+22/10/2024 22:59:44 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.27.128.0/17 list=radio
+
+22/10/2024 22:59:45 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.28.128.0/17 list=radio
+
+22/10/2024 22:59:46 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.29.128.0/17 list=radio
+
+22/10/2024 22:59:46 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.30.128.0/17 list=radio
+
+22/10/2024 22:59:47 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.50.128.0/17 list=radio
+
+22/10/2024 22:59:47 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.75.128.0/17 list=radio
+
+22/10/2024 22:59:48 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=103.73.74.98 comment=rtr-b_kantorBnet-pop001-001-a201 list=acceptAccess
+
+22/10/2024 22:59:48 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.12.1.2 comment=rumah_popGt list=acceptAccess
+
+22/10/2024 22:59:49 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=103.73.73.0/24 comment=prefix_allServer list=acceptAccess
+
+22/10/2024 22:59:49 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=103.73.72.70 comment=rtr-b_tunnel_IDC list=acceptAccess
+
+22/10/2024 22:59:50 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=172.16.1.140/30 comment=server_lib.bnet.id list=server
+
+22/10/2024 22:59:50 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=172.16.1.148/30 comment=server_lapakAep list=server
+
+22/10/2024 22:59:51 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=172.16.1.168/30 comment=server_all.bnet.id list=server
+
+22/10/2024 22:59:51 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=172.16.1.78 comment=pnetLab list=server
+
+22/10/2024 22:59:52 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=172.16.1.161 comment=server_ribitCode list=server
+
+22/10/2024 22:59:52 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=172.16.1.50 comment=serverNetmation list=server
+
+22/10/2024 22:59:53 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=172.16.1.27 comment=btoolsV3 list=server
+
+22/10/2024 22:59:53 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=172.16.1.77 comment=btoolsV2 list=server
+
+22/10/2024 22:59:54 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=100.64.0.0/10 comment="Shared Address Space" list=bogus
+
+22/10/2024 22:59:54 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=169.254.0.0/16 comment="Link Local" list=bogus
+
+22/10/2024 22:59:55 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=192.0.0.0/24 comment="IETF Protocol Assignments" list=bogus
+
+22/10/2024 22:59:55 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=192.0.2.0/24 comment=TEST-NET-1 list=bogus
+
+22/10/2024 22:59:56 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=192.88.99.0/24 comment="6to4 Relay Anycast" list=bogus
+
+22/10/2024 22:59:56 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=192.168.0.0/16 comment="Private-Use Networks" list=bogus
+
+22/10/2024 22:59:57 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=198.18.0.0/15 comment="Network Interconnect Device Benchmark Testing" list=bogus
+
+22/10/2024 22:59:57 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=198.51.100.0/24 comment=TEST-NET-2 list=bogus
+
+22/10/2024 22:59:58 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=203.0.113.0/24 comment=TEST-NET-3 list=bogus
+
+22/10/2024 22:59:58 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=224.0.0.0/3 comment=Multicast list=bogus
+
+22/10/2024 22:59:59 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=240.0.0.0/4 comment="Reserved for Future Use" list=bogus
+
+22/10/2024 22:59:59 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=255.255.255.255 comment="Limited Broadcast" list=bogus
+
+22/10/2024 23:00:00 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=0.0.0.0/8 comment="Reserved for Broadcast" list=bogus
+
+22/10/2024 23:00:00 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=127.0.0.0/8 comment=Loopback list=bogus
+
+22/10/2024 23:00:01 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=172.16.0.0/24 list=SwOltSvr
+
+22/10/2024 23:00:01 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=172.16.1.0/24 list=SwOltSvr
+
+22/10/2024 23:00:02 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=172.16.2.0/24 list=SwOltSvr
+
+22/10/2024 23:00:02 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=172.16.3.0/24 list=SwOltSvr
+
+22/10/2024 23:00:03 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=172.16.4.0/24 list=SwOltSvr
+
+22/10/2024 23:00:03 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=172.16.5.0/24 list=SwOltSvr
+
+22/10/2024 23:00:04 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=172.16.6.0/24 list=SwOltSvr
+
+22/10/2024 23:00:04 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=172.16.7.0/24 list=SwOltSvr
+
+22/10/2024 23:00:05 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=172.16.8.0/24 list=SwOltSvr
+
+22/10/2024 23:00:06 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=172.16.9.0/24 list=SwOltSvr
+
+22/10/2024 23:00:06 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=172.16.10.0/24 list=SwOltSvr
+
+22/10/2024 23:00:07 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=172.16.11.0/24 list=SwOltSvr
+
+22/10/2024 23:00:07 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=172.16.12.0/24 list=SwOltSvr
+
+22/10/2024 23:00:08 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=172.16.13.0/24 list=SwOltSvr
+
+22/10/2024 23:00:08 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=172.16.14.0/24 list=SwOltSvr
+
+22/10/2024 23:00:09 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=172.16.15.0/24 list=SwOltSvr
+
+22/10/2024 23:00:09 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=172.16.16.0/24 list=SwOltSvr
+
+22/10/2024 23:00:10 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=172.16.17.0/24 list=SwOltSvr
+
+22/10/2024 23:00:10 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=172.16.18.0/24 list=SwOltSvr
+
+22/10/2024 23:00:11 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=172.16.19.0/24 list=SwOltSvr
+
+22/10/2024 23:00:11 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=172.16.20.0/24 list=SwOltSvr
+
+22/10/2024 23:00:12 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=172.16.1.77 comment=btools list=monitoring
+
+22/10/2024 23:00:12 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=172.16.1.61 comment=graylog list=monitoring
+
+22/10/2024 23:00:13 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=172.16.1.54 comment=nagios4 list=monitoring
+
+22/10/2024 23:00:13 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=172.16.1.51 comment=nagios1 list=monitoring
+
+22/10/2024 23:00:14 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=172.16.1.52 comment=nagios2 list=monitoring
+
+22/10/2024 23:00:14 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=172.16.1.29 comment=smokeping list=monitoring
+
+22/10/2024 23:00:15 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=172.16.1.53 comment=nagios3 list=monitoring
+
+22/10/2024 23:00:15 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=103.73.72.0/24 list=acceptPortScanner
+
+22/10/2024 23:00:16 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=103.73.74.98 list=acceptPortScanner
+
+22/10/2024 23:00:16 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.12.1.2 list=acceptPortScanner
+
+22/10/2024 23:00:17 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=172.16.0.0/12 list=acceptPortScanner
+
+22/10/2024 23:00:17 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.1.0.0/17 list=custPrivate
+
+22/10/2024 23:00:18 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.2.0.0/17 list=custPrivate
+
+22/10/2024 23:00:18 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.3.0.0/17 list=custPrivate
+
+22/10/2024 23:00:19 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.4.0.0/17 list=custPrivate
+
+22/10/2024 23:00:19 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.5.0.0/17 list=custPrivate
+
+22/10/2024 23:00:20 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.6.0.0/17 list=custPrivate
+
+22/10/2024 23:00:20 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.7.0.0/17 list=custPrivate
+
+22/10/2024 23:00:21 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.8.0.0/17 list=custPrivate
+
+22/10/2024 23:00:21 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.9.0.0/17 list=custPrivate
+
+22/10/2024 23:00:22 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.10.0.0/17 list=custPrivate
+
+22/10/2024 23:00:22 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.11.0.0/17 list=custPrivate
+
+22/10/2024 23:00:23 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.12.0.0/17 list=custPrivate
+
+22/10/2024 23:00:23 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.13.0.0/17 list=custPrivate
+
+22/10/2024 23:00:24 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.14.0.0/17 list=custPrivate
+
+22/10/2024 23:00:24 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.15.0.0/17 list=custPrivate
+
+22/10/2024 23:00:25 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.16.0.0/17 list=custPrivate
+
+22/10/2024 23:00:26 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.17.0.0/17 list=custPrivate
+
+22/10/2024 23:00:26 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.18.0.0/17 list=custPrivate
+
+22/10/2024 23:00:27 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.19.0.0/17 list=custPrivate
+
+22/10/2024 23:00:27 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.20.0.0/17 list=custPrivate
+
+22/10/2024 23:00:28 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.21.0.0/17 list=custPrivate
+
+22/10/2024 23:00:28 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.22.0.0/17 list=custPrivate
+
+22/10/2024 23:00:29 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.23.0.0/17 list=custPrivate
+
+22/10/2024 23:00:29 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.24.0.0/17 list=custPrivate
+
+22/10/2024 23:00:30 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.25.0.0/17 list=custPrivate
+
+22/10/2024 23:00:30 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.26.0.0/17 list=custPrivate
+
+22/10/2024 23:00:31 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.27.0.0/17 list=custPrivate
+
+22/10/2024 23:00:31 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.28.0.0/17 list=custPrivate
+
+22/10/2024 23:00:32 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.29.0.0/17 list=custPrivate
+
+22/10/2024 23:00:32 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.30.0.0/17 list=custPrivate
+
+22/10/2024 23:00:33 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.31.0.0/17 list=custPrivate
+
+22/10/2024 23:00:33 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.32.0.0/17 list=custPrivate
+
+22/10/2024 23:00:34 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.33.0.0/17 list=custPrivate
+
+22/10/2024 23:00:34 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.34.0.0/17 list=custPrivate
+
+22/10/2024 23:00:35 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.35.0.0/17 list=custPrivate
+
+22/10/2024 23:00:35 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.36.0.0/17 list=custPrivate
+
+22/10/2024 23:00:36 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.37.0.0/17 list=custPrivate
+
+22/10/2024 23:00:36 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.38.0.0/17 list=custPrivate
+
+22/10/2024 23:00:37 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.39.0.0/17 list=custPrivate
+
+22/10/2024 23:00:37 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.40.0.0/17 list=custPrivate
+
+22/10/2024 23:00:38 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.41.0.0/17 list=custPrivate
+
+22/10/2024 23:00:38 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.42.0.0/17 list=custPrivate
+
+22/10/2024 23:00:39 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.43.0.0/17 list=custPrivate
+
+22/10/2024 23:00:39 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.44.0.0/17 list=custPrivate
+
+22/10/2024 23:00:40 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.45.0.0/17 list=custPrivate
+
+22/10/2024 23:00:40 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.46.0.0/17 list=custPrivate
+
+22/10/2024 23:00:41 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.47.0.0/17 list=custPrivate
+
+22/10/2024 23:00:41 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.48.0.0/17 list=custPrivate
+
+22/10/2024 23:00:42 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.49.0.0/17 list=custPrivate
+
+22/10/2024 23:00:42 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.50.0.0/17 list=custPrivate
+
+22/10/2024 23:00:43 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.75.0.0/17 list=custPrivate
+
+22/10/2024 23:00:43 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.1.224.0/23 list=router
+
+22/10/2024 23:00:44 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.2.224.0/23 list=router
+
+22/10/2024 23:00:44 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.3.224.0/23 list=router
+
+22/10/2024 23:00:45 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.4.224.0/23 list=router
+
+22/10/2024 23:00:46 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.5.224.0/23 list=router
+
+22/10/2024 23:00:46 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.6.224.0/23 list=router
+
+22/10/2024 23:00:47 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.7.224.0/23 list=router
+
+22/10/2024 23:00:47 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.8.224.0/23 list=router
+
+22/10/2024 23:00:48 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.9.224.0/23 list=router
+
+22/10/2024 23:00:48 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.10.224.0/23 list=router
+
+22/10/2024 23:00:49 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.11.224.0/23 list=router
+
+22/10/2024 23:00:49 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.12.224.0/23 list=router
+
+22/10/2024 23:00:50 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.13.224.0/23 list=router
+
+22/10/2024 23:00:50 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.14.224.0/23 list=router
+
+22/10/2024 23:00:51 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.15.224.0/23 list=router
+
+22/10/2024 23:00:51 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.16.224.0/23 list=router
+
+22/10/2024 23:00:52 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.17.224.0/23 list=router
+
+22/10/2024 23:00:52 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.18.224.0/23 list=router
+
+22/10/2024 23:00:53 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.19.224.0/23 list=router
+
+22/10/2024 23:00:53 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.20.224.0/23 list=router
+
+22/10/2024 23:00:54 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.21.224.0/23 list=router
+
+22/10/2024 23:00:54 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.22.224.0/23 list=router
+
+22/10/2024 23:00:55 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.23.224.0/23 list=router
+
+22/10/2024 23:00:55 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.24.224.0/23 list=router
+
+22/10/2024 23:00:56 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.25.224.0/23 list=router
+
+22/10/2024 23:00:56 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.26.224.0/23 list=router
+
+22/10/2024 23:00:57 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.27.224.0/23 list=router
+
+22/10/2024 23:00:57 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.28.224.0/23 list=router
+
+22/10/2024 23:00:58 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.29.224.0/23 list=router
+
+22/10/2024 23:00:58 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.30.224.0/23 list=router
+
+22/10/2024 23:00:59 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.50.224.0/23 list=router
+
+22/10/2024 23:00:59 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall address-list add address=10.75.224.0/23 list=router
+
+22/10/2024 23:01:00 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall filter add action=accept chain=forward comment=allAcceptSubnetSourceIPs src-address-list=acceptAccess
+
+22/10/2024 23:01:00 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall filter add action=accept chain=forward comment=allAcceptSubnetDestinationIPs dst-address-list=acceptAccess
+
+22/10/2024 23:01:01 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall filter add action=accept chain=forward comment=acceptBandwithTestDestinationFromAllSubnetPortTcp dst-port=2000 protocol=tcp src-port=""
+
+22/10/2024 23:01:01 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall filter add action=accept chain=forward comment=acceptBandwithTestSourceFromAllSubnetPortTcp protocol=tcp src-port=2000
+
+22/10/2024 23:01:02 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall filter add action=accept chain=forward comment=acceptBandwithTestDestinationFromAllSubnetPortUdp dst-port=2000 protocol=udp
+
+22/10/2024 23:01:02 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall filter add action=accept chain=forward comment=acceptBandwithTestSourceFromAllSubnetPortUdp protocol=udp src-port=2000
+
+22/10/2024 23:01:03 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall filter add action=accept chain=forward comment=acceptFromServerGraylogSourceIPs protocol=udp src-address=172.16.1.61 src-port=5151,12201
+
+22/10/2024 23:01:03 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall filter add action=accept chain=forward comment=acceptFromServerGraylogDestinationIPs dst-address=172.16.1.61 dst-port=5151,12201 protocol=udp
+
+22/10/2024 23:01:04 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall filter add action=accept chain=forward comment=acceptFromApi&SshToServerList connection-state=established dst-address-list=server protocol=tcp src-port=22,22322,21312,24321,8728,8927
+
+22/10/2024 23:01:04 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall filter add action=drop chain=forward comment=dropAccesToPublicFromCustPrivate dst-address=103.73.72.0/24 protocol=!icmp src-address-list=custPrivate
+
+22/10/2024 23:01:05 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall filter add action=drop chain=forward comment=dropAccesToPublicFromCustIpPublic dst-address=103.73.72.0/24 protocol=!icmp src-address-list=public
+
+22/10/2024 23:01:06 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall filter add action=drop chain=forward comment=dropAllBlockFromUnstrustedSubnetToRouter dst-address-list=router protocol=!icmp
+
+22/10/2024 23:01:06 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall filter add action=drop chain=forward comment=dropLocalToLocal dst-address-list=custPrivate src-address-list=custPrivate
+
+22/10/2024 23:01:07 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall filter add action=drop chain=forward comment=dropAllBlockFromUnstrustedSubnetToRadio dst-address-list=radio protocol=!icmp
+
+22/10/2024 23:01:07 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall filter add action=drop chain=forward comment=dropAllBlockFromUnstrustedSubnetToSwitch_OLT_Server dst-address-list=SwOltSvr protocol=!icmp
+
+22/10/2024 23:01:08 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall filter add action=drop chain=forward comment="Surveillance Address" dst-port=23 protocol=tcp src-address-list=addressSurveillance
+
+22/10/2024 23:01:08 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall filter add action=drop chain=input comment=dropBogusSourceIPs src-address-list=bogus
+
+22/10/2024 23:01:09 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall filter add action=drop chain=forward comment=dropBogusDestinationIPs dst-address-list=bogus
+
+22/10/2024 23:01:09 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall filter add action=return chain=detect-ddos comment=ddosAttack dst-limit=32,32,src-and-dst-addresses/10s
+
+22/10/2024 23:01:10 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall filter add action=add-dst-to-address-list address-list=ddos-targets address-list-timeout=10m chain=detect-ddos comment=ddosAttack
+
+22/10/2024 23:01:10 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall filter add action=add-src-to-address-list address-list=ddos-attackers address-list-timeout=10m chain=detect-ddos comment=ddosAttack
+
+22/10/2024 23:01:11 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall filter add action=add-src-to-address-list address-list=portScanner address-list-timeout=1m chain=input comment=portScanDetector protocol=tcp psd=21,3s,3,1 src-address-list=!acceptPortScanner
+
+22/10/2024 23:01:11 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall filter add action=drop chain=input comment=dropSpamPort src-address-list=portScanner
+22/10/2024 23:01:12 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip service set ssh address=172.16.1.77/32,172.16.1.27/32,172.16.1.50/32,172.16.1.130/32,103.73.74.15/32 port=22322
+22/10/2024 23:01:12 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /snmp set contact=noc@bnet.id enabled=yes location="POP001-Adiarsa" trap-community=intbnet trap-version=3
