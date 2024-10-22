@@ -62,6 +62,7 @@ def client(request):
             Q(namapelanggan__icontains=query) |
             Q(tanggalinstalasi__icontains=query) |
             Q(ipremote__icontains=query) |
+            Q(deviceOs__icontains=query) |
             Q(portwinbox__icontains=query) |
             Q(portssh__icontains=query) |
             Q(portapi__icontains=query) |

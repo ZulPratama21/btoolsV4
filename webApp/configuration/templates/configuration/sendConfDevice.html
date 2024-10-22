@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container mt-5">
+    <h1 class="text-center">Mengirim Konfigurasi ke Perangkat Core & Distribusi</h1>
+
+    <!-- Alert Box -->
+    <div class="alert alert-warning mt-4" role="alert">
+        <h4 class="alert-heading">Hal yang harus diperhatikan sebelum melakukan pengiriman konfigurasi:</h4>
+        <ul class="mb-0">
+            <li>Masukan konfigurasi sesuai dengan <strong>command line terminal Mikrotik</strong>.</li>
+            <li><strong>Dilarang</strong> merubah, menghapus, atau menambah konfigurasi yang berdampak pada <strong>Jaringan</strong> seperti IP Address, interface, routing, dll. Disarankan config manual.</li>
+            <li>Jika konfigurasi yang akan dikirim lebih dari 1, cukup pisahkan dengan new line atau <strong>1x enter</strong>.</li>
+            <li>Fitur ini juga dapat menampilkan konfigurasi dengan command <strong>print</strong> seperti biasa.</li>
+        </ul>
+    </div>
+
+    <!-- Form -->
+    <form method="POST" onsubmit="return validateForm();">
+        {% csrf_token %}
+        <!-- Config Input Section -->
+        <label for="configInput" class="form-label"><strong>Masukan Konfigurasi:</strong></label>
+        <textarea class="form-control shadow-sm" id="configInput" name="config" rows="10" placeholder="Masukan konfigurasi di kolom ini..."></textarea>
+        <small class="text-muted">Pisahkan perintah dengan new line untuk memasukan lebih dari 1 konfigurasi.</small>
+
+        <!-- Device Table Section -->
+        <div class="card shadow-sm">
+            <div class="card-header bg-secondary text-white text-center">
+                <strong><i class="bi bi-router"></i> Device List</strong>
+            </div>
+            <div class="card-body p-0">
+                <!-- Search bar untuk Device -->
+                <div class="p-3 bg-light">
+                    <input class="form-control" id="deviceTableFilter" type="text" placeholder="Cari perangkat...">
+                </div>
+
+                <!-- Device Table -->
+                <div class="table-responsive" style="max-height: 300px; overflow-y: auto;">
+                    <table class="table table-hover" id="deviceTable">
+                        <thead class="table-light sticky-top">
+                            <tr>
+                                <th scope="col">
+                                    <input type="checkbox" id="selectAllDevices" onclick="toggleSelectAll('deviceTable', this)"> All
+                                </th>
+                                <th scope="col">POP</th>
+                                <th scope="col">Identity</th>
+                                <th scope="col">Layer</th>
+                                <th scope="col">IP Device</th>
+                                <th scope="col">OS</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for device in devices %}
+                            <tr>
+                                <td>
+                                    <input type="checkbox" class="deviceCheckbox" name="selectedDevices" value="{{ device.id }}" onclick="checkSelectAll('deviceTable', 'selectAllDevices')">
+                                </td>
+                                <td>{{ device.pop }}</td>
+                                <td>{{ device.deviceId }}</td>
+                                <td>{{ device.layer }}</td>
+                                <td>{{ device.remoteAddress }}</td>
+                                <td>{{ device.os }}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- User, Password, and Submit Section -->
+        <div class="row g-3 mt-3">
+            <div class="col-md-4">
+                <label for="userSelect" class="form-label">Pilih User</label>
+                <select class="form-select shadow-sm" id="userSelect" name="user" aria-label="User">
+                    <option selected>Select User</option>
+                    {% for user in users %}
+                        {% if user.user != 'neteng' and user.user != 'bnettools' %}
+                            <option value="{{ user.user }}">{{ user.user }}</option>
+                        {% endif %}
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="col-md-4">
+                <label for="passwordInput" class="form-label">Password</label>
+                <input type="password" class="form-control shadow-sm" id="passwordInput" name="password" placeholder="Password">
+            </div>
+
+            <div class="col-md-4 d-flex align-items-end">
+                <button type="submit" class="btn btn-primary w-100 shadow-sm">Send Config</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<script src="{% static 'configuration/js/sendConfDevice.js' %}"></script>
+
+{% endblock %}

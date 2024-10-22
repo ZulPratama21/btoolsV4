@@ -12,7 +12,7 @@ from .scriptNetmation.generateScript import (
     gConfC320OnuStatic,
     gConfC320OnuManyPacket
     )
-from databases.models import UserDevice, Device
+from databases.models import UserDevice, Device, Client
 from common.utils import decryptor, confRouterOs
 
 @csrf_exempt
@@ -125,6 +125,7 @@ def confUserDevice(request):
                 {
                     'remoteAddress': device.remoteAddress,
                     'port': device.portSsh,
+                    'os': device.os,
                 }
             )
 
@@ -133,7 +134,7 @@ def confUserDevice(request):
             if action == 'add':
                 configList.append(f"/user add name={user['user']} password={user['password']} group={user['group']}")
 
-            if action == 'edit':
+            elif action == 'edit':
                 configList.append(f"/user set {user['user']} name={user['user']} password={user['password']} group={user['group']}")
 
             else:
@@ -141,17 +142,29 @@ def confUserDevice(request):
 
         userLogin = UserDevice.objects.get(user='bnettools')
 
+        outputList = []
         for device in deviceList:
-            output = confRouterOs(
-                device['remoteAddress'],
-                userLogin.user,
-                decryptor(userLogin.password),
-                device['port'],
-                'Konfigurasi User',
-                configList,
-                'n')
+            if device['os'].lower() == 'routeros':
+                output = confRouterOs(
+                    device['remoteAddress'],
+                    userLogin.user,
+                    decryptor(userLogin.password),
+                    device['port'],
+                    'Konfigurasi User',
+                    configList,
+                    'n')
 
-        return HttpResponse(json.dumps(output, indent=4))
+            else:
+                output = f"{device['remoteAddress']} || {device['os']} || Btools belum support OS tersebut"
+            
+            outputList.append(output)
+        
+        context = {
+            'output':outputList,
+            'source':'configuration:confUserDevice',
+        }
+
+        return render(request, f'logOutput.html', context)
     
     users = UserDevice.objects.all().values()
     devices = Device.objects.all().values()
@@ -162,3 +175,118 @@ def confUserDevice(request):
     }
 
     return render(request, f'configuration/confUserDevice.html', context)
+
+@login_required(redirect_field_name='next', login_url='/login')
+def sendConfDevice(request):
+    if request.method == 'POST':
+        configInput = request.POST.get('config')
+        configList = configInput.split('\r\n')
+
+        selected_devices = request.POST.getlist('selectedDevices')
+        devices = Device.objects.filter(id__in=selected_devices)
+        
+        deviceList = []
+        for device in devices:
+            deviceList.append(
+                {
+                    'remoteAddress': device.remoteAddress,
+                    'port': device.portSsh,
+                    'os': device.os,
+                }
+            )
+
+        user = request.POST.get('user')
+        password = request.POST.get('password')
+        
+        outputList = []
+        for device in deviceList:
+            if device['os'].lower() == 'routeros':
+                output = confRouterOs(
+                    device['remoteAddress'],
+                    user,
+                    password,
+                    device['port'],
+                    'Mengirim Konfigurasi Device',
+                    configList,
+                    'n')
+                
+            else:
+                output = f"{device['remoteAddress']} || {device['os']} || Btools belum support OS tersebut"
+        
+            outputList += output
+            
+        context = {
+            'output':outputList,
+            'source':'configuration:sendConfDevice',
+        }
+        
+        return render(request, f'logOutput.html', context)
+
+    users = UserDevice.objects.all().values()
+    devices = Device.objects.all().values()
+
+    context = {
+        'users': users,
+        'devices': devices,
+    }
+
+    return render(request, f'configuration/sendConfDevice.html', context)
+
+@login_required(redirect_field_name='next', login_url='/login')
+def sendConfClient(request):
+    if request.method == 'POST':
+        configInput = request.POST.get('config')
+        configList = configInput.split('\r\n')
+
+        selected_devices = request.POST.getlist('selectedDevices')
+        clients = Client.objects.filter(id__in=selected_devices)
+        
+        clientList = []
+        for client in clients:
+            clientList.append(
+                {
+                    'remoteAddress': client.ipremote,
+                    'port': client.portssh,
+                    'os': client.deviceOs,
+                }
+            )
+
+        user = request.POST.get('user')
+        password = request.POST.get('password')
+        
+        outputList = []
+        for client in clientList:
+            if client['os'].lower() == 'routeros':
+                output = confRouterOs(
+                    client['remoteAddress'],
+                    user,
+                    password,
+                    client['port'],
+                    'Mengirim Konfigurasi Client',
+                    configList,
+                    'n')
+                
+            else:
+                output = f"{client['remoteAddress']} || {client['os']} || Btools belum support OS tersebut"
+        
+            outputList += output
+            
+        context = {
+            'output':outputList,
+            'source':'configuration:sendConfClient',
+        }
+        
+        return render(request, f'logOutput.html', context)
+
+    users = UserDevice.objects.all().values()
+    clients = Client.objects.all().values()
+
+    context = {
+        'users': users,
+        'clients': clients,
+    }
+
+    return render(request, f'configuration/sendConfClient.html', context)
+
+def activationDevice(request):
+    pass

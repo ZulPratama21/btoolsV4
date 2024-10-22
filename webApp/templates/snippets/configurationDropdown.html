@@ -13,6 +13,7 @@ aria-controls="collapseConfiguration">
 <div class="collapse {% if 'configuration' in request.path %}show{% endif %}" id="collapseConfiguration">
     <div class="list-group">
 
+        <!-- Generate Script -->
         <div class="list-group">
             <a class="list-group-item list-group-item-light p-3 
                 {% if 'generateScript' in request.path  %}active
@@ -44,16 +45,41 @@ aria-controls="collapseConfiguration">
                     <a class="list-group-item list-group-item-light p-3
                         {% if 'confC320OnuManyPacket' in request.path %}active{% endif %}"
                         href="{% url 'configuration:generateScript' 'confC320OnuManyPacket' %}">
-                        <i class="bi bi-dot"></i> <i class="bi bi-dot"></i> confC320OnuManyPacket
+                        <i class="bi bi-dot"></i> <i class="bi bi-dot"></i> confC320OnuMany
                     </a>
                 </div>
             </div>
         </div>
 
-        <a class="list-group-item list-group-item-light p-3" href="#!"><i class="bi bi-dot"></i> Device BNET</a>
-        <a class="list-group-item list-group-item-light p-3" href="#!"><i class="bi bi-dot"></i> Device Client</a>
+        <!-- Send Config -->
+        <div class="list-group">
+            <a class="list-group-item list-group-item-light p-3 
+                {% if 'sendConf' in request.path  %}active
+                {% endif %}" 
+                data-bs-toggle="collapse" 
+                href="#collapseSendConf" 
+                role="button" 
+                aria-expanded="{% if 'sendConf' in request.path %}true{% else %}false{% endif %}" 
+                aria-controls="collapseSendConf">
+                <i class="bi bi-dot"></i>  Send Config
+            </a>
+            <div class="collapse {% if 'sendConf' in request.path %}show{% endif %}" id="collapseSendConf">
+                <div class="list-group">
+                    <a class="list-group-item list-group-item-light p-3 
+                        {% if 'sendConfDevice' in request.path %}active{% endif %}" 
+                        href="{% url 'configuration:sendConfDevice'%}">
+                        <i class="bi bi-dot"></i> <i class="bi bi-dot"></i> Device
+                    </a>      
+                    <a class="list-group-item list-group-item-light p-3
+                        {% if 'sendConfClient' in request.path %}active{% endif %}"
+                        href="{% url 'configuration:sendConfClient'%}">
+                        <i class="bi bi-dot"></i> <i class="bi bi-dot"></i> Client
+                    </a>
+                </div>
+            </div>
+        </div>
 
-        {% if user|in_groups:"NE Junior" %}
+        {% if user|in_groups:"Super" %}
         <div class="list-group">
             <a class="list-group-item list-group-item-light p-3 
                 {% if 'confUser' in request.path  %}active

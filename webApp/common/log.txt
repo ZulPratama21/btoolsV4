@@ -6,3 +6,1183 @@
 21/10/2024 15:28:28 || 103.73.72.7 || bnettools || Konfigurasi User || Berhasil melakukan konfigurasi: /user set deni name=deni password=D3n123 group=write
 21/10/2024 15:28:28 || 103.73.72.7 || bnettools || Konfigurasi User || Berhasil melakukan konfigurasi: /user set randi name=randi password=R4nd!098 group=write
 21/10/2024 15:28:29 || 103.73.72.7 || bnettools || Konfigurasi User || Berhasil melakukan konfigurasi: /user set fitria name=fitria password=Bismillah12 group=write
+21/10/2024 17:32:36 || 103.73.72.6 || bnettools || Konfigurasi User || Terjadi kegagalan login pada perangkat 103.73.72.6 dengan detail : Authentication failed.
+21/10/2024 17:33:04 || 103.73.72.6 || bnettools || Konfigurasi User || Terjadi kegagalan login pada perangkat 103.73.72.6 dengan detail : Authentication failed.
+21/10/2024 17:37:15 || 103.73.72.6 || bnettools || Konfigurasi User || Berhasil login pada perangkat 103.73.72.6
+21/10/2024 17:37:16 || 103.73.72.6 || bnettools || Konfigurasi User || Berhasil melakukan konfigurasi: /user set neteng name=neteng password=netEngineerBnet group=read
+21/10/2024 17:39:15 || 10.5.224.2 || bnettools || Konfigurasi User || Berhasil login pada perangkat 10.5.224.2
+21/10/2024 17:39:16 || 10.5.224.2 || bnettools || Konfigurasi User || Berhasil melakukan konfigurasi: /user add name=vyoga password=Izki123# group=read
+21/10/2024 17:39:16 || 10.5.224.2 || bnettools || Konfigurasi User || Berhasil melakukan konfigurasi: /user remove vyoga
+21/10/2024 17:43:08 || 10.5.224.2 || bnettools || Konfigurasi User || Berhasil login pada perangkat 10.5.224.2
+21/10/2024 17:43:08 || 10.5.224.2 || bnettools || Konfigurasi User || Berhasil melakukan konfigurasi: /user add name=vyoga password=Izki123# group=read
+21/10/2024 17:43:09 || 10.5.224.2 || bnettools || Konfigurasi User || Berhasil melakukan konfigurasi: /user remove vyoga
+21/10/2024 17:46:07 || 10.5.224.2 || bnettools || Konfigurasi User || Berhasil login pada perangkat 10.5.224.2
+21/10/2024 17:46:08 || 10.5.224.2 || bnettools || Konfigurasi User || Berhasil melakukan konfigurasi: /user add name=vyoga password=Izki123# group=read
+21/10/2024 17:46:33 || 10.5.224.2 || bnettools || Konfigurasi User || Berhasil login pada perangkat 10.5.224.2
+21/10/2024 17:46:34 || 10.5.224.2 || bnettools || Konfigurasi User || Berhasil melakukan konfigurasi: /user set vyoga name=vyoga password=Izki123# group=write
+21/10/2024 17:46:55 || 10.5.224.2 || bnettools || Konfigurasi User || Berhasil login pada perangkat 10.5.224.2
+21/10/2024 17:46:56 || 10.5.224.2 || bnettools || Konfigurasi User || Berhasil melakukan konfigurasi: /user remove vyoga
+21/10/2024 20:35:04 || 103.73.72.6 || jul || Mengirim Konfigurasi || Berhasil login pada perangkat 103.73.72.6
+21/10/2024 20:58:26 || 103.73.72.6 || jul || Mengirim Konfigurasi || Berhasil login pada perangkat 103.73.72.6
+21/10/2024 20:58:26 || 103.73.72.6 || jul || Mengirim Konfigurasi || terjadi error pada konfigurasi: /ip address print dengan detail: Flags: X - DISABLED
+Columns: ADDRESS, NETWORK, INTERFACE
+ #   ADDRESS           NETWORK        INTERFACE
+;;; MAINLINK-KRW-IDC
+ 0   103.73.72.173/30  103.73.72.172  vlan2605 
+;;; BACKUPLINK-KRW-NDC
+ 1   103.73.72.141/30  103.73.72.140  vlan2606 
+;;; RTR-B_QRP-POP001-001-A201
+ 2   103.73.72.133/30  103.73.72.132  vlan91   
+;;; RTR-B_QRP-POP001-002-A201
+ 3   103.73.72.137/30  103.73.72.136  vlan90   
+;;; LOOPBACK
+ 4   103.73.72.6/32    103.73.72.6    Loopback 
+;;; RTR-B_Kominfo-POP001-001-A201
+ 5   103.73.72.169/30  103.73.72.168  ether3   
+;;; RTR-B_Kominfo-POP001-001-A201
+ 6   103.73.72.56/32   103.73.72.57   ether3   
+;;; SERVER [cloud.bnet.id]
+ 7   103.73.73.165/30  103.73.73.164  vlan200  
+;;; Proxmox1
+ 8   172.16.1.21/30    172.16.1.20    vlan200  
+;;; SERVER [bnet.id]
+ 9   103.73.73.161/30  103.73.73.160  vlan200  
+;;; SERVER [bnet.id]
+10   103.73.73.157/30  103.73.73.156  vlan200  
+;;; SERVER [bnet.id]
+11   103.73.73.153/30  103.73.73.152  vlan200  
+;;; Proxmox2
+12   172.16.1.25/29    172.16.1.24    vlan200  
+;;; SERVER [bnet.id]
+13   103.73.73.149/30  103.73.73.148  vlan201  
+;;; SERVER [bnet.id]
+14   103.73.73.145/30  103.73.73.144  vlan200  
+;;; Netmation&Nagios
+15   172.16.1.49/29    172.16.1.48    vlan201  
+;;; SERVER [bnet.id]
+16   103.73.73.5/30    103.73.73.4    vlan200  
+;;; SERVER [dev6.bnet.id]
+17   103.73.73.173/30  103.73.73.172  vlan200  
+;;; RTR-B_RH-POP001-002-A202
+18   103.73.72.161/30  103.73.72.160  vlan92   
+;;; RTR-B_RH-POP001-001-A202
+19   103.73.72.181/30  103.73.72.180  vlan100  
+;;; RTR PRIVATE
+20   103.73.72.21/30   103.73.72.20   ether1   
+;;; SERVER [bnet.id]
+21   103.73.73.9/30    103.73.73.8    vlan200  
+;;; SWC-B_Core-POP001
+22   172.16.1.17/30    172.16.1.16    ether2   
+;;; LOOPBACK
+23   103.73.74.23/32   103.73.74.23   Loopback 
+;;; LOOPBACK
+24   103.73.75.95/32   103.73.75.95   Loopback 
+;;; SERVER [bnet.id]
+25   103.73.73.181/30  103.73.73.180  vlan200  
+;;; RTR-B_RH-POP001-003-A202
+26   103.73.72.221/30  103.73.72.220  vlan96   
+;;; LOOPBACK
+27   103.73.72.10/32   103.73.72.10   Loopback 
+;;; Proxmox2
+28   172.16.1.57/29    172.16.1.56    vlan200  
+;;; SW2 JKT02 JKT06
+29   172.16.1.13/30    172.16.1.12    vlan1    
+;;; LOOPBACK
+30   103.73.72.11/32   103.73.72.11   Loopback 
+;;; RTR-B_MINIPOP001-JKT02 | KRW-JKT02 
+31   10.1.224.33/30    10.1.224.32    vlan102  
+;;; LOOPBACK [speedtest.bnet.id]
+32   103.73.73.49/32   103.73.73.49   Loopback 
+;;; Proxmox2
+33   172.16.1.73/29    172.16.1.72    vlan200  
+;;; Proxmox2
+34   172.16.1.81/29    172.16.1.80    vlan200  
+;;; RTR-B_QRP-POP001-003-A201
+35   103.73.72.229/30  103.73.72.228  vlan97   
+;;; SERVER [bnet.id]
+36   103.73.73.141/30  103.73.73.140  vlan200  
+;;; SERVER [bnet.id]
+37   103.73.73.137/30  103.73.73.136  vlan200  
+;;; SERVER BLOCK
+38   103.73.73.12/32   103.73.73.12   Loopback 
+;;; IPMI SPMC
+39   172.16.1.9/30     172.16.1.8     vlan200  
+;;; PX2
+40   172.16.1.93/30    172.16.1.92    vlan201  
+;;; SERVER [librenms.bnet.id]
+41   103.73.73.77/30   103.73.73.76   vlan201  
+;;; Temp-Server
+42   172.16.1.97/30    172.16.1.96    vlan200  
+;;; SERVER [ns1.win.net.id]
+43   172.16.1.255/32   103.73.73.71   vlan201  
+;;; SERVER [bnet.id]
+44   172.16.1.254/32   103.73.73.16   vlan201  
+;;; SERVER [bnet.id]
+45   172.16.1.253/32   103.73.73.17   vlan201  
+;;; Python Compile
+46   172.16.1.101/30   172.16.1.100   vlan201  
+;;; WEB HOST
+47   172.16.1.5/30     172.16.1.4     vlan201  
+;;; LOOPBACK [btools.bnet.id]
+48   172.16.0.116/32   172.16.0.116   Loopback 
+;;; SERVER [elasticsearch]
+49   172.16.0.121/30   172.16.0.120   vlan200  
+;;; OVPN
+50   172.16.0.125/30   172.16.0.124   vlan200  
+;;; lib.bnet.id
+51   172.16.1.141/30   172.16.1.140   vlan201  
+;;; Ribit
+52   172.16.1.145/30   172.16.1.144   vlan200  
+;;; routerIdle[CCR1009]_Disable27/12/2023
+53 X 103.73.72.25/30   103.73.72.24   ether6   
+;;; LOOPBACK [lapakaep.id]
+54   103.73.73.50/32   103.73.73.50   Loopback 
+;;; Lapakaep
+55   172.16.1.149/30   172.16.1.148   vlan201  
+;;; RTR-B_QRP-POP001-003-A201||Traffic_RTRWNET_1
+56   103.73.72.125/30  103.73.72.124  ether7   
+;;; RTR-B_QRP-POP001-003-A201||Traffic_RTRWNET_2
+57   103.73.72.238/30  103.73.72.236  ether5   
+;;; RTR-QRP-BHOME_disable21/10/2024
+58 X 103.73.72.65/30   103.73.72.64   vlan94   
+;;; ca0021904_andriansyah_adel
+59 X 10.0.0.1/32       103.73.74.119  vlan1001 
+;;; RTR-B_POP001-ISOLIR-001-A204
+60   10.0.255.1/32     103.73.72.226  vlan200  
+;;; RibitCode
+61   172.16.1.161/30   172.16.1.160   vlan201  
+;;; NEW SERVER
+62   103.73.73.80/32   103.73.73.80   Loopback 
+;;; SWC-CA0021905-Andriansyah Site Emen_1
+63   192.168.88.9/29   192.168.88.8   vlan1003 
+;;; FileStore
+64   172.16.1.165/30   172.16.1.164   vlan201  
+;;; BNET
+65 X 103.73.73.177/32  103.73.73.177  Loopback 
+;;; AllBNET
+66   172.16.1.169/30   172.16.1.168   vlan201  
+;;; LOOPBACK [all.bnet.id.id]
+67   103.73.73.74/32   103.73.73.74   Loopback 
+;;; ca0021905_andriansyah_adel_site_emen_1
+68   10.0.0.3/32       103.73.74.9    vlan1003 
+;;; LOOPBACK [CRM]
+69   103.73.73.51/32   103.73.73.51   Loopback 
+;;; CRM
+70   172.16.1.157/30   172.16.1.156   vlan201  
+;;; ca0021906_andriansyah_adel
+71   10.0.0.2/32       103.73.74.8    vlan1002 
+;;; SWC-CA0021904-Andriansyah
+72 X 192.168.88.1/29   192.168.88.0   vlan1001 
+;;; SWC-CA0021906-Andriansyah II
+73 X 192.168.88.17/29  192.168.88.16  vlan1002 
+;;; graylog&btoolsV3
+74   103.73.73.13/32   103.73.73.13   Loopback 
+;;; RTR-B_Core-POP001-002-A204
+75   103.73.72.247/32  103.73.72.246  vlan2700 
+;;; ca0098301-IndokomasJkt02
+76   10.0.0.4/32       103.73.75.239  vlan102  
+;;; konekyuV3
+77   172.16.1.173/30   172.16.1.172   vlan201  
+;;; konekyuV3
+78   103.73.73.81/32   103.73.73.81   Loopback 
+;;; rtr-b-nx-filter_12/10/2024
+79 X 10.0.0.5/32       103.73.72.112  vlan1006 
+;;; devBtools
+80 X 172.16.1.129/30   172.16.1.128   vlan200  
+;;; allBnetMigrate
+81   172.16.1.133/30   172.16.1.132   vlan201  
+;;; konekyuMigrate
+82   103.73.73.33/32   103.73.73.33   Loopback 
+;;; ca0021907_andriansyahAdel_site_Rannet
+83   10.0.0.6/32       103.73.75.97   vlan1004 
+;;; btools
+84   172.16.1.177/29   172.16.1.176   vlan200  
+;;; SWC-CA0021907_andriansyahAdel_site_Rannet
+85   192.168.88.25/29  192.168.88.24  vlan1004 
+;;; SWC-CA0021908-Andriansyah Site Emen_2
+86 X 192.168.88.33/24  192.168.88.0   vlan1005 
+;;; ca0021908_andriansyah_adel_site_emen_2
+87   10.0.0.7/32       103.73.75.98   vlan1005 
+;;; webBlock&mrtgKominfo
+88   172.16.1.89/29    172.16.1.88    vlan201  
+;;; ManageEngine
+89   172.16.1.213/30   172.16.1.212   vlan201  
+90   172.16.1.185/30   172.16.1.184   vlan201  
+;;; NeBox_DacenManajemen
+91   172.16.1.217/30   172.16.1.216   vlan201  
+;;; ns2.bnet.id
+92   172.16.1.221/32   103.73.73.72   vlan201  
+;;; mail.bayukarta.net
+93   172.16.1.225/30   172.16.1.224   vlan201  
+;;; btools
+94   172.16.1.229/30   172.16.1.228   vlan201  
+;;; SWC-B_POP001-QRP-BHOME-001-A201rn
+95   172.16.1.153/30   172.16.1.152   vlan99   
+;;; RTR-B_RH-POP001-001-A202
+96 X 10.250.250.1/29   10.250.250.0   vlan100  
+
+21/10/2024 20:58:27 || 103.73.72.6 || jul || Mengirim Konfigurasi || terjadi error pada konfigurasi: /interface print dengan detail: Flags: X - DISABLED, R - RUNNING
+Columns: NAME, TYPE, ACTUAL-MTU, L2MTU, MAX-L2MTU, MAC-ADDRESS
+ #   NAME          TYPE      ACTUAL-MTU  L2MTU  MAX-L2MTU  MAC-ADDRESS      
+;;; RTR PRIVATE
+ 0 R ether1        ether           9000   9080      10222  E4:8D:8C:02:2D:37
+;;; SWC-B_Core-POP001
+ 1 R ether2        ether           9000   9080      10222  E4:8D:8C:02:2D:38
+;;; RTR-B_Kominfo-POP001-001-A201
+ 2 R ether3        ether           9000   9080      10222  E4:8D:8C:02:2D:39
+;;; RTR-B_POP001-ISOLIR-001-A204
+ 3   ether4        ether           1500   1500      10222  E4:8D:8C:02:2D:3A
+;;; RTR-B_QRP-POP001-003-A201||Traffic_RTRWNET_2
+ 4 R ether5        ether           9000   9080      10222  E4:8D:8C:02:2D:3A
+ 5   ether6        ether           9000   9080      10222  E4:8D:8C:02:2D:3A
+;;; RTR-B_QRP-POP001-003-A201||Traffic_RTRWNET_1
+ 6 R ether7        ether           9000   9080      10222  E4:8D:8C:02:2D:3D
+ 7   ether8        ether           1500   1580      10222  E4:8D:8C:02:2D:3E
+ 8 R sfp-sfpplus1  ether           9000   9080      10222  08:55:31:8B:AE:25
+ 9 R sfp-sfpplus2  ether           9000   9080      10222  08:55:31:8B:AE:26
+10 R Loopback      bridge          1500  65535             A6:A1:24:4C:84:36
+11 R lo            loopback       65536                    00:00:00:00:00:00
+;;; MGMT
+12 R vlan1         vlan            9000   9076             08:55:31:8B:AE:25
+;;; RTR-B_QRP-POP001-002-A201
+13 R vlan90        vlan            9000   9076             08:55:31:8B:AE:25
+;;; RTR-B_QRP-POP001-001-A201
+14 R vlan91        vlan            9000   9076             08:55:31:8B:AE:25
+;;; RTR-B_RH-POP001-002-A202
+15 R vlan92        vlan            9000   9076             08:55:31:8B:AE:25
+;;; RTR IDLE [CCR1009] DISABLE_20/11/2023
+16 X vlan93        vlan                                    08:55:31:8B:AE:25
+;;; RTR-B_QRP-POP001-004-A202
+17 R vlan94        vlan            9000   9076             08:55:31:8B:AE:25
+;;; RTR-B_RH-POP001-001-A202_disable21/10/2024
+18 X vlan95        vlan                                    08:55:31:8B:AE:25
+;;; RTR-B_RH-POP001-003-A202
+19 R vlan96        vlan            9000   9076             08:55:31:8B:AE:25
+;;; RTR-B_QRP-POP001-003-A201
+20 R vlan97        vlan            9000   9076             08:55:31:8B:AE:25
+;;; SWC-B_CoreBHome-POP001-001-A201
+21 R vlan99        vlan            9000   9076             08:55:31:8B:AE:25
+;;; RTR-B_RH-POP001-001-A202
+22 R vlan100       vlan            9000   9076             08:55:31:8B:AE:25
+;;; KRW-JKT02 [1712041300068644]
+23 R vlan102       vlan            1500   9076             08:55:31:8B:AE:25
+;;; SWC-B_Distribution-Proxmox-001-A202 [SERVER]
+24 R vlan200       vlan            9000   9076             08:55:31:8B:AE:25
+;;; SRV-SUPERMICRO_002
+25 R vlan201       vlan            1500   9076             08:55:31:8B:AE:25
+;;; ca0021904_andriansyah_adel_disable21/10/2024
+26 X vlan1001      vlan                                    08:55:31:8B:AE:25
+;;; ca0021906_andriansyah_adel
+27 R vlan1002      vlan            1500   9076             08:55:31:8B:AE:25
+;;; ca0021905_andriansyah_adel_site_emen_1
+28 R vlan1003      vlan            1500   9076             08:55:31:8B:AE:25
+;;; ca0021907_andriansyahAdel_site_Rannet
+29 R vlan1004      vlan            1500   9076             08:55:31:8B:AE:25
+;;; ca0021908_andriansyah_adel_site_emen_2
+30 R vlan1005      vlan            1500   9076             08:55:31:8B:AE:25
+;;; pengetesan 
+31 R vlan1006      vlan            1500   9076             08:55:31:8B:AE:25
+;;; KRW-IDC [1712041300039099]
+32 R vlan2605      vlan            9000   9076             08:55:31:8B:AE:26
+;;; KRW-NDC [1712041300046623]
+33 R vlan2606      vlan            9000   9076             08:55:31:8B:AE:26
+;;; RTR-B_Core-POP001-002-A204
+34 R vlan2700      vlan            9000   9076             08:55:31:8B:AE:25
+
+21/10/2024 20:58:27 || 103.73.72.182 || jul || Mengirim Konfigurasi || Berhasil login pada perangkat 103.73.72.182
+21/10/2024 20:58:27 || 103.73.72.182 || jul || Mengirim Konfigurasi || terjadi error pada konfigurasi: /ip address print dengan detail: Flags: X - DISABLED, D - DYNAMIC
+Columns: ADDRESS, NETWORK, INTERFACE
+  #   ADDRESS           NETWORK        INTERFACE             
+;;; b018_u_kp_kb
+  0   10.200.0.254/24   10.200.0.0     vlan101               
+;;; b019_u_ns_kb
+  1   10.200.1.254/24   10.200.1.0     vlan102               
+;;; b020_u_ns_kb
+  2   10.200.2.254/24   10.200.2.0     vlan103               
+;;; b021_u_py_tt
+  3   10.200.3.254/24   10.200.3.0     vlan104               
+;;; odp_trn1_u_ab_kb
+  4   10.200.4.254/24   10.200.4.0     vlan105               
+;;; mgmt_olt_b_distribution_pop001_003_a1
+  5   172.16.1.113/30   172.16.1.112   vlan3                 
+;;; mgmt_olt_b_distribution_pop001_004_a202
+  6   172.16.1.117/30   172.16.1.116   vlan3                 
+;;; gry_03_b1_tt
+  7   10.200.64.254/24  10.200.64.0    vlan317               
+;;; gry_04_b3_sl_tt
+  8   10.200.65.254/24  10.200.65.0    vlan318               
+;;; gry_11_a9_sl
+  9   10.200.66.254/24  10.200.66.0    vlan319               
+;;; gry_08_a8_sl
+ 10   10.200.67.254/24  10.200.67.0    vlan320               
+ 11   10.200.68.254/24  10.200.68.0    vlan321 - GRY Blok G7 
+;;; gry_35_f2_sl
+ 12   10.200.69.254/24  10.200.69.0    vlan322               
+;;; gry_40_g9_sl
+ 13   10.200.70.254/24  10.200.70.0    vlan323               
+;;; gry_24_d6_sl
+ 14   10.200.71.254/24  10.200.71.0    vlan324               
+;;; gry_26_d5_sl
+ 15   10.200.72.254/24  10.200.72.0    vlan325               
+;;; gry_32_f1_sl
+ 16   10.200.73.254/24  10.200.73.0    vlan326               
+;;; gry_46_g5_sl
+ 17   10.200.74.254/24  10.200.74.0    vlan327               
+ 18   10.200.75.254/24  10.200.75.0    vlan328               
+;;; gry_14_a5_sl
+ 19   10.200.76.254/24  10.200.76.0    vlan329               
+ 20   10.200.77.254/24  10.200.77.0    vlan330 - GRY Blok G8 
+;;; gry_52_c10_sl
+ 21   10.200.78.254/24  10.200.78.0    vlan331               
+;;; gry_54_c8_sl
+ 22   10.200.79.254/24  10.200.79.0    vlan332               
+;;; rtr-b_core-pop001-a204
+ 23   103.73.72.182/30  103.73.72.180  sfp-sfpplus2          
+ 24   103.73.75.41/32   103.73.75.41   loopback              
+ 25   103.73.75.42/32   103.73.75.42   loopback              
+ 26   103.73.75.188/32  103.73.75.188  loopback              
+ 27   103.73.75.189/32  103.73.75.189  loopback              
+ 28   103.73.75.190/32  103.73.75.190  loopback              
+ 29 D 10.221.11.254/32  10.201.11.247  <pppoe-10303@bnethome>
+ 30 D 10.221.3.250/32   10.201.0.250   <pppoe-10514@bnethome>
+ 31 D 10.221.3.218/32   10.201.0.25    <pppoe-10515@bnethome>
+ 32 D 10.221.3.215/32   10.201.0.23    <pppoe-10508@bnethome>
+ 33 D 10.221.3.204/32   10.201.0.144   <pppoe-10219@bnethome>
+ 34 D 10.221.15.254/32  10.201.15.254  <pppoe-10206@bnethome>
+ 35 D 10.221.3.210/32   10.201.1.17    <pppoe-10537@bnethome>
+ 36 D 10.221.11.249/32  10.201.11.235  10217                 
+ 37 D 10.221.3.192/32   10.201.0.8     <pppoe-10205@bnethome>
+ 38 D 10.221.3.188/32   10.201.0.116   <pppoe-10510@bnethome>
+ 39 D 10.221.3.187/32   10.201.0.6     <pppoe-10203@bnethome>
+ 40 D 10.221.3.179/32   10.201.0.78    <pppoe-10115@bnethome>
+ 41 D 10.221.3.176/32   10.201.0.89    <pppoe-10116@bnethome>
+ 42 D 10.221.3.173/32   10.201.0.53    <pppoe-10523@bnethome>
+ 43 D 10.221.3.171/32   10.201.0.26    <pppoe-10516@bnethome>
+ 44 D 10.221.7.233/32   10.201.7.21    <pppoe-10220@bnethome>
+ 45 D 10.221.3.160/32   10.201.0.63    <pppoe-10118@bnethome>
+ 46 D 10.221.3.151/32   10.201.0.75    <pppoe-10113@bnethome>
+ 47 D 10.221.3.147/32   10.201.0.4     <pppoe-10111@bnethome>
+ 48 D 10.221.3.142/32   10.201.0.29    <pppoe-10525@bnethome>
+ 49 D 10.221.3.141/32   10.201.0.71    <pppoe-10117@bnethome>
+ 50 D 10.221.3.139/32   10.201.0.158   <pppoe-10531@bnethome>
+ 51 D 10.221.7.224/32   10.201.7.2     <pppoe-10529@bnethome>
+ 52 D 10.221.15.252/32  10.201.15.252  <pppoe-10210@bnethome>
+ 53 D 10.221.3.114/32   10.201.1.27    <pppoe-10226@bnethome>
+ 54 D 10.221.3.108/32   10.201.0.19    <pppoe-10223@bnethome>
+ 55 D 10.221.3.105/32   10.201.0.22    <pppoe-10507@bnethome>
+ 56 D 10.221.3.103/32   10.201.0.2     <pppoe-10106@bnethome>
+ 57 D 10.221.3.90/32    10.201.0.208   <pppoe-10307@bnethome>
+ 58 D 10.221.3.81/32    10.201.0.149   <pppoe-10227@bnethome>
+ 59 D 10.221.3.67/32    10.201.0.31    <pppoe-10527@bnethome>
+ 60 D 10.221.3.63/32    10.201.0.236   <pppoe-10224@bnethome>
+ 61 D 10.221.7.205/32   10.201.7.241   <pppoe-10204@bnethome>
+ 62 D 10.221.3.60/32    10.201.0.30    <pppoe-10538@bnethome>
+ 63 D 10.221.11.233/32  10.201.11.15   <pppoe-10536@bnethome>
+ 64 D 10.221.15.249/32  10.201.15.20   <pppoe-10506@bnethome>
+ 65 D 10.221.7.203/32   10.201.7.20    <pppoe-10312@bnethome>
+ 66 D 10.221.11.232/32  10.201.11.13   <pppoe-10314@bnethome>
+ 67 D 10.221.15.247/32  10.201.15.248  <pppoe-10308@bnethome>
+ 68 D 10.221.3.39/32    10.201.0.126   <pppoe-10539@bnethome>
+ 69 D 10.221.3.38/32    10.201.0.5     <pppoe-10532@bnethome>
+ 70 D 10.221.3.31/32    10.201.0.3     <pppoe-10110@bnethome>
+ 71 D 10.221.11.229/32  10.201.11.250  <pppoe-10207@bnethome>
+ 72 D 10.221.7.195/32   10.201.7.248   <pppoe-10509@bnethome>
+ 73 D 10.221.11.227/32  10.201.11.254  <pppoe-10114@bnethome>
+ 74 D 10.221.3.25/32    10.201.0.35    <pppoe-10103@bnethome>
+ 75 D 10.221.7.191/32   10.201.7.253   <pppoe-10112@bnethome>
+ 76 D 10.221.7.190/32   10.201.7.245   <pppoe-10524@bnethome>
+ 77 D 10.221.11.223/32  10.201.11.251  <pppoe-10202@bnethome>
+ 78 D 10.221.11.222/32  10.201.11.216  <pppoe-10313@bnethome>
+ 79 D 10.221.11.220/32  10.201.11.248  <pppoe-10301@bnethome>
+ 80 D 10.221.3.8/32     10.201.0.14    <pppoe-10535@bnethome>
+ 81 D 10.221.3.7/32     10.201.0.17    <pppoe-10502@bnethome>
+ 82 D 10.221.3.6/32     10.201.0.18    <pppoe-10503@bnethome>
+ 83 D 10.221.3.5/32     10.201.0.16    <pppoe-10501@bnethome>
+;;; rtr-b_core-pop001-a204
+ 84 X 10.250.250.2/29   10.250.250.0   sfp-sfpplus1          
+ 85 D 10.221.3.3/32     10.201.0.27    <pppoe-10519@bnethome>
+ 86 D 10.221.11.224/32  10.201.11.25   <pppoe-10309@bnethome>
+ 87 D 10.221.3.190/32   10.201.0.199   <pppoe-32111@bnethome>
+ 88 D 10.221.3.229/32   10.201.1.41    <pppoe-32932@bnethome>
+ 89 D 10.221.7.240/32   10.201.7.28    <pppoe-33122@bnethome>
+ 90 D 10.221.11.243/32  10.201.11.239  <pppoe-33105@bnethome>
+ 91 D 10.221.3.203/32   10.201.0.83    <pppoe-31705@bnethome>
+ 92 D 10.221.3.223/32   10.201.1.44    <pppoe-33242@bnethome>
+ 93 D 10.221.3.178/32   10.201.0.33    <pppoe-31925@bnethome>
+ 94 D 10.221.3.235/32   10.201.0.100   <pppoe-31904@bnethome>
+ 95 D 10.221.7.251/32   10.201.7.26    <pppoe-32343@bnethome>
+ 96 D 10.221.11.247/32  10.201.11.17   <pppoe-33231@bnethome>
+ 97 D 10.221.3.191/32   10.201.0.88    <pppoe-32116@bnethome>
+ 98 D 10.221.7.255/32   10.201.7.24    <pppoe-32725@bnethome>
+ 99 D 10.221.3.237/32   10.201.0.64    <pppoe-32919@bnethome>
+100 D 10.221.3.129/32   10.201.0.93    <pppoe-31707@bnethome>
+101 D 10.221.7.245/32   10.201.7.4     <pppoe-32934@bnethome>
+102 D 10.221.7.249/32   10.201.7.141   <pppoe-31910@bnethome>
+103 D 10.221.7.254/32   10.201.7.239   <pppoe-31706@bnethome>
+104 D 10.221.3.230/32   10.201.0.52    <pppoe-33240@bnethome>
+105 D 10.221.11.253/32  10.201.11.221  <pppoe-31812@bnethome>
+106 D 10.221.3.244/32   10.201.1.14    <pppoe-33209@bnethome>
+107 D 10.221.3.221/32   10.201.1.42    <pppoe-32029@bnethome>
+108 D 10.221.3.220/32   10.201.0.226   <pppoe-33241@bnethome>
+109 D 10.221.3.175/32   10.201.1.11    <pppoe-32414@bnethome>
+110 D 10.221.3.251/32   10.201.0.176   <pppoe-31915@bnethome>
+111 D 10.221.7.248/32   10.201.7.15    <pppoe-32218@bnethome>
+112 D 10.221.3.222/32   10.201.1.16    <pppoe-31918@bnethome>
+113 D 10.221.11.251/32  10.201.11.16   <pppoe-32927@bnethome>
+114 D 10.221.3.240/32   10.201.0.51    <pppoe-32702@bnethome>
+115 D 10.221.3.177/32   10.201.1.45    <pppoe-32127@bnethome>
+116 D 10.221.7.246/32   10.201.7.142   <pppoe-32904@bnethome>
+117 D 10.221.3.219/32   10.201.0.61    <pppoe-31913@bnethome>
+118 D 10.221.3.234/32   10.201.0.230   32020                 
+119 D 10.221.7.250/32   10.201.7.29    <pppoe-32830@bnethome>
+120 D 10.221.11.252/32  10.201.11.24   <pppoe-32204@bnethome>
+121 D 10.221.11.250/32  10.201.11.233  <pppoe-31703@bnethome>
+122 D 10.221.3.227/32   10.201.1.10    <pppoe-32723@bnethome>
+123 D 10.221.3.202/32   10.201.0.54    <pppoe-32117@bnethome>
+124 D 10.221.7.252/32   10.201.7.13    <pppoe-33217@bnethome>
+125 D 10.221.3.52/32    10.201.0.37    <pppoe-32906@bnethome>
+126 D 10.221.3.246/32   10.201.0.28    <pppoe-32523@bnethome>
+127 D 10.221.11.255/32  10.201.11.29   33207                 
+128 D 10.221.3.174/32   10.201.1.47    <pppoe-32341@bnethome>
+129 D 10.221.3.248/32   10.201.1.28    <pppoe-33018@bnethome>
+130 D 10.221.3.217/32   10.201.1.15    <pppoe-33121@bnethome>
+131 D 10.221.7.253/32   10.201.7.3     <pppoe-32113@bnethome>
+132 D 10.221.3.211/32   10.201.1.46    <pppoe-31716@bnethome>
+133 D 10.221.3.233/32   10.201.1.50    <pppoe-32415@bnethome>
+134 D 10.221.3.209/32   10.201.0.112   <pppoe-32109@bnethome>
+135 D 10.221.3.254/32   10.201.0.148   <pppoe-32507@bnethome>
+136 D 10.221.3.206/32   10.201.1.40    <pppoe-32028@bnethome>
+137 D 10.221.3.252/32   10.201.0.105   <pppoe-32007@bnethome>
+138 D 10.221.3.236/32   10.201.0.101   <pppoe-32003@bnethome>
+139 D 10.221.3.208/32   10.201.0.125   <pppoe-32933@bnethome>
+140 D 10.221.3.226/32   10.201.0.96    <pppoe-31807@bnethome>
+141 D 10.221.3.255/32   10.201.0.207   <pppoe-32901@bnethome>
+142 D 10.221.3.247/32   10.201.0.134   <pppoe-32413@bnethome>
+143 D 10.221.3.239/32   10.201.1.48    <pppoe-32935@bnethome>
+144 D 10.221.3.224/32   10.201.0.232   <pppoe-31917@bnethome>
+145 D 10.221.3.241/32   10.201.0.94    <pppoe-31802@bnethome>
+146 D 10.221.3.225/32   10.201.0.163   <pppoe-33005@bnethome>
+147 D 10.221.3.94/32    10.201.1.4     <pppoe-32721@bnethome>
+148 D 10.221.3.216/32   10.201.0.131   <pppoe-32305@bnethome>
+149 D 10.221.11.245/32  10.201.11.26   <pppoe-32112@bnethome>
+150 D 10.221.3.199/32   10.201.0.132   <pppoe-32306@bnethome>
+151 D 10.221.3.137/32   10.201.0.69    <pppoe-32807@bnethome>
+152 D 10.221.3.200/32   10.201.0.122   <pppoe-32205@bnethome>
+153 D 10.221.3.205/32   10.201.0.135   <pppoe-32309@bnethome>
+154 D 10.221.3.144/32   10.201.1.12    <pppoe-32024@bnethome>
+155 D 10.221.3.193/32   10.201.0.154   <pppoe-32603@bnethome>
+156 D 10.221.7.230/32   10.201.7.223   <pppoe-33221@bnethome>
+157 D 10.221.3.189/32   10.201.0.186   <pppoe-33204@bnethome>
+158 D 10.221.3.238/32   10.201.0.185   <pppoe-33203@bnethome>
+159 D 10.221.3.232/32   10.201.0.162   <pppoe-33003@bnethome>
+160 D 10.221.3.249/32   10.201.0.175   <pppoe-33104@bnethome>
+161 D 10.221.3.195/32   10.201.0.182   <pppoe-33115@bnethome>
+162 D 10.221.3.253/32   10.201.0.99    <pppoe-31903@bnethome>
+163 D 10.221.3.214/32   10.201.0.153   <pppoe-32602@bnethome>
+164 D 10.221.3.231/32   10.201.0.143   <pppoe-32403@bnethome>
+165 D 10.221.7.239/32   10.201.7.203   <pppoe-32120@bnethome>
+166 D 10.221.3.207/32   10.201.0.152   <pppoe-32601@bnethome>
+167 D 10.221.3.197/32   10.201.0.90    <pppoe-32406@bnethome>
+168 D 10.221.3.172/32   10.201.0.108   <pppoe-32101@bnethome>
+169 D 10.221.3.181/32   10.201.0.172   <pppoe-33101@bnethome>
+170 D 10.221.3.198/32   10.201.0.171   <pppoe-33013@bnethome>
+171 D 10.221.3.196/32   10.201.0.128   <pppoe-32302@bnethome>
+172 D 10.221.3.194/32   10.201.0.97    <pppoe-31901@bnethome>
+173 D 10.221.3.201/32   10.201.0.212   <pppoe-32213@bnethome>
+174 D 10.221.7.244/32   10.201.7.231   <pppoe-33219@bnethome>
+175 D 10.221.3.170/32   10.201.0.211   <pppoe-32103@bnethome>
+176 D 10.221.3.184/32   10.201.0.184   <pppoe-33202@bnethome>
+177 D 10.221.3.182/32   10.201.0.103   <pppoe-32005@bnethome>
+178 D 10.221.11.248/32  10.201.11.215  <pppoe-33205@bnethome>
+179 D 10.221.7.241/32   10.201.7.227   <pppoe-32203@bnethome>
+180 D 10.221.3.180/32   10.201.0.183   <pppoe-33201@bnethome>
+181 D 10.221.7.238/32   10.201.7.229   <pppoe-32210@bnethome>
+182 D 10.221.7.225/32   10.201.7.121   <pppoe-32508@bnethome>
+183 D 10.221.3.119/32   10.201.0.206   <pppoe-32802@bnethome>
+184 D 10.221.7.196/32   10.201.7.23    <pppoe-32812@bnethome>
+185 D 10.221.3.149/32   10.201.0.179   <pppoe-33110@bnethome>
+186 D 10.221.3.13/32    10.201.0.41    <pppoe-32409@bnethome>
+187 D 10.221.11.244/32  10.201.11.20   <pppoe-32324@bnethome>
+188 D 10.221.3.41/32    10.201.0.168   <pppoe-33010@bnethome>
+189 D 10.221.7.227/32   10.201.7.120   <pppoe-32907@bnethome>
+190 D 10.221.7.221/32   10.201.7.232   <pppoe-33212@bnethome>
+191 D 10.221.3.155/32   10.201.0.221   <pppoe-32320@bnethome>
+192 D 10.221.7.229/32   10.201.7.238   <pppoe-31805@bnethome>
+193 D 10.221.3.43/32    10.201.0.145   <pppoe-32504@bnethome>
+194 D 10.221.3.45/32    10.201.0.98    <pppoe-31902@bnethome>
+195 D 10.221.3.24/32    10.201.0.191   <pppoe-33214@bnethome>
+196 D 10.221.3.26/32    10.201.0.244   <pppoe-31923@bnethome>
+197 D 10.221.7.222/32   10.201.7.236   <pppoe-33227@bnethome>
+198 D 10.221.7.192/32   10.201.7.199   <pppoe-31813@bnethome>
+199 D 10.221.3.42/32    10.201.0.169   <pppoe-32706@bnethome>
+200 D 10.221.3.17/32    10.201.0.118   <pppoe-32118@bnethome>
+201 D 10.221.3.21/32    10.201.0.195   <pppoe-31920@bnethome>
+202 D 10.221.3.168/32   10.201.11.28   <pppoe-32911@bnethome>
+203 D 10.221.7.236/32   10.201.7.22    <pppoe-32811@bnethome>
+204 D 10.221.11.228/32  10.201.11.23   <pppoe-32818@bnethome>
+205 D 10.221.7.197/32   10.201.7.139   <pppoe-32905@bnethome>
+206 D 10.221.3.30/32    10.201.0.72    <pppoe-32809@bnethome>
+207 D 10.221.3.120/32   10.201.0.146   <pppoe-32505@bnethome>
+208 D 10.221.3.78/32    10.201.0.110   <pppoe-32105@bnethome>
+209 D 10.221.3.110/32   10.201.0.119   <pppoe-32201@bnethome>
+210 D 10.221.7.234/32   10.201.7.235   <pppoe-33108@bnethome>
+211 D 10.221.3.130/32   10.201.0.216   <pppoe-31922@bnethome>
+212 D 10.221.3.157/32   10.201.0.81    <pppoe-31702@bnethome>
+213 D 10.221.3.75/32    10.201.0.234   <pppoe-31711@bnethome>
+214 D 10.221.3.117/32   10.201.0.129   <pppoe-32303@bnethome>
+215 D 10.221.3.165/32   10.201.0.220   <pppoe-33116@bnethome>
+216 D 10.221.3.109/32   10.201.0.170   <pppoe-33012@bnethome>
+217 D 10.221.3.122/32   10.201.0.107   <pppoe-32009@bnethome>
+218 D 10.221.3.22/32    10.201.0.246   <pppoe-32016@bnethome>
+219 D 10.221.7.214/32   10.201.7.201   <pppoe-32214@bnethome>
+220 D 10.221.3.153/32   10.201.0.77    <pppoe-32010@bnethome>
+221 D 10.221.3.150/32   10.201.0.50    <pppoe-32806@bnethome>
+222 D 10.221.3.134/32   10.201.0.38    <pppoe-32803@bnethome>
+223 D 10.221.3.143/32   10.201.0.113   <pppoe-32110@bnethome>
+224 D 10.221.3.163/32   10.201.0.95    <pppoe-31803@bnethome>
+225 D 10.221.3.99/32    10.201.0.241   <pppoe-32019@bnethome>
+226 D 10.221.3.106/32   10.201.0.150   <pppoe-32509@bnethome>
+227 D 10.221.7.213/32   10.201.7.7     <pppoe-32337@bnethome>
+228 D 10.221.3.91/32    10.201.0.42    <pppoe-32017@bnethome>
+229 D 10.221.7.201/32   10.201.7.202   <pppoe-32407@bnethome>
+230 D 10.221.11.242/32  10.201.11.222  <pppoe-32903@bnethome>
+231 D 10.221.3.100/32   10.201.0.62    <pppoe-32816@bnethome>
+232 D 10.221.7.215/32   10.201.7.200   <pppoe-32319@bnethome>
+233 D 10.221.3.34/32    10.201.11.217  <pppoe-33225@bnethome>
+234 D 10.221.7.200/32   10.201.7.140   <pppoe-32323@bnethome>
+235 D 10.221.7.237/32   10.201.7.198   <pppoe-31814@bnethome>
+236 D 10.221.11.240/32  10.201.11.253  <pppoe-31905@bnethome>
+237 D 10.221.3.131/32   10.201.0.231   <pppoe-31916@bnethome>
+238 D 10.221.11.239/32  10.201.11.21   <pppoe-32913@bnethome>
+239 D 10.221.3.92/32    10.201.0.49    <pppoe-32912@bnethome>
+240 D 10.221.3.83/32    10.201.0.68    <pppoe-32518@bnethome>
+241 D 10.221.3.58/32    10.201.0.247   <pppoe-32515@bnethome>
+242 D 10.221.7.212/32   10.201.7.1     <pppoe-31809@bnethome>
+243 D 10.221.7.211/32   10.201.7.226   <pppoe-32810@bnethome>
+244 D 10.221.7.209/32   10.201.7.246   <pppoe-32604@bnethome>
+245 D 10.221.7.204/32   10.201.7.10    <pppoe-32822@bnethome>
+246 D 10.221.11.236/32  10.201.11.252  <pppoe-31806@bnethome>
+247 D 10.221.3.64/32    10.201.0.76    <pppoe-32516@bnethome>
+248 D 10.221.3.40/32    10.201.0.190   <pppoe-33213@bnethome>
+249 D 10.221.3.112/32   10.201.0.214   <pppoe-32608@bnethome>
+250 D 10.221.3.167/32   10.201.0.245   <pppoe-33224@bnethome>
+251 D 10.221.3.59/32    10.201.0.106   <pppoe-32008@bnethome>
+252 D 10.221.11.235/32  10.201.11.219  <pppoe-32408@bnethome>
+253 D 10.221.3.68/32    10.201.0.139   <pppoe-32315@bnethome>
+254 D 10.221.3.37/32    10.201.0.127   <pppoe-33107@bnethome>
+255 D 10.221.3.51/32    10.201.0.223   <pppoe-32513@bnethome>
+256 D 10.221.11.225/32  10.201.11.231  <pppoe-32312@bnethome>
+257 D 10.221.11.238/32  10.201.11.12   <pppoe-33210@bnethome>
+258 D 10.221.7.198/32   10.201.7.243   <pppoe-32817@bnethome>
+259 D 10.221.3.102/32   10.201.0.222   <pppoe-31914@bnethome>
+260 D 10.221.3.113/32   10.201.0.137   <pppoe-32922@bnethome>
+261 D 10.221.7.210/32   10.201.7.196   <pppoe-32814@bnethome>
+262 D 10.221.3.33/32    10.201.0.233   <pppoe-31817@bnethome>
+263 D 10.221.3.88/32    10.201.0.173   <pppoe-33102@bnethome>
+264 D 10.221.3.126/32   10.201.0.79    <pppoe-32115@bnethome>
+265 D 10.221.3.46/32    10.201.0.178   <pppoe-33109@bnethome>
+266 D 10.221.3.27/32    10.201.1.5     <pppoe-32722@bnethome>
+267 D 10.221.7.231/32   10.201.7.12    <pppoe-32318@bnethome>
+268 D 10.221.3.125/32   10.201.1.2     <pppoe-33120@bnethome>
+269 D 10.221.3.16/32    10.201.1.35    <pppoe-32339@bnethome>
+270 D 10.221.3.146/32   10.201.0.167   <pppoe-33009@bnethome>
+271 D 10.221.3.111/32   10.201.0.43    <pppoe-32717@bnethome>
+272 D 10.221.11.230/32  10.201.11.27   <pppoe-32824@bnethome>
+273 D 10.221.3.20/32    10.201.0.21    <pppoe-32519@bnethome>
+274 D 10.221.3.47/32    10.201.0.160   <pppoe-32332@bnethome>
+275 D 10.221.3.138/32   10.201.0.187   <pppoe-31713@bnethome>
+276 D 10.221.3.156/32   10.201.0.157   <pppoe-32609@bnethome>
+277 D 10.221.3.183/32   10.201.0.227   <pppoe-32021@bnethome>
+278 D 10.221.3.152/32   10.201.0.239   <pppoe-32520@bnethome>
+279 D 10.221.3.19/32    10.201.0.120   <pppoe-32202@bnethome>
+280 D 10.221.3.65/32    10.201.0.121   <pppoe-32815@bnethome>
+281 D 10.221.3.136/32   10.201.0.156   <pppoe-32931@bnethome>
+282 D 10.221.3.18/32    10.201.0.254   <pppoe-32825@bnethome>
+283 D 10.221.3.169/32   10.201.1.31    <pppoe-33237@bnethome>
+284 D 10.221.7.217/32   10.201.7.252   <pppoe-32828@bnethome>
+285 D 10.221.3.116/32   10.201.0.138   <pppoe-32313@bnethome>
+286 D 10.221.3.135/32   10.201.0.82    <pppoe-31704@bnethome>
+287 D 10.221.3.127/32   10.201.0.217   <pppoe-32925@bnethome>
+288 D 10.221.3.62/32    10.201.0.209   <pppoe-32715@bnethome>
+289 D 10.221.3.104/32   10.201.0.46    <pppoe-32326@bnethome>
+290 D 10.221.7.206/32   10.201.7.195   <pppoe-32716@bnethome>
+291 D 10.221.3.101/32   10.201.1.34    <pppoe-32827@bnethome>
+292 D 10.221.3.124/32   10.201.1.7     <pppoe-32826@bnethome>
+293 D 10.221.3.28/32    10.201.1.29    <pppoe-32521@bnethome>
+294 D 10.221.7.199/32   10.201.7.18    <pppoe-32819@bnethome>
+295 D 10.221.3.36/32    10.201.0.74    <pppoe-32918@bnethome>
+296 D 10.221.11.231/32  10.201.11.14   <pppoe-33232@bnethome>
+297 D 10.221.3.97/32    10.201.0.228   <pppoe-32719@bnethome>
+298 D 10.221.3.48/32    10.201.0.198   <pppoe-32503@bnethome>
+299 D 10.221.3.118/32   10.201.0.161   <pppoe-32022@bnethome>
+300 D 10.221.3.95/32    10.201.0.147   <pppoe-32506@bnethome>
+301 D 10.221.7.202/32   10.201.7.118   <pppoe-32340@bnethome>
+302 D 10.221.3.76/32    10.201.0.73    <pppoe-32915@bnethome>
+303 D 10.221.3.29/32    10.201.1.22    <pppoe-33234@bnethome>
+304 D 10.221.3.133/32   10.201.1.43    <pppoe-32724@bnethome>
+305 D 10.221.11.221/32  10.201.11.225  <pppoe-31804@bnethome>
+306 D 10.221.3.145/32   10.201.0.151   <pppoe-32510@bnethome>
+307 D 10.221.3.121/32   10.201.1.21    <pppoe-33233@bnethome>
+308 D 10.221.3.70/32    10.201.0.109   <pppoe-32102@bnethome>
+309 D 10.221.3.14/32    10.201.0.165   <pppoe-33007@bnethome>
+310 D 10.221.3.69/32    10.201.1.36    <pppoe-32929@bnethome>
+311 D 10.221.7.223/32   10.201.7.17    <pppoe-33229@bnethome>
+312 D 10.221.3.44/32    10.201.1.30    <pppoe-33236@bnethome>
+313 D 10.221.3.87/32    10.201.0.194   <pppoe-32821@bnethome>
+314 D 10.221.3.53/32    10.201.0.238   <pppoe-32714@bnethome>
+315 D 10.221.3.10/32    10.201.0.229   <pppoe-32331@bnethome>
+316 D 10.221.3.77/32    10.201.0.243   <pppoe-32333@bnethome>
+317 D 10.221.7.235/32   10.201.7.11    <pppoe-32704@bnethome>
+318 D 10.221.3.98/32    10.201.0.34    <pppoe-33106@bnethome>
+319 D 10.221.3.89/32    10.201.0.251   <pppoe-32328@bnethome>
+320 D 10.221.3.32/32    10.201.0.202   <pppoe-32801@bnethome>
+321 D 10.221.3.186/32   10.201.0.44    <pppoe-33235@bnethome>
+322 D 10.221.3.55/32    10.201.0.59    <pppoe-32813@bnethome>
+323 D 10.221.3.96/32    10.201.0.201   <pppoe-31708@bnethome>
+324 D 10.221.7.232/32   10.201.7.143   <pppoe-32710@bnethome>
+325 D 10.221.3.57/32    10.201.0.84    <pppoe-32410@bnethome>
+326 D 10.221.7.226/32   10.201.7.206   <pppoe-32329@bnethome>
+327 D 10.221.3.128/32   10.201.0.210   <pppoe-32902@bnethome>
+328 D 10.221.7.208/32   10.201.7.8     <pppoe-32823@bnethome>
+329 D 10.221.7.207/32   10.201.7.247   <pppoe-32713@bnethome>
+330 D 10.221.11.237/32  10.201.11.244  <pppoe-32703@bnethome>
+331 D 10.221.7.193/32   10.201.7.217   <pppoe-32026@bnethome>
+332 D 10.221.3.9/32     10.201.1.24    <pppoe-32025@bnethome>
+333 D 10.221.3.56/32    10.201.1.9     <pppoe-32023@bnethome>
+334 D 10.221.3.80/32    10.201.0.55    <pppoe-32327@bnethome>
+335 D 10.221.3.115/32   10.201.0.155   <pppoe-32126@bnethome>
+336 D 10.221.3.161/32   10.201.0.197   <pppoe-32707@bnethome>
+337 D 10.221.3.86/32    10.201.0.45    <pppoe-32908@bnethome>
+338 D 10.221.7.220/32   10.201.7.14    <pppoe-31911@bnethome>
+339 D 10.221.7.242/32   10.201.7.27    <pppoe-32926@bnethome>
+340 D 10.221.3.15/32    10.201.0.200   <pppoe-31919@bnethome>
+341 D 10.221.3.93/32    10.201.1.32    <pppoe-31907@bnethome>
+342 D 10.221.7.219/32   10.201.7.233   <pppoe-33208@bnethome>
+343 D 10.221.3.61/32    10.201.0.213   <pppoe-32605@bnethome>
+344 D 10.221.3.154/32   10.201.0.58    <pppoe-32916@bnethome>
+345 D 10.221.15.248/32  10.201.15.246  <pppoe-32517@bnethome>
+346 D 10.221.3.23/32    10.201.0.224   <pppoe-32321@bnethome>
+347 D 10.221.7.187/32   10.201.7.19    <pppoe-31815@bnethome>
+348 D 10.221.7.216/32   10.201.7.237   <pppoe-31906@bnethome>
+349 D 10.221.3.11/32    10.201.0.124   <pppoe-32207@bnethome>
+350 D 10.221.3.185/32   10.201.1.23    <pppoe-32336@bnethome>
+351 D 10.221.7.189/32   10.201.7.9     <pppoe-32121@bnethome>
+352 D 10.221.7.218/32   10.201.7.218   <pppoe-33117@bnethome>
+353 D 10.221.3.212/32   10.201.0.196   <pppoe-32501@bnethome>
+354 D 10.221.3.242/32   10.201.0.242   <pppoe-32412@bnethome>
+355 D 10.221.3.162/32   10.201.0.60    <pppoe-31912@bnethome>
+356 D 10.221.3.132/32   10.201.0.87    <pppoe-31926@bnethome>
+357 D 10.221.3.166/32   10.201.1.39    <pppoe-32705@bnethome>
+358 D 10.221.15.255/32  10.201.15.21   <pppoe-10120@bnethome>
+359 D 10.221.3.243/32   10.201.0.24    <pppoe-10511@bnethome>
+360 D 10.221.3.213/32   10.201.0.123   <pppoe-32206@bnethome>
+361 D 10.221.3.245/32   10.201.1.49    <pppoe-33019@bnethome>
+362 D 10.221.3.148/32   10.201.0.218   <pppoe-32512@bnethome>
+363 D 10.221.3.72/32    10.201.0.85    <pppoe-32920@bnethome>
+364 D 10.221.3.49/32    10.201.0.36    <pppoe-32322@bnethome>
+365 D 10.221.3.79/32    10.201.0.159   <pppoe-32701@bnethome>
+366 D 10.221.3.164/32   10.201.1.38    <pppoe-32027@bnethome>
+367 D 10.221.7.194/32   10.201.7.16    <pppoe-31714@bnethome>
+368 D 10.221.3.140/32   10.201.1.37    <pppoe-33239@bnethome>
+369 D 10.221.3.71/32    10.201.0.141   <pppoe-32401@bnethome>
+370 D 10.221.3.54/32    10.201.0.166   <pppoe-33008@bnethome>
+371 D 10.221.3.107/32   10.201.0.115   <pppoe-32114@bnethome>
+372 D 10.221.3.74/32    10.201.1.18    <pppoe-32335@bnethome>
+373 D 10.221.3.159/32   10.201.1.33    <pppoe-32338@bnethome>
+374 D 10.221.3.66/32    10.201.1.25    <pppoe-32928@bnethome>
+375 D 10.221.3.85/32    10.201.0.249   <pppoe-32018@bnethome>
+376 D 10.221.3.35/32    10.201.0.70    <pppoe-32123@bnethome>
+377 D 10.221.3.123/32   10.201.0.219   <pppoe-32215@bnethome>
+378 D 10.221.3.158/32   10.201.0.240   <pppoe-32924@bnethome>
+379 D 10.221.11.234/32  10.201.11.245  <pppoe-10408@bnethome>
+380 D 10.221.7.243/32   10.201.7.251   <pppoe-10403@bnethome>
+381 D 10.221.15.251/32  10.201.15.243  <pppoe-10425@bnethome>
+382 D 10.221.3.73/32    10.201.0.11    <pppoe-10405@bnethome>
+383 D 10.221.3.50/32    10.201.1.19    <pppoe-10423@bnethome>
+384 D 10.221.3.12/32    10.201.0.13    <pppoe-10402@bnethome>
+385 D 10.221.7.188/32   10.201.7.197   <pppoe-10417@bnethome>
+386 D 10.221.7.228/32   10.201.7.250   <pppoe-10412@bnethome>
+387 D 10.221.11.226/32  10.201.11.246  <pppoe-10401@bnethome>
+388 D 10.221.3.82/32    10.201.1.6     <pppoe-10421@bnethome>
+389 D 10.221.15.250/32  10.201.15.244  <pppoe-10424@bnethome>
+390 D 10.221.3.4/32     10.201.0.12    <pppoe-10406@bnethome>
+391 D 10.221.15.253/32  10.201.15.242  <pppoe-10426@bnethome>
+392 D 10.221.11.246/32  10.201.11.241  <pppoe-10413@bnethome>
+
+21/10/2024 20:58:28 || 103.73.72.182 || jul || Mengirim Konfigurasi || terjadi error pada konfigurasi: /interface print dengan detail: Flags: D - DYNAMIC; R - RUNNING
+Columns: NAME, TYPE, ACTUAL-MTU, L2MTU, MAX-L2MTU, MAC-ADDRESS
+  #    NAME                    TYPE      ACTUA  L2MTU  MAX-L  MAC-ADDRESS      
+;;; swc-b_distribution_pop001_004_a203_link1
+  0  R ether1                  ether      1500   1580  10222  74:4D:28:32:55:A5
+;;; swc-b_distribution_pop001_004_a203_link2
+  1  R ether2                  ether      1500   1580  10222  74:4D:28:32:55:A6
+  2    ether3                  ether      1500   1580  10222  74:4D:28:32:55:A7
+  3    ether4                  ether      1500   1580  10222  74:4D:28:32:55:A8
+  4    ether5                  ether      1500   1580  10222  74:4D:28:32:55:A9
+  5    ether6                  ether      1500   1580  10222  74:4D:28:32:55:AA
+  6    ether7                  ether      1500   1580  10222  74:4D:28:32:55:AB
+  7    ether8                  ether      1500   1580  10222  74:4D:28:32:55:AC
+  8    sfp-sfpplus1            ether      9000   9080  10222  74:4D:28:32:55:A3
+;;; rtr-b_core-pop001-a204
+  9  R sfp-sfpplus2            ether      9000   9080  10222  74:4D:28:32:55:A4
+ 10  R 10217                   pppoe-in   1492                                 
+ 11  R 32020                   pppoe-in   1492                                 
+ 12  R 33207                   pppoe-in   1492                                 
+ 13 DR <pppoe-10103@bnethome>  pppoe-in   1492                                 
+ 14 DR <pppoe-10106@bnethome>  pppoe-in   1492                                 
+ 15 DR <pppoe-10110@bnethome>  pppoe-in   1492                                 
+ 16 DR <pppoe-10111@bnethome>  pppoe-in   1492                                 
+ 17 DR <pppoe-10112@bnethome>  pppoe-in   1492                                 
+ 18 DR <pppoe-10113@bnethome>  pppoe-in   1492                                 
+ 19 DR <pppoe-10114@bnethome>  pppoe-in   1492                                 
+ 20 DR <pppoe-10115@bnethome>  pppoe-in   1492                                 
+ 21 DR <pppoe-10116@bnethome>  pppoe-in   1492                                 
+ 22 DR <pppoe-10117@bnethome>  pppoe-in   1492                                 
+ 23 DR <pppoe-10118@bnethome>  pppoe-in   1492                                 
+ 24 DR <pppoe-10120@bnethome>  pppoe-in   1492                                 
+ 25 DR <pppoe-10202@bnethome>  pppoe-in   1492                                 
+ 26 DR <pppoe-10203@bnethome>  pppoe-in   1492                                 
+ 27 DR <pppoe-10204@bnethome>  pppoe-in   1492                                 
+ 28 DR <pppoe-10205@bnethome>  pppoe-in   1492                                 
+ 29 DR <pppoe-10206@bnethome>  pppoe-in   1492                                 
+ 30 DR <pppoe-10207@bnethome>  pppoe-in   1492                                 
+ 31 DR <pppoe-10210@bnethome>  pppoe-in   1492                                 
+ 32 DR <pppoe-10219@bnethome>  pppoe-in   1480                                 
+ 33 DR <pppoe-10220@bnethome>  pppoe-in   1492                                 
+ 34 DR <pppoe-10223@bnethome>  pppoe-in   1492                                 
+ 35 DR <pppoe-10224@bnethome>  pppoe-in   1492                                 
+ 36 DR <pppoe-10226@bnethome>  pppoe-in   1492                                 
+ 37 DR <pppoe-10227@bnethome>  pppoe-in   1492                                 
+ 38 DR <pppoe-10301@bnethome>  pppoe-in   1492                                 
+ 39 DR <pppoe-10303@bnethome>  pppoe-in   1480                                 
+ 40 DR <pppoe-10307@bnethome>  pppoe-in   1492                                 
+ 41 DR <pppoe-10308@bnethome>  pppoe-in   1492                                 
+ 42 DR <pppoe-10309@bnethome>  pppoe-in   1492                                 
+ 43 DR <pppoe-10312@bnethome>  pppoe-in   1492                                 
+ 44 DR <pppoe-10313@bnethome>  pppoe-in   1492                                 
+ 45 DR <pppoe-10314@bnethome>  pppoe-in   1492                                 
+ 46 DR <pppoe-10401@bnethome>  pppoe-in   1492                                 
+ 47 DR <pppoe-10402@bnethome>  pppoe-in   1492                                 
+ 48 DR <pppoe-10403@bnethome>  pppoe-in   1492                                 
+ 49 DR <pppoe-10405@bnethome>  pppoe-in   1492                                 
+ 50 DR <pppoe-10406@bnethome>  pppoe-in   1492                                 
+ 51 DR <pppoe-10408@bnethome>  pppoe-in   1492                                 
+ 52 DR <pppoe-10412@bnethome>  pppoe-in   1492                                 
+ 53 DR <pppoe-10413@bnethome>  pppoe-in   1492                                 
+ 54 DR <pppoe-10417@bnethome>  pppoe-in   1492                                 
+ 55 DR <pppoe-10421@bnethome>  pppoe-in   1492                                 
+ 56 DR <pppoe-10423@bnethome>  pppoe-in   1492                                 
+ 57 DR <pppoe-10424@bnethome>  pppoe-in   1492                                 
+ 58 DR <pppoe-10425@bnethome>  pppoe-in   1492                                 
+ 59 DR <pppoe-10426@bnethome>  pppoe-in   1492                                 
+ 60 DR <pppoe-10501@bnethome>  pppoe-in   1492                                 
+ 61 DR <pppoe-10502@bnethome>  pppoe-in   1492                                 
+ 62 DR <pppoe-10503@bnethome>  pppoe-in   1492                                 
+ 63 DR <pppoe-10506@bnethome>  pppoe-in   1492                                 
+ 64 DR <pppoe-10507@bnethome>  pppoe-in   1492                                 
+ 65 DR <pppoe-10508@bnethome>  pppoe-in   1492                                 
+ 66 DR <pppoe-10509@bnethome>  pppoe-in   1492                                 
+ 67 DR <pppoe-10510@bnethome>  pppoe-in   1492                                 
+ 68 DR <pppoe-10511@bnethome>  pppoe-in   1492                                 
+ 69 DR <pppoe-10514@bnethome>  pppoe-in   1492                                 
+ 70 DR <pppoe-10515@bnethome>  pppoe-in   1492                                 
+ 71 DR <pppoe-10516@bnethome>  pppoe-in   1492                                 
+ 72 DR <pppoe-10519@bnethome>  pppoe-in   1492                                 
+ 73 DR <pppoe-10523@bnethome>  pppoe-in   1492                                 
+ 74 DR <pppoe-10524@bnethome>  pppoe-in   1492                                 
+ 75 DR <pppoe-10525@bnethome>  pppoe-in   1492                                 
+ 76 DR <pppoe-10527@bnethome>  pppoe-in   1492                                 
+ 77 DR <pppoe-10529@bnethome>  pppoe-in   1492                                 
+ 78 DR <pppoe-10531@bnethome>  pppoe-in   1492                                 
+ 79 DR <pppoe-10532@bnethome>  pppoe-in   1492                                 
+ 80 DR <pppoe-10535@bnethome>  pppoe-in   1492                                 
+ 81 DR <pppoe-10536@bnethome>  pppoe-in   1492                                 
+ 82 DR <pppoe-10537@bnethome>  pppoe-in   1492                                 
+ 83 DR <pppoe-10538@bnethome>  pppoe-in   1492                                 
+ 84 DR <pppoe-10539@bnethome>  pppoe-in   1492                                 
+ 85 DR <pppoe-31702@bnethome>  pppoe-in   1492                                 
+ 86 DR <pppoe-31703@bnethome>  pppoe-in   1492                                 
+ 87 DR <pppoe-31704@bnethome>  pppoe-in   1492                                 
+ 88 DR <pppoe-31705@bnethome>  pppoe-in   1492                                 
+ 89 DR <pppoe-31706@bnethome>  pppoe-in   1492                                 
+ 90 DR <pppoe-31707@bnethome>  pppoe-in   1492                                 
+ 91 DR <pppoe-31708@bnethome>  pppoe-in   1492                                 
+ 92 DR <pppoe-31711@bnethome>  pppoe-in   1492                                 
+ 93 DR <pppoe-31713@bnethome>  pppoe-in   1492                                 
+ 94 DR <pppoe-31714@bnethome>  pppoe-in   1492                                 
+ 95 DR <pppoe-31716@bnethome>  pppoe-in   1492                                 
+ 96 DR <pppoe-31802@bnethome>  pppoe-in   1492                                 
+ 97 DR <pppoe-31803@bnethome>  pppoe-in   1492                                 
+ 98 DR <pppoe-31804@bnethome>  pppoe-in   1492                                 
+ 99 DR <pppoe-31805@bnethome>  pppoe-in   1492                                 
+100 DR <pppoe-31806@bnethome>  pppoe-in   1492                                 
+101 DR <pppoe-31807@bnethome>  pppoe-in   1492                                 
+102 DR <pppoe-31809@bnethome>  pppoe-in   1492                                 
+103 DR <pppoe-31812@bnethome>  pppoe-in   1492                                 
+104 DR <pppoe-31813@bnethome>  pppoe-in   1492                                 
+105 DR <pppoe-31814@bnethome>  pppoe-in   1492                                 
+106 DR <pppoe-31815@bnethome>  pppoe-in   1492                                 
+107 DR <pppoe-31817@bnethome>  pppoe-in   1492                                 
+108 DR <pppoe-31901@bnethome>  pppoe-in   1492                                 
+109 DR <pppoe-31902@bnethome>  pppoe-in   1492                                 
+110 DR <pppoe-31903@bnethome>  pppoe-in   1492                                 
+111 DR <pppoe-31904@bnethome>  pppoe-in   1492                                 
+112 DR <pppoe-31905@bnethome>  pppoe-in   1492                                 
+113 DR <pppoe-31906@bnethome>  pppoe-in   1492                                 
+114 DR <pppoe-31907@bnethome>  pppoe-in   1492                                 
+115 DR <pppoe-31910@bnethome>  pppoe-in   1492                                 
+116 DR <pppoe-31911@bnethome>  pppoe-in   1492                                 
+117 DR <pppoe-31912@bnethome>  pppoe-in   1492                                 
+118 DR <pppoe-31913@bnethome>  pppoe-in   1492                                 
+119 DR <pppoe-31914@bnethome>  pppoe-in   1492                                 
+120 DR <pppoe-31915@bnethome>  pppoe-in   1492                                 
+121 DR <pppoe-31916@bnethome>  pppoe-in   1492                                 
+122 DR <pppoe-31917@bnethome>  pppoe-in   1492                                 
+123 DR <pppoe-31918@bnethome>  pppoe-in   1492                                 
+124 DR <pppoe-31919@bnethome>  pppoe-in   1492                                 
+125 DR <pppoe-31920@bnethome>  pppoe-in   1492                                 
+126 DR <pppoe-31922@bnethome>  pppoe-in   1492                                 
+127 DR <pppoe-31923@bnethome>  pppoe-in   1492                                 
+128 DR <pppoe-31925@bnethome>  pppoe-in   1492                                 
+129 DR <pppoe-31926@bnethome>  pppoe-in   1492                                 
+130 DR <pppoe-32003@bnethome>  pppoe-in   1492                                 
+131 DR <pppoe-32005@bnethome>  pppoe-in   1492                                 
+132 DR <pppoe-32007@bnethome>  pppoe-in   1492                                 
+133 DR <pppoe-32008@bnethome>  pppoe-in   1492                                 
+134 DR <pppoe-32009@bnethome>  pppoe-in   1492                                 
+135 DR <pppoe-32010@bnethome>  pppoe-in   1492                                 
+136 DR <pppoe-32016@bnethome>  pppoe-in   1492                                 
+137 DR <pppoe-32017@bnethome>  pppoe-in   1492                                 
+138 DR <pppoe-32018@bnethome>  pppoe-in   1492                                 
+139 DR <pppoe-32019@bnethome>  pppoe-in   1492                                 
+140 DR <pppoe-32021@bnethome>  pppoe-in   1492                                 
+141 DR <pppoe-32022@bnethome>  pppoe-in   1492                                 
+142 DR <pppoe-32023@bnethome>  pppoe-in   1492                                 
+143 DR <pppoe-32024@bnethome>  pppoe-in   1492                                 
+144 DR <pppoe-32025@bnethome>  pppoe-in   1492                                 
+145 DR <pppoe-32026@bnethome>  pppoe-in   1492                                 
+146 DR <pppoe-32027@bnethome>  pppoe-in   1492                                 
+147 DR <pppoe-32028@bnethome>  pppoe-in   1492                                 
+148 DR <pppoe-32029@bnethome>  pppoe-in   1492                                 
+149 DR <pppoe-32101@bnethome>  pppoe-in   1492                                 
+150 DR <pppoe-32102@bnethome>  pppoe-in   1492                                 
+151 DR <pppoe-32103@bnethome>  pppoe-in   1492                                 
+152 DR <pppoe-32105@bnethome>  pppoe-in   1492                                 
+153 DR <pppoe-32109@bnethome>  pppoe-in   1492                                 
+154 DR <pppoe-32110@bnethome>  pppoe-in   1492                                 
+155 DR <pppoe-32111@bnethome>  pppoe-in   1492                                 
+156 DR <pppoe-32112@bnethome>  pppoe-in   1492                                 
+157 DR <pppoe-32113@bnethome>  pppoe-in   1492                                 
+158 DR <pppoe-32114@bnethome>  pppoe-in   1492                                 
+159 DR <pppoe-32115@bnethome>  pppoe-in   1492                                 
+160 DR <pppoe-32116@bnethome>  pppoe-in   1492                                 
+161 DR <pppoe-32117@bnethome>  pppoe-in   1492                                 
+162 DR <pppoe-32118@bnethome>  pppoe-in   1492                                 
+163 DR <pppoe-32120@bnethome>  pppoe-in   1492                                 
+164 DR <pppoe-32121@bnethome>  pppoe-in   1492                                 
+165 DR <pppoe-32123@bnethome>  pppoe-in   1492                                 
+166 DR <pppoe-32126@bnethome>  pppoe-in   1492                                 
+167 DR <pppoe-32127@bnethome>  pppoe-in   1492                                 
+168 DR <pppoe-32201@bnethome>  pppoe-in   1492                                 
+169 DR <pppoe-32202@bnethome>  pppoe-in   1492                                 
+170 DR <pppoe-32203@bnethome>  pppoe-in   1492                                 
+171 DR <pppoe-32204@bnethome>  pppoe-in   1492                                 
+172 DR <pppoe-32205@bnethome>  pppoe-in   1492                                 
+173 DR <pppoe-32206@bnethome>  pppoe-in   1492                                 
+174 DR <pppoe-32207@bnethome>  pppoe-in   1492                                 
+175 DR <pppoe-32210@bnethome>  pppoe-in   1492                                 
+176 DR <pppoe-32213@bnethome>  pppoe-in   1492                                 
+177 DR <pppoe-32214@bnethome>  pppoe-in   1492                                 
+178 DR <pppoe-32215@bnethome>  pppoe-in   1492                                 
+179 DR <pppoe-32218@bnethome>  pppoe-in   1492                                 
+180 DR <pppoe-32302@bnethome>  pppoe-in   1492                                 
+181 DR <pppoe-32303@bnethome>  pppoe-in   1492                                 
+182 DR <pppoe-32305@bnethome>  pppoe-in   1492                                 
+183 DR <pppoe-32306@bnethome>  pppoe-in   1492                                 
+184 DR <pppoe-32309@bnethome>  pppoe-in   1492                                 
+185 DR <pppoe-32312@bnethome>  pppoe-in   1492                                 
+186 DR <pppoe-32313@bnethome>  pppoe-in   1492                                 
+187 DR <pppoe-32315@bnethome>  pppoe-in   1492                                 
+188 DR <pppoe-32318@bnethome>  pppoe-in   1492                                 
+189 DR <pppoe-32319@bnethome>  pppoe-in   1492                                 
+190 DR <pppoe-32320@bnethome>  pppoe-in   1492                                 
+191 DR <pppoe-32321@bnethome>  pppoe-in   1492                                 
+192 DR <pppoe-32322@bnethome>  pppoe-in   1492                                 
+193 DR <pppoe-32323@bnethome>  pppoe-in   1492                                 
+194 DR <pppoe-32324@bnethome>  pppoe-in   1492                                 
+195 DR <pppoe-32326@bnethome>  pppoe-in   1492                                 
+196 DR <pppoe-32327@bnethome>  pppoe-in   1492                                 
+197 DR <pppoe-32328@bnethome>  pppoe-in   1492                                 
+198 DR <pppoe-32329@bnethome>  pppoe-in   1492                                 
+199 DR <pppoe-32331@bnethome>  pppoe-in   1492                                 
+200 DR <pppoe-32332@bnethome>  pppoe-in   1492                                 
+201 DR <pppoe-32333@bnethome>  pppoe-in   1492                                 
+202 DR <pppoe-32335@bnethome>  pppoe-in   1492                                 
+203 DR <pppoe-32336@bnethome>  pppoe-in   1492                                 
+204 DR <pppoe-32337@bnethome>  pppoe-in   1492                                 
+205 DR <pppoe-32338@bnethome>  pppoe-in   1492                                 
+206 DR <pppoe-32339@bnethome>  pppoe-in   1492                                 
+207 DR <pppoe-32340@bnethome>  pppoe-in   1492                                 
+208 DR <pppoe-32341@bnethome>  pppoe-in   1492                                 
+209 DR <pppoe-32343@bnethome>  pppoe-in   1492                                 
+210 DR <pppoe-32401@bnethome>  pppoe-in   1492                                 
+211 DR <pppoe-32403@bnethome>  pppoe-in   1492                                 
+212 DR <pppoe-32406@bnethome>  pppoe-in   1492                                 
+213 DR <pppoe-32407@bnethome>  pppoe-in   1492                                 
+214 DR <pppoe-32408@bnethome>  pppoe-in   1492                                 
+215 DR <pppoe-32409@bnethome>  pppoe-in   1492                                 
+216 DR <pppoe-32410@bnethome>  pppoe-in   1492                                 
+217 DR <pppoe-32412@bnethome>  pppoe-in   1492                                 
+218 DR <pppoe-32413@bnethome>  pppoe-in   1492                                 
+219 DR <pppoe-32414@bnethome>  pppoe-in   1492                                 
+220 DR <pppoe-32415@bnethome>  pppoe-in   1492                                 
+221 DR <pppoe-32501@bnethome>  pppoe-in   1492                                 
+222 DR <pppoe-32503@bnethome>  pppoe-in   1492                                 
+223 DR <pppoe-32504@bnethome>  pppoe-in   1492                                 
+224 DR <pppoe-32505@bnethome>  pppoe-in   1492                                 
+225 DR <pppoe-32506@bnethome>  pppoe-in   1492                                 
+226 DR <pppoe-32507@bnethome>  pppoe-in   1492                                 
+227 DR <pppoe-32508@bnethome>  pppoe-in   1492                                 
+228 DR <pppoe-32509@bnethome>  pppoe-in   1492                                 
+229 DR <pppoe-32510@bnethome>  pppoe-in   1492                                 
+230 DR <pppoe-32512@bnethome>  pppoe-in   1492                                 
+231 DR <pppoe-32513@bnethome>  pppoe-in   1492                                 
+232 DR <pppoe-32515@bnethome>  pppoe-in   1492                                 
+233 DR <pppoe-32516@bnethome>  pppoe-in   1492                                 
+234 DR <pppoe-32517@bnethome>  pppoe-in   1492                                 
+235 DR <pppoe-32518@bnethome>  pppoe-in   1492                                 
+236 DR <pppoe-32519@bnethome>  pppoe-in   1492                                 
+237 DR <pppoe-32520@bnethome>  pppoe-in   1492                                 
+238 DR <pppoe-32521@bnethome>  pppoe-in   1492                                 
+239 DR <pppoe-32523@bnethome>  pppoe-in   1492                                 
+240 DR <pppoe-32601@bnethome>  pppoe-in   1492                                 
+241 DR <pppoe-32602@bnethome>  pppoe-in   1492                                 
+242 DR <pppoe-32603@bnethome>  pppoe-in   1492                                 
+243 DR <pppoe-32604@bnethome>  pppoe-in   1492                                 
+244 DR <pppoe-32605@bnethome>  pppoe-in   1492                                 
+245 DR <pppoe-32608@bnethome>  pppoe-in   1492                                 
+246 DR <pppoe-32609@bnethome>  pppoe-in   1492                                 
+247 DR <pppoe-32701@bnethome>  pppoe-in   1492                                 
+248 DR <pppoe-32702@bnethome>  pppoe-in   1492                                 
+249 DR <pppoe-32703@bnethome>  pppoe-in   1492                                 
+250 DR <pppoe-32704@bnethome>  pppoe-in   1492                                 
+251 DR <pppoe-32705@bnethome>  pppoe-in   1492                                 
+252 DR <pppoe-32706@bnethome>  pppoe-in   1492                                 
+253 DR <pppoe-32707@bnethome>  pppoe-in   1492                                 
+254 DR <pppoe-32710@bnethome>  pppoe-in   1492                                 
+255 DR <pppoe-32713@bnethome>  pppoe-in   1492                                 
+256 DR <pppoe-32714@bnethome>  pppoe-in   1492                                 
+257 DR <pppoe-32715@bnethome>  pppoe-in   1492                                 
+258 DR <pppoe-32716@bnethome>  pppoe-in   1492                                 
+259 DR <pppoe-32717@bnethome>  pppoe-in   1492                                 
+260 DR <pppoe-32719@bnethome>  pppoe-in   1492                                 
+261 DR <pppoe-32721@bnethome>  pppoe-in   1492                                 
+262 DR <pppoe-32722@bnethome>  pppoe-in   1492                                 
+263 DR <pppoe-32723@bnethome>  pppoe-in   1492                                 
+264 DR <pppoe-32724@bnethome>  pppoe-in   1492                                 
+265 DR <pppoe-32725@bnethome>  pppoe-in   1492                                 
+266 DR <pppoe-32801@bnethome>  pppoe-in   1492                                 
+267 DR <pppoe-32802@bnethome>  pppoe-in   1492                                 
+268 DR <pppoe-32803@bnethome>  pppoe-in   1492                                 
+269 DR <pppoe-32806@bnethome>  pppoe-in   1492                                 
+270 DR <pppoe-32807@bnethome>  pppoe-in   1492                                 
+271 DR <pppoe-32809@bnethome>  pppoe-in   1492                                 
+272 DR <pppoe-32810@bnethome>  pppoe-in   1492                                 
+273 DR <pppoe-32811@bnethome>  pppoe-in   1492                                 
+274 DR <pppoe-32812@bnethome>  pppoe-in   1492                                 
+275 DR <pppoe-32813@bnethome>  pppoe-in   1492                                 
+276 DR <pppoe-32814@bnethome>  pppoe-in   1492                                 
+277 DR <pppoe-32815@bnethome>  pppoe-in   1492                                 
+278 DR <pppoe-32816@bnethome>  pppoe-in   1492                                 
+279 DR <pppoe-32817@bnethome>  pppoe-in   1492                                 
+280 DR <pppoe-32818@bnethome>  pppoe-in   1492                                 
+281 DR <pppoe-32819@bnethome>  pppoe-in   1492                                 
+282 DR <pppoe-32821@bnethome>  pppoe-in   1492                                 
+283 DR <pppoe-32822@bnethome>  pppoe-in   1492                                 
+284 DR <pppoe-32823@bnethome>  pppoe-in   1492                                 
+285 DR <pppoe-32824@bnethome>  pppoe-in   1492                                 
+286 DR <pppoe-32825@bnethome>  pppoe-in   1492                                 
+287 DR <pppoe-32826@bnethome>  pppoe-in   1492                                 
+288 DR <pppoe-32827@bnethome>  pppoe-in   1492                                 
+289 DR <pppoe-32828@bnethome>  pppoe-in   1492                                 
+290 DR <pppoe-32830@bnethome>  pppoe-in   1492                                 
+291 DR <pppoe-32901@bnethome>  pppoe-in   1492                                 
+292 DR <pppoe-32902@bnethome>  pppoe-in   1492                                 
+293 DR <pppoe-32903@bnethome>  pppoe-in   1492                                 
+294 DR <pppoe-32904@bnethome>  pppoe-in   1492                                 
+295 DR <pppoe-32905@bnethome>  pppoe-in   1492                                 
+296 DR <pppoe-32906@bnethome>  pppoe-in   1492                                 
+297 DR <pppoe-32907@bnethome>  pppoe-in   1492                                 
+298 DR <pppoe-32908@bnethome>  pppoe-in   1492                                 
+299 DR <pppoe-32911@bnethome>  pppoe-in   1492                                 
+300 DR <pppoe-32912@bnethome>  pppoe-in   1492                                 
+301 DR <pppoe-32913@bnethome>  pppoe-in   1492                                 
+302 DR <pppoe-32915@bnethome>  pppoe-in   1492                                 
+303 DR <pppoe-32916@bnethome>  pppoe-in   1492                                 
+304 DR <pppoe-32918@bnethome>  pppoe-in   1492                                 
+305 DR <pppoe-32919@bnethome>  pppoe-in   1492                                 
+306 DR <pppoe-32920@bnethome>  pppoe-in   1492                                 
+307 DR <pppoe-32922@bnethome>  pppoe-in   1492                                 
+308 DR <pppoe-32924@bnethome>  pppoe-in   1492                                 
+309 DR <pppoe-32925@bnethome>  pppoe-in   1492                                 
+310 DR <pppoe-32926@bnethome>  pppoe-in   1492                                 
+311 DR <pppoe-32927@bnethome>  pppoe-in   1492                                 
+312 DR <pppoe-32928@bnethome>  pppoe-in   1492                                 
+313 DR <pppoe-32929@bnethome>  pppoe-in   1492                                 
+314 DR <pppoe-32931@bnethome>  pppoe-in   1492                                 
+315 DR <pppoe-32932@bnethome>  pppoe-in   1492                                 
+316 DR <pppoe-32933@bnethome>  pppoe-in   1492                                 
+317 DR <pppoe-32934@bnethome>  pppoe-in   1492                                 
+318 DR <pppoe-32935@bnethome>  pppoe-in   1492                                 
+319 DR <pppoe-33003@bnethome>  pppoe-in   1492                                 
+320 DR <pppoe-33005@bnethome>  pppoe-in   1492                                 
+321 DR <pppoe-33007@bnethome>  pppoe-in   1492                                 
+322 DR <pppoe-33008@bnethome>  pppoe-in   1492                                 
+323 DR <pppoe-33009@bnethome>  pppoe-in   1492                                 
+324 DR <pppoe-33010@bnethome>  pppoe-in   1492                                 
+325 DR <pppoe-33012@bnethome>  pppoe-in   1492                                 
+326 DR <pppoe-33013@bnethome>  pppoe-in   1492                                 
+327 DR <pppoe-33018@bnethome>  pppoe-in   1492                                 
+328 DR <pppoe-33019@bnethome>  pppoe-in   1492                                 
+329 DR <pppoe-33101@bnethome>  pppoe-in   1492                                 
+330 DR <pppoe-33102@bnethome>  pppoe-in   1492                                 
+331 DR <pppoe-33104@bnethome>  pppoe-in   1492                                 
+332 DR <pppoe-33105@bnethome>  pppoe-in   1492                                 
+333 DR <pppoe-33106@bnethome>  pppoe-in   1492                                 
+334 DR <pppoe-33107@bnethome>  pppoe-in   1492                                 
+335 DR <pppoe-33108@bnethome>  pppoe-in   1492                                 
+336 DR <pppoe-33109@bnethome>  pppoe-in   1492                                 
+337 DR <pppoe-33110@bnethome>  pppoe-in   1492                                 
+338 DR <pppoe-33115@bnethome>  pppoe-in   1492                                 
+339 DR <pppoe-33116@bnethome>  pppoe-in   1492                                 
+340 DR <pppoe-33117@bnethome>  pppoe-in   1492                                 
+341 DR <pppoe-33120@bnethome>  pppoe-in   1492                                 
+342 DR <pppoe-33121@bnethome>  pppoe-in   1492                                 
+343 DR <pppoe-33122@bnethome>  pppoe-in   1492                                 
+344 DR <pppoe-33201@bnethome>  pppoe-in   1492                                 
+345 DR <pppoe-33202@bnethome>  pppoe-in   1492                                 
+346 DR <pppoe-33203@bnethome>  pppoe-in   1492                                 
+347 DR <pppoe-33204@bnethome>  pppoe-in   1492                                 
+348 DR <pppoe-33205@bnethome>  pppoe-in   1492                                 
+349 DR <pppoe-33208@bnethome>  pppoe-in   1492                                 
+350 DR <pppoe-33209@bnethome>  pppoe-in   1492                                 
+351 DR <pppoe-33210@bnethome>  pppoe-in   1492                                 
+352 DR <pppoe-33212@bnethome>  pppoe-in   1492                                 
+353 DR <pppoe-33213@bnethome>  pppoe-in   1492                                 
+354 DR <pppoe-33214@bnethome>  pppoe-in   1492                                 
+355 DR <pppoe-33217@bnethome>  pppoe-in   1492                                 
+356 DR <pppoe-33219@bnethome>  pppoe-in   1492                                 
+357 DR <pppoe-33221@bnethome>  pppoe-in   1492                                 
+358 DR <pppoe-33224@bnethome>  pppoe-in   1492                                 
+359 DR <pppoe-33225@bnethome>  pppoe-in   1492                                 
+360 DR <pppoe-33227@bnethome>  pppoe-in   1492                                 
+361 DR <pppoe-33229@bnethome>  pppoe-in   1492                                 
+362 DR <pppoe-33231@bnethome>  pppoe-in   1492                                 
+363 DR <pppoe-33232@bnethome>  pppoe-in   1492                                 
+364 DR <pppoe-33233@bnethome>  pppoe-in   1492                                 
+365 DR <pppoe-33234@bnethome>  pppoe-in   1492                                 
+366 DR <pppoe-33235@bnethome>  pppoe-in   1492                                 
+367 DR <pppoe-33236@bnethome>  pppoe-in   1492                                 
+368 DR <pppoe-33237@bnethome>  pppoe-in   1492                                 
+369 DR <pppoe-33239@bnethome>  pppoe-in   1492                                 
+370 DR <pppoe-33240@bnethome>  pppoe-in   1492                                 
+371 DR <pppoe-33241@bnethome>  pppoe-in   1492                                 
+372 DR <pppoe-33242@bnethome>  pppoe-in   1492                                 
+373  R lo                      loopback  65536                00:00:00:00:00:00
+374  R loopback                bridge     1500  65535         FE:34:14:95:54:B7
+;;; mgmt_olt_b_distribution_pop001_003_&_004
+375  R vlan3                   vlan       1500   1576         74:4D:28:32:55:A5
+;;; b018_u_kp_kb
+376  R vlan101                 vlan       1500   1576         74:4D:28:32:55:A5
+;;; b019_u_ns_kb
+377  R vlan102                 vlan       1500   1576         74:4D:28:32:55:A5
+;;; b020_u_ns_kb
+378  R vlan103                 vlan       1500   1576         74:4D:28:32:55:A5
+;;; b021_u_py_tt
+379  R vlan104                 vlan       1500   1576         74:4D:28:32:55:A5
+;;; odp_trn1_u_ab_kb
+380  R vlan105                 vlan       1500   1576         74:4D:28:32:55:A5
+;;; gry_03_b1_tt
+381  R vlan317                 vlan       1500   1576         74:4D:28:32:55:A5
+;;; gry_04_b3_sl_tt
+382  R vlan318                 vlan       1500   1576         74:4D:28:32:55:A5
+;;; gry_11_a9_sl
+383  R vlan319                 vlan       1500   1576         74:4D:28:32:55:A5
+;;; gry_08_a8_sl
+384  R vlan320                 vlan       1500   1576         74:4D:28:32:55:A5
+385  R vlan321 - GRY Blok G7   vlan       1500   1576         74:4D:28:32:55:A5
+;;; gry_35_f2_sl
+386  R vlan322                 vlan       1500   1576         74:4D:28:32:55:A5
+;;; gry_40_g9_sl
+387  R vlan323                 vlan       1500   1576         74:4D:28:32:55:A6
+;;; gry_24_d6_sl
+388  R vlan324                 vlan       1500   1576         74:4D:28:32:55:A6
+;;; gry_26_d5_sl
+389  R vlan325                 vlan       1500   1576         74:4D:28:32:55:A6
+;;; gry_32_f1_sl
+390  R vlan326                 vlan       1500   1576         74:4D:28:32:55:A6
+;;; gry_46_g5_sl
+391  R vlan327                 vlan       1500   1576         74:4D:28:32:55:A6
+392  R vlan328                 vlan       1500   1576         74:4D:28:32:55:A6
+;;; gry_14_a5_sl
+393  R vlan329                 vlan       1500   1576         74:4D:28:32:55:A6
+394  R vlan330 - GRY Blok G8   vlan       1500   1576         74:4D:28:32:55:A6
+;;; gry_52_c10_sl
+395  R vlan331                 vlan       1500   1576         74:4D:28:32:55:A6
+;;; gry_54_c8_sl
+396  R vlan332                 vlan       1500   1576         74:4D:28:32:55:A6
+
+21/10/2024 21:03:34 || 103.73.72.6 || jul || Mengirim Konfigurasi || Berhasil login pada perangkat 103.73.72.6
+21/10/2024 21:06:21 || 103.73.72.6 || jul || Mengirim Konfigurasi || Berhasil login pada perangkat 103.73.72.6
+21/10/2024 21:09:45 || 103.73.72.6 || jul || Mengirim Konfigurasi || Berhasil login pada perangkat 103.73.72.6
+21/10/2024 21:09:45 || 103.73.72.6 || jul || Mengirim Konfigurasi || /ip address print
+21/10/2024 21:11:44 || 103.73.72.6 || jul || Mengirim Konfigurasi || Berhasil login pada perangkat 103.73.72.6
+21/10/2024 21:11:45 || 103.73.72.6 || jul || Mengirim Konfigurasi || /ip address print
+21/10/2024 21:15:05 || 103.73.72.6 || jul || Mengirim Konfigurasi || Berhasil login pada perangkat 103.73.72.6
+21/10/2024 21:15:05 || 103.73.72.6 || jul || Mengirim Konfigurasi || /ip address print
+21/10/2024 21:15:34 || 103.73.72.6 || jul || Mengirim Konfigurasi || Berhasil login pada perangkat 103.73.72.6
+21/10/2024 21:15:34 || 103.73.72.6 || jul || Mengirim Konfigurasi || /ip address print
+21/10/2024 21:16:21 || 103.73.72.6 || jul || Mengirim Konfigurasi || Berhasil login pada perangkat 103.73.72.6
+21/10/2024 21:16:22 || 103.73.72.6 || jul || Mengirim Konfigurasi || /ip address print
+21/10/2024 21:17:07 || 103.73.72.6 || jul || Mengirim Konfigurasi || Berhasil login pada perangkat 103.73.72.6
+21/10/2024 21:17:08 || 103.73.72.6 || jul || Mengirim Konfigurasi || /ip address print
+21/10/2024 21:18:10 || 103.73.72.6 || jul || Mengirim Konfigurasi || Berhasil login pada perangkat 103.73.72.6
+21/10/2024 21:18:11 || 103.73.72.6 || jul || Mengirim Konfigurasi || /ip address print
+21/10/2024 21:18:47 || 103.73.72.6 || jul || Mengirim Konfigurasi || Berhasil login pada perangkat 103.73.72.6
+21/10/2024 21:18:48 || 103.73.72.6 || jul || Mengirim Konfigurasi || /ip address print
+21/10/2024 21:20:01 || 103.73.72.6 || jul || Mengirim Konfigurasi || Berhasil login pada perangkat 103.73.72.6
+21/10/2024 21:20:02 || 103.73.72.6 || jul || Mengirim Konfigurasi || /ip address print
+21/10/2024 21:20:51 || 103.73.72.6 || jul || Mengirim Konfigurasi || Berhasil login pada perangkat 103.73.72.6
+21/10/2024 21:20:51 || 103.73.72.6 || jul || Mengirim Konfigurasi || /ip address print
+21/10/2024 21:21:20 || 103.73.72.6 || jul || Mengirim Konfigurasi || Berhasil login pada perangkat 103.73.72.6
+21/10/2024 21:21:21 || 103.73.72.6 || jul || Mengirim Konfigurasi || /ip address print
+21/10/2024 21:22:08 || 103.73.72.72 || jul || Mengirim Konfigurasi || Berhasil login pada perangkat 103.73.72.72
+21/10/2024 21:22:09 || 103.73.72.72 || jul || Mengirim Konfigurasi || /ip address print
+21/10/2024 21:22:09 || 103.73.72.72 || jul || Mengirim Konfigurasi || /interface print
+21/10/2024 21:22:09 || 103.73.72.73 || jul || Mengirim Konfigurasi || Berhasil login pada perangkat 103.73.72.73
+21/10/2024 21:22:10 || 103.73.72.73 || jul || Mengirim Konfigurasi || /ip address print
+21/10/2024 21:22:10 || 103.73.72.73 || jul || Mengirim Konfigurasi || /interface print
+21/10/2024 21:30:44 || 103.73.72.72 || jul || Mengirim Konfigurasi || Berhasil login pada perangkat 103.73.72.72
+21/10/2024 21:30:44 || 103.73.72.72 || jul || Mengirim Konfigurasi || /ip address print
+21/10/2024 21:30:45 || 103.73.72.72 || jul || Mengirim Konfigurasi || /interface print
+21/10/2024 21:30:45 || 103.73.72.73 || jul || Mengirim Konfigurasi || Berhasil login pada perangkat 103.73.72.73
+21/10/2024 21:30:45 || 103.73.72.73 || jul || Mengirim Konfigurasi || /ip address print
+21/10/2024 21:30:46 || 103.73.72.73 || jul || Mengirim Konfigurasi || /interface print
+21/10/2024 21:31:31 || 103.73.72.72 || jul || Mengirim Konfigurasi || Berhasil login pada perangkat 103.73.72.72
+21/10/2024 21:31:32 || 103.73.72.72 || jul || Mengirim Konfigurasi || /ip address print
+21/10/2024 21:31:32 || 103.73.72.72 || jul || Mengirim Konfigurasi || /interface print
+21/10/2024 21:31:32 || 103.73.72.73 || jul || Mengirim Konfigurasi || Berhasil login pada perangkat 103.73.72.73
+21/10/2024 21:31:33 || 103.73.72.73 || jul || Mengirim Konfigurasi || /ip address print
+21/10/2024 21:31:33 || 103.73.72.73 || jul || Mengirim Konfigurasi || /interface print
+21/10/2024 21:33:30 || 103.73.72.72 || jul || Mengirim Konfigurasi || Berhasil login pada perangkat 103.73.72.72
+21/10/2024 21:33:30 || 103.73.72.72 || jul || Mengirim Konfigurasi || /ip address print
+21/10/2024 21:33:31 || 103.73.72.72 || jul || Mengirim Konfigurasi || /interface print
+21/10/2024 21:33:31 || 103.73.72.73 || jul || Mengirim Konfigurasi || Berhasil login pada perangkat 103.73.72.73
+21/10/2024 21:33:32 || 103.73.72.73 || jul || Mengirim Konfigurasi || /ip address print
+21/10/2024 21:33:32 || 103.73.72.73 || jul || Mengirim Konfigurasi || /interface print
+21/10/2024 21:38:57 || 103.73.72.7 || jul || Mengirim Konfigurasi || Berhasil login pada perangkat 103.73.72.7
+21/10/2024 21:38:57 || 103.73.72.7 || jul || Mengirim Konfigurasi || Berhasil melakukan konfigurasi: /interface bridge add name=testing
+22/10/2024 09:27:58 || 103.73.74.18 || jul || Mengirim Konfigurasi Client || Terjadi kegagalan login pada perangkat 103.73.74.18 dengan detail : Authentication failed.
+22/10/2024 09:30:09 || 10.201.35.61 || jul || Mengirim Konfigurasi Client || Terjadi kegagalan login pada perangkat 10.201.35.61 dengan detail : [Errno 110] Connection timed out
+22/10/2024 09:34:13 || 103.73.75.62 || jul || Mengirim Konfigurasi Client || Berhasil login pada perangkat 103.73.75.62
+22/10/2024 09:34:14 || 103.73.75.62 || jul || Mengirim Konfigurasi Client || /ip address print

@@ -34,6 +34,7 @@ class Client(models.Model):
     namapelanggan = models.CharField(max_length = 255)
     tanggalinstalasi = models.DateField()
     ipremote = models.CharField(max_length = 20)
+    deviceOs = models.CharField(max_length = 100)
     portwinbox = models.IntegerField(blank=True, null=True)
     portssh = models.IntegerField(blank=True, null=True)
     portapi = models.IntegerField(blank=True, null=True)

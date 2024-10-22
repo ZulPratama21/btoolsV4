@@ -1,14 +1,7 @@
 def gConfC320OnuBridge(sn,neCodeMain,ipAddress,subnetMask,limitasi,modemType):
     oltId = int(neCodeMain[-4:-2])
-    if neCodeMain[:-4] == '3':
-        if oltId < 17:
-            oltPort = f'1/2/{oltId}'
 
-        elif oltId < 33:
-            oltId2 = oltId - 32
-            oltPort = f'1/2/{oltId2}'
-
-    elif oltId < 17:
+    if oltId < 17:
         oltPort = f'1/1/{oltId}'
 
     elif oltId < 33:
@@ -50,10 +43,8 @@ exit'''
 
 def gConfC320OnuPppoe(sn,neCodeMain,limitasi,modemType):
     oltId = int(neCodeMain[-4:-2])
-    if neCodeMain[:-4] == '3':
-        oltPort = f'1/2/{oltId}'
     
-    elif oltId < 17:
+    if oltId < 17:
         oltPort = f'1/1/{oltId}'
 
     else:
@@ -115,15 +106,8 @@ def createGateway(ipAddress):
 def gConfC320OnuStatic(sn,neCodeMain,ipAddress,subnetMask,limitasi,modemType):
     gateway = createGateway(ipAddress)
     oltId = int(neCodeMain[-4:-2])
-    if neCodeMain[:-4] == '3':
-        if oltId < 17:
-            oltPort = f'1/2/{oltId}'
 
-        elif oltId < 33:
-            oltId2 = oltId - 32
-            oltPort = f'1/2/{oltId2}'
-
-    elif oltId < 17:
+    if oltId < 17:
         oltPort = f'1/1/{oltId}'
 
     elif oltId < 33:
@@ -167,13 +151,7 @@ def gConfC320OnuManyPacket(vlanGw, sn,neCodes,ipAddress,limitasi,modemType):
     neCodeMain = neCodes[0]
     oltId = int(neCodeMain[-4:-2])
 
-    if neCodeMain[:-4] == '3':
-        if oltId < 17:
-            oltPort = f'1/2/{oltId}'
-        elif oltId < 33:
-            oltId2 = oltId - 32
-            oltPort = f'1/2/{oltId2}'
-    elif oltId < 17:
+    if oltId < 17:
         oltPort = f'1/1/{oltId}'
     elif oltId < 33:
         oltId2 = oltId - 16

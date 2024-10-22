@@ -26,7 +26,7 @@ def writeLog(remoteAddress, user, activity, log):
 		f.write(logOutput)
 
 	if 'password' in logOutput:
-		logOutput = f'\n{formattedTime} || {remoteAddress} || {user} || {activity}'
+		logOutput = f'\n{formattedTime} || {remoteAddress} || {user} || {activity} || log mengandung data confiden'
 
 	return logOutput
 
@@ -48,7 +48,14 @@ def confRouterOs(remoteAddress, user, password, port, activity, configList, roll
 
 			output = (stdout.read().decode("ascii").strip("\n"))
 
-			if(len(output) != 0):
+			if 'print' in config:
+				log = writeLog(remoteAddress, user, activity, f'{config}')
+				logList.append(log)
+				logList.append(output)
+
+				continue
+
+			elif len(output) != 0:
 				log = writeLog(remoteAddress, user, activity, f'terjadi error pada konfigurasi: {config} dengan detail: {output}')
 				logList.append(log)
 				
