@@ -1958,3 +1958,5 @@ Columns: NAME, TYPE, ACTUAL-MTU, L2MTU, MAX-L2MTU, MAC-ADDRESS
 22/10/2024 23:01:11 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip firewall filter add action=drop chain=input comment=dropSpamPort src-address-list=portScanner
 22/10/2024 23:01:12 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /ip service set ssh address=172.16.1.77/32,172.16.1.27/32,172.16.1.50/32,172.16.1.130/32,103.73.74.15/32 port=22322
 22/10/2024 23:01:12 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Berhasil melakukan konfigurasi: /snmp set contact=noc@bnet.id enabled=yes location="POP001-Adiarsa" trap-community=intbnet trap-version=3
+23/10/2024 13:18:54 || 10.0.250.2 || admin || Aktivasi Perangkat BNET || Gagal login pada perangkat 10.0.250.2 dengan detail : [Errno None] Unable to connect to port 22 on 10.0.250.2
+23/10/2024 13:18:54 || 10.0.250.2 || jul || Aktivasi Perangkat BNET || Gagal login pada perangkat 10.0.250.2 dengan detail : [Errno None] Unable to connect to port 22 on 10.0.250.2

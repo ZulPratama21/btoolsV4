@@ -3,7 +3,7 @@ from common.utils import confRouterOs, decryptor
 from datetime import datetime
 import time
 
-def deviceActivation(remoteAddress, user, password, portSsh, deviceId, pop, routerFirewall):
+def deviceActivationRos(remoteAddress, user, password, portSsh, deviceId, pop, routerFirewall):
     # Mengatur Hak Akses
     removeUserAdmin = '/user remove admin'
     addActivator = f'/user add name={user} password={password} group=write'

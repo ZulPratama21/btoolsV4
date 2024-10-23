@@ -13,7 +13,7 @@ from .scriptNetmation.generateScript import (
     gConfC320OnuManyPacket
     )
 
-from .scriptNetmation.activation import deviceActivation
+from .scriptNetmation.activation import deviceActivationRos
 from databases.models import UserDevice, Device, Client
 from common.utils import decryptor, confRouterOs
 from databases.forms import deviceForm
@@ -306,7 +306,15 @@ def activationDevice(request):
             user = request.POST.get('user')
             password = request.POST.get('password')
 
-            result = deviceActivation(remoteAddress, user, password, portSsh, deviceId, pop, routerFirewall)
+            if os.lower() == 'routeros':
+                result = deviceActivationRos(remoteAddress, user, password, portSsh, deviceId, pop, routerFirewall)
+
+            else:
+                result = [f"{remoteAddress} || {os} || Btools belum support OS tersebut"]
+                context = {
+                    'output': result,
+                    'source': 'configuration:activationDevice',
+                }
 
             # Checking error
             for log in result:

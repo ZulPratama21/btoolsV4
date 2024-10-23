@@ -4,6 +4,21 @@
 
 {% block content %}
 <div class="container mt-5">
+    <h1 class="text-center mb-3">Aktivasi Device BNET</h1>
+    <div class="alert alert-warning" role="alert">
+        <h4 class="alert-heading">Hal yang harus diperhatikan sebelum melakukan aktivasi device:</h4>
+        <ul>
+            <li>Pastikan user masih default: <strong>user=admin password=(blank)</strong></li>
+            <li>Pastikan device sudah bisa ping ke server <strong>172.16.1.130</strong></li>
+            <li>Konfigurasi masih <strong>kosong</strong> kecuali untuk konfigurasi yang berhubungan dengan network seperti, IP address, Interface, routing dan sebagainya</li>
+            <li>Untuk port device biarkan <strong>default 22322</strong>, kecuali jika ada kebutuhan khusus seperti port konekyu, port firewall atau dsbg.</li>
+            <li>Jika yang diaktivasi adalah <strong>Router POP</strong>, pastikan centang kotak dibawah untuk memasukan konfigurasi firewall nya.</li>
+            <li>Masukan data perangkat ke <strong>MRTG</strong> dan <strong>Nagios</strong> setelah dilakukan aktivasi.</li>
+        </ul>
+    </div>
+</div>
+
+<div class="container mt-5">
     <div class="card shadow-sm">
         <div class="card-header">
             <h4 class="mb-0">Tambah Device</h4>
